@@ -35,6 +35,7 @@
             this.pessoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.veículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mateusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,8 @@
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesToolStripMenuItem,
             this.veículosToolStripMenuItem,
-            this.gitToolStripMenuItem});
+            this.gitToolStripMenuItem,
+            this.mateusToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -85,6 +87,12 @@
             this.gitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.gitToolStripMenuItem.Text = "Git";
             // 
+            // mateusToolStripMenuItem
+            // 
+            this.mateusToolStripMenuItem.Name = "mateusToolStripMenuItem";
+            this.mateusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mateusToolStripMenuItem.Text = "mateus";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,5 +122,6 @@
         private System.Windows.Forms.ToolStripMenuItem pessoaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem veículosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mateusToolStripMenuItem;
     }
 }
