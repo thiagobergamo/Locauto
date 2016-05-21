@@ -124,6 +124,7 @@
     </Compile>
     <Compile Include="Opcional.cs" />
     <Compile Include="PessoaFisica.cs" />
+    <Compile Include="PessoaFisicaDAO.cs" />
     <Compile Include="PessoaJuridica.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -44,6 +44,8 @@ namespace LocAuto
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            String msg;
+
             PessoaFisica pessoaFisica = new PessoaFisica();
             pessoaFisica.Nome = TxtNome.Text;
             pessoaFisica.Email = TxtEmail.Text;
@@ -62,8 +64,10 @@ namespace LocAuto
             pessoaFisica.Cpf = MskCpf.Text;
             pessoaFisica.OutroDocumento = TxtOutDocumento.Text;
             pessoaFisica.LoginWeb = TxtLoginWeb.Text;
-            pessoaFisica.SenhaWeb = TxtSenha.Text;            
-          
+            pessoaFisica.SenhaWeb = TxtSenha.Text;
+            PessoaFisicaDAO dao = new PessoaFisicaDAO();
+            msg = dao.inserir(pessoaFisica);
+            MessageBox.Show(msg);
         }
 
         private void TxtNumero_TextChanged(object sender, EventArgs e)
