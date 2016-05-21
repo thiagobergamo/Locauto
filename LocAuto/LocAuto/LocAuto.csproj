@@ -122,6 +122,7 @@
     <Compile Include="UsuarioDAO.cs" />
     <Compile Include="Veiculo.cs" />
     <Compile Include="Vistoria.cs" />
+    <Compile Include="TipoTelefoneDAO.cs" />
     <EmbeddedResource Include="CadCliente.resx">
       <DependentUpon>CadCliente.cs</DependentUpon>
     </EmbeddedResource>
