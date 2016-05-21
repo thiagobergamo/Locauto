@@ -34,7 +34,6 @@
             this.TxtModelo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.TxtAno = new System.Windows.Forms.TextBox();
             this.TxtObs = new System.Windows.Forms.TextBox();
             this.TxtPlaca = new System.Windows.Forms.TextBox();
             this.TxtChassi = new System.Windows.Forms.TextBox();
@@ -50,6 +49,7 @@
             this.CmbGrupo = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.TxtAno = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -102,13 +102,6 @@
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Modelo";
-            // 
-            // TxtAno
-            // 
-            this.TxtAno.Location = new System.Drawing.Point(86, 158);
-            this.TxtAno.Name = "TxtAno";
-            this.TxtAno.Size = new System.Drawing.Size(165, 20);
-            this.TxtAno.TabIndex = 6;
             // 
             // TxtObs
             // 
@@ -204,6 +197,7 @@
             this.BtnSalvar.TabIndex = 17;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // CmbSituacao
             // 
@@ -240,6 +234,13 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "Grupo";
             // 
+            // TxtAno
+            // 
+            this.TxtAno.Location = new System.Drawing.Point(86, 158);
+            this.TxtAno.Name = "TxtAno";
+            this.TxtAno.Size = new System.Drawing.Size(165, 20);
+            this.TxtAno.TabIndex = 6;
+            // 
             // CadVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,6 +270,7 @@
             this.Controls.Add(this.label1);
             this.Name = "CadVeiculo";
             this.Text = "Cadastro Veículo";
+            this.Load += new System.EventHandler(this.CadVeiculo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,7 +284,6 @@
         private System.Windows.Forms.TextBox TxtModelo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtAno;
         private System.Windows.Forms.TextBox TxtObs;
         private System.Windows.Forms.TextBox TxtPlaca;
         private System.Windows.Forms.TextBox TxtChassi;
@@ -298,5 +299,6 @@
         private System.Windows.Forms.ComboBox CmbGrupo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox TxtAno;
     }
 }
