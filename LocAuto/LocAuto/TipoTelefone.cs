@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace LocAuto
 {
-    class Opcional
+    class TipoTelefone
     {
         public int Codigo { get; set; }
         public string Descricao { get; set; }
-        public decimal Valor { get; set; }
     }
 }

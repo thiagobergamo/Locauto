@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace LocAuto
 {
-    class Opcional
+    class Usuario
     {
         public int Codigo { get; set; }
-        public string Descricao { get; set; }
-        public decimal Valor { get; set; }
+        public string Nome { get; set; }
+        public string Email { get; set; }
+        public string Login { get; set; }
+        public string Senha { get; set; }
     }
 }
