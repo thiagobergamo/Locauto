@@ -53,6 +53,30 @@
     <Compile Include="CadCliPf.Designer.cs">
       <DependentUpon>CadCliPf.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadOpcional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadOpcional.Designer.cs">
+      <DependentUpon>CadOpcional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadSituacaoVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadSituacaoVeiculo.Designer.cs">
+      <DependentUpon>CadSituacaoVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadTipoTelefone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadTipoTelefone.Designer.cs">
+      <DependentUpon>CadTipoTelefone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadUsuario.Designer.cs">
+      <DependentUpon>CadUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionFactory.cs" />
     <Compile Include="Locacao.cs" />
     <Compile Include="Menu.cs">
@@ -61,17 +85,41 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Opcional.cs" />
+    <Compile Include="Opcional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opcional.Designer.cs">
+      <DependentUpon>Opcional.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SituacaoVeiculo.cs" />
     <Compile Include="TipoTelefone.cs" />
+    <Compile Include="TipoVeiculo.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="Veiculo.cs" />
+    <Compile Include="Vistoria.cs" />
     <Compile Include="TipoTelefoneDAO.cs" />
     <EmbeddedResource Include="CadCliPf.resx">
       <DependentUpon>CadCliPf.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CadOpcional.resx">
+      <DependentUpon>CadOpcional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadSituacaoVeiculo.resx">
+      <DependentUpon>CadSituacaoVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadTipoTelefone.resx">
+      <DependentUpon>CadTipoTelefone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadUsuario.resx">
+      <DependentUpon>CadUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opcional.resx">
+      <DependentUpon>Opcional.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
