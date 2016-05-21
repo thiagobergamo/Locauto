@@ -40,7 +40,7 @@
             // 
             // BtnLimpar
             // 
-            this.BtnLimpar.Location = new System.Drawing.Point(60, 137);
+            this.BtnLimpar.Location = new System.Drawing.Point(74, 137);
             this.BtnLimpar.Name = "BtnLimpar";
             this.BtnLimpar.Size = new System.Drawing.Size(75, 23);
             this.BtnLimpar.TabIndex = 11;
@@ -66,7 +66,7 @@
             // 
             // TxtDescricao
             // 
-            this.TxtDescricao.Location = new System.Drawing.Point(90, 62);
+            this.TxtDescricao.Location = new System.Drawing.Point(90, 59);
             this.TxtDescricao.Name = "TxtDescricao";
             this.TxtDescricao.Size = new System.Drawing.Size(140, 20);
             this.TxtDescricao.TabIndex = 8;
@@ -74,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 65);
+            this.label2.Location = new System.Drawing.Point(22, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 7;
@@ -100,7 +100,7 @@
             // 
             // TxtValor
             // 
-            this.TxtValor.Location = new System.Drawing.Point(90, 95);
+            this.TxtValor.Location = new System.Drawing.Point(90, 92);
             this.TxtValor.Name = "TxtValor";
             this.TxtValor.Size = new System.Drawing.Size(82, 20);
             this.TxtValor.TabIndex = 13;

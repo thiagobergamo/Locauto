@@ -24,8 +24,20 @@ namespace LocAuto
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            String msg;
             Usuario usuario = new Usuario();
             usuario.Nome = TxtNome.Text;
+            usuario.Email = TxtEmail.Text;
+            usuario.Login = TxtUsuario.Text;
+            usuario.Senha = TxtSenha.Text;
+
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            msg = usuarioDAO.inserir(usuario);
+            TxtNome.Text = "";
+            TxtEmail.Text = "";
+            TxtUsuario.Text = "";
+            TxtSenha.Text = "";
+            MessageBox.Show(msg);
         }
     }
 }

@@ -75,6 +75,8 @@
             this.CbxPlaca = new System.Windows.Forms.ComboBox();
             this.CbxGrupo = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.BtnSalvar = new System.Windows.Forms.Button();
+            this.BtnLimpar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -119,7 +121,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Cliente";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // DtpDtValidade
             // 
@@ -403,6 +404,11 @@
             // CbxFormaPagto
             // 
             this.CbxFormaPagto.FormattingEnabled = true;
+            this.CbxFormaPagto.Items.AddRange(new object[] {
+            "Dinheiro",
+            "Cartão de Crédito",
+            "Cartão de Débito",
+            "Faturado"});
             this.CbxFormaPagto.Location = new System.Drawing.Point(81, 232);
             this.CbxFormaPagto.Name = "CbxFormaPagto";
             this.CbxFormaPagto.Size = new System.Drawing.Size(107, 21);
@@ -535,15 +541,36 @@
             this.label9.TabIndex = 1;
             this.label9.Text = "Veículo";
             // 
+            // BtnSalvar
+            // 
+            this.BtnSalvar.Location = new System.Drawing.Point(509, 470);
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.BtnSalvar.TabIndex = 4;
+            this.BtnSalvar.Text = "Salvar";
+            this.BtnSalvar.UseVisualStyleBackColor = true;
+            // 
+            // BtnLimpar
+            // 
+            this.BtnLimpar.Location = new System.Drawing.Point(428, 470);
+            this.BtnLimpar.Name = "BtnLimpar";
+            this.BtnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.BtnLimpar.TabIndex = 5;
+            this.BtnLimpar.Text = "Limpar";
+            this.BtnLimpar.UseVisualStyleBackColor = true;
+            // 
             // CadLocPf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 497);
+            this.ClientSize = new System.Drawing.Size(622, 505);
+            this.Controls.Add(this.BtnLimpar);
+            this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "CadLocPf";
             this.Text = "Locação PF";
+            this.Load += new System.EventHandler(this.CadLocPf_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -603,5 +630,7 @@
         private System.Windows.Forms.CheckBox ChkCoberturaTerceiros;
         private System.Windows.Forms.CheckBox ChkCoberturaCarro;
         private System.Windows.Forms.DateTimePicker DtpDtValidade;
+        private System.Windows.Forms.Button BtnSalvar;
+        private System.Windows.Forms.Button BtnLimpar;
     }
 }

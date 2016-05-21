@@ -30,6 +30,7 @@ namespace LocAuto
             {
                 return "Erro ao salvar tipo de telefone - " + ex; 
             }
+
             finally
             {
                 conn.Close();

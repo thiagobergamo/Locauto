@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace LocAuto
 {
-    public partial class CadSituacaoVeiculo : Form
+    public partial class CadClienteJuridico : Form
     {
-        public CadSituacaoVeiculo()
+        public CadClienteJuridico()
         {
             InitializeComponent();
         }
 
-        private void BtnLimpar_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtNumero_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -39,6 +39,7 @@ namespace LocAuto
             tipoTelefone.Descricao = TxtDescricao.Text;
             TipoTelefoneDAO dao = new TipoTelefoneDAO();
             msg = dao.inserir(tipoTelefone);
+            TxtDescricao.Text = "";
             MessageBox.Show(msg);
 
         }
