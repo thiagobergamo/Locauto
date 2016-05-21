@@ -132,6 +132,7 @@
             // 
             // TxtCodigo
             // 
+            this.TxtCodigo.Enabled = false;
             this.TxtCodigo.Location = new System.Drawing.Point(460, 23);
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Size = new System.Drawing.Size(69, 20);
@@ -198,10 +199,13 @@
             // CbxNome
             // 
             this.CbxNome.FormattingEnabled = true;
+            this.CbxNome.Items.AddRange(new object[] {
+            "-"});
             this.CbxNome.Location = new System.Drawing.Point(67, 25);
             this.CbxNome.Name = "CbxNome";
             this.CbxNome.Size = new System.Drawing.Size(305, 21);
             this.CbxNome.TabIndex = 2;
+            this.CbxNome.Validated += new System.EventHandler(this.CbxNome_Validated);
             // 
             // label4
             // 

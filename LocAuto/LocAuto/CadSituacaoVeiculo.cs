@@ -19,7 +19,19 @@ namespace LocAuto
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
+            TxtDescricao.Text = "";
+        }
 
+        private void BtnSalvar_Click(object sender, EventArgs e)
+        {
+            String msg;
+            SituacaoVeiculo situacaoVeiculo = new SituacaoVeiculo();
+            situacaoVeiculo.Descricao = TxtDescricao.Text;
+
+            SituacaoVeiculo1DAO situacaoVeiculoDAO = new SituacaoVeiculo1DAO();
+            msg = situacaoVeiculoDAO.inserir(situacaoVeiculo);
+            TxtDescricao.Text = "";
+            MessageBox.Show(msg);
         }
     }
 }

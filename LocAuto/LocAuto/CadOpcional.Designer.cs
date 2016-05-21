@@ -46,6 +46,7 @@
             this.BtnLimpar.TabIndex = 11;
             this.BtnLimpar.Text = "Limpar";
             this.BtnLimpar.UseVisualStyleBackColor = true;
+            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
             // BtnSalvar
             // 
@@ -55,6 +56,7 @@
             this.BtnSalvar.TabIndex = 10;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // TxtCodigo
             // 
@@ -119,7 +121,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CadOpcional";
-            this.Text = "CadOpcional";
+            this.Text = "Opcional";
             this.ResumeLayout(false);
             this.PerformLayout();
 

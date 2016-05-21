@@ -46,5 +46,12 @@ namespace LocAuto
         {
 
         }
+
+        private void BtnSalvar_Click(object sender, EventArgs e)
+        {
+            PessoaJuridica pessoaJuridica = new PessoaJuridica();
+            /*pessoaJuridica.Codigo = TxtCodigo(Convert.ToInt32);*/
+
+        }
     }
 }

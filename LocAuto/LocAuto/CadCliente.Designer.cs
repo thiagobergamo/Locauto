@@ -59,8 +59,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.TxtComplemento = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.TxtNumero = new System.Windows.Forms.TextBox();
-            this.TxtEndereco = new System.Windows.Forms.TextBox();
+          
             this.Num = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -387,19 +386,7 @@
             this.label10.Text = "Bairro";
             // 
             // TxtNumero
-            // 
-            this.TxtNumero.Location = new System.Drawing.Point(452, 98);
-            this.TxtNumero.Name = "TxtNumero";
-            this.TxtNumero.Size = new System.Drawing.Size(92, 20);
-            this.TxtNumero.TabIndex = 37;
-            // 
-            // TxtEndereco
-            // 
-            this.TxtEndereco.Location = new System.Drawing.Point(56, 100);
-            this.TxtEndereco.Name = "TxtEndereco";
-            this.TxtEndereco.Size = new System.Drawing.Size(308, 20);
-            this.TxtEndereco.TabIndex = 36;
-            // 
+
             // Num
             // 
             this.Num.AutoSize = true;
