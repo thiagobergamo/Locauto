@@ -53,7 +53,7 @@
     <Compile Include="CadCliPf.Designer.cs">
       <DependentUpon>CadCliPf.cs</DependentUpon>
     </Compile>
-        <Compile Include="CadLocPf.cs">
+    <Compile Include="CadLocPf.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CadLocPf.Designer.cs">
@@ -88,6 +88,12 @@
     </Compile>
     <Compile Include="CadUsuario.Designer.cs">
       <DependentUpon>CadUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadVistoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadVistoria.Designer.cs">
+      <DependentUpon>CadVistoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente.cs" />
     <Compile Include="ConnectionFactory.cs" />
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadUsuario.resx">
       <DependentUpon>CadUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadVistoria.resx">
+      <DependentUpon>CadVistoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
