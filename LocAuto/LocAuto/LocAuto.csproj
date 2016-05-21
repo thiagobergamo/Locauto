@@ -107,6 +107,12 @@
     <Compile Include="CadVeiculo.Designer.cs">
       <DependentUpon>CadVeiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadVistoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadVistoria.Designer.cs">
+      <DependentUpon>CadVistoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cliente.cs" />
     <Compile Include="ConnectionFactory.cs" />
     <Compile Include="Locacao.cs" />
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadUsuario.resx">
       <DependentUpon>CadUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadVistoria.resx">
+      <DependentUpon>CadVistoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadVeiculo.resx">
       <DependentUpon>CadVeiculo.cs</DependentUpon>
