@@ -36,6 +36,7 @@
             this.veículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mateusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mayaraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,8 @@
             this.clientesToolStripMenuItem,
             this.veículosToolStripMenuItem,
             this.gitToolStripMenuItem,
-            this.mateusToolStripMenuItem});
+            this.mateusToolStripMenuItem,
+            this.mayaraToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -93,6 +95,12 @@
             this.mateusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mateusToolStripMenuItem.Text = "mateus";
             // 
+            // mayaraToolStripMenuItem
+            // 
+            this.mayaraToolStripMenuItem.Name = "mayaraToolStripMenuItem";
+            this.mayaraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mayaraToolStripMenuItem.Text = "mayara";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,5 +131,6 @@
         private System.Windows.Forms.ToolStripMenuItem veículosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mateusToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mayaraToolStripMenuItem;
     }
 }
