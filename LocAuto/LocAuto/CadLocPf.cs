@@ -41,7 +41,7 @@ namespace LocAuto
 
             conn.Open();
 
-            string mSQL = "Select codigo_cliente, nome from pessoa_fisica";
+            string mSQL = "Select codigo_cliente, nome from pessoa_fisica order by nome";
 
             MySqlCommand cmd = new MySqlCommand(mSQL, conn);
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -56,6 +56,19 @@ namespace LocAuto
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void CbxNome_Validated(object sender, EventArgs e)
+        {
+            PessoaFisica pessoaFisica = new PessoaFisica();
+            PessoaFisicaDAO pessoaFisicaDao = new PessoaFisicaDAO();
+            pessoaFisica = pessoaFisicaDao.Retornar(Convert.ToInt32(CbxNome.SelectedValue));
+            TxtCodigo.Text = pessoaFisica.Codigo.ToString();
+            TxtCnh.Text = pessoaFisica.Cnh.ToString();
+            TxtEmail.Text = pessoaFisica.Email;
+
+            CbxGrupo.Focus();
+            
         }
     }
 }
