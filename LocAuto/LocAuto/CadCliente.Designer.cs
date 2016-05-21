@@ -49,24 +49,24 @@
             this.label7 = new System.Windows.Forms.Label();
             this.MskValCnh = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Num = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.TxtEndereco = new System.Windows.Forms.TextBox();
-            this.TxtNumero = new System.Windows.Forms.TextBox();
-            this.TxtComplemento = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.TxtBairro = new System.Windows.Forms.TextBox();
-            this.CEP = new System.Windows.Forms.Label();
-            this.MskCep = new System.Windows.Forms.MaskedTextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.TxtCidade = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.CmbEstado = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.TxtCidade = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.MskCep = new System.Windows.Forms.MaskedTextBox();
+            this.CEP = new System.Windows.Forms.Label();
+            this.TxtBairro = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.TxtComplemento = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.IntNumero = new System.Windows.Forms.TextBox();
+            this.TxtLogradouro = new System.Windows.Forms.TextBox();
+            this.Num = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.TxtLogin = new System.Windows.Forms.TextBox();
+            this.TxtLoginWeb = new System.Windows.Forms.TextBox();
             this.TxtSenha = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -134,6 +134,7 @@
             this.BtnSalvar.TabIndex = 30;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // TxtCodigo
             // 
@@ -259,8 +260,8 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.TxtComplemento);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.TxtNumero);
-            this.groupBox1.Controls.Add(this.TxtEndereco);
+            this.groupBox1.Controls.Add(this.IntNumero);
+            this.groupBox1.Controls.Add(this.TxtLogradouro);
             this.groupBox1.Controls.Add(this.Num);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.TxtNome);
@@ -273,133 +274,6 @@
             this.groupBox1.TabIndex = 49;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Cliente";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.Senha);
-            this.groupBox2.Controls.Add(this.TxtOutDocumento);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.MskValCnh);
-            this.groupBox2.Controls.Add(this.MskCpf);
-            this.groupBox2.Controls.Add(this.TxtRg);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.TxtCnh);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(26, 246);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(544, 99);
-            this.groupBox2.TabIndex = 50;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Documentos";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(22, 87);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 13);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "End.";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // Num
-            // 
-            this.Num.AutoSize = true;
-            this.Num.Location = new System.Drawing.Point(389, 87);
-            this.Num.Name = "Num";
-            this.Num.Size = new System.Drawing.Size(29, 13);
-            this.Num.TabIndex = 35;
-            this.Num.Text = "Num";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 123);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 13);
-            this.label10.TabIndex = 51;
-            this.label10.Text = "Compl.";
-            // 
-            // TxtEndereco
-            // 
-            this.TxtEndereco.Location = new System.Drawing.Point(56, 84);
-            this.TxtEndereco.Name = "TxtEndereco";
-            this.TxtEndereco.Size = new System.Drawing.Size(266, 20);
-            this.TxtEndereco.TabIndex = 36;
-            // 
-            // TxtNumero
-            // 
-            this.TxtNumero.Location = new System.Drawing.Point(424, 84);
-            this.TxtNumero.Name = "TxtNumero";
-            this.TxtNumero.Size = new System.Drawing.Size(75, 20);
-            this.TxtNumero.TabIndex = 37;
-            // 
-            // TxtComplemento
-            // 
-            this.TxtComplemento.Location = new System.Drawing.Point(56, 120);
-            this.TxtComplemento.Name = "TxtComplemento";
-            this.TxtComplemento.Size = new System.Drawing.Size(136, 20);
-            this.TxtComplemento.TabIndex = 52;
-            this.TxtComplemento.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(216, 123);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 13);
-            this.label9.TabIndex = 53;
-            this.label9.Text = "Bairro";
-            // 
-            // TxtBairro
-            // 
-            this.TxtBairro.Location = new System.Drawing.Point(256, 120);
-            this.TxtBairro.Name = "TxtBairro";
-            this.TxtBairro.Size = new System.Drawing.Size(128, 20);
-            this.TxtBairro.TabIndex = 54;
-            // 
-            // CEP
-            // 
-            this.CEP.AutoSize = true;
-            this.CEP.Location = new System.Drawing.Point(390, 119);
-            this.CEP.Name = "CEP";
-            this.CEP.Size = new System.Drawing.Size(28, 13);
-            this.CEP.TabIndex = 55;
-            this.CEP.Text = "CEP";
-            // 
-            // MskCep
-            // 
-            this.MskCep.Location = new System.Drawing.Point(424, 116);
-            this.MskCep.Mask = "99.999-999";
-            this.MskCep.Name = "MskCep";
-            this.MskCep.Size = new System.Drawing.Size(75, 20);
-            this.MskCep.TabIndex = 56;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(11, 159);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 13);
-            this.label11.TabIndex = 57;
-            this.label11.Text = "Cidade";
-            // 
-            // TxtCidade
-            // 
-            this.TxtCidade.Location = new System.Drawing.Point(56, 154);
-            this.TxtCidade.Name = "TxtCidade";
-            this.TxtCidade.Size = new System.Drawing.Size(136, 20);
-            this.TxtCidade.TabIndex = 58;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(210, 154);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 13);
-            this.label12.TabIndex = 59;
-            this.label12.Text = "Estado";
             // 
             // CmbEstado
             // 
@@ -437,6 +311,134 @@
             this.CmbEstado.Size = new System.Drawing.Size(54, 21);
             this.CmbEstado.TabIndex = 60;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(210, 154);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 13);
+            this.label12.TabIndex = 59;
+            this.label12.Text = "Estado";
+            // 
+            // TxtCidade
+            // 
+            this.TxtCidade.Location = new System.Drawing.Point(56, 154);
+            this.TxtCidade.Name = "TxtCidade";
+            this.TxtCidade.Size = new System.Drawing.Size(136, 20);
+            this.TxtCidade.TabIndex = 58;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(11, 159);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(40, 13);
+            this.label11.TabIndex = 57;
+            this.label11.Text = "Cidade";
+            // 
+            // MskCep
+            // 
+            this.MskCep.Location = new System.Drawing.Point(424, 116);
+            this.MskCep.Mask = "99.999-999";
+            this.MskCep.Name = "MskCep";
+            this.MskCep.Size = new System.Drawing.Size(75, 20);
+            this.MskCep.TabIndex = 56;
+            // 
+            // CEP
+            // 
+            this.CEP.AutoSize = true;
+            this.CEP.Location = new System.Drawing.Point(390, 119);
+            this.CEP.Name = "CEP";
+            this.CEP.Size = new System.Drawing.Size(28, 13);
+            this.CEP.TabIndex = 55;
+            this.CEP.Text = "CEP";
+            // 
+            // TxtBairro
+            // 
+            this.TxtBairro.Location = new System.Drawing.Point(256, 120);
+            this.TxtBairro.Name = "TxtBairro";
+            this.TxtBairro.Size = new System.Drawing.Size(128, 20);
+            this.TxtBairro.TabIndex = 54;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(216, 123);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 13);
+            this.label9.TabIndex = 53;
+            this.label9.Text = "Bairro";
+            // 
+            // TxtComplemento
+            // 
+            this.TxtComplemento.Location = new System.Drawing.Point(56, 120);
+            this.TxtComplemento.Name = "TxtComplemento";
+            this.TxtComplemento.Size = new System.Drawing.Size(136, 20);
+            this.TxtComplemento.TabIndex = 52;
+            this.TxtComplemento.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(12, 123);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 51;
+            this.label10.Text = "Compl.";
+            // 
+            // IntNumero
+            // 
+            this.IntNumero.Location = new System.Drawing.Point(424, 84);
+            this.IntNumero.Name = "IntNumero";
+            this.IntNumero.Size = new System.Drawing.Size(75, 20);
+            this.IntNumero.TabIndex = 37;
+            this.IntNumero.TextChanged += new System.EventHandler(this.TxtNumero_TextChanged);
+            // 
+            // TxtLogradouro
+            // 
+            this.TxtLogradouro.Location = new System.Drawing.Point(56, 84);
+            this.TxtLogradouro.Name = "TxtLogradouro";
+            this.TxtLogradouro.Size = new System.Drawing.Size(266, 20);
+            this.TxtLogradouro.TabIndex = 36;
+            // 
+            // Num
+            // 
+            this.Num.AutoSize = true;
+            this.Num.Location = new System.Drawing.Point(389, 87);
+            this.Num.Name = "Num";
+            this.Num.Size = new System.Drawing.Size(29, 13);
+            this.Num.TabIndex = 35;
+            this.Num.Text = "Num";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(22, 87);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 13);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "End.";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.Senha);
+            this.groupBox2.Controls.Add(this.TxtOutDocumento);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.MskValCnh);
+            this.groupBox2.Controls.Add(this.MskCpf);
+            this.groupBox2.Controls.Add(this.TxtRg);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.TxtCnh);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Location = new System.Drawing.Point(26, 246);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(544, 99);
+            this.groupBox2.TabIndex = 50;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Documentos";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -455,12 +457,12 @@
             this.label14.TabIndex = 50;
             this.label14.Text = "Senha";
             // 
-            // TxtLogin
+            // TxtLoginWeb
             // 
-            this.TxtLogin.Location = new System.Drawing.Point(61, 26);
-            this.TxtLogin.Name = "TxtLogin";
-            this.TxtLogin.Size = new System.Drawing.Size(100, 20);
-            this.TxtLogin.TabIndex = 51;
+            this.TxtLoginWeb.Location = new System.Drawing.Point(61, 26);
+            this.TxtLoginWeb.Name = "TxtLoginWeb";
+            this.TxtLoginWeb.Size = new System.Drawing.Size(100, 20);
+            this.TxtLoginWeb.TabIndex = 51;
             // 
             // TxtSenha
             // 
@@ -474,7 +476,7 @@
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.TxtSenha);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.TxtLogin);
+            this.groupBox3.Controls.Add(this.TxtLoginWeb);
             this.groupBox3.Location = new System.Drawing.Point(26, 365);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(200, 100);
@@ -532,8 +534,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TxtComplemento;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox TxtNumero;
-        private System.Windows.Forms.TextBox TxtEndereco;
+        private System.Windows.Forms.TextBox IntNumero;
+        private System.Windows.Forms.TextBox TxtLogradouro;
         private System.Windows.Forms.Label Num;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -544,7 +546,7 @@
         private System.Windows.Forms.MaskedTextBox MskCep;
         private System.Windows.Forms.Label CEP;
         private System.Windows.Forms.TextBox TxtSenha;
-        private System.Windows.Forms.TextBox TxtLogin;
+        private System.Windows.Forms.TextBox TxtLoginWeb;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox3;
