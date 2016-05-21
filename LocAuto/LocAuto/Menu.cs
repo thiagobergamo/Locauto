@@ -19,8 +19,9 @@ namespace LocAuto
 
         private void pessoaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadCliPf cadCliPf = new CadCliPf("teste param");
-            cadCliPf.Show();
+            CadClienteFisica cadClienteFisica = new CadClienteFisica();
+            cadClienteFisica.MdiParent = this;
+            cadClienteFisica.Show();
         }
 
         private void tipoDeTelefonesToolStripMenuItem_Click(object sender, EventArgs e)
