@@ -59,12 +59,6 @@
     <Compile Include="CadClienteJuridico.Designer.cs">
       <DependentUpon>CadClienteJuridico.cs</DependentUpon>
     </Compile>
-    <Compile Include="CadCliPf.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CadCliPf.Designer.cs">
-      <DependentUpon>CadCliPf.cs</DependentUpon>
-    </Compile>
     <Compile Include="CadLocPf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,9 +135,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadClienteJuridico.resx">
       <DependentUpon>CadClienteJuridico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CadCliPf.resx">
-      <DependentUpon>CadCliPf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadLocPf.resx">
       <DependentUpon>CadLocPf.cs</DependentUpon>
