@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LocAuto
 {
-    class TipoTelefone
+    public class TipoTelefone
     {
         public int Codigo { get; set; }
         public string Descricao { get; set; }

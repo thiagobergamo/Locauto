@@ -31,5 +31,17 @@ namespace LocAuto
         {
 
         }
+
+        private void BtnSalvar_Click(object sender, EventArgs e)
+        {
+            String msg;
+            TipoTelefone tipoTelefone = new TipoTelefone();
+            tipoTelefone.Descricao = TxtDescricao.Text;
+            TipoTelefoneDAO dao = new TipoTelefoneDAO();
+            msg = dao.inserir(tipoTelefone);
+            TxtDescricao.Text = "";
+            MessageBox.Show(msg);
+
+        }
     }
 }

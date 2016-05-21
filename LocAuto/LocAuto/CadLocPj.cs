@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace LocAuto
 {
-    public partial class CadSituacaoVeiculo : Form
+    public partial class CadLocPj : Form
     {
-        public CadSituacaoVeiculo()
+        public CadLocPj()
         {
             InitializeComponent();
-        }
-
-        private void BtnLimpar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
