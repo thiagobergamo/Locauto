@@ -48,7 +48,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 55);
+            this.label2.Location = new System.Drawing.Point(12, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // TxtDescricao
             // 
-            this.TxtDescricao.Location = new System.Drawing.Point(80, 52);
+            this.TxtDescricao.Location = new System.Drawing.Point(80, 49);
             this.TxtDescricao.Name = "TxtDescricao";
             this.TxtDescricao.Size = new System.Drawing.Size(140, 20);
             this.TxtDescricao.TabIndex = 2;
@@ -66,32 +66,33 @@
             this.TxtCodigo.Enabled = false;
             this.TxtCodigo.Location = new System.Drawing.Point(80, 17);
             this.TxtCodigo.Name = "TxtCodigo";
-            this.TxtCodigo.Size = new System.Drawing.Size(140, 20);
+            this.TxtCodigo.Size = new System.Drawing.Size(59, 20);
             this.TxtCodigo.TabIndex = 3;
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Location = new System.Drawing.Point(145, 93);
+            this.BtnSalvar.Location = new System.Drawing.Point(155, 93);
             this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.BtnSalvar.Size = new System.Drawing.Size(65, 23);
             this.BtnSalvar.TabIndex = 4;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
             // 
             // BtnLimpar
             // 
-            this.BtnLimpar.Location = new System.Drawing.Point(47, 93);
+            this.BtnLimpar.Location = new System.Drawing.Point(90, 93);
             this.BtnLimpar.Name = "BtnLimpar";
-            this.BtnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.BtnLimpar.Size = new System.Drawing.Size(59, 23);
             this.BtnLimpar.TabIndex = 5;
             this.BtnLimpar.Text = "Limpar";
             this.BtnLimpar.UseVisualStyleBackColor = true;
+            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
             // CadSituacaoVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(252, 153);
+            this.ClientSize = new System.Drawing.Size(256, 134);
             this.Controls.Add(this.BtnLimpar);
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.TxtCodigo);

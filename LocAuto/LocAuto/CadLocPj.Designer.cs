@@ -63,6 +63,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TxtNomeCondutor = new System.Windows.Forms.TextBox();
             this.DtpDtValidade = new System.Windows.Forms.DateTimePicker();
             this.TxtCodigo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -74,7 +75,8 @@
             this.TxtCnh = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.TxtNomeCondutor = new System.Windows.Forms.TextBox();
+            this.BtnSalvar = new System.Windows.Forms.Button();
+            this.BtnLimpar = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -107,7 +109,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(29, 176);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(555, 281);
+            this.groupBox2.Size = new System.Drawing.Size(555, 270);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados Locação";
@@ -433,6 +435,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Cliente";
             // 
+            // TxtNomeCondutor
+            // 
+            this.TxtNomeCondutor.Location = new System.Drawing.Point(67, 23);
+            this.TxtNomeCondutor.Name = "TxtNomeCondutor";
+            this.TxtNomeCondutor.Size = new System.Drawing.Size(305, 20);
+            this.TxtNomeCondutor.TabIndex = 13;
+            // 
             // DtpDtValidade
             // 
             this.DtpDtValidade.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -523,18 +532,31 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Condutor";
             // 
-            // TxtNomeCondutor
+            // BtnSalvar
             // 
-            this.TxtNomeCondutor.Location = new System.Drawing.Point(67, 23);
-            this.TxtNomeCondutor.Name = "TxtNomeCondutor";
-            this.TxtNomeCondutor.Size = new System.Drawing.Size(305, 20);
-            this.TxtNomeCondutor.TabIndex = 13;
+            this.BtnSalvar.Location = new System.Drawing.Point(509, 465);
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.BtnSalvar.TabIndex = 6;
+            this.BtnSalvar.Text = "Salvar";
+            this.BtnSalvar.UseVisualStyleBackColor = true;
+            // 
+            // BtnLimpar
+            // 
+            this.BtnLimpar.Location = new System.Drawing.Point(428, 465);
+            this.BtnLimpar.Name = "BtnLimpar";
+            this.BtnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.BtnLimpar.TabIndex = 7;
+            this.BtnLimpar.Text = "Limpar";
+            this.BtnLimpar.UseVisualStyleBackColor = true;
             // 
             // CadLocPj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 464);
+            this.ClientSize = new System.Drawing.Size(623, 500);
+            this.Controls.Add(this.BtnLimpar);
+            this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "CadLocPj";
@@ -598,5 +620,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtNomeCondutor;
+        private System.Windows.Forms.Button BtnSalvar;
+        private System.Windows.Forms.Button BtnLimpar;
     }
 }

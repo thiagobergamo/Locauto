@@ -16,5 +16,10 @@ namespace LocAuto
         {
             InitializeComponent();
         }
+
+        private void BtnLimpar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
