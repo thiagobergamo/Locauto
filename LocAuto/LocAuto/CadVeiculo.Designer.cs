@@ -68,6 +68,7 @@
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Size = new System.Drawing.Size(70, 20);
             this.TxtCodigo.TabIndex = 1;
+            this.TxtCodigo.TextChanged += new System.EventHandler(this.TxtCodigo_TextChanged);
             // 
             // TxtMarca
             // 
@@ -172,7 +173,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(29, 213);
+            this.label8.Location = new System.Drawing.Point(29, 210);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(26, 13);
             this.label8.TabIndex = 14;

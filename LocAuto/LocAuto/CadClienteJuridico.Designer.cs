@@ -38,12 +38,12 @@
             this.TxtNomCodutor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.MskValCnh = new System.Windows.Forms.MaskedTextBox();
+            this.TxtCnh = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.MskCnpj = new System.Windows.Forms.MaskedTextBox();
             this.TxtInsc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtCnh = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TxtCodigo = new System.Windows.Forms.TextBox();
             this.TxtContato = new System.Windows.Forms.TextBox();
@@ -85,7 +85,7 @@
             this.groupBox3.Controls.Add(this.TxtLogin);
             this.groupBox3.Location = new System.Drawing.Point(12, 366);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(297, 89);
+            this.groupBox3.Size = new System.Drawing.Size(224, 89);
             this.groupBox3.TabIndex = 58;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Usuário";
@@ -103,7 +103,7 @@
             // 
             this.TxtSenha.Location = new System.Drawing.Point(72, 47);
             this.TxtSenha.Name = "TxtSenha";
-            this.TxtSenha.Size = new System.Drawing.Size(215, 20);
+            this.TxtSenha.Size = new System.Drawing.Size(120, 20);
             this.TxtSenha.TabIndex = 52;
             // 
             // label14
@@ -119,7 +119,7 @@
             // 
             this.TxtLogin.Location = new System.Drawing.Point(72, 23);
             this.TxtLogin.Name = "TxtLogin";
-            this.TxtLogin.Size = new System.Drawing.Size(215, 20);
+            this.TxtLogin.Size = new System.Drawing.Size(120, 20);
             this.TxtLogin.TabIndex = 51;
             // 
             // groupBox2
@@ -170,6 +170,22 @@
             this.MskValCnh.Size = new System.Drawing.Size(81, 20);
             this.MskValCnh.TabIndex = 48;
             // 
+            // TxtCnh
+            // 
+            this.TxtCnh.Location = new System.Drawing.Point(72, 19);
+            this.TxtCnh.Name = "TxtCnh";
+            this.TxtCnh.Size = new System.Drawing.Size(215, 20);
+            this.TxtCnh.TabIndex = 43;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "CNH";
+            // 
             // MskCnpj
             // 
             this.MskCnpj.Location = new System.Drawing.Point(72, 46);
@@ -206,22 +222,6 @@
             this.label4.TabIndex = 38;
             this.label4.Text = "Inscrição Estadual";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // TxtCnh
-            // 
-            this.TxtCnh.Location = new System.Drawing.Point(72, 19);
-            this.TxtCnh.Name = "TxtCnh";
-            this.TxtCnh.Size = new System.Drawing.Size(215, 20);
-            this.TxtCnh.TabIndex = 43;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 26);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 13);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "CNH";
             // 
             // groupBox1
             // 
@@ -516,7 +516,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 508);
+            this.ClientSize = new System.Drawing.Size(654, 508);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
