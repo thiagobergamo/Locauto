@@ -34,6 +34,7 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pessoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.veículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,8 @@
             // 
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesToolStripMenuItem,
-            this.veículosToolStripMenuItem});
+            this.veículosToolStripMenuItem,
+            this.gitToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -76,6 +78,12 @@
             this.veículosToolStripMenuItem.Name = "veículosToolStripMenuItem";
             this.veículosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.veículosToolStripMenuItem.Text = "Veículos";
+            // 
+            // gitToolStripMenuItem
+            // 
+            this.gitToolStripMenuItem.Name = "gitToolStripMenuItem";
+            this.gitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gitToolStripMenuItem.Text = "Git";
             // 
             // Menu
             // 
@@ -105,5 +113,6 @@
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pessoaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem veículosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gitToolStripMenuItem;
     }
 }
