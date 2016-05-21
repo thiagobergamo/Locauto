@@ -11,7 +11,7 @@ namespace LocAuto
     {
         public MySqlConnection ObterConexao()
         {
-            String str = @"server=localhost;database=locadora;userid=usuario;password=senha;";
+            String str = @"server=localhost;database=locauto;userid=locauto;password=senha;";
             MySqlConnection conn = new MySqlConnection(str);
             return conn;
         }
