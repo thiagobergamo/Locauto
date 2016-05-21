@@ -404,6 +404,11 @@
             // CbxFormaPagto
             // 
             this.CbxFormaPagto.FormattingEnabled = true;
+            this.CbxFormaPagto.Items.AddRange(new object[] {
+            "Dinheiro",
+            "Cartão de Crédito",
+            "Cartão de Débito",
+            "Faturado"});
             this.CbxFormaPagto.Location = new System.Drawing.Point(81, 232);
             this.CbxFormaPagto.Name = "CbxFormaPagto";
             this.CbxFormaPagto.Size = new System.Drawing.Size(107, 21);
@@ -565,6 +570,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CadLocPf";
             this.Text = "Locação PF";
+            this.Load += new System.EventHandler(this.CadLocPf_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
