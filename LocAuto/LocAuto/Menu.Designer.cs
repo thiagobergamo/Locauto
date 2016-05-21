@@ -37,13 +37,18 @@
             this.gitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mateusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mayaraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.geraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeTelefonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrosToolStripMenuItem});
+            this.cadastrosToolStripMenuItem,
+            this.usuáriosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(719, 24);
@@ -57,7 +62,8 @@
             this.veículosToolStripMenuItem,
             this.gitToolStripMenuItem,
             this.mateusToolStripMenuItem,
-            this.mayaraToolStripMenuItem});
+            this.mayaraToolStripMenuItem,
+            this.geraisToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -73,7 +79,7 @@
             // pessoaToolStripMenuItem
             // 
             this.pessoaToolStripMenuItem.Name = "pessoaToolStripMenuItem";
-            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.pessoaToolStripMenuItem.Text = "Pessoa ";
             this.pessoaToolStripMenuItem.Click += new System.EventHandler(this.pessoaToolStripMenuItem_Click);
             // 
@@ -100,6 +106,36 @@
             this.mayaraToolStripMenuItem.Name = "mayaraToolStripMenuItem";
             this.mayaraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mayaraToolStripMenuItem.Text = "mayara";
+            // 
+            // geraisToolStripMenuItem
+            // 
+            this.geraisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tipoDeTelefonesToolStripMenuItem});
+            this.geraisToolStripMenuItem.Name = "geraisToolStripMenuItem";
+            this.geraisToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.geraisToolStripMenuItem.Text = "Gerais";
+            // 
+            // tipoDeTelefonesToolStripMenuItem
+            // 
+            this.tipoDeTelefonesToolStripMenuItem.Name = "tipoDeTelefonesToolStripMenuItem";
+            this.tipoDeTelefonesToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.tipoDeTelefonesToolStripMenuItem.Text = "Tipo de Telefones";
+            this.tipoDeTelefonesToolStripMenuItem.Click += new System.EventHandler(this.tipoDeTelefonesToolStripMenuItem_Click);
+            // 
+            // usuáriosToolStripMenuItem
+            // 
+            this.usuáriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastroToolStripMenuItem});
+            this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.usuáriosToolStripMenuItem.Text = "Usuários";
+            // 
+            // cadastroToolStripMenuItem
+            // 
+            this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cadastroToolStripMenuItem.Text = "Cadastro";
+            this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -132,5 +168,9 @@
         private System.Windows.Forms.ToolStripMenuItem gitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mateusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mayaraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem geraisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoDeTelefonesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
     }
 }

@@ -22,5 +22,19 @@ namespace LocAuto
             CadCliPf cadCliPf = new CadCliPf("teste param");
             cadCliPf.Show();
         }
+
+        private void tipoDeTelefonesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadTipoTelefone cadTipoTelefone = new CadTipoTelefone();
+            cadTipoTelefone.MdiParent = this;
+            cadTipoTelefone.Show();
+        }
+
+        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadUsuario cadUsuario = new CadUsuario();
+            cadUsuario.MdiParent = this;
+            cadUsuario.Show();
+        }
     }
 }

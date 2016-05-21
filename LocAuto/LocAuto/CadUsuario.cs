@@ -21,5 +21,11 @@ namespace LocAuto
         {
 
         }
+
+        private void BtnSalvar_Click(object sender, EventArgs e)
+        {
+            Usuario usuario = new Usuario();
+            usuario.Nome = TxtNome.Text;
+        }
     }
 }
