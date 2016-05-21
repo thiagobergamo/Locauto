@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,37 +53,74 @@
     <Compile Include="CadCliPf.Designer.cs">
       <DependentUpon>CadCliPf.cs</DependentUpon>
     </Compile>
-    <Compile Include="CadLocPf.cs">
+    <Compile Include="CadOpcional.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadLocPf.Designer.cs">
-      <DependentUpon>CadLocPf.cs</DependentUpon>
+    <Compile Include="CadOpcional.Designer.cs">
+      <DependentUpon>CadOpcional.cs</DependentUpon>
     </Compile>
-    <Compile Include="CadLocPj.cs">
+    <Compile Include="CadSituacaoVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadLocPj.Designer.cs">
-      <DependentUpon>CadLocPj.cs</DependentUpon>
+    <Compile Include="CadSituacaoVeiculo.Designer.cs">
+      <DependentUpon>CadSituacaoVeiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadTipoTelefone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadTipoTelefone.Designer.cs">
+      <DependentUpon>CadTipoTelefone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadUsuario.Designer.cs">
+      <DependentUpon>CadUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="ConnectionFactory.cs" />
+    <Compile Include="Locacao.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Opcional.cs" />
+    <Compile Include="Opcional.Designer.cs">
+      <DependentUpon>Opcional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PessoaFisica.cs" />
+    <Compile Include="PessoaJuridica.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SituacaoVeiculo.cs" />
+    <Compile Include="TipoTelefone.cs" />
+    <Compile Include="TipoVeiculo.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="Veiculo.cs" />
+    <Compile Include="Vistoria.cs" />
+    <Compile Include="TipoTelefoneDAO.cs" />
     <EmbeddedResource Include="CadCliPf.resx">
       <DependentUpon>CadCliPf.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CadLocPf.resx">
-      <DependentUpon>CadLocPf.cs</DependentUpon>
+    <EmbeddedResource Include="CadOpcional.resx">
+      <DependentUpon>CadOpcional.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CadLocPj.resx">
-      <DependentUpon>CadLocPj.cs</DependentUpon>
+    <EmbeddedResource Include="CadSituacaoVeiculo.resx">
+      <DependentUpon>CadSituacaoVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadTipoTelefone.resx">
+      <DependentUpon>CadTipoTelefone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadUsuario.resx">
+      <DependentUpon>CadUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opcional.resx">
+      <DependentUpon>Opcional.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

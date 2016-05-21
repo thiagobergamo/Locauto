@@ -35,6 +35,8 @@
             this.pessoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.veículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mateusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mayaraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +55,9 @@
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesToolStripMenuItem,
             this.veículosToolStripMenuItem,
-            this.gitToolStripMenuItem});
+            this.gitToolStripMenuItem,
+            this.mateusToolStripMenuItem,
+            this.mayaraToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -69,7 +73,7 @@
             // pessoaToolStripMenuItem
             // 
             this.pessoaToolStripMenuItem.Name = "pessoaToolStripMenuItem";
-            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pessoaToolStripMenuItem.Text = "Pessoa ";
             this.pessoaToolStripMenuItem.Click += new System.EventHandler(this.pessoaToolStripMenuItem_Click);
             // 
@@ -84,6 +88,18 @@
             this.gitToolStripMenuItem.Name = "gitToolStripMenuItem";
             this.gitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.gitToolStripMenuItem.Text = "Git";
+            // 
+            // mateusToolStripMenuItem
+            // 
+            this.mateusToolStripMenuItem.Name = "mateusToolStripMenuItem";
+            this.mateusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mateusToolStripMenuItem.Text = "mateus";
+            // 
+            // mayaraToolStripMenuItem
+            // 
+            this.mayaraToolStripMenuItem.Name = "mayaraToolStripMenuItem";
+            this.mayaraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mayaraToolStripMenuItem.Text = "mayara";
             // 
             // Menu
             // 
@@ -114,5 +130,7 @@
         private System.Windows.Forms.ToolStripMenuItem pessoaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem veículosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mateusToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mayaraToolStripMenuItem;
     }
 }
