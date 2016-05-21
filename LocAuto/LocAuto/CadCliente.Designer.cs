@@ -66,7 +66,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.TxtLogin = new System.Windows.Forms.TextBox();
+            this.TxtLoginWeb = new System.Windows.Forms.TextBox();
             this.TxtSenha = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -134,6 +134,7 @@
             this.BtnSalvar.TabIndex = 30;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // TxtCodigo
             // 
@@ -259,8 +260,8 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.TxtComplemento);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.TxtNumero);
-            this.groupBox1.Controls.Add(this.TxtEndereco);
+            this.groupBox1.Controls.Add(this.IntNumero);
+            this.groupBox1.Controls.Add(this.TxtLogradouro);
             this.groupBox1.Controls.Add(this.Num);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.TxtNome);
@@ -455,12 +456,12 @@
             this.label14.TabIndex = 50;
             this.label14.Text = "Senha";
             // 
-            // TxtLogin
+            // TxtLoginWeb
             // 
-            this.TxtLogin.Location = new System.Drawing.Point(61, 26);
-            this.TxtLogin.Name = "TxtLogin";
-            this.TxtLogin.Size = new System.Drawing.Size(100, 20);
-            this.TxtLogin.TabIndex = 51;
+            this.TxtLoginWeb.Location = new System.Drawing.Point(61, 26);
+            this.TxtLoginWeb.Name = "TxtLoginWeb";
+            this.TxtLoginWeb.Size = new System.Drawing.Size(100, 20);
+            this.TxtLoginWeb.TabIndex = 51;
             // 
             // TxtSenha
             // 
@@ -474,7 +475,7 @@
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.TxtSenha);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.TxtLogin);
+            this.groupBox3.Controls.Add(this.TxtLoginWeb);
             this.groupBox3.Location = new System.Drawing.Point(26, 365);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(200, 100);
@@ -532,8 +533,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TxtComplemento;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox TxtNumero;
-        private System.Windows.Forms.TextBox TxtEndereco;
+        private System.Windows.Forms.TextBox IntNumero;
+        private System.Windows.Forms.TextBox TxtLogradouro;
         private System.Windows.Forms.Label Num;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -544,7 +545,7 @@
         private System.Windows.Forms.MaskedTextBox MskCep;
         private System.Windows.Forms.Label CEP;
         private System.Windows.Forms.TextBox TxtSenha;
-        private System.Windows.Forms.TextBox TxtLogin;
+        private System.Windows.Forms.TextBox TxtLoginWeb;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox3;
