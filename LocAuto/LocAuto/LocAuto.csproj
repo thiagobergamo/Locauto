@@ -85,9 +85,7 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Opcional.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Opcional.cs" />
     <Compile Include="Opcional.Designer.cs">
       <DependentUpon>Opcional.cs</DependentUpon>
     </Compile>
