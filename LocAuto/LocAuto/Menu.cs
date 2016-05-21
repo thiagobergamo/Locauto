@@ -19,7 +19,9 @@ namespace LocAuto
 
         private void pessoaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-     
+            CadClienteFisica cadClienteFisica = new CadClienteFisica();
+            cadClienteFisica.MdiParent = this;
+            cadClienteFisica.Show();
         }
 
         private void tipoDeTelefonesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -31,9 +33,14 @@ namespace LocAuto
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadUsuario cadUsuario = new CadUsuario();
-            cadUsuario.MdiParent = this;
-            cadUsuario.Show();
+         
+        }
+
+        private void pessoaFísicaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadClienteFisica cadClienteFisica = new CadClienteFisica();
+            cadClienteFisica.MdiParent = this;
+            cadClienteFisica.Show();
         }
     }
 }
