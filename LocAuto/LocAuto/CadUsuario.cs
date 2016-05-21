@@ -19,7 +19,10 @@ namespace LocAuto
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
-
+            TxtNome.Text = "";
+            TxtEmail.Text = "";
+            TxtUsuario.Text = "";
+            TxtSenha.Text = "";
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
