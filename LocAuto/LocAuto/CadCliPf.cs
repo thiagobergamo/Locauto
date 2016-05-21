@@ -10,17 +10,18 @@ using System.Windows.Forms;
 
 namespace LocAuto
 {
-    public partial class Menu : Form
+    public partial class CadCliPf : Form
     {
-        public Menu()
+        String pNome;
+        public CadCliPf(String nome)
         {
+            pNome = nome;
             InitializeComponent();
         }
 
-        private void pessoaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CadCliPf_Load(object sender, EventArgs e)
         {
-            CadCliPf cadCliPf = new CadCliPf("teste param");
-            cadCliPf.Show();
+            label1.Text = this.pNome;
         }
     }
 }
