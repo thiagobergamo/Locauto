@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadCliente.Designer.cs">
+      <DependentUpon>CadCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadClienteJuridico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadClienteJuridico.Designer.cs">
+      <DependentUpon>CadClienteJuridico.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadCliPf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,7 +122,12 @@
     <Compile Include="UsuarioDAO.cs" />
     <Compile Include="Veiculo.cs" />
     <Compile Include="Vistoria.cs" />
-    <Compile Include="TipoTelefoneDAO.cs" />
+    <EmbeddedResource Include="CadCliente.resx">
+      <DependentUpon>CadCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadClienteJuridico.resx">
+      <DependentUpon>CadClienteJuridico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadCliPf.resx">
       <DependentUpon>CadCliPf.cs</DependentUpon>
     </EmbeddedResource>
