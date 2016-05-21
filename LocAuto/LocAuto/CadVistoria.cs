@@ -10,18 +10,26 @@ using System.Windows.Forms;
 
 namespace LocAuto
 {
-    public partial class CadCliPf : Form
+    public partial class CadVistoria : Form
     {
-        String pNome;
-        public CadCliPf(String nome)
+        public CadVistoria()
         {
-            pNome = nome;
             InitializeComponent();
         }
 
-        private void CadCliPf_Load(object sender, EventArgs e)
+        private void label9_Click(object sender, EventArgs e)
         {
-            label1.Text = this.pNome;
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

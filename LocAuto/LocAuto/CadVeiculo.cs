@@ -46,5 +46,10 @@ namespace LocAuto
         {
 
         }
+
+        private void TxtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

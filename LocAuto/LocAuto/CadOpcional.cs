@@ -16,5 +16,19 @@ namespace LocAuto
         {
             InitializeComponent();
         }
+
+        private void BtnSalvar_Click(object sender, EventArgs e)
+        {
+            String msg;
+            Opcional opcional = new Opcional();
+            opcional.Descricao = TxtDescricao.Text;
+            opcional.Valor = Convert.ToDecimal(TxtValor.Text);
+
+            OpcionalDAO opcionalDAO = new OpcionalDAO();
+            msg = opcionalDAO.inserir(opcional);
+            TxtDescricao.Text = "";
+            TxtValor.Text = "";
+            MessageBox.Show(msg);
+        }
     }
 }

@@ -41,5 +41,34 @@ namespace LocAuto
         {
 
         }
+
+        private void BtnSalvar_Click(object sender, EventArgs e)
+        {
+            PessoaFisica pessoaFisica = new PessoaFisica();
+            pessoaFisica.Nome = TxtNome.Text;
+            pessoaFisica.Email = TxtEmail.Text;
+            pessoaFisica.DtNascimento = MskDtNascimento.Text;
+            pessoaFisica.Logradouro = TxtLogradouro.Text;
+            pessoaFisica.Numero = Convert.ToInt32 (IntNumero.Text);
+            pessoaFisica.Complemento = TxtComplemento.Text;
+            pessoaFisica.Bairro = TxtBairro.Text;
+            pessoaFisica.Cep = MskCep.Text;
+            pessoaFisica.Cidade = TxtCidade.Text;
+            pessoaFisica.Estado = CmbEstado.Text;
+            pessoaFisica.Codigo = Convert.ToInt32(TxtCodigo.Text);
+            pessoaFisica.Rg = TxtRg.Text;
+            pessoaFisica.Cnh = TxtCnh.Text;
+            pessoaFisica.ValidadeCnh = MskValCnh.Text;
+            pessoaFisica.Cpf = MskCpf.Text;
+            pessoaFisica.OutroDocumento = TxtOutDocumento.Text;
+            pessoaFisica.LoginWeb = TxtLoginWeb.Text;
+            pessoaFisica.SenhaWeb = TxtSenha.Text;            
+          
+        }
+
+        private void TxtNumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

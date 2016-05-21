@@ -44,7 +44,7 @@
             // 
             // TxtEmail
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(83, 76);
+            this.TxtEmail.Location = new System.Drawing.Point(73, 80);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(212, 20);
             this.TxtEmail.TabIndex = 21;
@@ -52,7 +52,7 @@
             // Email
             // 
             this.Email.AutoSize = true;
-            this.Email.Location = new System.Drawing.Point(26, 79);
+            this.Email.Location = new System.Drawing.Point(18, 83);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(32, 13);
             this.Email.TabIndex = 20;
@@ -60,7 +60,7 @@
             // 
             // BtnLimpar
             // 
-            this.BtnLimpar.Location = new System.Drawing.Point(139, 163);
+            this.BtnLimpar.Location = new System.Drawing.Point(129, 153);
             this.BtnLimpar.Name = "BtnLimpar";
             this.BtnLimpar.Size = new System.Drawing.Size(75, 23);
             this.BtnLimpar.TabIndex = 19;
@@ -70,7 +70,7 @@
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Location = new System.Drawing.Point(220, 163);
+            this.BtnSalvar.Location = new System.Drawing.Point(210, 153);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
             this.BtnSalvar.TabIndex = 18;
@@ -81,14 +81,14 @@
             // TxtCodigo
             // 
             this.TxtCodigo.Enabled = false;
-            this.TxtCodigo.Location = new System.Drawing.Point(83, 15);
+            this.TxtCodigo.Location = new System.Drawing.Point(73, 19);
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Size = new System.Drawing.Size(74, 20);
             this.TxtCodigo.TabIndex = 17;
             // 
             // TxtNome
             // 
-            this.TxtNome.Location = new System.Drawing.Point(83, 45);
+            this.TxtNome.Location = new System.Drawing.Point(73, 49);
             this.TxtNome.Name = "TxtNome";
             this.TxtNome.Size = new System.Drawing.Size(212, 20);
             this.TxtNome.TabIndex = 16;
@@ -96,7 +96,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 48);
+            this.label2.Location = new System.Drawing.Point(18, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 15;
@@ -105,7 +105,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 18);
+            this.label1.Location = new System.Drawing.Point(18, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 14;
@@ -114,7 +114,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 111);
+            this.label3.Location = new System.Drawing.Point(18, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 22;
@@ -122,7 +122,7 @@
             // 
             // TxtUsuario
             // 
-            this.TxtUsuario.Location = new System.Drawing.Point(83, 108);
+            this.TxtUsuario.Location = new System.Drawing.Point(73, 112);
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(74, 20);
             this.TxtUsuario.TabIndex = 23;
@@ -130,7 +130,7 @@
             // Senha
             // 
             this.Senha.AutoSize = true;
-            this.Senha.Location = new System.Drawing.Point(177, 111);
+            this.Senha.Location = new System.Drawing.Point(167, 115);
             this.Senha.Name = "Senha";
             this.Senha.Size = new System.Drawing.Size(38, 13);
             this.Senha.TabIndex = 24;
@@ -138,7 +138,7 @@
             // 
             // TxtSenha
             // 
-            this.TxtSenha.Location = new System.Drawing.Point(221, 108);
+            this.TxtSenha.Location = new System.Drawing.Point(211, 112);
             this.TxtSenha.Name = "TxtSenha";
             this.TxtSenha.Size = new System.Drawing.Size(74, 20);
             this.TxtSenha.TabIndex = 25;
@@ -147,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 211);
+            this.ClientSize = new System.Drawing.Size(317, 196);
             this.Controls.Add(this.TxtSenha);
             this.Controls.Add(this.Senha);
             this.Controls.Add(this.TxtUsuario);

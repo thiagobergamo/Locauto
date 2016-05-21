@@ -55,6 +55,7 @@
             this.BtnSalvar.TabIndex = 10;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // TxtCodigo
             // 
@@ -119,7 +120,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CadOpcional";
-            this.Text = "CadOpcional";
+            this.Text = "Opcional";
             this.ResumeLayout(false);
             this.PerformLayout();
 
