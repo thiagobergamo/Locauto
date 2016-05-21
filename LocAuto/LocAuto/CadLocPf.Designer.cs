@@ -50,8 +50,8 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.ChkAssentoElevacao = new System.Windows.Forms.CheckBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.ChkCadeiraBebe = new System.Windows.Forms.CheckBox();
             this.ChkNavegadorGps = new System.Windows.Forms.CheckBox();
             this.ChkCoberturaTerceiros = new System.Windows.Forms.CheckBox();
@@ -320,15 +320,6 @@
             this.label19.TabIndex = 6;
             this.label19.Text = "R$ 17,00";
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(182, 17);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(51, 13);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "R$ 20,00";
-            // 
             // ChkAssentoElevacao
             // 
             this.ChkAssentoElevacao.AutoSize = true;
@@ -338,6 +329,15 @@
             this.ChkAssentoElevacao.TabIndex = 4;
             this.ChkAssentoElevacao.Text = "Assento de elevação";
             this.ChkAssentoElevacao.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(182, 17);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(51, 13);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "R$ 20,00";
             // 
             // ChkCadeiraBebe
             // 
@@ -573,7 +573,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "CadLocPf";
-            this.Text = "Locação PF";
+            this.Text = "Locação Pessoa Física";
             this.Load += new System.EventHandler(this.CadLocPf_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
