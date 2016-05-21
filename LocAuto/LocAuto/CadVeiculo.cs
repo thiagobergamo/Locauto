@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace LocAuto
 {
-    public partial class CadLocPf : Form
+    public partial class CadVeiculo : Form
     {
-        public CadLocPf()
+        public CadVeiculo()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -22,17 +27,22 @@ namespace LocAuto
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox8_TextChanged(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
