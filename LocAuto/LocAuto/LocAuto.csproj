@@ -53,6 +53,18 @@
     <Compile Include="CadCliPf.Designer.cs">
       <DependentUpon>CadCliPf.cs</DependentUpon>
     </Compile>
+        <Compile Include="CadLocPf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadLocPf.Designer.cs">
+      <DependentUpon>CadLocPf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadLocPj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadLocPj.Designer.cs">
+      <DependentUpon>CadLocPj.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadOpcional.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +113,12 @@
     <Compile Include="TipoTelefoneDAO.cs" />
     <EmbeddedResource Include="CadCliPf.resx">
       <DependentUpon>CadCliPf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadLocPf.resx">
+      <DependentUpon>CadLocPf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadLocPj.resx">
+      <DependentUpon>CadLocPj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadOpcional.resx">
       <DependentUpon>CadOpcional.cs</DependentUpon>
