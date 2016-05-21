@@ -36,6 +36,8 @@ namespace LocAuto
 
                 }
             }
+            conn.Close();
+
             return pessoaFisica;
         }
     }
