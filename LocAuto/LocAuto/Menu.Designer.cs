@@ -41,6 +41,7 @@
             this.tipoDeTelefonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pessoaFísicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,10 +133,19 @@
             // 
             // cadastroToolStripMenuItem
             // 
+            this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pessoaFísicaToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
+            // 
+            // pessoaFísicaToolStripMenuItem
+            // 
+            this.pessoaFísicaToolStripMenuItem.Name = "pessoaFísicaToolStripMenuItem";
+            this.pessoaFísicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pessoaFísicaToolStripMenuItem.Text = "Pessoa Física";
+            this.pessoaFísicaToolStripMenuItem.Click += new System.EventHandler(this.pessoaFísicaToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -172,5 +182,6 @@
         private System.Windows.Forms.ToolStripMenuItem tipoDeTelefonesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pessoaFísicaToolStripMenuItem;
     }
 }
