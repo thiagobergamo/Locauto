@@ -50,8 +50,8 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.ChkAssentoElevacao = new System.Windows.Forms.CheckBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.ChkCadeiraBebe = new System.Windows.Forms.CheckBox();
             this.ChkNavegadorGps = new System.Windows.Forms.CheckBox();
             this.ChkCoberturaTerceiros = new System.Windows.Forms.CheckBox();
@@ -273,8 +273,8 @@
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.ChkAssentoElevacao);
+            this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.ChkCadeiraBebe);
             this.panel1.Controls.Add(this.ChkNavegadorGps);
             this.panel1.Controls.Add(this.ChkCoberturaTerceiros);
@@ -309,7 +309,7 @@
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(51, 13);
             this.label20.TabIndex = 7;
-            this.label20.Text = "R$ 17,00";
+            this.label20.Text = "R$ 38,00";
             // 
             // label19
             // 
@@ -318,7 +318,17 @@
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(51, 13);
             this.label19.TabIndex = 6;
-            this.label19.Text = "R$ 10,00";
+            this.label19.Text = "R$ 17,00";
+            // 
+            // ChkAssentoElevacao
+            // 
+            this.ChkAssentoElevacao.AutoSize = true;
+            this.ChkAssentoElevacao.Location = new System.Drawing.Point(25, 17);
+            this.ChkAssentoElevacao.Name = "ChkAssentoElevacao";
+            this.ChkAssentoElevacao.Size = new System.Drawing.Size(126, 17);
+            this.ChkAssentoElevacao.TabIndex = 4;
+            this.ChkAssentoElevacao.Text = "Assento de elevação";
+            this.ChkAssentoElevacao.UseVisualStyleBackColor = true;
             // 
             // label18
             // 
@@ -327,22 +337,12 @@
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(51, 13);
             this.label18.TabIndex = 5;
-            this.label18.Text = "R$ 28,00";
-            // 
-            // ChkAssentoElevacao
-            // 
-            this.ChkAssentoElevacao.AutoSize = true;
-            this.ChkAssentoElevacao.Location = new System.Drawing.Point(28, 117);
-            this.ChkAssentoElevacao.Name = "ChkAssentoElevacao";
-            this.ChkAssentoElevacao.Size = new System.Drawing.Size(126, 17);
-            this.ChkAssentoElevacao.TabIndex = 4;
-            this.ChkAssentoElevacao.Text = "Assento de elevação";
-            this.ChkAssentoElevacao.UseVisualStyleBackColor = true;
+            this.label18.Text = "R$ 20,00";
             // 
             // ChkCadeiraBebe
             // 
             this.ChkCadeiraBebe.AutoSize = true;
-            this.ChkCadeiraBebe.Location = new System.Drawing.Point(28, 92);
+            this.ChkCadeiraBebe.Location = new System.Drawing.Point(25, 40);
             this.ChkCadeiraBebe.Name = "ChkCadeiraBebe";
             this.ChkCadeiraBebe.Size = new System.Drawing.Size(104, 17);
             this.ChkCadeiraBebe.TabIndex = 3;
@@ -352,7 +352,7 @@
             // ChkNavegadorGps
             // 
             this.ChkNavegadorGps.AutoSize = true;
-            this.ChkNavegadorGps.Location = new System.Drawing.Point(28, 66);
+            this.ChkNavegadorGps.Location = new System.Drawing.Point(25, 117);
             this.ChkNavegadorGps.Name = "ChkNavegadorGps";
             this.ChkNavegadorGps.Size = new System.Drawing.Size(104, 17);
             this.ChkNavegadorGps.TabIndex = 2;
@@ -362,7 +362,7 @@
             // ChkCoberturaTerceiros
             // 
             this.ChkCoberturaTerceiros.AutoSize = true;
-            this.ChkCoberturaTerceiros.Location = new System.Drawing.Point(28, 41);
+            this.ChkCoberturaTerceiros.Location = new System.Drawing.Point(25, 91);
             this.ChkCoberturaTerceiros.Name = "ChkCoberturaTerceiros";
             this.ChkCoberturaTerceiros.Size = new System.Drawing.Size(139, 17);
             this.ChkCoberturaTerceiros.TabIndex = 1;
@@ -372,7 +372,7 @@
             // ChkCoberturaCarro
             // 
             this.ChkCoberturaCarro.AutoSize = true;
-            this.ChkCoberturaCarro.Location = new System.Drawing.Point(28, 16);
+            this.ChkCoberturaCarro.Location = new System.Drawing.Point(25, 66);
             this.ChkCoberturaCarro.Name = "ChkCoberturaCarro";
             this.ChkCoberturaCarro.Size = new System.Drawing.Size(114, 17);
             this.ChkCoberturaCarro.TabIndex = 0;
@@ -573,7 +573,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "CadLocPf";
-            this.Text = "Locação PF";
+            this.Text = "Locação Pessoa Física";
             this.Load += new System.EventHandler(this.CadLocPf_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
