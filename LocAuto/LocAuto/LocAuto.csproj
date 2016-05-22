@@ -116,6 +116,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="ConnectionFactory.cs" />
     <Compile Include="Locacao.cs" />
+    <Compile Include="LocacaoDAO.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>

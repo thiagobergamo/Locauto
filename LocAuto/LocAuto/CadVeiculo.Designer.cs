@@ -64,6 +64,7 @@
             // 
             // TxtCodigo
             // 
+            this.TxtCodigo.Enabled = false;
             this.TxtCodigo.Location = new System.Drawing.Point(86, 23);
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Size = new System.Drawing.Size(70, 20);
@@ -75,14 +76,14 @@
             this.TxtMarca.Location = new System.Drawing.Point(86, 77);
             this.TxtMarca.Name = "TxtMarca";
             this.TxtMarca.Size = new System.Drawing.Size(334, 20);
-            this.TxtMarca.TabIndex = 2;
+            this.TxtMarca.TabIndex = 3;
             // 
             // TxtModelo
             // 
             this.TxtModelo.Location = new System.Drawing.Point(86, 104);
             this.TxtModelo.Name = "TxtModelo";
             this.TxtModelo.Size = new System.Drawing.Size(334, 20);
-            this.TxtModelo.TabIndex = 3;
+            this.TxtModelo.TabIndex = 4;
             // 
             // label2
             // 
@@ -109,21 +110,21 @@
             this.TxtObs.Multiline = true;
             this.TxtObs.Name = "TxtObs";
             this.TxtObs.Size = new System.Drawing.Size(334, 70);
-            this.TxtObs.TabIndex = 7;
+            this.TxtObs.TabIndex = 9;
             // 
             // TxtPlaca
             // 
             this.TxtPlaca.Location = new System.Drawing.Point(307, 155);
             this.TxtPlaca.Name = "TxtPlaca";
             this.TxtPlaca.Size = new System.Drawing.Size(113, 20);
-            this.TxtPlaca.TabIndex = 8;
+            this.TxtPlaca.TabIndex = 7;
             // 
             // TxtChassi
             // 
             this.TxtChassi.Location = new System.Drawing.Point(86, 184);
             this.TxtChassi.Name = "TxtChassi";
             this.TxtChassi.Size = new System.Drawing.Size(334, 20);
-            this.TxtChassi.TabIndex = 9;
+            this.TxtChassi.TabIndex = 8;
             this.TxtChassi.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label4
@@ -178,7 +179,7 @@
             this.TxtCor.Location = new System.Drawing.Point(86, 132);
             this.TxtCor.Name = "TxtCor";
             this.TxtCor.Size = new System.Drawing.Size(165, 20);
-            this.TxtCor.TabIndex = 15;
+            this.TxtCor.TabIndex = 5;
             // 
             // BtnLimpar
             // 
@@ -195,7 +196,7 @@
             this.BtnSalvar.Location = new System.Drawing.Point(345, 301);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.BtnSalvar.TabIndex = 17;
+            this.BtnSalvar.TabIndex = 10;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
@@ -206,7 +207,7 @@
             this.CmbSituacao.Location = new System.Drawing.Point(307, 49);
             this.CmbSituacao.Name = "CmbSituacao";
             this.CmbSituacao.Size = new System.Drawing.Size(113, 21);
-            this.CmbSituacao.TabIndex = 18;
+            this.CmbSituacao.TabIndex = 2;
             // 
             // CmbGrupo
             // 
@@ -214,7 +215,7 @@
             this.CmbGrupo.Location = new System.Drawing.Point(86, 49);
             this.CmbGrupo.Name = "CmbGrupo";
             this.CmbGrupo.Size = new System.Drawing.Size(165, 21);
-            this.CmbGrupo.TabIndex = 19;
+            this.CmbGrupo.TabIndex = 1;
             this.CmbGrupo.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label9
