@@ -50,14 +50,14 @@ namespace LocAuto
             pessoaFisica.Nome = TxtNome.Text;
             pessoaFisica.Email = TxtEmail.Text;
             pessoaFisica.DtNascimento = MskDtNascimento.Text;
-            pessoaFisica.Logradouro = TxtLogradouro.Text;
-            pessoaFisica.Numero = Convert.ToInt32 (IntNumero.Text);
+            pessoaFisica.Logradouro = TxtLog.Text;
+            pessoaFisica.Numero = Convert.ToInt32 (TxtNum.Text);
             pessoaFisica.Complemento = TxtComplemento.Text;
             pessoaFisica.Bairro = TxtBairro.Text;
             pessoaFisica.Cep = MskCep.Text;
             pessoaFisica.Cidade = TxtCidade.Text;
             pessoaFisica.Estado = CmbEstado.Text;
-            pessoaFisica.Codigo = Convert.ToInt32(TxtCodigo.Text);
+            //pessoaFisica.Codigo = Convert.ToInt32(TxtCodigo.Text);
             pessoaFisica.Rg = TxtRg.Text;
             pessoaFisica.Cnh = TxtCnh.Text;
             pessoaFisica.ValidadeCnh = MskValCnh.Text;

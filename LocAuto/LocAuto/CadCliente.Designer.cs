@@ -59,7 +59,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.TxtComplemento = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-          
             this.Num = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -68,6 +67,8 @@
             this.TxtLoginWeb = new System.Windows.Forms.TextBox();
             this.TxtSenha = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.TxtLog = new System.Windows.Forms.TextBox();
+            this.TxtNum = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -221,7 +222,6 @@
             // MskDtNascimento
             // 
             this.MskDtNascimento.Location = new System.Drawing.Point(452, 72);
-            this.MskDtNascimento.Mask = "99 /99 /9999";
             this.MskDtNascimento.Name = "MskDtNascimento";
             this.MskDtNascimento.Size = new System.Drawing.Size(92, 20);
             this.MskDtNascimento.TabIndex = 46;
@@ -238,13 +238,14 @@
             // MskValCnh
             // 
             this.MskValCnh.Location = new System.Drawing.Point(452, 19);
-            this.MskValCnh.Mask = "99/99/9999";
             this.MskValCnh.Name = "MskValCnh";
             this.MskValCnh.Size = new System.Drawing.Size(92, 20);
             this.MskValCnh.TabIndex = 48;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.TxtNum);
+            this.groupBox1.Controls.Add(this.TxtLog);
             this.groupBox1.Controls.Add(this.CmbEstado);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.MskDtNascimento);
@@ -259,8 +260,6 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.TxtComplemento);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.IntNumero);
-            this.groupBox1.Controls.Add(this.TxtLogradouro);
             this.groupBox1.Controls.Add(this.Num);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.TxtNome);
@@ -385,8 +384,6 @@
             this.label10.TabIndex = 51;
             this.label10.Text = "Bairro";
             // 
-            // TxtNumero
-
             // Num
             // 
             this.Num.AutoSize = true;
@@ -470,6 +467,20 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Usuário";
             // 
+            // TxtLog
+            // 
+            this.TxtLog.Location = new System.Drawing.Point(56, 98);
+            this.TxtLog.Name = "TxtLog";
+            this.TxtLog.Size = new System.Drawing.Size(308, 20);
+            this.TxtLog.TabIndex = 61;
+            // 
+            // TxtNum
+            // 
+            this.TxtNum.Location = new System.Drawing.Point(452, 98);
+            this.TxtNum.Name = "TxtNum";
+            this.TxtNum.Size = new System.Drawing.Size(92, 20);
+            this.TxtNum.TabIndex = 62;
+            // 
             // CadClienteFisica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -536,5 +547,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox TxtNum;
+        private System.Windows.Forms.TextBox TxtLog;
     }
 }
