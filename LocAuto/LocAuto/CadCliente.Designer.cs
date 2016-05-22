@@ -49,6 +49,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.MskValCnh = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TxtNum = new System.Windows.Forms.TextBox();
+            this.TxtLog = new System.Windows.Forms.TextBox();
             this.CmbEstado = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.TxtCidade = new System.Windows.Forms.TextBox();
@@ -67,8 +69,6 @@
             this.TxtLoginWeb = new System.Windows.Forms.TextBox();
             this.TxtSenha = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.TxtLog = new System.Windows.Forms.TextBox();
-            this.TxtNum = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -273,6 +273,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Cliente";
             // 
+            // TxtNum
+            // 
+            this.TxtNum.Location = new System.Drawing.Point(452, 98);
+            this.TxtNum.Name = "TxtNum";
+            this.TxtNum.Size = new System.Drawing.Size(92, 20);
+            this.TxtNum.TabIndex = 62;
+            // 
+            // TxtLog
+            // 
+            this.TxtLog.Location = new System.Drawing.Point(56, 98);
+            this.TxtLog.Name = "TxtLog";
+            this.TxtLog.Size = new System.Drawing.Size(308, 20);
+            this.TxtLog.TabIndex = 61;
+            // 
             // CmbEstado
             // 
             this.CmbEstado.FormattingEnabled = true;
@@ -434,7 +448,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(17, 66);
+            this.label14.Location = new System.Drawing.Point(17, 55);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(38, 13);
             this.label14.TabIndex = 50;
@@ -466,20 +480,6 @@
             this.groupBox3.TabIndex = 53;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Usuário";
-            // 
-            // TxtLog
-            // 
-            this.TxtLog.Location = new System.Drawing.Point(56, 98);
-            this.TxtLog.Name = "TxtLog";
-            this.TxtLog.Size = new System.Drawing.Size(308, 20);
-            this.TxtLog.TabIndex = 61;
-            // 
-            // TxtNum
-            // 
-            this.TxtNum.Location = new System.Drawing.Point(452, 98);
-            this.TxtNum.Name = "TxtNum";
-            this.TxtNum.Size = new System.Drawing.Size(92, 20);
-            this.TxtNum.TabIndex = 62;
             // 
             // CadClienteFisica
             // 
