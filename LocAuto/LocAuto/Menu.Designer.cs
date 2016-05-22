@@ -33,16 +33,13 @@
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pessoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pessoaJuridícaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.veículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mateusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mayaraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeTelefonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pessoaFísicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pessoaJuridícaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,9 +59,6 @@
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesToolStripMenuItem,
             this.veículosToolStripMenuItem,
-            this.gitToolStripMenuItem,
-            this.mateusToolStripMenuItem,
-            this.mayaraToolStripMenuItem,
             this.geraisToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
@@ -86,29 +80,18 @@
             this.pessoaToolStripMenuItem.Text = "Pessoa Física";
             this.pessoaToolStripMenuItem.Click += new System.EventHandler(this.pessoaToolStripMenuItem_Click);
             // 
+            // pessoaJuridícaToolStripMenuItem
+            // 
+            this.pessoaJuridícaToolStripMenuItem.Name = "pessoaJuridícaToolStripMenuItem";
+            this.pessoaJuridícaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.pessoaJuridícaToolStripMenuItem.Text = "Pessoa Juridíca";
+            this.pessoaJuridícaToolStripMenuItem.Click += new System.EventHandler(this.pessoaJuridícaToolStripMenuItem_Click);
+            // 
             // veículosToolStripMenuItem
             // 
             this.veículosToolStripMenuItem.Name = "veículosToolStripMenuItem";
             this.veículosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.veículosToolStripMenuItem.Text = "Veículos";
-            // 
-            // gitToolStripMenuItem
-            // 
-            this.gitToolStripMenuItem.Name = "gitToolStripMenuItem";
-            this.gitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.gitToolStripMenuItem.Text = "Git";
-            // 
-            // mateusToolStripMenuItem
-            // 
-            this.mateusToolStripMenuItem.Name = "mateusToolStripMenuItem";
-            this.mateusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.mateusToolStripMenuItem.Text = "mateus";
-            // 
-            // mayaraToolStripMenuItem
-            // 
-            this.mayaraToolStripMenuItem.Name = "mayaraToolStripMenuItem";
-            this.mayaraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.mayaraToolStripMenuItem.Text = "mayara";
             // 
             // geraisToolStripMenuItem
             // 
@@ -121,7 +104,7 @@
             // tipoDeTelefonesToolStripMenuItem
             // 
             this.tipoDeTelefonesToolStripMenuItem.Name = "tipoDeTelefonesToolStripMenuItem";
-            this.tipoDeTelefonesToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.tipoDeTelefonesToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.tipoDeTelefonesToolStripMenuItem.Text = "Tipo de Telefones";
             this.tipoDeTelefonesToolStripMenuItem.Click += new System.EventHandler(this.tipoDeTelefonesToolStripMenuItem_Click);
             // 
@@ -148,13 +131,6 @@
             this.pessoaFísicaToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.pessoaFísicaToolStripMenuItem.Text = "Pessoa Física";
             this.pessoaFísicaToolStripMenuItem.Click += new System.EventHandler(this.pessoaFísicaToolStripMenuItem_Click);
-            // 
-            // pessoaJuridícaToolStripMenuItem
-            // 
-            this.pessoaJuridícaToolStripMenuItem.Name = "pessoaJuridícaToolStripMenuItem";
-            this.pessoaJuridícaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.pessoaJuridícaToolStripMenuItem.Text = "Pessoa Juridíca";
-            this.pessoaJuridícaToolStripMenuItem.Click += new System.EventHandler(this.pessoaJuridícaToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -186,9 +162,6 @@
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pessoaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem veículosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mateusToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mayaraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem geraisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoDeTelefonesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
