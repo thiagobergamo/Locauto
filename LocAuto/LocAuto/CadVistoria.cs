@@ -13,6 +13,7 @@ namespace LocAuto
 {
     public partial class CadVistoria : Form
     {
+        public int codLocacao { get; set; }
         public CadVistoria()
         {
             InitializeComponent();
@@ -49,6 +50,7 @@ namespace LocAuto
             TxtNivelCombLoc.Text = "";
             TxtNivelCombLoc.Text = "";
             MessageBox.Show(msg);
+            this.Close();
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
@@ -77,7 +79,9 @@ namespace LocAuto
             this.TxtCodigoUsuario.ValueMember = "codigo";
             this.TxtCodigoUsuario.DisplayMember = "nome";
 
-            conn.Close();            
+            conn.Close();
+
+            TxtCodigoLocacao.Text = codLocacao.ToString();
         }
     }
 }

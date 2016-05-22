@@ -311,8 +311,16 @@ namespace LocAuto
             locacao.Pago = Convert.ToInt32(ChkPago.Checked).ToString();
             LocacaoDAO dao = new LocacaoDAO();
             msg = dao.Inserir(locacao);
-            MessageBox.Show(msg);
+            TxtCodigo.Text = msg;
+            MessageBox.Show("Locação salva com sucesso");
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CadVistoria cadVistoria = new CadVistoria();
+            cadVistoria.codLocacao = Convert.ToInt32(TxtCodigo.Text);
+            cadVistoria.Show();
         }
     }
 }
