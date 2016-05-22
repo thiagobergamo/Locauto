@@ -50,7 +50,7 @@
             this.BtnSalvar.Location = new System.Drawing.Point(175, 83);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(45, 23);
-            this.BtnSalvar.TabIndex = 1;
+            this.BtnSalvar.TabIndex = 2;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
@@ -79,14 +79,14 @@
             this.TxtDescricao.Location = new System.Drawing.Point(80, 47);
             this.TxtDescricao.Name = "TxtDescricao";
             this.TxtDescricao.Size = new System.Drawing.Size(140, 20);
-            this.TxtDescricao.TabIndex = 4;
+            this.TxtDescricao.TabIndex = 1;
             // 
             // Limpar
             // 
             this.Limpar.Location = new System.Drawing.Point(118, 83);
             this.Limpar.Name = "Limpar";
             this.Limpar.Size = new System.Drawing.Size(51, 23);
-            this.Limpar.TabIndex = 5;
+            this.Limpar.TabIndex = 3;
             this.Limpar.Text = "Limpar";
             this.Limpar.UseVisualStyleBackColor = true;
             this.Limpar.Click += new System.EventHandler(this.Limpar_Click);
@@ -103,6 +103,7 @@
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.TxtCodigo);
             this.Name = "CadTipoTelefone";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tipo Telefone";
             this.ResumeLayout(false);
             this.PerformLayout();

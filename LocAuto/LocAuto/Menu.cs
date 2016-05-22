@@ -56,5 +56,66 @@ namespace LocAuto
             cadClienteJuridico.MdiParent = this;
             cadClienteJuridico.Show();
         }
+
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pessoaFisícaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadLocPf cadLocPf = new CadLocPf();
+            cadLocPf.MdiParent = this;
+            cadLocPf.Show();
+        }
+
+        private void pessoaJurídicaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CadLocPj cadLocPj = new CadLocPj();
+            cadLocPj.MdiParent = this;
+            cadLocPj.Show();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadUsuario cadUsuario = new CadUsuario();
+            cadUsuario.MdiParent = this;
+            cadUsuario.Show();
+        }
+
+        private void situaçãoDoVeículoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            CadSituacaoVeiculo cadSituacaoVeiculo = new CadSituacaoVeiculo();
+            cadSituacaoVeiculo.MdiParent = this;
+            cadSituacaoVeiculo.Show();
+        }
+
+        private void opcionaisLocaçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadOpcional cadOpcional = new CadOpcional();
+            cadOpcional.MdiParent = this;
+            cadOpcional.Show();
+        }
+
+        private void pessoaJurídicaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadClienteJuridico cadClienteJuridico = new CadClienteJuridico();
+            cadClienteJuridico.MdiParent = this;
+            cadClienteJuridico.Show();
+        }
+
+        private void cadastroVeículoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadVeiculo cadVeiculo = new CadVeiculo();
+            cadVeiculo.MdiParent = this;
+            cadVeiculo.Show();
+        }
+
+        private void grupoDoVeículoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CadTipoVeiculo cadTipoVeiculo = new CadTipoVeiculo();
+            cadTipoVeiculo.MdiParent = this;
+            cadTipoVeiculo.Show();
+        }
     }
 }

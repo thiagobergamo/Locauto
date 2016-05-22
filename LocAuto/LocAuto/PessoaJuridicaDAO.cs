@@ -9,13 +9,16 @@ namespace LocAuto
 {
     class PessoaJuridicaDAO
     {
-        public String inserir(PessoaJuridica pessoaJuridica)
+        public String inserir(PessoaJuridica pessoaJuridica, List<TelefoneCliente> telefoneCliente)
         {
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
             conn = cf.ObterConexao();
             String cmdText = "INSERT INTO cliente ( email, login_web, senha_web, cnh, validade_cnh, logradouro, numero, complemento, bairro, cep, cidade, estado) values ( @email, @login_web, @senha_web, @cnh, @validade_cnh, @logradouro, @numero, @complemento, @bairro, @cep, @cidade, @estado);";
             long id;
+            String msg;
+            id = 0;
+
             try
             {
                 conn.Open();
@@ -39,7 +42,7 @@ namespace LocAuto
             }
             catch (Exception ex)
             {
-                return "Erro ao salvar usuário - " + ex;
+                msg = "Erro ao salvar cliente - " + ex;
             }
             finally
             {
@@ -60,17 +63,44 @@ namespace LocAuto
                 cmd.Parameters.Add(new MySqlParameter("nome_condutor", pessoaJuridica.NomeCondutor));
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
-                id = cmd.LastInsertedId;
-                return "Usuário salvo com sucesso.";
+                msg = "Cliente salvo com sucesso.";
             }
             catch (Exception ex)
             {
-                return "Erro ao salvar usuário - " + ex;
+                msg = "Erro ao salvar cliente - " + ex;
             }
             finally
             {
                 conn.Close();
             }
+
+            foreach (TelefoneCliente telefone in telefoneCliente)
+            {
+                cmdText = "INSERT INTO telefone_cliente (codigo_cliente, codigo_tipo_telefone, telefone) values (@codigo_cliente, @codigo_tipo_telefone, @telefone);";
+                
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+                    cmd.Parameters.Add(new MySqlParameter("codigo_cliente", id));
+                    cmd.Parameters.Add(new MySqlParameter("codigo_tipo_telefone", telefone.Tipo));
+                    cmd.Parameters.Add(new MySqlParameter("telefone", telefone.Numero));
+                    cmd.Prepare();
+                    cmd.ExecuteNonQuery();
+                    msg = "Cliente salvo com sucesso.";
+                }
+                catch (Exception ex)
+                {
+                    msg = "Erro ao salvar cliente - " + ex;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+            }
+
+            return msg;
         }
     }
 

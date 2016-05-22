@@ -128,7 +128,7 @@
             this.DtpDtValidade.Location = new System.Drawing.Point(272, 55);
             this.DtpDtValidade.Name = "DtpDtValidade";
             this.DtpDtValidade.Size = new System.Drawing.Size(100, 20);
-            this.DtpDtValidade.TabIndex = 12;
+            this.DtpDtValidade.TabIndex = 3;
             // 
             // TxtCodigo
             // 
@@ -161,14 +161,14 @@
             this.TxtEmail.Location = new System.Drawing.Point(272, 85);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(165, 20);
-            this.TxtEmail.TabIndex = 8;
+            this.TxtEmail.TabIndex = 5;
             // 
             // TxtNumero
             // 
             this.TxtNumero.Location = new System.Drawing.Point(67, 85);
             this.TxtNumero.Name = "TxtNumero";
             this.TxtNumero.Size = new System.Drawing.Size(129, 20);
-            this.TxtNumero.TabIndex = 7;
+            this.TxtNumero.TabIndex = 4;
             // 
             // label6
             // 
@@ -194,7 +194,7 @@
             this.TxtCnh.Location = new System.Drawing.Point(67, 55);
             this.TxtCnh.Name = "TxtCnh";
             this.TxtCnh.Size = new System.Drawing.Size(129, 20);
-            this.TxtCnh.TabIndex = 3;
+            this.TxtCnh.TabIndex = 2;
             // 
             // CbxNome
             // 
@@ -204,7 +204,8 @@
             this.CbxNome.Location = new System.Drawing.Point(67, 25);
             this.CbxNome.Name = "CbxNome";
             this.CbxNome.Size = new System.Drawing.Size(305, 21);
-            this.CbxNome.TabIndex = 2;
+            this.CbxNome.TabIndex = 1;
+            this.CbxNome.SelectedIndexChanged += new System.EventHandler(this.CbxNome_SelectedIndexChanged);
             this.CbxNome.Validated += new System.EventHandler(this.CbxNome_Validated);
             // 
             // label4
@@ -329,6 +330,7 @@
             this.ChkAssentoElevacao.TabIndex = 4;
             this.ChkAssentoElevacao.Text = "Assento de elevação";
             this.ChkAssentoElevacao.UseVisualStyleBackColor = true;
+            this.ChkAssentoElevacao.CheckedChanged += new System.EventHandler(this.ChkAssentoElevacao_CheckedChanged);
             // 
             // label18
             // 
@@ -348,6 +350,7 @@
             this.ChkCadeiraBebe.TabIndex = 3;
             this.ChkCadeiraBebe.Text = "Cadeira de bebê";
             this.ChkCadeiraBebe.UseVisualStyleBackColor = true;
+            this.ChkCadeiraBebe.CheckedChanged += new System.EventHandler(this.ChkCadeiraBebe_CheckedChanged);
             // 
             // ChkNavegadorGps
             // 
@@ -358,6 +361,7 @@
             this.ChkNavegadorGps.TabIndex = 2;
             this.ChkNavegadorGps.Text = "Navegador GPS";
             this.ChkNavegadorGps.UseVisualStyleBackColor = true;
+            this.ChkNavegadorGps.CheckedChanged += new System.EventHandler(this.ChkNavegadorGps_CheckedChanged);
             // 
             // ChkCoberturaTerceiros
             // 
@@ -368,6 +372,7 @@
             this.ChkCoberturaTerceiros.TabIndex = 1;
             this.ChkCoberturaTerceiros.Text = "Cobertura para terceiros";
             this.ChkCoberturaTerceiros.UseVisualStyleBackColor = true;
+            this.ChkCoberturaTerceiros.CheckedChanged += new System.EventHandler(this.ChkCoberturaTerceiros_CheckedChanged);
             // 
             // ChkCoberturaCarro
             // 
@@ -378,6 +383,7 @@
             this.ChkCoberturaCarro.TabIndex = 0;
             this.ChkCoberturaCarro.Text = "Cobertura do carro";
             this.ChkCoberturaCarro.UseVisualStyleBackColor = true;
+            this.ChkCoberturaCarro.CheckedChanged += new System.EventHandler(this.ChkCoberturaCarro_CheckedChanged);
             // 
             // ChkPago
             // 
@@ -385,7 +391,7 @@
             this.ChkPago.Location = new System.Drawing.Point(417, 234);
             this.ChkPago.Name = "ChkPago";
             this.ChkPago.Size = new System.Drawing.Size(51, 17);
-            this.ChkPago.TabIndex = 20;
+            this.ChkPago.TabIndex = 9;
             this.ChkPago.Text = "Pago";
             this.ChkPago.UseVisualStyleBackColor = true;
             // 
@@ -394,7 +400,7 @@
             this.TxtValorCaucao.Location = new System.Drawing.Point(314, 232);
             this.TxtValorCaucao.Name = "TxtValorCaucao";
             this.TxtValorCaucao.Size = new System.Drawing.Size(61, 20);
-            this.TxtValorCaucao.TabIndex = 18;
+            this.TxtValorCaucao.TabIndex = 8;
             // 
             // label16
             // 
@@ -416,7 +422,7 @@
             this.CbxFormaPagto.Location = new System.Drawing.Point(81, 232);
             this.CbxFormaPagto.Name = "CbxFormaPagto";
             this.CbxFormaPagto.Size = new System.Drawing.Size(107, 21);
-            this.CbxFormaPagto.TabIndex = 16;
+            this.CbxFormaPagto.TabIndex = 7;
             // 
             // label15
             // 
@@ -442,6 +448,7 @@
             this.TxtValorTotal.Name = "TxtValorTotal";
             this.TxtValorTotal.Size = new System.Drawing.Size(79, 20);
             this.TxtValorTotal.TabIndex = 13;
+            this.TxtValorTotal.Text = "0";
             this.TxtValorTotal.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // TxtValorOpc
@@ -450,6 +457,8 @@
             this.TxtValorOpc.Name = "TxtValorOpc";
             this.TxtValorOpc.Size = new System.Drawing.Size(79, 20);
             this.TxtValorOpc.TabIndex = 12;
+            this.TxtValorOpc.Text = "0";
+            this.TxtValorOpc.TextChanged += new System.EventHandler(this.TxtValorOpc_TextChanged);
             // 
             // label13
             // 
@@ -466,6 +475,9 @@
             this.TxtValorDiaria.Name = "TxtValorDiaria";
             this.TxtValorDiaria.Size = new System.Drawing.Size(79, 20);
             this.TxtValorDiaria.TabIndex = 10;
+            this.TxtValorDiaria.Text = "0";
+            this.TxtValorDiaria.TextChanged += new System.EventHandler(this.TxtValorDiaria_TextChanged);
+            this.TxtValorDiaria.Validated += new System.EventHandler(this.TxtValorDiaria_Validated);
             // 
             // label12
             // 
@@ -478,21 +490,23 @@
             // 
             // DtpDtDevolucao
             // 
-            this.DtpDtDevolucao.CustomFormat = "dd:MM:yyyy HH:mm";
-            this.DtpDtDevolucao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtpDtDevolucao.CustomFormat = "";
+            this.DtpDtDevolucao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpDtDevolucao.Location = new System.Drawing.Point(67, 116);
             this.DtpDtDevolucao.Name = "DtpDtDevolucao";
             this.DtpDtDevolucao.Size = new System.Drawing.Size(121, 20);
-            this.DtpDtDevolucao.TabIndex = 8;
+            this.DtpDtDevolucao.TabIndex = 6;
+            this.DtpDtDevolucao.Validated += new System.EventHandler(this.DtpDtDevolucao_Validated);
             // 
             // DtpDtLocacao
             // 
-            this.DtpDtLocacao.CustomFormat = "dd:MM:yyyy HH:mm";
-            this.DtpDtLocacao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtpDtLocacao.CustomFormat = "";
+            this.DtpDtLocacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpDtLocacao.Location = new System.Drawing.Point(67, 86);
             this.DtpDtLocacao.Name = "DtpDtLocacao";
             this.DtpDtLocacao.Size = new System.Drawing.Size(121, 20);
-            this.DtpDtLocacao.TabIndex = 7;
+            this.DtpDtLocacao.TabIndex = 5;
+            this.DtpDtLocacao.Value = new System.DateTime(2016, 5, 22, 0, 0, 0, 0);
             // 
             // label11
             // 
@@ -518,7 +532,8 @@
             this.CbxVeiculo.Location = new System.Drawing.Point(272, 27);
             this.CbxVeiculo.Name = "CbxVeiculo";
             this.CbxVeiculo.Size = new System.Drawing.Size(257, 21);
-            this.CbxVeiculo.TabIndex = 4;
+            this.CbxVeiculo.TabIndex = 3;
+            this.CbxVeiculo.Validated += new System.EventHandler(this.CbxVeiculo_Validated);
             // 
             // CbxPlaca
             // 
@@ -526,7 +541,7 @@
             this.CbxPlaca.Location = new System.Drawing.Point(67, 56);
             this.CbxPlaca.Name = "CbxPlaca";
             this.CbxPlaca.Size = new System.Drawing.Size(121, 21);
-            this.CbxPlaca.TabIndex = 3;
+            this.CbxPlaca.TabIndex = 4;
             // 
             // CbxGrupo
             // 
@@ -535,6 +550,7 @@
             this.CbxGrupo.Name = "CbxGrupo";
             this.CbxGrupo.Size = new System.Drawing.Size(121, 21);
             this.CbxGrupo.TabIndex = 2;
+            this.CbxGrupo.Validated += new System.EventHandler(this.CbxGrupo_Validated);
             // 
             // label9
             // 
@@ -550,9 +566,10 @@
             this.BtnSalvar.Location = new System.Drawing.Point(509, 470);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.BtnSalvar.TabIndex = 4;
+            this.BtnSalvar.TabIndex = 10;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // BtnLimpar
             // 

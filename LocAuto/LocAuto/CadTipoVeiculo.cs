@@ -35,7 +35,7 @@ namespace LocAuto
             tipoVeiculo.ArCondicionado = ChkArCondicionado.Checked.ToString();
             tipoVeiculo.VidroEletrico = ChkVidroEletrico.Checked.ToString();
             tipoVeiculo.TravaEletrica = ChkTravaEletrica.Checked.ToString();
-            tipoVeiculo.Portas = ChkPortas.Checked.ToString();
+            //tipoVeiculo.Portas = ChkPortas.Checked.ToString();
             tipoVeiculo.Abs = ChkAbs.Checked.ToString();
             tipoVeiculo.AirBag = ChkAirBag.Checked.ToString();
             tipoVeiculo.ValorDiaria = Convert.ToDecimal(TxtValorDiaria.Text);
@@ -45,7 +45,7 @@ namespace LocAuto
             ChkArCondicionado.Checked = false;
             ChkVidroEletrico.Checked = false;
             ChkTravaEletrica.Checked = false;
-            ChkPortas.Checked = false;
+            //ChkPortas.Checked = false;
             ChkAbs.Checked = false;
             ChkAirBag.Checked = false;
             TxtValorDiaria.Text = "";
@@ -59,10 +59,11 @@ namespace LocAuto
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
+            TxtGrupo.Text = "";
             ChkArCondicionado.Checked = false;
             ChkVidroEletrico.Checked = false;
             ChkTravaEletrica.Checked = false;
-            ChkPortas.Checked = false;
+            //ChkPortas.Checked = false;
             ChkAbs.Checked = false;
             ChkAirBag.Checked = false;
             TxtValorDiaria.Text = "";
