@@ -51,6 +51,23 @@ namespace LocAuto
             this.CbxNome.DataSource = dtClientes;
             this.CbxNome.ValueMember = "codigo_cliente";
             this.CbxNome.DisplayMember = "nome";
+
+            conn.Close();
+
+            conn.Open();
+
+            mSQL = "select codigo, descricao from tipo_veiculo order by descricao";
+
+            MySqlCommand cmd1 = new MySqlCommand(mSQL, conn);
+            MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
+
+            DataTable dtTipoVeiculo = new DataTable();
+            da1.Fill(dtTipoVeiculo);
+            this.CbxGrupo.DataSource = dtTipoVeiculo;
+            this.CbxGrupo.ValueMember = "codigo";
+            this.CbxGrupo.DisplayMember = "descricao";
+
+            conn.Close();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -69,6 +86,11 @@ namespace LocAuto
 
             CbxGrupo.Focus();
             
+        }
+
+        private void CbxGrupo_Validated(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -535,6 +535,7 @@
             this.CbxGrupo.Name = "CbxGrupo";
             this.CbxGrupo.Size = new System.Drawing.Size(121, 21);
             this.CbxGrupo.TabIndex = 2;
+            this.CbxGrupo.Validated += new System.EventHandler(this.CbxGrupo_Validated);
             // 
             // label9
             // 
