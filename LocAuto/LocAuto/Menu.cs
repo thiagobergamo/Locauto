@@ -24,6 +24,8 @@ namespace LocAuto
             cadClienteFisica.Show();
         }
 
+       
+
         private void tipoDeTelefonesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadTipoTelefone cadTipoTelefone = new CadTipoTelefone();
@@ -46,6 +48,13 @@ namespace LocAuto
         private void Menu_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void pessoaJuridícaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadClienteJuridico cadClienteJuridico = new CadClienteJuridico();
+            cadClienteJuridico.MdiParent = this;
+            cadClienteJuridico.Show();
         }
     }
 }

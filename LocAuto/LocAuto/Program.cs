@@ -16,7 +16,7 @@ namespace LocAuto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CadVeiculo());
+            Application.Run(new Menu());
         }
     }
 }

@@ -45,12 +45,13 @@ namespace LocAuto
             {
                 conn.Close();
             }
-            cmdText = "INSERT INTO pessoa_juridica ( cnpj, inscricao_estadual, razao_social, nome_fantasia, contato, nome_condutor) values ( @cnpj, @inscricao_estadual, @razao_social, @nome_fantasia, @contato, @nome_condutor);";
+            cmdText = "INSERT INTO pessoa_juridica (codigo_cliente, cnpj, insc_estadual, razao_social, nome_fantasia, contato, nome_condutor) values (@codigo_cliente, @cnpj, @inscricao_estadual, @razao_social, @nome_fantasia, @contato, @nome_condutor);";
 
             try
             {
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+                cmd.Parameters.Add(new MySqlParameter("codigo_cliente", id));
                 cmd.Parameters.Add(new MySqlParameter("cnpj", pessoaJuridica.Cnpj));
                 cmd.Parameters.Add(new MySqlParameter("inscricao_estadual", pessoaJuridica.InscEstadual));
                 cmd.Parameters.Add(new MySqlParameter("razao_social", pessoaJuridica.RazaoSocial));

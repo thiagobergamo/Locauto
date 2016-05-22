@@ -42,6 +42,7 @@
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pessoaFísicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pessoaJuridícaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,40 +73,41 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pessoaToolStripMenuItem});
+            this.pessoaToolStripMenuItem,
+            this.pessoaJuridícaToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // pessoaToolStripMenuItem
             // 
             this.pessoaToolStripMenuItem.Name = "pessoaToolStripMenuItem";
-            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.pessoaToolStripMenuItem.Text = "Pessoa Física";
             this.pessoaToolStripMenuItem.Click += new System.EventHandler(this.pessoaToolStripMenuItem_Click);
             // 
             // veículosToolStripMenuItem
             // 
             this.veículosToolStripMenuItem.Name = "veículosToolStripMenuItem";
-            this.veículosToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.veículosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.veículosToolStripMenuItem.Text = "Veículos";
             // 
             // gitToolStripMenuItem
             // 
             this.gitToolStripMenuItem.Name = "gitToolStripMenuItem";
-            this.gitToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.gitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.gitToolStripMenuItem.Text = "Git";
             // 
             // mateusToolStripMenuItem
             // 
             this.mateusToolStripMenuItem.Name = "mateusToolStripMenuItem";
-            this.mateusToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.mateusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mateusToolStripMenuItem.Text = "mateus";
             // 
             // mayaraToolStripMenuItem
             // 
             this.mayaraToolStripMenuItem.Name = "mayaraToolStripMenuItem";
-            this.mayaraToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.mayaraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mayaraToolStripMenuItem.Text = "mayara";
             // 
             // geraisToolStripMenuItem
@@ -113,13 +115,13 @@
             this.geraisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tipoDeTelefonesToolStripMenuItem});
             this.geraisToolStripMenuItem.Name = "geraisToolStripMenuItem";
-            this.geraisToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.geraisToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.geraisToolStripMenuItem.Text = "Gerais";
             // 
             // tipoDeTelefonesToolStripMenuItem
             // 
             this.tipoDeTelefonesToolStripMenuItem.Name = "tipoDeTelefonesToolStripMenuItem";
-            this.tipoDeTelefonesToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.tipoDeTelefonesToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.tipoDeTelefonesToolStripMenuItem.Text = "Tipo de Telefones";
             this.tipoDeTelefonesToolStripMenuItem.Click += new System.EventHandler(this.tipoDeTelefonesToolStripMenuItem_Click);
             // 
@@ -146,6 +148,13 @@
             this.pessoaFísicaToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.pessoaFísicaToolStripMenuItem.Text = "Pessoa Física";
             this.pessoaFísicaToolStripMenuItem.Click += new System.EventHandler(this.pessoaFísicaToolStripMenuItem_Click);
+            // 
+            // pessoaJuridícaToolStripMenuItem
+            // 
+            this.pessoaJuridícaToolStripMenuItem.Name = "pessoaJuridícaToolStripMenuItem";
+            this.pessoaJuridícaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.pessoaJuridícaToolStripMenuItem.Text = "Pessoa Juridíca";
+            this.pessoaJuridícaToolStripMenuItem.Click += new System.EventHandler(this.pessoaJuridícaToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -185,5 +194,6 @@
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pessoaFísicaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pessoaJuridícaToolStripMenuItem;
     }
 }

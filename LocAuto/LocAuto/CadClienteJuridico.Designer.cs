@@ -165,7 +165,6 @@
             // MskValCnh
             // 
             this.MskValCnh.Location = new System.Drawing.Point(347, 19);
-            this.MskValCnh.Mask = "99/99/9999";
             this.MskValCnh.Name = "MskValCnh";
             this.MskValCnh.Size = new System.Drawing.Size(81, 20);
             this.MskValCnh.TabIndex = 48;

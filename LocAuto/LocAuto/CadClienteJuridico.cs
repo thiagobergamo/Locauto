@@ -59,7 +59,7 @@ namespace LocAuto
             pessoaJuridica.Email = TxtEmail.Text;
             pessoaJuridica.Contato = TxtContato.Text;
             pessoaJuridica.Logradouro = TxtEndereco.Text;
-            pessoaJuridica.Numero = Convert.ToInt32(TxtNumero);
+            pessoaJuridica.Numero = Convert.ToInt32(TxtNumero.Text);
             pessoaJuridica.Bairro = TxtBairro.Text;
             pessoaJuridica.Complemento = TxtComplemento.Text;
             pessoaJuridica.Cep = MskCep.Text;
