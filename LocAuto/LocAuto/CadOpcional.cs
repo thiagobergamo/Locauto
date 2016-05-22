@@ -30,5 +30,11 @@ namespace LocAuto
             TxtValor.Text = "";
             MessageBox.Show(msg);
         }
+
+        private void BtnLimpar_Click(object sender, EventArgs e)
+        {
+            TxtDescricao.Text = "";
+            TxtValor.Text = "";
+        }
     }
 }
