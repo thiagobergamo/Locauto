@@ -74,6 +74,24 @@ namespace LocAuto
 
             PessoaJuridicaDAO dao = new PessoaJuridicaDAO();
             msg = dao.inserir(pessoaJuridica);
+            TxtRazSocial.Text = "";
+            TxtInsc.Text = "";
+            MskCnpj.Text = "";
+            TxtNomFantasia.Text = "";
+            TxtEmail.Text = "";
+            TxtContato.Text = "";
+            TxtEndereco.Text = "";
+            TxtNumero.Text = "";
+            TxtBairro.Text = "";
+            TxtComplemento.Text = "";
+            MskCep.Text = "";
+            TxtCidade.Text = "";
+            CmbEstado.Text = "";
+            TxtCnh.Text = "";
+            MskValCnh.Text = "";
+            TxtNomCodutor.Text = "";
+            TxtSenha.Text = "";
+            TxtLogin.Text = "";
             MessageBox.Show(msg);
 
         }
@@ -81,6 +99,28 @@ namespace LocAuto
         private void TxtCodigo_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnLimpar_Click(object sender, EventArgs e)
+        {
+            TxtRazSocial.Text = "";
+            TxtInsc.Text = "";
+            MskCnpj.Text = "";
+            TxtNomFantasia.Text = "";
+            TxtEmail.Text = "";
+            TxtContato.Text = "";
+            TxtEndereco.Text = "";
+            TxtNumero.Text = "";
+            TxtBairro.Text = "";
+            TxtComplemento.Text = "";
+            MskCep.Text = "";
+            TxtCidade.Text = "";
+            CmbEstado.Text = "";
+            TxtCnh.Text = "";
+            MskValCnh.Text = "";
+            TxtNomCodutor.Text = "";
+            TxtSenha.Text = "";
+            TxtLogin.Text = "";
         }
     }
 }

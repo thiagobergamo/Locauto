@@ -118,7 +118,7 @@
             // 
             // BtnLimpar
             // 
-            this.BtnLimpar.Location = new System.Drawing.Point(414, 475);
+            this.BtnLimpar.Location = new System.Drawing.Point(451, 471);
             this.BtnLimpar.Name = "BtnLimpar";
             this.BtnLimpar.Size = new System.Drawing.Size(75, 23);
             this.BtnLimpar.TabIndex = 31;
@@ -128,7 +128,7 @@
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Location = new System.Drawing.Point(495, 475);
+            this.BtnSalvar.Location = new System.Drawing.Point(532, 471);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
             this.BtnSalvar.TabIndex = 30;
