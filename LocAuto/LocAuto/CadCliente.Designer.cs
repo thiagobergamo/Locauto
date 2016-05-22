@@ -163,7 +163,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 25);
+            this.label1.Location = new System.Drawing.Point(6, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 26;
@@ -439,7 +439,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(17, 29);
+            this.label13.Location = new System.Drawing.Point(6, 29);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(33, 13);
             this.label13.TabIndex = 49;
@@ -448,7 +448,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(17, 55);
+            this.label14.Location = new System.Drawing.Point(6, 55);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(38, 13);
             this.label14.TabIndex = 50;
@@ -456,14 +456,14 @@
             // 
             // TxtLoginWeb
             // 
-            this.TxtLoginWeb.Location = new System.Drawing.Point(61, 26);
+            this.TxtLoginWeb.Location = new System.Drawing.Point(56, 26);
             this.TxtLoginWeb.Name = "TxtLoginWeb";
             this.TxtLoginWeb.Size = new System.Drawing.Size(100, 20);
             this.TxtLoginWeb.TabIndex = 51;
             // 
             // TxtSenha
             // 
-            this.TxtSenha.Location = new System.Drawing.Point(61, 52);
+            this.TxtSenha.Location = new System.Drawing.Point(56, 52);
             this.TxtSenha.Name = "TxtSenha";
             this.TxtSenha.Size = new System.Drawing.Size(100, 20);
             this.TxtSenha.TabIndex = 52;
@@ -476,7 +476,7 @@
             this.groupBox3.Controls.Add(this.TxtLoginWeb);
             this.groupBox3.Location = new System.Drawing.Point(26, 365);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 100);
+            this.groupBox3.Size = new System.Drawing.Size(581, 100);
             this.groupBox3.TabIndex = 53;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Usuário";

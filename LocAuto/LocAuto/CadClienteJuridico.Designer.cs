@@ -85,7 +85,7 @@
             this.groupBox3.Controls.Add(this.TxtLogin);
             this.groupBox3.Location = new System.Drawing.Point(12, 366);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(224, 89);
+            this.groupBox3.Size = new System.Drawing.Size(607, 89);
             this.groupBox3.TabIndex = 58;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Usuário";
@@ -150,7 +150,7 @@
             // 
             this.TxtNomCodutor.Location = new System.Drawing.Point(72, 48);
             this.TxtNomCodutor.Name = "TxtNomCodutor";
-            this.TxtNomCodutor.Size = new System.Drawing.Size(513, 20);
+            this.TxtNomCodutor.Size = new System.Drawing.Size(356, 20);
             this.TxtNomCodutor.TabIndex = 37;
             // 
             // label7
@@ -262,10 +262,12 @@
             // 
             // TxtCodigo
             // 
+            this.TxtCodigo.Enabled = false;
             this.TxtCodigo.Location = new System.Drawing.Point(72, 19);
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Size = new System.Drawing.Size(120, 20);
             this.TxtCodigo.TabIndex = 66;
+            this.TxtCodigo.TextChanged += new System.EventHandler(this.TxtCodigo_TextChanged);
             // 
             // TxtContato
             // 

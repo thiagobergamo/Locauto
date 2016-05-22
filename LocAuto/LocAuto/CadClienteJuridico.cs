@@ -77,5 +77,10 @@ namespace LocAuto
             MessageBox.Show(msg);
 
         }
+
+        private void TxtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
