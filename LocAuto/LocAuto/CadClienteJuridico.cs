@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace LocAuto
 {
@@ -71,9 +72,17 @@ namespace LocAuto
             pessoaJuridica.SenhaWeb = TxtSenha.Text;
             pessoaJuridica.LoginWeb = TxtLogin.Text;
 
+            List<TelefoneCliente> telefones = new List<TelefoneCliente>();
+            foreach (DataGridViewRow linha in this.dataGridView1.Rows)
+            {
+                if (linha.Cells["Tipo"].Value != null)
+                {
+                    telefones.Add(new TelefoneCliente() { Tipo = Convert.ToInt32(linha.Cells["Tipo"].Value), Numero = linha.Cells["numero"].Value.ToString() });
+                }
+            }
 
             PessoaJuridicaDAO dao = new PessoaJuridicaDAO();
-            msg = dao.inserir(pessoaJuridica);
+            msg = dao.inserir(pessoaJuridica, telefones);
             TxtRazSocial.Text = "";
             TxtInsc.Text = "";
             MskCnpj.Text = "";
@@ -121,6 +130,28 @@ namespace LocAuto
             TxtNomCodutor.Text = "";
             TxtSenha.Text = "";
             TxtLogin.Text = "";
+        }
+
+        private void CadClienteJuridico_Load(object sender, EventArgs e)
+        {
+            ConnectionFactory cf = new ConnectionFactory();
+            MySqlConnection conn;
+            conn = cf.ObterConexao();
+
+            conn.Open();
+
+            string mSQL = "select codigo, descricao from tipo_telefone order by descricao";
+
+            MySqlCommand cmd = new MySqlCommand(mSQL, conn);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+            DataTable dtClientes = new DataTable();
+            da.Fill(dtClientes);
+            this.Tipo.DataSource = dtClientes;
+            this.Tipo.ValueMember = "codigo";
+            this.Tipo.DisplayMember = "descricao";
+
+            conn.Close();
         }
     }
 }

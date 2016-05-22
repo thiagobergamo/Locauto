@@ -47,7 +47,7 @@
             this.TxtEmail.Location = new System.Drawing.Point(73, 80);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(212, 20);
-            this.TxtEmail.TabIndex = 21;
+            this.TxtEmail.TabIndex = 2;
             // 
             // Email
             // 
@@ -63,7 +63,7 @@
             this.BtnLimpar.Location = new System.Drawing.Point(129, 153);
             this.BtnLimpar.Name = "BtnLimpar";
             this.BtnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.BtnLimpar.TabIndex = 19;
+            this.BtnLimpar.TabIndex = 6;
             this.BtnLimpar.Text = "Limpar";
             this.BtnLimpar.UseVisualStyleBackColor = true;
             this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
@@ -73,7 +73,7 @@
             this.BtnSalvar.Location = new System.Drawing.Point(210, 153);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.BtnSalvar.TabIndex = 18;
+            this.BtnSalvar.TabIndex = 5;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
@@ -91,7 +91,7 @@
             this.TxtNome.Location = new System.Drawing.Point(73, 49);
             this.TxtNome.Name = "TxtNome";
             this.TxtNome.Size = new System.Drawing.Size(212, 20);
-            this.TxtNome.TabIndex = 16;
+            this.TxtNome.TabIndex = 1;
             // 
             // label2
             // 
@@ -125,7 +125,7 @@
             this.TxtUsuario.Location = new System.Drawing.Point(73, 112);
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(74, 20);
-            this.TxtUsuario.TabIndex = 23;
+            this.TxtUsuario.TabIndex = 3;
             // 
             // Senha
             // 
@@ -141,7 +141,7 @@
             this.TxtSenha.Location = new System.Drawing.Point(211, 112);
             this.TxtSenha.Name = "TxtSenha";
             this.TxtSenha.Size = new System.Drawing.Size(74, 20);
-            this.TxtSenha.TabIndex = 25;
+            this.TxtSenha.TabIndex = 4;
             // 
             // CadUsuario
             // 
@@ -161,6 +161,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CadUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastro Usuário";
             this.ResumeLayout(false);
             this.PerformLayout();

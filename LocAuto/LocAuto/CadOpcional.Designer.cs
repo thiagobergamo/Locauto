@@ -43,7 +43,7 @@
             this.BtnLimpar.Location = new System.Drawing.Point(74, 137);
             this.BtnLimpar.Name = "BtnLimpar";
             this.BtnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.BtnLimpar.TabIndex = 11;
+            this.BtnLimpar.TabIndex = 4;
             this.BtnLimpar.Text = "Limpar";
             this.BtnLimpar.UseVisualStyleBackColor = true;
             this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
@@ -53,7 +53,7 @@
             this.BtnSalvar.Location = new System.Drawing.Point(155, 137);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.BtnSalvar.TabIndex = 10;
+            this.BtnSalvar.TabIndex = 3;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
@@ -63,7 +63,7 @@
             this.TxtCodigo.Enabled = false;
             this.TxtCodigo.Location = new System.Drawing.Point(90, 27);
             this.TxtCodigo.Name = "TxtCodigo";
-            this.TxtCodigo.Size = new System.Drawing.Size(140, 20);
+            this.TxtCodigo.Size = new System.Drawing.Size(59, 20);
             this.TxtCodigo.TabIndex = 9;
             // 
             // TxtDescricao
@@ -71,7 +71,7 @@
             this.TxtDescricao.Location = new System.Drawing.Point(90, 59);
             this.TxtDescricao.Name = "TxtDescricao";
             this.TxtDescricao.Size = new System.Drawing.Size(140, 20);
-            this.TxtDescricao.TabIndex = 8;
+            this.TxtDescricao.TabIndex = 1;
             // 
             // label2
             // 
@@ -105,7 +105,7 @@
             this.TxtValor.Location = new System.Drawing.Point(90, 92);
             this.TxtValor.Name = "TxtValor";
             this.TxtValor.Size = new System.Drawing.Size(82, 20);
-            this.TxtValor.TabIndex = 13;
+            this.TxtValor.TabIndex = 2;
             // 
             // CadOpcional
             // 
@@ -121,6 +121,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CadOpcional";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Opcional";
             this.ResumeLayout(false);
             this.PerformLayout();

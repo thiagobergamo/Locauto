@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.TxtCodigoVistoria = new System.Windows.Forms.TextBox();
             this.TxtCodigoLocacao = new System.Windows.Forms.TextBox();
-            this.TxtCodigoUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,55 +40,30 @@
             this.TxtNivelCombLoc = new System.Windows.Forms.TextBox();
             this.TxtNivelCombDev = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.TxtLaudoLoc = new System.Windows.Forms.TextBox();
-            this.TxtLaudoDev = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.TxtLaudoDev = new System.Windows.Forms.TextBox();
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
+            this.TxtCodigoUsuario = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(455, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Código";
-            // 
-            // TxtCodigoVistoria
-            // 
-            this.TxtCodigoVistoria.Enabled = false;
-            this.TxtCodigoVistoria.Location = new System.Drawing.Point(522, 24);
-            this.TxtCodigoVistoria.Name = "TxtCodigoVistoria";
-            this.TxtCodigoVistoria.Size = new System.Drawing.Size(79, 20);
-            this.TxtCodigoVistoria.TabIndex = 1;
-            // 
             // TxtCodigoLocacao
             // 
             this.TxtCodigoLocacao.Enabled = false;
-            this.TxtCodigoLocacao.Location = new System.Drawing.Point(114, 24);
+            this.TxtCodigoLocacao.Location = new System.Drawing.Point(101, 20);
             this.TxtCodigoLocacao.Name = "TxtCodigoLocacao";
             this.TxtCodigoLocacao.Size = new System.Drawing.Size(79, 20);
             this.TxtCodigoLocacao.TabIndex = 2;
             // 
-            // TxtCodigoUsuario
-            // 
-            this.TxtCodigoUsuario.Enabled = false;
-            this.TxtCodigoUsuario.Location = new System.Drawing.Point(303, 24);
-            this.TxtCodigoUsuario.Name = "TxtCodigoUsuario";
-            this.TxtCodigoUsuario.Size = new System.Drawing.Size(100, 20);
-            this.TxtCodigoUsuario.TabIndex = 3;
-            this.TxtCodigoUsuario.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 27);
+            this.label2.Location = new System.Drawing.Point(21, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 4;
@@ -100,11 +72,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(230, 27);
+            this.label3.Location = new System.Drawing.Point(21, 51);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Usuário";
+            this.label3.Text = "Vistoriador";
             // 
             // label4
             // 
@@ -186,6 +158,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Locação";
             // 
+            // TxtLaudoLoc
+            // 
+            this.TxtLaudoLoc.Location = new System.Drawing.Point(55, 101);
+            this.TxtLaudoLoc.Multiline = true;
+            this.TxtLaudoLoc.Name = "TxtLaudoLoc";
+            this.TxtLaudoLoc.Size = new System.Drawing.Size(202, 72);
+            this.TxtLaudoLoc.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(11, 104);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Laudo";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label9);
@@ -201,31 +190,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Devolução";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 104);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Laudo";
-            // 
-            // TxtLaudoLoc
-            // 
-            this.TxtLaudoLoc.Location = new System.Drawing.Point(55, 101);
-            this.TxtLaudoLoc.Multiline = true;
-            this.TxtLaudoLoc.Name = "TxtLaudoLoc";
-            this.TxtLaudoLoc.Size = new System.Drawing.Size(202, 72);
-            this.TxtLaudoLoc.TabIndex = 14;
-            // 
-            // TxtLaudoDev
-            // 
-            this.TxtLaudoDev.Location = new System.Drawing.Point(67, 101);
-            this.TxtLaudoDev.Multiline = true;
-            this.TxtLaudoDev.Name = "TxtLaudoDev";
-            this.TxtLaudoDev.Size = new System.Drawing.Size(196, 72);
-            this.TxtLaudoDev.TabIndex = 14;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -236,6 +200,14 @@
             this.label9.Text = "Laudo";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // TxtLaudoDev
+            // 
+            this.TxtLaudoDev.Location = new System.Drawing.Point(67, 101);
+            this.TxtLaudoDev.Multiline = true;
+            this.TxtLaudoDev.Name = "TxtLaudoDev";
+            this.TxtLaudoDev.Size = new System.Drawing.Size(196, 72);
+            this.TxtLaudoDev.TabIndex = 14;
+            // 
             // BtnSalvar
             // 
             this.BtnSalvar.Location = new System.Drawing.Point(526, 280);
@@ -244,6 +216,7 @@
             this.BtnSalvar.TabIndex = 16;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // BtnLimpar
             // 
@@ -253,24 +226,33 @@
             this.BtnLimpar.TabIndex = 17;
             this.BtnLimpar.Text = "Limpar";
             this.BtnLimpar.UseVisualStyleBackColor = true;
+            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
+            // 
+            // TxtCodigoUsuario
+            // 
+            this.TxtCodigoUsuario.FormattingEnabled = true;
+            this.TxtCodigoUsuario.Location = new System.Drawing.Point(101, 48);
+            this.TxtCodigoUsuario.Name = "TxtCodigoUsuario";
+            this.TxtCodigoUsuario.Size = new System.Drawing.Size(121, 21);
+            this.TxtCodigoUsuario.TabIndex = 18;
             // 
             // CadVistoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 318);
+            this.Controls.Add(this.TxtCodigoUsuario);
             this.Controls.Add(this.BtnLimpar);
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.TxtCodigoUsuario);
             this.Controls.Add(this.TxtCodigoLocacao);
-            this.Controls.Add(this.TxtCodigoVistoria);
-            this.Controls.Add(this.label1);
             this.Name = "CadVistoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Vistoria";
+            this.Load += new System.EventHandler(this.CadVistoria_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -281,11 +263,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TxtCodigoVistoria;
         private System.Windows.Forms.TextBox TxtCodigoLocacao;
-        private System.Windows.Forms.TextBox TxtCodigoUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -304,5 +282,6 @@
         private System.Windows.Forms.TextBox TxtLaudoDev;
         private System.Windows.Forms.Button BtnSalvar;
         private System.Windows.Forms.Button BtnLimpar;
+        private System.Windows.Forms.ComboBox TxtCodigoUsuario;
     }
 }
