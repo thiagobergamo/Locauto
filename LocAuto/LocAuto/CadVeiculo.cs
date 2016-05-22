@@ -57,6 +57,8 @@ namespace LocAuto
         {
             String msg;
             Veiculo veiculo = new Veiculo();
+            veiculo.codigoTipoVeiculo = CmbGrupo.SelectedValue.ToString();
+            veiculo.codigoSituacaoVeiculo = CmbSituacao.SelectedValue.ToString();
             veiculo.Marca = TxtMarca.Text;
             veiculo.Modelo = TxtModelo.Text;
             veiculo.Ano = Convert.ToInt32(TxtAno.Text);
@@ -112,6 +114,17 @@ namespace LocAuto
             this.CmbSituacao.DisplayMember = "descricao";
 
             conn.Close();
+        }
+
+        private void BtnLimpar_Click(object sender, EventArgs e)
+        {
+            TxtMarca.Text = "";
+            TxtModelo.Text = "";
+            TxtAno.Text = "";
+            TxtPlaca.Text = "";
+            TxtChassi.Text = "";
+            TxtCor.Text = "";
+            TxtObs.Text = "";
         }
     }
 }

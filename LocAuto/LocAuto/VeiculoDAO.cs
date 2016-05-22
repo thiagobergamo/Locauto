@@ -14,12 +14,14 @@ namespace LocAuto
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
             conn = cf.ObterConexao();
-            String cmdText = "INSERT INTO veiculo (marca, modelo, ano, placa, chassi, cor, observacao) values (@marca, @modelo, @ano, @placa, @chasse, @cor, @observacao);";
+            String cmdText = "INSERT INTO veiculo (codigo_tipo_veiculo, codigo_situacao_veiculo, marca, modelo, ano, placa, chassi, cor, observacao) values (@codigo_tipo_veiculo, @codigo_situacao_veiculo, @marca, @modelo, @ano, @placa, @chassi, @cor, @observacao);";
 
             try
             {
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+                cmd.Parameters.Add(new MySqlParameter("codigo_tipo_veiculo", veiculo.codigoTipoVeiculo));
+                cmd.Parameters.Add(new MySqlParameter("codigo_situacao_veiculo", veiculo.codigoSituacaoVeiculo));
                 cmd.Parameters.Add(new MySqlParameter("marca", veiculo.Marca));
                 cmd.Parameters.Add(new MySqlParameter("modelo", veiculo.Modelo));
                 cmd.Parameters.Add(new MySqlParameter("ano", veiculo.Ano));

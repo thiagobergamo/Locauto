@@ -33,13 +33,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TxtGrupo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ChkArCondicionado = new System.Windows.Forms.CheckBox();
-            this.ChkAbs = new System.Windows.Forms.CheckBox();
-            this.ChkAirBag = new System.Windows.Forms.CheckBox();
-            this.ChkTravaEletrica = new System.Windows.Forms.CheckBox();
-            this.ChkVidroEletrico = new System.Windows.Forms.CheckBox();
             this.ChkPortas = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ChkVidroEletrico = new System.Windows.Forms.CheckBox();
+            this.ChkTravaEletrica = new System.Windows.Forms.CheckBox();
+            this.ChkAirBag = new System.Windows.Forms.CheckBox();
+            this.ChkAbs = new System.Windows.Forms.CheckBox();
+            this.ChkArCondicionado = new System.Windows.Forms.CheckBox();
+            this.TxtValorDiaria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.BtnLimpar = new System.Windows.Forms.Button();
             this.BtnSalvar = new System.Windows.Forms.Button();
@@ -67,9 +67,10 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 13);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Grupo";
+            this.label2.Text = "Descrição";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // TxtGrupo
             // 
@@ -94,45 +95,15 @@
             this.groupBox1.Text = "Opcionais";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // ChkArCondicionado
+            // ChkPortas
             // 
-            this.ChkArCondicionado.AutoSize = true;
-            this.ChkArCondicionado.Location = new System.Drawing.Point(6, 78);
-            this.ChkArCondicionado.Name = "ChkArCondicionado";
-            this.ChkArCondicionado.Size = new System.Drawing.Size(104, 17);
-            this.ChkArCondicionado.TabIndex = 0;
-            this.ChkArCondicionado.Text = "Ar Condicionado";
-            this.ChkArCondicionado.UseVisualStyleBackColor = true;
-            // 
-            // ChkAbs
-            // 
-            this.ChkAbs.AutoSize = true;
-            this.ChkAbs.Location = new System.Drawing.Point(6, 29);
-            this.ChkAbs.Name = "ChkAbs";
-            this.ChkAbs.Size = new System.Drawing.Size(47, 17);
-            this.ChkAbs.TabIndex = 1;
-            this.ChkAbs.Text = "ABS";
-            this.ChkAbs.UseVisualStyleBackColor = true;
-            // 
-            // ChkAirBag
-            // 
-            this.ChkAirBag.AutoSize = true;
-            this.ChkAirBag.Location = new System.Drawing.Point(6, 52);
-            this.ChkAirBag.Name = "ChkAirBag";
-            this.ChkAirBag.Size = new System.Drawing.Size(60, 17);
-            this.ChkAirBag.TabIndex = 2;
-            this.ChkAirBag.Text = "Air Bag";
-            this.ChkAirBag.UseVisualStyleBackColor = true;
-            // 
-            // ChkTravaEletrica
-            // 
-            this.ChkTravaEletrica.AutoSize = true;
-            this.ChkTravaEletrica.Location = new System.Drawing.Point(6, 124);
-            this.ChkTravaEletrica.Name = "ChkTravaEletrica";
-            this.ChkTravaEletrica.Size = new System.Drawing.Size(92, 17);
-            this.ChkTravaEletrica.TabIndex = 3;
-            this.ChkTravaEletrica.Text = "Trava Elétrica";
-            this.ChkTravaEletrica.UseVisualStyleBackColor = true;
+            this.ChkPortas.AutoSize = true;
+            this.ChkPortas.Location = new System.Drawing.Point(6, 101);
+            this.ChkPortas.Name = "ChkPortas";
+            this.ChkPortas.Size = new System.Drawing.Size(56, 17);
+            this.ChkPortas.TabIndex = 5;
+            this.ChkPortas.Text = "Portas";
+            this.ChkPortas.UseVisualStyleBackColor = true;
             // 
             // ChkVidroEletrico
             // 
@@ -144,22 +115,52 @@
             this.ChkVidroEletrico.Text = "Vidro Elétrico";
             this.ChkVidroEletrico.UseVisualStyleBackColor = true;
             // 
-            // ChkPortas
+            // ChkTravaEletrica
             // 
-            this.ChkPortas.AutoSize = true;
-            this.ChkPortas.Location = new System.Drawing.Point(6, 101);
-            this.ChkPortas.Name = "ChkPortas";
-            this.ChkPortas.Size = new System.Drawing.Size(56, 17);
-            this.ChkPortas.TabIndex = 5;
-            this.ChkPortas.Text = "Portas";
-            this.ChkPortas.UseVisualStyleBackColor = true;
+            this.ChkTravaEletrica.AutoSize = true;
+            this.ChkTravaEletrica.Location = new System.Drawing.Point(6, 124);
+            this.ChkTravaEletrica.Name = "ChkTravaEletrica";
+            this.ChkTravaEletrica.Size = new System.Drawing.Size(92, 17);
+            this.ChkTravaEletrica.TabIndex = 3;
+            this.ChkTravaEletrica.Text = "Trava Elétrica";
+            this.ChkTravaEletrica.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // ChkAirBag
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 284);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(111, 20);
-            this.textBox1.TabIndex = 5;
+            this.ChkAirBag.AutoSize = true;
+            this.ChkAirBag.Location = new System.Drawing.Point(6, 52);
+            this.ChkAirBag.Name = "ChkAirBag";
+            this.ChkAirBag.Size = new System.Drawing.Size(60, 17);
+            this.ChkAirBag.TabIndex = 2;
+            this.ChkAirBag.Text = "Air Bag";
+            this.ChkAirBag.UseVisualStyleBackColor = true;
+            // 
+            // ChkAbs
+            // 
+            this.ChkAbs.AutoSize = true;
+            this.ChkAbs.Location = new System.Drawing.Point(6, 29);
+            this.ChkAbs.Name = "ChkAbs";
+            this.ChkAbs.Size = new System.Drawing.Size(47, 17);
+            this.ChkAbs.TabIndex = 1;
+            this.ChkAbs.Text = "ABS";
+            this.ChkAbs.UseVisualStyleBackColor = true;
+            // 
+            // ChkArCondicionado
+            // 
+            this.ChkArCondicionado.AutoSize = true;
+            this.ChkArCondicionado.Location = new System.Drawing.Point(6, 78);
+            this.ChkArCondicionado.Name = "ChkArCondicionado";
+            this.ChkArCondicionado.Size = new System.Drawing.Size(104, 17);
+            this.ChkArCondicionado.TabIndex = 0;
+            this.ChkArCondicionado.Text = "Ar Condicionado";
+            this.ChkArCondicionado.UseVisualStyleBackColor = true;
+            // 
+            // TxtValorDiaria
+            // 
+            this.TxtValorDiaria.Location = new System.Drawing.Point(79, 284);
+            this.TxtValorDiaria.Name = "TxtValorDiaria";
+            this.TxtValorDiaria.Size = new System.Drawing.Size(111, 20);
+            this.TxtValorDiaria.TabIndex = 5;
             // 
             // label3
             // 
@@ -179,6 +180,7 @@
             this.BtnLimpar.TabIndex = 7;
             this.BtnLimpar.Text = "Limpar";
             this.BtnLimpar.UseVisualStyleBackColor = true;
+            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
             // BtnSalvar
             // 
@@ -188,6 +190,7 @@
             this.BtnSalvar.TabIndex = 8;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // CadTipoVeiculo
             // 
@@ -197,7 +200,7 @@
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.BtnLimpar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtValorDiaria);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TxtGrupo);
             this.Controls.Add(this.label2);
@@ -225,7 +228,7 @@
         private System.Windows.Forms.CheckBox ChkAirBag;
         private System.Windows.Forms.CheckBox ChkAbs;
         private System.Windows.Forms.CheckBox ChkArCondicionado;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtValorDiaria;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtnLimpar;
         private System.Windows.Forms.Button BtnSalvar;
