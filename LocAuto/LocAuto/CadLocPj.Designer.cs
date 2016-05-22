@@ -77,6 +77,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.CbxNomeFantasia = new System.Windows.Forms.ComboBox();
+            this.BtnVistoria = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -107,9 +110,9 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(29, 176);
+            this.groupBox2.Location = new System.Drawing.Point(29, 201);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(555, 270);
+            this.groupBox2.Size = new System.Drawing.Size(555, 273);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados Locação";
@@ -416,6 +419,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.CbxNomeFantasia);
+            this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.TxtNomeCondutor);
             this.groupBox1.Controls.Add(this.DtpDtValidade);
             this.groupBox1.Controls.Add(this.TxtCodigo);
@@ -428,16 +433,16 @@
             this.groupBox1.Controls.Add(this.TxtCnh);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(29, 18);
+            this.groupBox1.Location = new System.Drawing.Point(29, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(555, 130);
+            this.groupBox1.Size = new System.Drawing.Size(555, 154);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Cliente";
             // 
             // TxtNomeCondutor
             // 
-            this.TxtNomeCondutor.Location = new System.Drawing.Point(67, 23);
+            this.TxtNomeCondutor.Location = new System.Drawing.Point(67, 55);
             this.TxtNomeCondutor.Name = "TxtNomeCondutor";
             this.TxtNomeCondutor.Size = new System.Drawing.Size(305, 20);
             this.TxtNomeCondutor.TabIndex = 13;
@@ -445,14 +450,14 @@
             // DtpDtValidade
             // 
             this.DtpDtValidade.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtpDtValidade.Location = new System.Drawing.Point(272, 55);
+            this.DtpDtValidade.Location = new System.Drawing.Point(272, 87);
             this.DtpDtValidade.Name = "DtpDtValidade";
             this.DtpDtValidade.Size = new System.Drawing.Size(100, 20);
             this.DtpDtValidade.TabIndex = 12;
             // 
             // TxtCodigo
             // 
-            this.TxtCodigo.Location = new System.Drawing.Point(460, 23);
+            this.TxtCodigo.Location = new System.Drawing.Point(460, 24);
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Size = new System.Drawing.Size(69, 20);
             this.TxtCodigo.TabIndex = 11;
@@ -460,7 +465,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(414, 26);
+            this.label8.Location = new System.Drawing.Point(414, 27);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 13);
             this.label8.TabIndex = 10;
@@ -469,7 +474,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(218, 88);
+            this.label7.Location = new System.Drawing.Point(218, 120);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 9;
@@ -477,14 +482,14 @@
             // 
             // TxtEmail
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(272, 85);
+            this.TxtEmail.Location = new System.Drawing.Point(272, 117);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(165, 20);
             this.TxtEmail.TabIndex = 8;
             // 
             // TxtNumero
             // 
-            this.TxtNumero.Location = new System.Drawing.Point(67, 85);
+            this.TxtNumero.Location = new System.Drawing.Point(67, 117);
             this.TxtNumero.Name = "TxtNumero";
             this.TxtNumero.Size = new System.Drawing.Size(129, 20);
             this.TxtNumero.TabIndex = 7;
@@ -492,7 +497,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 88);
+            this.label6.Location = new System.Drawing.Point(10, 120);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 6;
@@ -501,7 +506,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(218, 58);
+            this.label5.Location = new System.Drawing.Point(218, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 13);
             this.label5.TabIndex = 5;
@@ -509,7 +514,7 @@
             // 
             // TxtCnh
             // 
-            this.TxtCnh.Location = new System.Drawing.Point(67, 55);
+            this.TxtCnh.Location = new System.Drawing.Point(67, 87);
             this.TxtCnh.Name = "TxtCnh";
             this.TxtCnh.Size = new System.Drawing.Size(129, 20);
             this.TxtCnh.TabIndex = 3;
@@ -517,7 +522,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 58);
+            this.label4.Location = new System.Drawing.Point(10, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 13);
             this.label4.TabIndex = 1;
@@ -526,7 +531,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 26);
+            this.label3.Location = new System.Drawing.Point(10, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 0;
@@ -534,33 +539,63 @@
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Location = new System.Drawing.Point(509, 465);
+            this.BtnSalvar.Location = new System.Drawing.Point(509, 490);
             this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.BtnSalvar.Size = new System.Drawing.Size(75, 26);
             this.BtnSalvar.TabIndex = 6;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // BtnLimpar
             // 
-            this.BtnLimpar.Location = new System.Drawing.Point(428, 465);
+            this.BtnLimpar.Location = new System.Drawing.Point(428, 490);
             this.BtnLimpar.Name = "BtnLimpar";
-            this.BtnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.BtnLimpar.Size = new System.Drawing.Size(75, 26);
             this.BtnLimpar.TabIndex = 7;
             this.BtnLimpar.Text = "Limpar";
             this.BtnLimpar.UseVisualStyleBackColor = true;
+            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(10, 27);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(48, 13);
+            this.label23.TabIndex = 14;
+            this.label23.Text = "Empresa";
+            // 
+            // CbxNomeFantasia
+            // 
+            this.CbxNomeFantasia.FormattingEnabled = true;
+            this.CbxNomeFantasia.Location = new System.Drawing.Point(67, 24);
+            this.CbxNomeFantasia.Name = "CbxNomeFantasia";
+            this.CbxNomeFantasia.Size = new System.Drawing.Size(305, 21);
+            this.CbxNomeFantasia.TabIndex = 15;
+            // 
+            // BtnVistoria
+            // 
+            this.BtnVistoria.Location = new System.Drawing.Point(29, 492);
+            this.BtnVistoria.Name = "BtnVistoria";
+            this.BtnVistoria.Size = new System.Drawing.Size(75, 23);
+            this.BtnVistoria.TabIndex = 8;
+            this.BtnVistoria.Text = "Vistoria";
+            this.BtnVistoria.UseVisualStyleBackColor = true;
             // 
             // CadLocPj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 500);
+            this.ClientSize = new System.Drawing.Size(623, 532);
+            this.Controls.Add(this.BtnVistoria);
             this.Controls.Add(this.BtnLimpar);
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "CadLocPj";
             this.Text = "Locação PJ";
+            this.Load += new System.EventHandler(this.CadLocPj_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -622,5 +657,8 @@
         private System.Windows.Forms.TextBox TxtNomeCondutor;
         private System.Windows.Forms.Button BtnSalvar;
         private System.Windows.Forms.Button BtnLimpar;
+        private System.Windows.Forms.ComboBox CbxNomeFantasia;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button BtnVistoria;
     }
 }
