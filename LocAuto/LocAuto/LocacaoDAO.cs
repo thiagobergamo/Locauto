@@ -32,11 +32,11 @@ namespace LocAuto
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
                 id = cmd.LastInsertedId;
-                msg = "Locação salva com sucesso.";
+                msg = id.ToString();
             }
             catch (Exception ex)
             {
-                return "Erro ao salvar locação - " + ex;
+                msg = "Erro ao salvar locação - " + ex;
             }
             finally
             {

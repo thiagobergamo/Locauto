@@ -77,6 +77,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
+            this.btnVistoria = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -401,6 +402,7 @@
             this.TxtValorCaucao.Name = "TxtValorCaucao";
             this.TxtValorCaucao.Size = new System.Drawing.Size(61, 20);
             this.TxtValorCaucao.TabIndex = 8;
+            this.TxtValorCaucao.Text = "0";
             // 
             // label16
             // 
@@ -580,11 +582,22 @@
             this.BtnLimpar.Text = "Limpar";
             this.BtnLimpar.UseVisualStyleBackColor = true;
             // 
+            // btnVistoria
+            // 
+            this.btnVistoria.Location = new System.Drawing.Point(29, 470);
+            this.btnVistoria.Name = "btnVistoria";
+            this.btnVistoria.Size = new System.Drawing.Size(75, 23);
+            this.btnVistoria.TabIndex = 11;
+            this.btnVistoria.Text = "Vistoria";
+            this.btnVistoria.UseVisualStyleBackColor = true;
+            this.btnVistoria.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CadLocPf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 505);
+            this.Controls.Add(this.btnVistoria);
             this.Controls.Add(this.BtnLimpar);
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.groupBox2);
@@ -653,5 +666,6 @@
         private System.Windows.Forms.DateTimePicker DtpDtValidade;
         private System.Windows.Forms.Button BtnSalvar;
         private System.Windows.Forms.Button BtnLimpar;
+        private System.Windows.Forms.Button btnVistoria;
     }
 }
