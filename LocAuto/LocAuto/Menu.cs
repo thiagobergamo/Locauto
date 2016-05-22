@@ -33,7 +33,7 @@ namespace LocAuto
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         
+            
         }
 
         private void pessoaFísicaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,6 +41,11 @@ namespace LocAuto
             CadClienteFisica cadClienteFisica = new CadClienteFisica();
             cadClienteFisica.MdiParent = this;
             cadClienteFisica.Show();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
