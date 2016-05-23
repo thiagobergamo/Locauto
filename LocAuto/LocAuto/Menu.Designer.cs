@@ -34,18 +34,22 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeTelefonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.situaçãoDoVeículoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opcionaisLocaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pessoaFísicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pessoaJurídicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.locaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.situaçãoDoVeículoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pessoaFisícaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pessoaJurídicaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.veículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroVeículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grupoDoVeículoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.opcionaisLocaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pessoaJurídicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pessoaFisícaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pessoaJurídicaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.locaçõesEmAbertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pessoaFísicaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pessoaJurídicaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +59,8 @@
             this.cadastrosToolStripMenuItem,
             this.usuáriosToolStripMenuItem,
             this.locaçãoToolStripMenuItem,
-            this.veículoToolStripMenuItem});
+            this.veículoToolStripMenuItem,
+            this.consultaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(719, 24);
@@ -74,7 +79,7 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.clientesToolStripMenuItem.Text = "Usuário";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -85,7 +90,7 @@
             this.situaçãoDoVeículoToolStripMenuItem2,
             this.opcionaisLocaçãoToolStripMenuItem});
             this.geraisToolStripMenuItem.Name = "geraisToolStripMenuItem";
-            this.geraisToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.geraisToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.geraisToolStripMenuItem.Text = "Gerais";
             // 
             // tipoDeTelefonesToolStripMenuItem
@@ -94,6 +99,20 @@
             this.tipoDeTelefonesToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.tipoDeTelefonesToolStripMenuItem.Text = "Tipo de Telefone";
             this.tipoDeTelefonesToolStripMenuItem.Click += new System.EventHandler(this.tipoDeTelefonesToolStripMenuItem_Click);
+            // 
+            // situaçãoDoVeículoToolStripMenuItem2
+            // 
+            this.situaçãoDoVeículoToolStripMenuItem2.Name = "situaçãoDoVeículoToolStripMenuItem2";
+            this.situaçãoDoVeículoToolStripMenuItem2.Size = new System.Drawing.Size(177, 22);
+            this.situaçãoDoVeículoToolStripMenuItem2.Text = "Situação do Veículo";
+            this.situaçãoDoVeículoToolStripMenuItem2.Click += new System.EventHandler(this.situaçãoDoVeículoToolStripMenuItem2_Click);
+            // 
+            // opcionaisLocaçãoToolStripMenuItem
+            // 
+            this.opcionaisLocaçãoToolStripMenuItem.Name = "opcionaisLocaçãoToolStripMenuItem";
+            this.opcionaisLocaçãoToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.opcionaisLocaçãoToolStripMenuItem.Text = "Opcionais Locação";
+            this.opcionaisLocaçãoToolStripMenuItem.Click += new System.EventHandler(this.opcionaisLocaçãoToolStripMenuItem_Click);
             // 
             // usuáriosToolStripMenuItem
             // 
@@ -110,7 +129,7 @@
             this.pessoaFísicaToolStripMenuItem,
             this.pessoaJurídicaToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
             // 
@@ -121,6 +140,13 @@
             this.pessoaFísicaToolStripMenuItem.Text = "Pessoa Física";
             this.pessoaFísicaToolStripMenuItem.Click += new System.EventHandler(this.pessoaFísicaToolStripMenuItem_Click);
             // 
+            // pessoaJurídicaToolStripMenuItem
+            // 
+            this.pessoaJurídicaToolStripMenuItem.Name = "pessoaJurídicaToolStripMenuItem";
+            this.pessoaJurídicaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.pessoaJurídicaToolStripMenuItem.Text = "Pessoa Jurídica";
+            this.pessoaJurídicaToolStripMenuItem.Click += new System.EventHandler(this.pessoaJurídicaToolStripMenuItem_Click);
+            // 
             // locaçãoToolStripMenuItem
             // 
             this.locaçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -130,12 +156,19 @@
             this.locaçãoToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.locaçãoToolStripMenuItem.Text = "Locação";
             // 
-            // situaçãoDoVeículoToolStripMenuItem2
+            // pessoaFisícaToolStripMenuItem
             // 
-            this.situaçãoDoVeículoToolStripMenuItem2.Name = "situaçãoDoVeículoToolStripMenuItem2";
-            this.situaçãoDoVeículoToolStripMenuItem2.Size = new System.Drawing.Size(177, 22);
-            this.situaçãoDoVeículoToolStripMenuItem2.Text = "Situação do Veículo";
-            this.situaçãoDoVeículoToolStripMenuItem2.Click += new System.EventHandler(this.situaçãoDoVeículoToolStripMenuItem2_Click);
+            this.pessoaFisícaToolStripMenuItem.Name = "pessoaFisícaToolStripMenuItem";
+            this.pessoaFisícaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.pessoaFisícaToolStripMenuItem.Text = "Pessoa Física";
+            this.pessoaFisícaToolStripMenuItem.Click += new System.EventHandler(this.pessoaFisícaToolStripMenuItem_Click);
+            // 
+            // pessoaJurídicaToolStripMenuItem1
+            // 
+            this.pessoaJurídicaToolStripMenuItem1.Name = "pessoaJurídicaToolStripMenuItem1";
+            this.pessoaJurídicaToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.pessoaJurídicaToolStripMenuItem1.Text = "Pessoa Jurídica";
+            this.pessoaJurídicaToolStripMenuItem1.Click += new System.EventHandler(this.pessoaJurídicaToolStripMenuItem1_Click);
             // 
             // veículoToolStripMenuItem
             // 
@@ -160,33 +193,36 @@
             this.grupoDoVeículoToolStripMenuItem1.Text = "Grupo do Veículo";
             this.grupoDoVeículoToolStripMenuItem1.Click += new System.EventHandler(this.grupoDoVeículoToolStripMenuItem1_Click);
             // 
-            // opcionaisLocaçãoToolStripMenuItem
+            // consultaToolStripMenuItem
             // 
-            this.opcionaisLocaçãoToolStripMenuItem.Name = "opcionaisLocaçãoToolStripMenuItem";
-            this.opcionaisLocaçãoToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.opcionaisLocaçãoToolStripMenuItem.Text = "Opcionais Locação";
-            this.opcionaisLocaçãoToolStripMenuItem.Click += new System.EventHandler(this.opcionaisLocaçãoToolStripMenuItem_Click);
+            this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.locaçõesEmAbertoToolStripMenuItem});
+            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.consultaToolStripMenuItem.Text = "Consulta";
             // 
-            // pessoaJurídicaToolStripMenuItem
+            // locaçõesEmAbertoToolStripMenuItem
             // 
-            this.pessoaJurídicaToolStripMenuItem.Name = "pessoaJurídicaToolStripMenuItem";
-            this.pessoaJurídicaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.pessoaJurídicaToolStripMenuItem.Text = "Pessoa Jurídica";
-            this.pessoaJurídicaToolStripMenuItem.Click += new System.EventHandler(this.pessoaJurídicaToolStripMenuItem_Click);
+            this.locaçõesEmAbertoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pessoaFísicaToolStripMenuItem1,
+            this.pessoaJurídicaToolStripMenuItem2});
+            this.locaçõesEmAbertoToolStripMenuItem.Name = "locaçõesEmAbertoToolStripMenuItem";
+            this.locaçõesEmAbertoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.locaçõesEmAbertoToolStripMenuItem.Text = "Locações em aberto";
             // 
-            // pessoaFisícaToolStripMenuItem
+            // pessoaFísicaToolStripMenuItem1
             // 
-            this.pessoaFisícaToolStripMenuItem.Name = "pessoaFisícaToolStripMenuItem";
-            this.pessoaFisícaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.pessoaFisícaToolStripMenuItem.Text = "Pessoa Física";
-            this.pessoaFisícaToolStripMenuItem.Click += new System.EventHandler(this.pessoaFisícaToolStripMenuItem_Click);
+            this.pessoaFísicaToolStripMenuItem1.Name = "pessoaFísicaToolStripMenuItem1";
+            this.pessoaFísicaToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.pessoaFísicaToolStripMenuItem1.Text = "Pessoa Física";
+            this.pessoaFísicaToolStripMenuItem1.Click += new System.EventHandler(this.pessoaFísicaToolStripMenuItem1_Click);
             // 
-            // pessoaJurídicaToolStripMenuItem1
+            // pessoaJurídicaToolStripMenuItem2
             // 
-            this.pessoaJurídicaToolStripMenuItem1.Name = "pessoaJurídicaToolStripMenuItem1";
-            this.pessoaJurídicaToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
-            this.pessoaJurídicaToolStripMenuItem1.Text = "Pessoa Jurídica";
-            this.pessoaJurídicaToolStripMenuItem1.Click += new System.EventHandler(this.pessoaJurídicaToolStripMenuItem1_Click);
+            this.pessoaJurídicaToolStripMenuItem2.Name = "pessoaJurídicaToolStripMenuItem2";
+            this.pessoaJurídicaToolStripMenuItem2.Size = new System.Drawing.Size(153, 22);
+            this.pessoaJurídicaToolStripMenuItem2.Text = "Pessoa Jurídica";
+            this.pessoaJurídicaToolStripMenuItem2.Click += new System.EventHandler(this.pessoaJurídicaToolStripMenuItem2_Click);
             // 
             // Menu
             // 
@@ -230,5 +266,9 @@
         private System.Windows.Forms.ToolStripMenuItem veículoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroVeículoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grupoDoVeículoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem locaçõesEmAbertoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pessoaFísicaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pessoaJurídicaToolStripMenuItem2;
     }
 }

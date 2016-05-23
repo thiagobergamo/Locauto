@@ -121,6 +121,12 @@
     <Compile Include="ConsultaLocacao.Designer.cs">
       <DependentUpon>ConsultaLocacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consulta_locacaoPf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_locacaoPf.Designer.cs">
+      <DependentUpon>Consulta_locacaoPf.cs</DependentUpon>
+    </Compile>
     <Compile Include="Locacao.cs" />
     <Compile Include="LocacaoDAO.cs" />
     <Compile Include="Menu.cs">
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaLocacao.resx">
       <DependentUpon>ConsultaLocacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_locacaoPf.resx">
+      <DependentUpon>Consulta_locacaoPf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

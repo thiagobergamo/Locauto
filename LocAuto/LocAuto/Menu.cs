@@ -117,5 +117,19 @@ namespace LocAuto
             cadTipoVeiculo.MdiParent = this;
             cadTipoVeiculo.Show();
         }
+
+        private void pessoaFísicaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Consulta_locacaoPf consulta_locacaoPf = new Consulta_locacaoPf();
+            consulta_locacaoPf.MdiParent = this;
+            consulta_locacaoPf.Show();
+        }
+
+        private void pessoaJurídicaToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            ConsultaLocacao consultaLocacao = new ConsultaLocacao();
+            consultaLocacao.MdiParent = this;
+            consultaLocacao.Show();
+        }
     }
 }
