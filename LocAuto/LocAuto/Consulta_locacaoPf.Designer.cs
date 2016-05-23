@@ -96,6 +96,7 @@
             this.BtnDevolucao.TabIndex = 1;
             this.BtnDevolucao.Text = "Devolução";
             this.BtnDevolucao.UseVisualStyleBackColor = true;
+            this.BtnDevolucao.Click += new System.EventHandler(this.BtnDevolucao_Click);
             // 
             // Consulta_locacaoPf
             // 

@@ -23,8 +23,8 @@ namespace LocAuto
                 cmd.Parameters.Add(new MySqlParameter("codigo_locacao", vistoria.CodigoLocacao));
                 cmd.Parameters.Add(new MySqlParameter("codigo_usuario", vistoria.CodigoUsuario));
                 cmd.Parameters.Add(new MySqlParameter("km_loc", vistoria.KmLoc));
-                cmd.Parameters.Add(new MySqlParameter("nivel_comb_loc", vistoria.LaudoLoc));
-                cmd.Parameters.Add(new MySqlParameter("laudo_loc", vistoria.NivelCombLoc));
+                cmd.Parameters.Add(new MySqlParameter("nivel_comb_loc", vistoria.NivelCombLoc));
+                cmd.Parameters.Add(new MySqlParameter("laudo_loc",vistoria.LaudoLoc));
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
                 return "Vistoria salvo com sucesso.";
@@ -44,7 +44,8 @@ namespace LocAuto
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
             conn = cf.ObterConexao();
-            String cmdText = "UPDATE vistoria set km_dev = @km_dev, nivel_comb_dev = @nivel_comb_dev, laudo_dev = @laudo_dev where codigo_locacao = @codigo_locacao;";
+            String cmdText = "UPDATE vistoria set km_dev = @km_dev, nivel_comb_dev = @nivel_comb_dev, laudo_dev = @laudo_dev where codigo_locacao = @codigo_locacao;" +
+                             "UPDATE locacao set data_devolucao = now() where codigo = @codigo_locacao1;";
 
             try
             {
@@ -54,8 +55,10 @@ namespace LocAuto
                 cmd.Parameters.Add(new MySqlParameter("km_dev", vistoria.KmDev));
                 cmd.Parameters.Add(new MySqlParameter("nivel_comb_dev", vistoria.NivelCombDev));
                 cmd.Parameters.Add(new MySqlParameter("laudo_dev", vistoria.LaudoDev));
+                cmd.Parameters.Add(new MySqlParameter("codigo_locacao1", vistoria.CodigoLocacao));
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
+                
                 return "Vistoria salvo com sucesso.";
             }
             catch (Exception ex)
@@ -75,7 +78,7 @@ namespace LocAuto
             MySqlConnection conn;
             conn = cf.ObterConexao();
 
-            String cmdText = "select * from vistoria where codigo = 188" ;
+            String cmdText = "select * from vistoria where codigo_locacao = @codigo" ;
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(cmdText, conn);
             cmd.Parameters.Add(new MySqlParameter("codigo", codigo.ToString()));

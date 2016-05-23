@@ -52,5 +52,12 @@ namespace LocAuto
                 }
             }
         }
+
+        private void BtnDevolucao_Click(object sender, EventArgs e)
+        {
+            CadVistoria cadVistoria = new CadVistoria();
+            cadVistoria.codLocacao = Convert.ToInt32(DgvConsultaPf.CurrentRow.Cells["Id_loc"].Value);
+            cadVistoria.Show();
+        }
     }
 }

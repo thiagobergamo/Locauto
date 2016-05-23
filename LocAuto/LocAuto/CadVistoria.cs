@@ -43,14 +43,32 @@ namespace LocAuto
             vistoria.KmLoc = Convert.ToInt32(TxtKmLoc.Text);
             vistoria.LaudoLoc = TxtLaudoLoc.Text;
             vistoria.NivelCombLoc = TxtNivelCombLoc.Text;
+            
 
-            VistoriaDAO vistoriaDAO = new VistoriaDAO();
-            msg = vistoriaDAO.inserir(vistoria);
-            TxtKmLoc.Text = "";
-            TxtNivelCombLoc.Text = "";
-            TxtNivelCombLoc.Text = "";
-            MessageBox.Show(msg);
-            this.Close();
+
+            if (TxtLaudoDev.Text == "")
+            {
+                VistoriaDAO vistoriaDAO = new VistoriaDAO();
+                msg = vistoriaDAO.inserir(vistoria);
+                TxtKmLoc.Text = "";
+                TxtNivelCombLoc.Text = "";
+                TxtNivelCombLoc.Text = "";
+                MessageBox.Show(msg);
+                this.Close();
+            }
+            else
+            {
+                vistoria.KmDev = Convert.ToInt32(TxtKmDev.Text);
+                vistoria.NivelCombDev = TxtNivelCombDev.Text;
+                vistoria.LaudoDev = TxtLaudoDev.Text;
+                VistoriaDAO vistoriaDAO = new VistoriaDAO();
+                msg = vistoriaDAO.atualizar(vistoria);
+                MessageBox.Show(msg);
+                this.Close();
+            }
+
+
+
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
@@ -90,7 +108,7 @@ namespace LocAuto
             {
                 TxtKmLoc.Text = vistoria.KmLoc.ToString();
                 TxtNivelCombLoc.Text = vistoria.NivelCombLoc.ToString();
-                TxtLaudoLoc.Text = vistoria.NivelCombLoc.ToString();
+                TxtLaudoLoc.Text = vistoria.LaudoLoc.ToString();
             }
             catch { }
 

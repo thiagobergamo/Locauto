@@ -96,6 +96,7 @@
             this.BtnDevolucao.TabIndex = 2;
             this.BtnDevolucao.Text = "Devolução";
             this.BtnDevolucao.UseVisualStyleBackColor = true;
+            this.BtnDevolucao.Click += new System.EventHandler(this.BtnDevolucao_Click);
             // 
             // ConsultaLocacao
             // 
