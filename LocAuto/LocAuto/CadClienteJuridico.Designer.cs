@@ -34,6 +34,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.TxtLogin = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.MskValCnh = new System.Windows.Forms.DateTimePicker();
             this.Senha = new System.Windows.Forms.Label();
             this.TxtNomCodutor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -74,7 +75,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Tipo = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MskValCnh = new System.Windows.Forms.DateTimePicker();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -141,6 +141,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Documentos Condutor";
             // 
+            // MskValCnh
+            // 
+            this.MskValCnh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.MskValCnh.Location = new System.Drawing.Point(390, 23);
+            this.MskValCnh.Name = "MskValCnh";
+            this.MskValCnh.Size = new System.Drawing.Size(82, 20);
+            this.MskValCnh.TabIndex = 15;
+            // 
             // Senha
             // 
             this.Senha.AutoSize = true;
@@ -156,7 +164,6 @@
             this.TxtNomCodutor.Name = "TxtNomCodutor";
             this.TxtNomCodutor.Size = new System.Drawing.Size(215, 20);
             this.TxtNomCodutor.TabIndex = 16;
-            this.TxtNomCodutor.Text = "Nayara cristina NAscimento Julio";
             // 
             // label7
             // 
@@ -173,7 +180,6 @@
             this.TxtCnh.Name = "TxtCnh";
             this.TxtCnh.Size = new System.Drawing.Size(120, 20);
             this.TxtCnh.TabIndex = 14;
-            this.TxtCnh.Text = "25639856999";
             // 
             // label5
             // 
@@ -191,7 +197,6 @@
             this.MskCnpj.Name = "MskCnpj";
             this.MskCnpj.Size = new System.Drawing.Size(120, 20);
             this.MskCnpj.TabIndex = 1;
-            this.MskCnpj.Text = "11221111111111";
             this.MskCnpj.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // TxtInsc
@@ -344,7 +349,7 @@
             this.CmbEstado.Location = new System.Drawing.Point(390, 176);
             this.CmbEstado.Name = "CmbEstado";
             this.CmbEstado.Size = new System.Drawing.Size(38, 21);
-            this.CmbEstado.TabIndex = 13;
+            this.CmbEstado.TabIndex = 11;
             // 
             // label12
             // 
@@ -386,7 +391,7 @@
             this.MskCep.Mask = "99.999-999";
             this.MskCep.Name = "MskCep";
             this.MskCep.Size = new System.Drawing.Size(62, 20);
-            this.MskCep.TabIndex = 11;
+            this.MskCep.TabIndex = 13;
             // 
             // CEP
             // 
@@ -403,6 +408,7 @@
             this.TxtBairro.Name = "TxtBairro";
             this.TxtBairro.Size = new System.Drawing.Size(81, 20);
             this.TxtBairro.TabIndex = 10;
+            this.TxtBairro.Text = "9";
             // 
             // label9
             // 
@@ -419,8 +425,7 @@
             this.TxtComplemento.Location = new System.Drawing.Point(72, 177);
             this.TxtComplemento.Name = "TxtComplemento";
             this.TxtComplemento.Size = new System.Drawing.Size(151, 20);
-            this.TxtComplemento.TabIndex = 9;
-            this.TxtComplemento.Text = "Parque dos Servidores";
+            this.TxtComplemento.TabIndex = 10;
             // 
             // label10
             // 
@@ -445,7 +450,6 @@
             this.TxtEndereco.Name = "TxtEndereco";
             this.TxtEndereco.Size = new System.Drawing.Size(215, 20);
             this.TxtEndereco.TabIndex = 7;
-            this.TxtEndereco.Text = "Avenida Jose Antonio Ferrarezi";
             // 
             // Num
             // 
@@ -471,7 +475,6 @@
             this.TxtRazSocial.Name = "TxtRazSocial";
             this.TxtRazSocial.Size = new System.Drawing.Size(238, 20);
             this.TxtRazSocial.TabIndex = 3;
-            this.TxtRazSocial.Text = "Tintas exppresse ltds";
             // 
             // TxtEmail
             // 
@@ -479,7 +482,6 @@
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(151, 20);
             this.TxtEmail.TabIndex = 5;
-            this.TxtEmail.Text = "nayara.julio@gmail.com";
             // 
             // Email
             // 
@@ -541,14 +543,6 @@
             // 
             this.numero.HeaderText = "Número";
             this.numero.Name = "numero";
-            // 
-            // MskValCnh
-            // 
-            this.MskValCnh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.MskValCnh.Location = new System.Drawing.Point(390, 23);
-            this.MskValCnh.Name = "MskValCnh";
-            this.MskValCnh.Size = new System.Drawing.Size(82, 20);
-            this.MskValCnh.TabIndex = 48;
             // 
             // CadClienteJuridico
             // 

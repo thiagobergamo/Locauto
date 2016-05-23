@@ -54,7 +54,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.TxtCidade = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.MskCep = new System.Windows.Forms.MaskedTextBox();
             this.CEP = new System.Windows.Forms.Label();
             this.TxtBairro = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -72,6 +71,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Tipo = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MskCep = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -109,8 +109,7 @@
             this.TxtEmail.Location = new System.Drawing.Point(56, 72);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(144, 20);
-            this.TxtEmail.TabIndex = 2;
-            this.TxtEmail.Text = "nayara.julio@gmail.com";
+            this.TxtEmail.TabIndex = 3;
             // 
             // Email
             // 
@@ -157,7 +156,6 @@
             this.TxtNome.Name = "TxtNome";
             this.TxtNome.Size = new System.Drawing.Size(202, 20);
             this.TxtNome.TabIndex = 1;
-            this.TxtNome.Text = "Nayara cristina NAscimento Julio";
             // 
             // label2
             // 
@@ -192,7 +190,7 @@
             this.MskCpf.Mask = "999.999.999-99";
             this.MskCpf.Name = "MskCpf";
             this.MskCpf.Size = new System.Drawing.Size(105, 20);
-            this.MskCpf.TabIndex = 12;
+            this.MskCpf.TabIndex = 14;
             this.MskCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // label5
@@ -209,8 +207,7 @@
             this.TxtCnh.Location = new System.Drawing.Point(256, 19);
             this.TxtCnh.Name = "TxtCnh";
             this.TxtCnh.Size = new System.Drawing.Size(105, 20);
-            this.TxtCnh.TabIndex = 13;
-            this.TxtCnh.Text = "25639856999";
+            this.TxtCnh.TabIndex = 12;
             // 
             // TxtRg
             // 
@@ -218,7 +215,6 @@
             this.TxtRg.Name = "TxtRg";
             this.TxtRg.Size = new System.Drawing.Size(105, 20);
             this.TxtRg.TabIndex = 11;
-            this.TxtRg.Text = "478723957";
             // 
             // label6
             // 
@@ -275,7 +271,7 @@
             this.MskDtNascimento.Location = new System.Drawing.Point(347, 46);
             this.MskDtNascimento.Name = "MskDtNascimento";
             this.MskDtNascimento.Size = new System.Drawing.Size(82, 20);
-            this.MskDtNascimento.TabIndex = 60;
+            this.MskDtNascimento.TabIndex = 2;
             // 
             // TxtNum
             // 
@@ -283,7 +279,7 @@
             this.TxtNum.Name = "TxtNum";
             this.TxtNum.Size = new System.Drawing.Size(39, 20);
             this.TxtNum.TabIndex = 5;
-            this.TxtNum.Text = "29999";
+            this.TxtNum.Text = "0";
             // 
             // TxtLog
             // 
@@ -291,7 +287,6 @@
             this.TxtLog.Name = "TxtLog";
             this.TxtLog.Size = new System.Drawing.Size(202, 20);
             this.TxtLog.TabIndex = 4;
-            this.TxtLog.Text = "Avenida Jose Antonio Ferrarezi";
             // 
             // CmbEstado
             // 
@@ -344,7 +339,6 @@
             this.TxtCidade.Name = "TxtCidade";
             this.TxtCidade.Size = new System.Drawing.Size(144, 20);
             this.TxtCidade.TabIndex = 9;
-            this.TxtCidade.Text = "Ribeirão Preto";
             // 
             // label11
             // 
@@ -354,15 +348,6 @@
             this.label11.Size = new System.Drawing.Size(40, 13);
             this.label11.TabIndex = 57;
             this.label11.Text = "Cidade";
-            // 
-            // MskCep
-            // 
-            this.MskCep.Location = new System.Drawing.Point(347, 152);
-            this.MskCep.Mask = "99999-999";
-            this.MskCep.Name = "MskCep";
-            this.MskCep.Size = new System.Drawing.Size(69, 20);
-            this.MskCep.TabIndex = 10;
-            this.MskCep.Text = "14094160";
             // 
             // CEP
             // 
@@ -379,8 +364,8 @@
             this.TxtBairro.Location = new System.Drawing.Point(460, 100);
             this.TxtBairro.Name = "TxtBairro";
             this.TxtBairro.Size = new System.Drawing.Size(84, 20);
-            this.TxtBairro.TabIndex = 7;
-            this.TxtBairro.Text = "Bloco 3 Ap 205";
+            this.TxtBairro.TabIndex = 6;
+            this.TxtBairro.Text = ".";
             // 
             // label9
             // 
@@ -396,8 +381,7 @@
             this.TxtComplemento.Location = new System.Drawing.Point(56, 126);
             this.TxtComplemento.Name = "TxtComplemento";
             this.TxtComplemento.Size = new System.Drawing.Size(144, 20);
-            this.TxtComplemento.TabIndex = 6;
-            this.TxtComplemento.Text = "Parque dos Servidores";
+            this.TxtComplemento.TabIndex = 7;
             this.TxtComplemento.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label10
@@ -453,7 +437,7 @@
             this.MskValCnh.Location = new System.Drawing.Point(460, 19);
             this.MskValCnh.Name = "MskValCnh";
             this.MskValCnh.Size = new System.Drawing.Size(84, 20);
-            this.MskValCnh.TabIndex = 48;
+            this.MskValCnh.TabIndex = 13;
             // 
             // label13
             // 
@@ -522,6 +506,14 @@
             this.numero.HeaderText = "Número";
             this.numero.Name = "numero";
             // 
+            // MskCep
+            // 
+            this.MskCep.Location = new System.Drawing.Point(347, 152);
+            this.MskCep.Mask = "99999-999";
+            this.MskCep.Name = "MskCep";
+            this.MskCep.Size = new System.Drawing.Size(69, 20);
+            this.MskCep.TabIndex = 10;
+            // 
             // CadClienteFisica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -582,7 +574,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox TxtCidade;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.MaskedTextBox MskCep;
         private System.Windows.Forms.Label CEP;
         private System.Windows.Forms.TextBox TxtSenha;
         private System.Windows.Forms.TextBox TxtLoginWeb;
@@ -596,5 +587,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewComboBoxColumn Tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
+        private System.Windows.Forms.MaskedTextBox MskCep;
     }
 }

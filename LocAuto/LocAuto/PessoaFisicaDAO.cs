@@ -39,7 +39,6 @@ namespace LocAuto
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
                 id = cmd.LastInsertedId;
-                MessageBox.Show(id.ToString());
                 //return "Usuário salvo com sucesso.";
             }
             catch (Exception ex)
