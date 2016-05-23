@@ -56,27 +56,27 @@ namespace LocAuto
 
             conn.Open();
 
-            mSQL = "select valor from opcional where codigo = 0";
+            mSQL = "select valor from opcional where codigo = 1";
 
             cmd = new MySqlCommand(mSQL, conn);
             label18.Text = "R$ " + cmd.ExecuteScalar().ToString();
 
-            mSQL = "select valor from opcional where codigo = 1";
+            mSQL = "select valor from opcional where codigo = 2";
 
             cmd = new MySqlCommand(mSQL, conn);
             label19.Text = "R$ " + cmd.ExecuteScalar().ToString();
 
-            mSQL = "select valor from opcional where codigo = 2";
+            mSQL = "select valor from opcional where codigo = 3";
 
             cmd = new MySqlCommand(mSQL, conn);
             label20.Text = "R$ " + cmd.ExecuteScalar().ToString();
 
-            mSQL = "select valor from opcional where codigo = 3";
+            mSQL = "select valor from opcional where codigo = 4";
 
             cmd = new MySqlCommand(mSQL, conn);
             label21.Text = "R$ " + cmd.ExecuteScalar().ToString();
 
-            mSQL = "select valor from opcional where codigo = 4";
+            mSQL = "select valor from opcional where codigo = 5";
 
             cmd = new MySqlCommand(mSQL, conn);
             label22.Text = "R$ " + cmd.ExecuteScalar().ToString();
@@ -109,6 +109,39 @@ namespace LocAuto
             TxtValorOpc.Text = "";
             TxtValorCaucao.Text = "";
             ChkPago.Checked = false;
+        }
+
+        private void CbxNomeFantasia_Validated(object sender, EventArgs e)
+        {
+            PessoaJuridica pessoaJuridica = new PessoaJuridica();
+            PessoaJuridicaDAO pessoaJuridicaDao = new PessoaJuridicaDAO();
+            pessoaJuridica = pessoaJuridicaDao.Retornar(Convert.ToInt32(CbxNomeFantasia.SelectedValue));
+            TxtCodigo.Text = pessoaJuridica.Codigo.ToString();
+            TxtCnh.Text = pessoaJuridica.Cnh.ToString();
+            TxtEmail.Text = pessoaJuridica.Email;
+            TxtNomeCondutor.Text = pessoaJuridica.NomeCondutor;
+            ConnectionFactory cf = new ConnectionFactory();
+            MySqlConnection conn;
+            String mSQL;
+
+            conn = cf.ObterConexao();
+
+            conn.Open();
+            mSQL = "select telefone from telefone_cliente where codigo_cliente = @codigo and codigo_tipo_telefone = 1 limit 1";
+
+            MySqlCommand cmd = new MySqlCommand(mSQL, conn);
+            cmd.Parameters.Add(new MySqlParameter("codigo", CbxNomeFantasia.SelectedValue.ToString()));
+
+
+            try
+            {
+                TxtNumero.Text = cmd.ExecuteScalar().ToString();
+            }
+            catch { }
+
+
+            conn.Close();
+            CbxGrupo.Focus();
         }
     }
 }

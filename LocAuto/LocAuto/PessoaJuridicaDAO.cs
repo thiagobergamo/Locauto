@@ -102,6 +102,37 @@ namespace LocAuto
 
             return msg;
         }
+
+        public PessoaJuridica Retornar(int codigo)
+        {
+            PessoaJuridica pessoaJuridica = new PessoaJuridica();
+            ConnectionFactory cf = new ConnectionFactory();
+            MySqlConnection conn;
+            conn = cf.ObterConexao();
+
+            String cmdText = "select * " +
+                             "from cliente c " +
+                             "join pessoa_juridica j on j.codigo_cliente = c.codigo " +
+                             "where c.codigo = @codigo";
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+            cmd.Parameters.Add(new MySqlParameter("codigo", codigo.ToString()));
+            cmd.Prepare();
+            using (MySqlDataReader leitor = cmd.ExecuteReader())
+            {
+                while (leitor.Read())
+                {
+                    pessoaJuridica.Codigo = Convert.ToInt32(leitor["codigo"]);
+                    pessoaJuridica.NomeFantasia = leitor["nome_fantasia"].ToString();
+                    pessoaJuridica.Cnh = leitor["cnh"].ToString();
+                    pessoaJuridica.Email = leitor["email"].ToString();
+                    pessoaJuridica.NomeCondutor = leitor["nome_condutor"].ToString();
+                }
+            }
+            conn.Close();
+
+            return pessoaJuridica;
+        }
     }
 
 }

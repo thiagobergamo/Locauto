@@ -63,6 +63,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CbxNomeFantasia = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.TxtNomeCondutor = new System.Windows.Forms.TextBox();
             this.DtpDtValidade = new System.Windows.Forms.DateTimePicker();
             this.TxtCodigo = new System.Windows.Forms.TextBox();
@@ -77,8 +79,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
-            this.label23 = new System.Windows.Forms.Label();
-            this.CbxNomeFantasia = new System.Windows.Forms.ComboBox();
             this.BtnVistoria = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -440,6 +440,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Cliente";
             // 
+            // CbxNomeFantasia
+            // 
+            this.CbxNomeFantasia.FormattingEnabled = true;
+            this.CbxNomeFantasia.Location = new System.Drawing.Point(67, 24);
+            this.CbxNomeFantasia.Name = "CbxNomeFantasia";
+            this.CbxNomeFantasia.Size = new System.Drawing.Size(305, 21);
+            this.CbxNomeFantasia.TabIndex = 15;
+            this.CbxNomeFantasia.Validated += new System.EventHandler(this.CbxNomeFantasia_Validated);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(10, 27);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(48, 13);
+            this.label23.TabIndex = 14;
+            this.label23.Text = "Empresa";
+            // 
             // TxtNomeCondutor
             // 
             this.TxtNomeCondutor.Location = new System.Drawing.Point(67, 55);
@@ -556,23 +574,6 @@
             this.BtnLimpar.Text = "Limpar";
             this.BtnLimpar.UseVisualStyleBackColor = true;
             this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(10, 27);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(48, 13);
-            this.label23.TabIndex = 14;
-            this.label23.Text = "Empresa";
-            // 
-            // CbxNomeFantasia
-            // 
-            this.CbxNomeFantasia.FormattingEnabled = true;
-            this.CbxNomeFantasia.Location = new System.Drawing.Point(67, 24);
-            this.CbxNomeFantasia.Name = "CbxNomeFantasia";
-            this.CbxNomeFantasia.Size = new System.Drawing.Size(305, 21);
-            this.CbxNomeFantasia.TabIndex = 15;
             // 
             // BtnVistoria
             // 
