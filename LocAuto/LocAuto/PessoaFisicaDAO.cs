@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace LocAuto
 {
@@ -18,6 +19,7 @@ namespace LocAuto
             String cmdText = "INSERT INTO cliente ( email, login_web, senha_web, cnh, validade_cnh, logradouro, numero, complemento, bairro, cep, cidade, estado) values ( @email, @login_web, @senha_web, @cnh, @validade_cnh, @logradouro, @numero, @complemento, @bairro, @cep, @cidade, @estado);";
             long id;
             id = 0;
+
             try
             {
                 conn.Open();
@@ -37,6 +39,7 @@ namespace LocAuto
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
                 id = cmd.LastInsertedId;
+                MessageBox.Show(id.ToString());
                 //return "Usuário salvo com sucesso.";
             }
             catch (Exception ex)

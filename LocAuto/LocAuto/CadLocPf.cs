@@ -13,6 +13,7 @@ namespace LocAuto
 {
     public partial class CadLocPf : Form
     {
+        public int idLocacao { get; set; }
         public CadLocPf()
         {
             InitializeComponent();
@@ -311,7 +312,7 @@ namespace LocAuto
             locacao.Pago = Convert.ToInt32(ChkPago.Checked).ToString();
             LocacaoDAO dao = new LocacaoDAO();
             msg = dao.Inserir(locacao);
-            TxtCodigo.Text = msg;
+            idLocacao = Convert.ToInt32(msg);
             MessageBox.Show("Locação salva com sucesso");
 
         }
@@ -319,7 +320,7 @@ namespace LocAuto
         private void button1_Click(object sender, EventArgs e)
         {
             CadVistoria cadVistoria = new CadVistoria();
-            cadVistoria.codLocacao = Convert.ToInt32(TxtCodigo.Text);
+            cadVistoria.codLocacao = idLocacao;
             cadVistoria.Show();
         }
     }

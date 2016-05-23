@@ -35,8 +35,8 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.ChkAssentoElevacao = new System.Windows.Forms.CheckBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.ChkCadeiraBebe = new System.Windows.Forms.CheckBox();
             this.ChkNavegadorGps = new System.Windows.Forms.CheckBox();
             this.ChkCoberturaTerceiros = new System.Windows.Forms.CheckBox();
@@ -133,8 +133,8 @@
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.ChkAssentoElevacao);
+            this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.ChkCadeiraBebe);
             this.panel1.Controls.Add(this.ChkNavegadorGps);
             this.panel1.Controls.Add(this.ChkCoberturaTerceiros);
@@ -147,97 +147,102 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(182, 118);
+            this.label22.Location = new System.Drawing.Point(180, 115);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(51, 13);
-            this.label22.TabIndex = 9;
+            this.label22.TabIndex = 19;
             this.label22.Text = "R$ 20,00";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(182, 92);
+            this.label21.Location = new System.Drawing.Point(180, 89);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(51, 13);
-            this.label21.TabIndex = 8;
+            this.label21.TabIndex = 18;
             this.label21.Text = "R$ 20,00";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(182, 67);
+            this.label20.Location = new System.Drawing.Point(180, 64);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(51, 13);
-            this.label20.TabIndex = 7;
-            this.label20.Text = "R$ 17,00";
+            this.label20.TabIndex = 17;
+            this.label20.Text = "R$ 38,00";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(182, 42);
+            this.label19.Location = new System.Drawing.Point(180, 39);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(51, 13);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "R$ 10,00";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(182, 17);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(51, 13);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "R$ 28,00";
+            this.label19.TabIndex = 16;
+            this.label19.Text = "R$ 17,00";
             // 
             // ChkAssentoElevacao
             // 
             this.ChkAssentoElevacao.AutoSize = true;
-            this.ChkAssentoElevacao.Location = new System.Drawing.Point(28, 117);
+            this.ChkAssentoElevacao.Location = new System.Drawing.Point(23, 14);
             this.ChkAssentoElevacao.Name = "ChkAssentoElevacao";
             this.ChkAssentoElevacao.Size = new System.Drawing.Size(126, 17);
-            this.ChkAssentoElevacao.TabIndex = 4;
+            this.ChkAssentoElevacao.TabIndex = 14;
             this.ChkAssentoElevacao.Text = "Assento de elevação";
             this.ChkAssentoElevacao.UseVisualStyleBackColor = true;
+            this.ChkAssentoElevacao.CheckedChanged += new System.EventHandler(this.ChkAssentoElevacao_CheckedChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(180, 14);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(51, 13);
+            this.label18.TabIndex = 15;
+            this.label18.Text = "R$ 20,00";
             // 
             // ChkCadeiraBebe
             // 
             this.ChkCadeiraBebe.AutoSize = true;
-            this.ChkCadeiraBebe.Location = new System.Drawing.Point(28, 92);
+            this.ChkCadeiraBebe.Location = new System.Drawing.Point(23, 37);
             this.ChkCadeiraBebe.Name = "ChkCadeiraBebe";
             this.ChkCadeiraBebe.Size = new System.Drawing.Size(104, 17);
-            this.ChkCadeiraBebe.TabIndex = 3;
+            this.ChkCadeiraBebe.TabIndex = 13;
             this.ChkCadeiraBebe.Text = "Cadeira de bebê";
             this.ChkCadeiraBebe.UseVisualStyleBackColor = true;
+            this.ChkCadeiraBebe.CheckedChanged += new System.EventHandler(this.ChkCadeiraBebe_CheckedChanged);
             // 
             // ChkNavegadorGps
             // 
             this.ChkNavegadorGps.AutoSize = true;
-            this.ChkNavegadorGps.Location = new System.Drawing.Point(28, 66);
+            this.ChkNavegadorGps.Location = new System.Drawing.Point(23, 114);
             this.ChkNavegadorGps.Name = "ChkNavegadorGps";
             this.ChkNavegadorGps.Size = new System.Drawing.Size(104, 17);
-            this.ChkNavegadorGps.TabIndex = 2;
+            this.ChkNavegadorGps.TabIndex = 12;
             this.ChkNavegadorGps.Text = "Navegador GPS";
             this.ChkNavegadorGps.UseVisualStyleBackColor = true;
+            this.ChkNavegadorGps.CheckedChanged += new System.EventHandler(this.ChkNavegadorGps_CheckedChanged);
             // 
             // ChkCoberturaTerceiros
             // 
             this.ChkCoberturaTerceiros.AutoSize = true;
-            this.ChkCoberturaTerceiros.Location = new System.Drawing.Point(28, 41);
+            this.ChkCoberturaTerceiros.Location = new System.Drawing.Point(23, 88);
             this.ChkCoberturaTerceiros.Name = "ChkCoberturaTerceiros";
             this.ChkCoberturaTerceiros.Size = new System.Drawing.Size(139, 17);
-            this.ChkCoberturaTerceiros.TabIndex = 1;
+            this.ChkCoberturaTerceiros.TabIndex = 11;
             this.ChkCoberturaTerceiros.Text = "Cobertura para terceiros";
             this.ChkCoberturaTerceiros.UseVisualStyleBackColor = true;
+            this.ChkCoberturaTerceiros.CheckedChanged += new System.EventHandler(this.ChkCoberturaTerceiros_CheckedChanged);
             // 
             // ChkCoberturaCarro
             // 
             this.ChkCoberturaCarro.AutoSize = true;
-            this.ChkCoberturaCarro.Location = new System.Drawing.Point(28, 16);
+            this.ChkCoberturaCarro.Location = new System.Drawing.Point(23, 63);
             this.ChkCoberturaCarro.Name = "ChkCoberturaCarro";
             this.ChkCoberturaCarro.Size = new System.Drawing.Size(114, 17);
-            this.ChkCoberturaCarro.TabIndex = 0;
+            this.ChkCoberturaCarro.TabIndex = 10;
             this.ChkCoberturaCarro.Text = "Cobertura do carro";
             this.ChkCoberturaCarro.UseVisualStyleBackColor = true;
+            this.ChkCoberturaCarro.CheckedChanged += new System.EventHandler(this.ChkCoberturaCarro_CheckedChanged_1);
             // 
             // ChkPago
             // 
@@ -245,7 +250,7 @@
             this.ChkPago.Location = new System.Drawing.Point(417, 234);
             this.ChkPago.Name = "ChkPago";
             this.ChkPago.Size = new System.Drawing.Size(51, 17);
-            this.ChkPago.TabIndex = 20;
+            this.ChkPago.TabIndex = 10;
             this.ChkPago.Text = "Pago";
             this.ChkPago.UseVisualStyleBackColor = true;
             // 
@@ -254,7 +259,8 @@
             this.TxtValorCaucao.Location = new System.Drawing.Point(314, 232);
             this.TxtValorCaucao.Name = "TxtValorCaucao";
             this.TxtValorCaucao.Size = new System.Drawing.Size(61, 20);
-            this.TxtValorCaucao.TabIndex = 18;
+            this.TxtValorCaucao.TabIndex = 9;
+            this.TxtValorCaucao.Text = "0";
             // 
             // label16
             // 
@@ -268,10 +274,15 @@
             // CbxFormaPagto
             // 
             this.CbxFormaPagto.FormattingEnabled = true;
+            this.CbxFormaPagto.Items.AddRange(new object[] {
+            "Dinheiro",
+            "Cartão de Crédito",
+            "Cartão de Débito",
+            "Faturado"});
             this.CbxFormaPagto.Location = new System.Drawing.Point(81, 232);
             this.CbxFormaPagto.Name = "CbxFormaPagto";
             this.CbxFormaPagto.Size = new System.Drawing.Size(107, 21);
-            this.CbxFormaPagto.TabIndex = 16;
+            this.CbxFormaPagto.TabIndex = 8;
             // 
             // label15
             // 
@@ -297,6 +308,7 @@
             this.TxtValorTotal.Name = "TxtValorTotal";
             this.TxtValorTotal.Size = new System.Drawing.Size(79, 20);
             this.TxtValorTotal.TabIndex = 13;
+            this.TxtValorTotal.Text = "0";
             // 
             // TxtValorOpc
             // 
@@ -304,6 +316,8 @@
             this.TxtValorOpc.Name = "TxtValorOpc";
             this.TxtValorOpc.Size = new System.Drawing.Size(79, 20);
             this.TxtValorOpc.TabIndex = 12;
+            this.TxtValorOpc.Text = "0";
+            this.TxtValorOpc.TextChanged += new System.EventHandler(this.TxtValorOpc_TextChanged);
             // 
             // label13
             // 
@@ -320,6 +334,8 @@
             this.TxtValorDiaria.Name = "TxtValorDiaria";
             this.TxtValorDiaria.Size = new System.Drawing.Size(79, 20);
             this.TxtValorDiaria.TabIndex = 10;
+            this.TxtValorDiaria.Text = "0";
+            this.TxtValorDiaria.TextChanged += new System.EventHandler(this.TxtValorDiaria_TextChanged);
             // 
             // label12
             // 
@@ -337,7 +353,8 @@
             this.DtpDtDevolucao.Location = new System.Drawing.Point(67, 116);
             this.DtpDtDevolucao.Name = "DtpDtDevolucao";
             this.DtpDtDevolucao.Size = new System.Drawing.Size(121, 20);
-            this.DtpDtDevolucao.TabIndex = 8;
+            this.DtpDtDevolucao.TabIndex = 7;
+            this.DtpDtDevolucao.Validated += new System.EventHandler(this.DtpDtDevolucao_Validated);
             // 
             // DtpDtLocacao
             // 
@@ -346,7 +363,7 @@
             this.DtpDtLocacao.Location = new System.Drawing.Point(67, 86);
             this.DtpDtLocacao.Name = "DtpDtLocacao";
             this.DtpDtLocacao.Size = new System.Drawing.Size(121, 20);
-            this.DtpDtLocacao.TabIndex = 7;
+            this.DtpDtLocacao.TabIndex = 6;
             // 
             // label11
             // 
@@ -373,6 +390,7 @@
             this.CbxVeiculo.Name = "CbxVeiculo";
             this.CbxVeiculo.Size = new System.Drawing.Size(257, 21);
             this.CbxVeiculo.TabIndex = 4;
+            this.CbxVeiculo.Validated += new System.EventHandler(this.CbxVeiculo_Validated);
             // 
             // CbxPlaca
             // 
@@ -380,7 +398,7 @@
             this.CbxPlaca.Location = new System.Drawing.Point(67, 56);
             this.CbxPlaca.Name = "CbxPlaca";
             this.CbxPlaca.Size = new System.Drawing.Size(121, 21);
-            this.CbxPlaca.TabIndex = 3;
+            this.CbxPlaca.TabIndex = 5;
             // 
             // CbxGrupo
             // 
@@ -388,7 +406,8 @@
             this.CbxGrupo.Location = new System.Drawing.Point(67, 27);
             this.CbxGrupo.Name = "CbxGrupo";
             this.CbxGrupo.Size = new System.Drawing.Size(121, 21);
-            this.CbxGrupo.TabIndex = 2;
+            this.CbxGrupo.TabIndex = 3;
+            this.CbxGrupo.Validated += new System.EventHandler(this.CbxGrupo_Validated);
             // 
             // label9
             // 
@@ -446,7 +465,7 @@
             this.CbxNomeFantasia.Location = new System.Drawing.Point(67, 24);
             this.CbxNomeFantasia.Name = "CbxNomeFantasia";
             this.CbxNomeFantasia.Size = new System.Drawing.Size(305, 21);
-            this.CbxNomeFantasia.TabIndex = 15;
+            this.CbxNomeFantasia.TabIndex = 1;
             this.CbxNomeFantasia.Validated += new System.EventHandler(this.CbxNomeFantasia_Validated);
             // 
             // label23
@@ -454,16 +473,16 @@
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(10, 27);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(48, 13);
+            this.label23.Size = new System.Drawing.Size(35, 13);
             this.label23.TabIndex = 14;
-            this.label23.Text = "Empresa";
+            this.label23.Text = "Nome";
             // 
             // TxtNomeCondutor
             // 
             this.TxtNomeCondutor.Location = new System.Drawing.Point(67, 55);
             this.TxtNomeCondutor.Name = "TxtNomeCondutor";
             this.TxtNomeCondutor.Size = new System.Drawing.Size(305, 20);
-            this.TxtNomeCondutor.TabIndex = 13;
+            this.TxtNomeCondutor.TabIndex = 2;
             // 
             // DtpDtValidade
             // 
@@ -560,7 +579,7 @@
             this.BtnSalvar.Location = new System.Drawing.Point(509, 490);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 26);
-            this.BtnSalvar.TabIndex = 6;
+            this.BtnSalvar.TabIndex = 11;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
@@ -583,6 +602,7 @@
             this.BtnVistoria.TabIndex = 8;
             this.BtnVistoria.Text = "Vistoria";
             this.BtnVistoria.UseVisualStyleBackColor = true;
+            this.BtnVistoria.Click += new System.EventHandler(this.BtnVistoria_Click);
             // 
             // CadLocPj
             // 
@@ -612,16 +632,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.CheckBox ChkAssentoElevacao;
-        private System.Windows.Forms.CheckBox ChkCadeiraBebe;
-        private System.Windows.Forms.CheckBox ChkNavegadorGps;
-        private System.Windows.Forms.CheckBox ChkCoberturaTerceiros;
-        private System.Windows.Forms.CheckBox ChkCoberturaCarro;
         private System.Windows.Forms.CheckBox ChkPago;
         private System.Windows.Forms.TextBox TxtValorCaucao;
         private System.Windows.Forms.Label label16;
@@ -661,5 +671,15 @@
         private System.Windows.Forms.ComboBox CbxNomeFantasia;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button BtnVistoria;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.CheckBox ChkAssentoElevacao;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.CheckBox ChkCadeiraBebe;
+        private System.Windows.Forms.CheckBox ChkNavegadorGps;
+        private System.Windows.Forms.CheckBox ChkCoberturaTerceiros;
+        private System.Windows.Forms.CheckBox ChkCoberturaCarro;
     }
 }

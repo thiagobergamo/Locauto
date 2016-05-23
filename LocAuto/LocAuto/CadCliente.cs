@@ -85,7 +85,7 @@ namespace LocAuto
             PessoaFisica pessoaFisica = new PessoaFisica();
             pessoaFisica.Nome = TxtNome.Text;
             pessoaFisica.Email = TxtEmail.Text;
-            pessoaFisica.DtNascimento = MskDtNascimento.Text;
+            pessoaFisica.DtNascimento = MskDtNascimento.Value.ToString("yyyy-MM-dd");
             pessoaFisica.Logradouro = TxtLog.Text;
             pessoaFisica.Numero = Convert.ToInt32 (TxtNum.Text);
             pessoaFisica.Complemento = TxtComplemento.Text;
@@ -96,7 +96,7 @@ namespace LocAuto
             //pessoaFisica.Codigo = Convert.ToInt32(TxtCodigo.Text);
             pessoaFisica.Rg = TxtRg.Text;
             pessoaFisica.Cnh = TxtCnh.Text;
-            pessoaFisica.ValidadeCnh = MskValCnh.Text;
+            pessoaFisica.ValidadeCnh = MskValCnh.Value.ToString("yyyy-MM-dd");
             pessoaFisica.Cpf = MskCpf.Text;
             pessoaFisica.OutroDocumento = TxtOutDocumento.Text;
             pessoaFisica.LoginWeb = TxtLoginWeb.Text;

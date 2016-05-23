@@ -67,7 +67,7 @@ namespace LocAuto
             pessoaJuridica.Cidade = TxtCidade.Text;
             pessoaJuridica.Estado = CmbEstado.Text;
             pessoaJuridica.Cnh = TxtCnh.Text;
-            pessoaJuridica.ValidadeCnh = MskValCnh.Text;
+            pessoaJuridica.ValidadeCnh = MskValCnh.Value.ToString("yyyy-MM-dd"); ;
             pessoaJuridica.NomeCondutor = TxtNomCodutor.Text;
             pessoaJuridica.SenhaWeb = TxtSenha.Text;
             pessoaJuridica.LoginWeb = TxtLogin.Text;
@@ -137,7 +137,7 @@ namespace LocAuto
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
             conn = cf.ObterConexao();
-
+            
             conn.Open();
 
             string mSQL = "select codigo, descricao from tipo_telefone order by descricao";

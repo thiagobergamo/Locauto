@@ -38,5 +38,62 @@ namespace LocAuto
                 conn.Close();
             }
         }
+
+        public String atualizar(Vistoria vistoria)
+        {
+            ConnectionFactory cf = new ConnectionFactory();
+            MySqlConnection conn;
+            conn = cf.ObterConexao();
+            String cmdText = "UPDATE vistoria set km_dev = @km_dev, nivel_comb_dev = @nivel_comb_dev, laudo_dev = @laudo_dev where codigo_locacao = @codigo_locacao;";
+
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+                cmd.Parameters.Add(new MySqlParameter("codigo_locacao", vistoria.CodigoLocacao));
+                cmd.Parameters.Add(new MySqlParameter("km_dev", vistoria.KmDev));
+                cmd.Parameters.Add(new MySqlParameter("nivel_comb_dev", vistoria.NivelCombDev));
+                cmd.Parameters.Add(new MySqlParameter("laudo_dev", vistoria.LaudoDev));
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+                return "Vistoria salvo com sucesso.";
+            }
+            catch (Exception ex)
+            {
+                return "Erro ao salvar vistoria - " + ex;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public Vistoria Retornar(int codigo)
+        {
+            Vistoria vistoria = new Vistoria();
+            ConnectionFactory cf = new ConnectionFactory();
+            MySqlConnection conn;
+            conn = cf.ObterConexao();
+
+            String cmdText = "select * from vistoria where codigo = 188" ;
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+            cmd.Parameters.Add(new MySqlParameter("codigo", codigo.ToString()));
+            cmd.Prepare();
+            using (MySqlDataReader leitor = cmd.ExecuteReader())
+            {
+                while (leitor.Read())
+                {
+                    vistoria.Codigo = Convert.ToInt32(leitor["codigo"]);
+                    vistoria.KmLoc = Convert.ToInt32(leitor["km_loc"].ToString());
+                    vistoria.NivelCombLoc = leitor["nivel_comb_loc"].ToString();
+                    vistoria.LaudoLoc = leitor["laudo_loc"].ToString();
+
+                }
+            }
+            conn.Close();
+
+            return vistoria;
+        }
     }
 }

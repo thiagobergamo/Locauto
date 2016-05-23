@@ -82,6 +82,18 @@ namespace LocAuto
             conn.Close();
 
             TxtCodigoLocacao.Text = codLocacao.ToString();
+
+            Vistoria vistoria = new Vistoria();
+            VistoriaDAO dao = new VistoriaDAO();
+            vistoria = dao.Retornar(codLocacao);
+            try
+            {
+                TxtKmLoc.Text = vistoria.KmLoc.ToString();
+                TxtNivelCombLoc.Text = vistoria.NivelCombLoc.ToString();
+                TxtLaudoLoc.Text = vistoria.NivelCombLoc.ToString();
+            }
+            catch { }
+
         }
     }
 }
