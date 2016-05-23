@@ -1,6 +1,6 @@
 ﻿namespace LocAuto
 {
-    partial class ConsultaLocacao
+    partial class Consulta_locacaoPf
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DgvConsultaPj = new System.Windows.Forms.DataGridView();
+            this.DgvConsultaPf = new System.Windows.Forms.DataGridView();
             this.Id_loc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data_loc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,23 +36,23 @@
             this.Veiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnDevolucao = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvConsultaPj)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvConsultaPf)).BeginInit();
             this.SuspendLayout();
             // 
-            // DgvConsultaPj
+            // DgvConsultaPf
             // 
-            this.DgvConsultaPj.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvConsultaPj.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DgvConsultaPf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvConsultaPf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_loc,
             this.Nome,
             this.data_loc,
             this.data_prev,
             this.Veiculo,
             this.Valor_Total});
-            this.DgvConsultaPj.Location = new System.Drawing.Point(31, 26);
-            this.DgvConsultaPj.Name = "DgvConsultaPj";
-            this.DgvConsultaPj.Size = new System.Drawing.Size(789, 335);
-            this.DgvConsultaPj.TabIndex = 0;
+            this.DgvConsultaPf.Location = new System.Drawing.Point(27, 29);
+            this.DgvConsultaPf.Name = "DgvConsultaPf";
+            this.DgvConsultaPf.Size = new System.Drawing.Size(792, 337);
+            this.DgvConsultaPf.TabIndex = 0;
             // 
             // Id_loc
             // 
@@ -73,7 +73,7 @@
             // 
             // data_prev
             // 
-            this.data_prev.HeaderText = "Data Prev Devolução";
+            this.data_prev.HeaderText = "Data Prev Dev";
             this.data_prev.Name = "data_prev";
             // 
             // Veiculo
@@ -90,31 +90,31 @@
             // 
             // BtnDevolucao
             // 
-            this.BtnDevolucao.Location = new System.Drawing.Point(714, 385);
+            this.BtnDevolucao.Location = new System.Drawing.Point(700, 381);
             this.BtnDevolucao.Name = "BtnDevolucao";
             this.BtnDevolucao.Size = new System.Drawing.Size(106, 30);
-            this.BtnDevolucao.TabIndex = 2;
+            this.BtnDevolucao.TabIndex = 1;
             this.BtnDevolucao.Text = "Devolução";
             this.BtnDevolucao.UseVisualStyleBackColor = true;
             // 
-            // ConsultaLocacao
+            // Consulta_locacaoPf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 427);
+            this.ClientSize = new System.Drawing.Size(852, 423);
             this.Controls.Add(this.BtnDevolucao);
-            this.Controls.Add(this.DgvConsultaPj);
-            this.Name = "ConsultaLocacao";
-            this.Text = "Consulta Locação PJ";
-            this.Load += new System.EventHandler(this.ConsultaLocacao_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvConsultaPj)).EndInit();
+            this.Controls.Add(this.DgvConsultaPf);
+            this.Name = "Consulta_locacaoPf";
+            this.Text = "Consulta Locação PF";
+            this.Load += new System.EventHandler(this.Consulta_locacaoPf_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvConsultaPf)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DgvConsultaPj;
+        private System.Windows.Forms.DataGridView DgvConsultaPf;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_loc;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn data_loc;
