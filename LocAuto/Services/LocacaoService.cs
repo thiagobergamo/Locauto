@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Modelo;
+using DaoInterface;
 
-namespace DaoInterface
+namespace Services
 {
-    public interface ITipoTelefoneDAO
+    class LocacaoService
     {
-        void inserir(TipoTelefone tipoTelefone);
     }
 }
