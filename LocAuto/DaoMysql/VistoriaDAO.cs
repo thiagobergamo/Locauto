@@ -8,7 +8,7 @@ using DaoInterface;
 
 namespace DaoMysql
 {
-    public class VistoriaDAO:IVistoriaDAO
+    public class VistoriaDAO : IVistoriaDAO
     {
         public void inserir(Vistoria vistoria)
         {

@@ -8,7 +8,7 @@ using DaoInterface;
 
 namespace DaoMysql
 {
-    public class PessoaFisicaDAO:IPessoaFisicaDAO
+    public class PessoaFisicaDAO : IPessoaFisicaDAO
     {
         public void inserir(PessoaFisica pessoaFisica, List<TelefoneCliente> telefoneCliente)
         {
