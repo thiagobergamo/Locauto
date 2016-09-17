@@ -43,9 +43,12 @@
     <Compile Include="PessoaJuridicaDAO.cs" />
     <Compile Include="LocacaoDAO.cs" />
     <Compile Include="OpcionalDAO.cs" />
+    <Compile Include="PessoaFisicaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoVeiculoDAO.cs" />
     <Compile Include="VeiculoDAO.cs" />
+    <Compile Include="SituacaoVeiculoDAO.cs" />
+    <Compile Include="VistoriaDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DaoInterface\DaoInterface.csproj">

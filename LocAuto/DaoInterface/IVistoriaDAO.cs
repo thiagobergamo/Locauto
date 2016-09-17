@@ -8,9 +8,9 @@ using Modelo;
 namespace DaoInterface
 {
     public interface IVistoriaDAO
-    {
-        void inserir(Vistoria vistoria);
+    {void inserir(Vistoria vistoria);
         void atualizar(Vistoria vistoria);
         Vistoria Retornar(int codigo);
+        
     }
 }
