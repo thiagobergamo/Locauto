@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="LocacaoService.cs" />
     <Compile Include="OpcionalService.cs" />
+    <Compile Include="PessoaJuridicaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoVeiculoService.cs" />
     <Compile Include="VeiculoService.cs" />
