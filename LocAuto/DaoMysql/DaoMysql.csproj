@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PessoaFisicaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SituacaoVeiculoDAO.cs" />
+    <Compile Include="VistoriaDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DaoInterface\DaoInterface.csproj">
