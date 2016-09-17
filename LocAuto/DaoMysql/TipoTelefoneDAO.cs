@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Modelo;
 
-namespace DaoInterface
+namespace DaoMysql
 {
-    public interface ITipoTelefoneDAO
+    public class TipoTelefone
     {
-        void inserir(TipoTelefone tipoTelefone);
+        public void inserir(TipoTelefone tipoTelefone)
+        {
+
+        }
     }
 }
