@@ -7,8 +7,8 @@ using Modelo;
 
 namespace DaoInterface
 {
-    public interface IVeiculo
+    public interface ITipoVeiculoDAO
     {
-        void inserir(Veiculo veiculo);
+        void inserir(TipoVeiculo tipoVeiculo);
     }
 }
