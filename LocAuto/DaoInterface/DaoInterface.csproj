@@ -45,9 +45,6 @@
     <Compile Include="IOpcionalDAO.cs" />
     <Compile Include="ITipoVeiculoDAO.cs" />
     <Compile Include="IVeiculoDAO.cs" />
-    <Compile Include="IPessoaFisicaDAO.cs" />
-    <Compile Include="ISituacaoVeiculoDAO.cs" />
-    <Compile Include="IVistoriaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
