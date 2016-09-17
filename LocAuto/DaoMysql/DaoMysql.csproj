@@ -43,6 +43,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DaoInterface\DaoInterface.csproj">
+      <Project>{434682e7-70be-4708-af2b-83328146f8b1}</Project>
+      <Name>DaoInterface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modelo\Modelo.csproj">
       <Project>{10bb5f3e-84ef-4d52-8dc8-9e0d14de2ba5}</Project>
       <Name>Modelo</Name>
