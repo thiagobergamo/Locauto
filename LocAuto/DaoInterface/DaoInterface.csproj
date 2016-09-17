@@ -48,6 +48,10 @@
     <Compile Include="IPessoaFisicaDao.cs" />
     <Compile Include="ISituacaoVeiculoDao.cs" />
     <Compile Include="IVistoriaDao.cs" />
+    <Compile Include="ILocacaoDAO.cs" />
+    <Compile Include="IOpcionalDAO.cs" />
+    <Compile Include="ITipoVeiculoDAO.cs" />
+    <Compile Include="IVeiculoDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

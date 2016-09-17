@@ -7,8 +7,8 @@ using Modelo;
 
 namespace DaoInterface
 {
-    public interface IOpcional
+    public interface ILocacaoDAO
     {
-        void inserir(Opcional opcional);
+        void Inserir(Locacao locacao);
     }
 }
