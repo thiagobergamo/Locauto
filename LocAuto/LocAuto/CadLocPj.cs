@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using DaoMysql;
+using Modelo;
+using Services;
+using DaoInterface;
 
 namespace LocAuto
 {
@@ -87,7 +91,6 @@ namespace LocAuto
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            string msg;
             Locacao locacao = new Locacao();
             locacao.CodigoCliente = Convert.ToInt32(CbxNomeFantasia.SelectedValue.ToString());
             locacao.CodigoVeiculo = Convert.ToInt32(CbxPlaca.SelectedValue.ToString());
@@ -98,10 +101,21 @@ namespace LocAuto
             locacao.ValorOpc = Convert.ToDecimal(TxtValorOpc.Text);
             locacao.ValorCaucao = Convert.ToDecimal(TxtValorCaucao.Text);
             locacao.Pago = Convert.ToInt32(ChkPago.Checked).ToString();
-            LocacaoDAO dao = new LocacaoDAO();
-            msg = dao.Inserir(locacao);
-            idLocacao = Convert.ToInt32(msg);
-            MessageBox.Show("Locação salva com sucesso");
+            LocacaoDAO locacaoDao = new LocacaoDAO();
+            LocacaoService locacaoService = new LocacaoService(locacaoDao);
+            try
+            {
+                locacaoService.inserir(locacao);
+                MessageBox.Show("Cadastro realizado com sucesso!");
+            }
+            catch (ArgumentNullException ex)
+            {
+                MessageBox.Show(ex.Message, "Mensagem");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro");
+            }
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
