@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    //apagar esta linha
      public class TelefoneCliente
     {
         public int Tipo { get; set; }
