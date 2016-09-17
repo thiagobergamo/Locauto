@@ -40,6 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ILocacao.cs" />
+    <Compile Include="IOpcional.cs" />
+    <Compile Include="ITipoVeiculo.cs" />
+    <Compile Include="IVeiculo.cs" />
+    <Compile Include="IPessoaJuridicaDAO.cs" />
     <Compile Include="IPessoaFisicaDao.cs" />
     <Compile Include="ISituacaoVeiculoDao.cs" />
     <Compile Include="IVistoriaDao.cs" />
