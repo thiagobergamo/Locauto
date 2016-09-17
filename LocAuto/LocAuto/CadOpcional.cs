@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DaoMysql;
+using Modelo;
+using Services;
+using DaoInterface;
 
 namespace LocAuto
 {
@@ -19,16 +23,19 @@ namespace LocAuto
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            String msg;
-            Opcional opcional = new Opcional();
+            
+            Modelo.Opcional opcional = new Modelo.Opcional();
             opcional.Descricao = TxtDescricao.Text;
             opcional.Valor = Convert.ToDecimal(TxtValor.Text);
-
-            OpcionalDAO opcionalDAO = new OpcionalDAO();
-            msg = opcionalDAO.inserir(opcional);
-            TxtDescricao.Text = "";
-            TxtValor.Text = "";
-            MessageBox.Show(msg);
+            DaoMysql.OpcionalDAO opcionalDao = new DaoMysql.OpcionalDAO();
+            OpcionalService opcionalService = new OpcionalService(opcionalDao);
+            try{
+                opcionalService.inserir(opcional);
+                MessageBox.Show("Cadastro realizado com sucesso!");
+            } catch(ArgumentNullException ex)
+            {
+                MessageBox.Show(ex.Message, "Mensagem");
+            }
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)

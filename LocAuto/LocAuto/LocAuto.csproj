@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -223,6 +223,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo_FBranco.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DaoInterface\DaoInterface.csproj">
+      <Project>{434682e7-70be-4708-af2b-83328146f8b1}</Project>
+      <Name>DaoInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DaoMysql\DaoMysql.csproj">
+      <Project>{3a363428-9a99-4703-b12b-9c433d9e7e8c}</Project>
+      <Name>DaoMysql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{10bb5f3e-84ef-4d52-8dc8-9e0d14de2ba5}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{489be008-8927-4110-8f77-5b6756c44a8f}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
