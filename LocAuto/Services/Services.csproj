@@ -42,9 +42,13 @@
   <ItemGroup>
     <Compile Include="LocacaoService.cs" />
     <Compile Include="OpcionalService.cs" />
+    <Compile Include="PessoaFisicaService.cs" />
+    <Compile Include="PessoaJuridicaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SituacaoVeiculoService.cs" />
     <Compile Include="TipoVeiculoService.cs" />
     <Compile Include="VeiculoService.cs" />
+    <Compile Include="VistoriaService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DaoInterface\DaoInterface.csproj">

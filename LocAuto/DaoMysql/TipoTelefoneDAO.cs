@@ -8,9 +8,9 @@ using DaoInterface;
 
 namespace DaoMysql
 {
-     public class TipoTelefoneDAO
+     public class TipoTelefoneDAO : ITipoTelefoneDAO
     {
-        void inserir(TipoTelefone tipoTelefone)
+        public void inserir(TipoTelefone tipoTelefone)
         {
 
         }

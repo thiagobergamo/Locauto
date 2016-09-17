@@ -8,9 +8,9 @@ using DaoInterface;
 
 namespace DaoMysql
 {
-    public class UsuarioDAO
+    public class UsuarioDAO : IUsuarioDAO
     {
-        void inserir(Usuario usuario)
+        public void inserir(Usuario usuario)
         {
 
         }
