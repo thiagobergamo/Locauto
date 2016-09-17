@@ -40,6 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ILocacao.cs" />
+    <Compile Include="IOpcional.cs" />
+    <Compile Include="ITipoVeiculo.cs" />
+    <Compile Include="IVeiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
