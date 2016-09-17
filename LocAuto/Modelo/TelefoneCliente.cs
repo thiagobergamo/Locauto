@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    class TelefoneCliente
+     public class TelefoneCliente
     {
         public int Tipo { get; set; }
         public String Numero { get; set; }
