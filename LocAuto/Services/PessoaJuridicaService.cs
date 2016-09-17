@@ -21,6 +21,7 @@ namespace Services
         public void inserir(PessoaJuridica pessoaJuridica, List<TelefoneCliente> telefoneCliente)
         {
             ValidarPessoaJuridica(pessoaJuridica);
+            pessoaJuridicaDAO.inserir(pessoaJuridica, telefoneCliente);
         }
 
         private void ValidarPessoaJuridica(PessoaJuridica pessoaJuridica)
