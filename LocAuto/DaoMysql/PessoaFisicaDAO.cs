@@ -10,7 +10,14 @@ namespace DaoMysql
 {
     public class PessoaFisicaDAO:IPessoaFisicaDAO
     {
-        public void inserir(PessoaFisica pessoaFisica, List<TelefoneCliente> telefoneCliente);
-        public PessoaFisica Retornar(int codigo);
+        public void inserir(PessoaFisica pessoaFisica, List<TelefoneCliente> telefoneCliente)
+        {
+
+        }
+        public PessoaFisica Retornar(int codigo)
+        {
+            PessoaFisica pessoaFisica = new PessoaFisica();
+            return pessoaFisica;
+        }
     }
 }

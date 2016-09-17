@@ -10,8 +10,18 @@ namespace DaoMysql
 {
     public class VistoriaDAO:IVistoriaDAO
     {
-        public void inserir(Vistoria vistoria);
-        public void atualizar(Vistoria vistoria);
-        public Vistoria Retornar(int codigo);
+        public void inserir(Vistoria vistoria)
+        {
+
+        }
+        public void atualizar(Vistoria vistoria)
+        {
+
+        }
+        public Vistoria Retornar(int codigo)
+        {
+            Vistoria vistoria = new Vistoria();
+            return vistoria;
+        }
     }
 }

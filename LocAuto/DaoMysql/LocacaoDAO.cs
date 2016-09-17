@@ -8,9 +8,9 @@ using DaoInterface;
 
 namespace DaoMysql
 {
-    public class SituacaoVeiculoDAO:ISituacaoVeiculoDAO
+    public class LocacaoDAO : ILocacaoDAO
     {
-        public void inserir(SituacaoVeiculo situacaoVeiculo)
+        public void Inserir(Locacao locacao)
         {
 
         }
