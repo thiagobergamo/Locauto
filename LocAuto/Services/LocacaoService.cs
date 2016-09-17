@@ -8,7 +8,33 @@ using DaoInterface;
 
 namespace Services
 {
-    class LocacaoService
+    public class LocacaoService
     {
+        private ILocacaoDAO locacaoDao;
+        public LocacaoService() { }
+        public LocacaoService(ILocacaoDAO locacaoDao)
+        {
+            this.locacaoDao = locacaoDao;
+        }
+        public void inserir(Locacao locacao)
+        {
+            ValidarLocacao(locacao);
+            locacaoDao.Inserir(locacao);
+        }
+        private void ValidarLocacao(Locacao locacao)
+        {
+            if (String.IsNullOrEmpty(locacao.DataLocacao))
+            {
+                throw new ArgumentNullException("Data Locação", "Campo obrigatório não preenchido");
+            }
+            if (String.IsNullOrEmpty(locacao.DataPrevDevolucao))
+            {
+                throw new ArgumentNullException("Data Prev. Devolução", "Campo obrigatório não preenchido");
+            }
+            if (String.IsNullOrEmpty(locacao.FormaPagamento))
+            {
+                throw new ArgumentNullException("Forma Pagamento", "Campo obrigatório não preenchido");
+            }
+        }
     }
 }
