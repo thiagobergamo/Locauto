@@ -45,6 +45,9 @@
     <Compile Include="ITipoVeiculo.cs" />
     <Compile Include="IVeiculo.cs" />
     <Compile Include="IPessoaJuridicaDAO.cs" />
+    <Compile Include="IPessoaFisicaDao.cs" />
+    <Compile Include="ISituacaoVeiculoDao.cs" />
+    <Compile Include="IVistoriaDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
