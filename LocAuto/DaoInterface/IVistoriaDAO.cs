@@ -7,7 +7,7 @@ using Modelo;
 
 namespace DaoInterface
 {
-    interface IVistoriaDAO
+    public interface IVistoriaDAO
     {
         void inserir(Vistoria vistoria);
         void atualizar(Vistoria vistoria);

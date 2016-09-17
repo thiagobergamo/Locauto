@@ -7,7 +7,7 @@ using Modelo;
 
 namespace DaoInterface
 {
-    interface IPessoaFisicaDAO
+    public interface IPessoaFisicaDAO
     {
         void inserir(PessoaFisica pessoaFisica, List<TelefoneCliente> telefoneCliente);
         PessoaFisica Retornar(int codigo);

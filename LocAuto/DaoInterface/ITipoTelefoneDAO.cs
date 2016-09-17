@@ -7,7 +7,7 @@ using Modelo;
 
 namespace DaoInterface
 {
-    interface ITipoTelefoneDAO
+    public interface ITipoTelefoneDAO
     {
         public void inserir(TipoTelefone tipoTelefone);
     }

@@ -7,7 +7,7 @@ using Modelo;
 
 namespace DaoInterface
 {
-    interface ISituacaoVeiculoDAO
+    public interface ISituacaoVeiculoDAO
     {
         void inserir(SituacaoVeiculo situacaoVeiculo);
     }
