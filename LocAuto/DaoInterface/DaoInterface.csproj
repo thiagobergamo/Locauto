@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPessoaFisicaDao.cs" />
+    <Compile Include="ISituacaoVeiculoDao.cs" />
+    <Compile Include="IVistoriaDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
