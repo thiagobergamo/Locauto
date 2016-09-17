@@ -43,6 +43,7 @@
     <Compile Include="LocacaoService.cs" />
     <Compile Include="OpcionalService.cs" />
     <Compile Include="PessoaFisicaService.cs" />
+    <Compile Include="PessoaJuridicaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SituacaoVeiculoService.cs" />
     <Compile Include="TipoVeiculoService.cs" />
