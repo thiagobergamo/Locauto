@@ -72,7 +72,6 @@ namespace Services
             {
                 throw new ArgumentNullException("CPF", "Campo obrigatório não preenchido");
             }
-            // NÃO FIZ O IF DO USUÁRIO E SENHA!!
         }
     }
 }
