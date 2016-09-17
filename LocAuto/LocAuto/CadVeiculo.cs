@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using DaoMysql;
+using Modelo;
+using Services;
+using DaoInterface;
 
 namespace LocAuto
 {
@@ -55,7 +59,6 @@ namespace LocAuto
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            String msg;
             Veiculo veiculo = new Veiculo();
             veiculo.codigoTipoVeiculo = CmbGrupo.SelectedValue.ToString();
             veiculo.codigoSituacaoVeiculo = CmbSituacao.SelectedValue.ToString();
@@ -66,17 +69,21 @@ namespace LocAuto
             veiculo.Chassi = TxtChassi.Text;
             veiculo.Cor = TxtCor.Text;
             veiculo.Observacao = TxtObs.Text;
-
-            VeiculoDAO veiculoDAO = new VeiculoDAO();
-            msg = veiculoDAO.inserir(veiculo);
-            TxtMarca.Text = "";
-            TxtModelo.Text = "";
-            TxtAno.Text = "";
-            TxtPlaca.Text = "";
-            TxtChassi.Text = "";
-            TxtCor.Text = "";
-            TxtObs.Text = "";
-            MessageBox.Show(msg);
+            VeiculoDAO veiculoDao = new VeiculoDAO();
+            VeiculoService veiculoService = new VeiculoService(veiculoDao);
+            try
+            {
+                veiculoService.inserir(veiculo);
+                MessageBox.Show("Cadastro realizado com sucesso!");
+            }
+            catch (ArgumentNullException ex)
+            {
+                MessageBox.Show(ex.Message, "Mensagem");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro");
+            }
         }
 
         private void CadVeiculo_Load(object sender, EventArgs e)

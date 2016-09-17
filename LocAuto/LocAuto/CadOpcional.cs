@@ -24,10 +24,10 @@ namespace LocAuto
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
             
-            Modelo.Opcional opcional = new Modelo.Opcional();
+            Opcional opcional = new Opcional();
             opcional.Descricao = TxtDescricao.Text;
             opcional.Valor = Convert.ToDecimal(TxtValor.Text);
-            DaoMysql.OpcionalDAO opcionalDao = new DaoMysql.OpcionalDAO();
+            OpcionalDAO opcionalDao = new OpcionalDAO();
             OpcionalService opcionalService = new OpcionalService(opcionalDao);
             try{
                 opcionalService.inserir(opcional);
@@ -35,6 +35,10 @@ namespace LocAuto
             } catch(ArgumentNullException ex)
             {
                 MessageBox.Show(ex.Message, "Mensagem");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro");
             }
         }
 
