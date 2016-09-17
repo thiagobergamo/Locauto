@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocAuto
+namespace Modelo
 {
     public class Usuario
     {
