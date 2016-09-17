@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DaoInterface
 {
-    interface ISituacaoVeiculoDao
+    interface ISituacaoVeiculoDAO
     {
+        void inserir(SituacaoVeiculo situacaoVeiculo);
     }
 }

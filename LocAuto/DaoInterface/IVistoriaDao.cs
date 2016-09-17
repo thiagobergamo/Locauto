@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DaoInterface
 {
-    interface IVistoriaDao
+    interface IVistoriaDAO
     {
+        void inserir(Vistoria vistoria);
     }
 }

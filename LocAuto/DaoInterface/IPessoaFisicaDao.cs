@@ -7,7 +7,7 @@ using Modelo;
 
 namespace DaoInterface
 {
-    interface IPessoaFisicaDao
+    interface IPessoaFisicaDAO
     {
         void inserir(PessoaFisica pessoaFisica, List<TelefoneCliente> telefoneCliente);
 
