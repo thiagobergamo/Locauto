@@ -21,10 +21,27 @@ namespace Services
             ValidarUsuario(usuario);
             usuario.inserir(usuario);
         }
-        if (String.IsNullOrEmpty(usuario.))
+
+        private void ValidarUsuario(UsuarioService usuario)
+        {
+            if (String.IsNullOrWhiteSpace(usuario.Nome))
             {
-                throw new ArgumentNullException("CNPJ", "Campo obrigatório não preenchido");
+                throw new ArgumentNullException("Nome", "Campo obrigatório não preenchido");
+            }
+            if (String.IsNullOrWhiteSpace(usuario.Email))
+            {
+                throw new ArgumentNullException("Email", "Campo obrigatório não preenchido");
+            }
+            if (String.IsNullOrWhiteSpace(usuario.Login))
+            {
+                throw new ArgumentNullException("Login", "Campo obrigatório não preenchido");
+            }
+            if (String.IsNullOrWhiteSpace(usuario.Senha))
+            {
+                throw new ArgumentNullException("Senha", "Campo obrigatório não preenchido");
+            }
+
+        }
     }
-    //IsNullOrWhiteSpace
 }
-}
+
