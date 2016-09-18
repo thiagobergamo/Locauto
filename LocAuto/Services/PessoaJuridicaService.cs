@@ -26,15 +26,15 @@ namespace Services
 
         private void ValidarPessoaJuridica(PessoaJuridica pessoaJuridica)
         {
-            if (String.IsNullOrEmpty(pessoaJuridica.Cnpj))
+            if (String.IsNullOrWhiteSpace(pessoaJuridica.Cnpj))
             {
                 throw new ArgumentNullException("CNPJ", "Campo obrigatório não preenchido");
             }
-            if (String.IsNullOrEmpty(pessoaJuridica.RazaoSocial))
+            if (String.IsNullOrWhiteSpace(pessoaJuridica.RazaoSocial))
             {
                 throw new ArgumentNullException("Razão Soc.", "Campo obrigatório não preenchido");
             }
-            if (String.IsNullOrEmpty(pessoaJuridica.Logradouro))
+            if (String.IsNullOrWhiteSpace(pessoaJuridica.Logradouro))
             {
                 throw new ArgumentNullException("Endereço", "Campo obrigatório não preenchido");
             }
@@ -42,31 +42,31 @@ namespace Services
             {
                 throw new ArgumentNullException("Numero", "Campo obrigatório não preenchido");
             }
-            if (String.IsNullOrEmpty(pessoaJuridica.Bairro))
+            if (String.IsNullOrWhiteSpace(pessoaJuridica.Bairro))
             {
                 throw new ArgumentException("Bairro", "Campo obrigatório não preenchido");
             }
-            if (String.IsNullOrEmpty(pessoaJuridica.Estado))
+            if (String.IsNullOrWhiteSpace(pessoaJuridica.Estado))
             {
                 throw new ArgumentException("Estado", "Campo obrigatório não preenchido");
             }
-            if (String.IsNullOrEmpty(pessoaJuridica.Cidade))
+            if (String.IsNullOrWhiteSpace(pessoaJuridica.Cidade))
             {
                 throw new ArgumentException("Cidade", "Campo obrigatório não preenchido");
             }
-            if (String.IsNullOrEmpty(pessoaJuridica.Cep))
+            if (String.IsNullOrWhiteSpace(pessoaJuridica.Cep))
             {
                 throw new ArgumentException("Cep", "Campo obrigatório não preenchido");
             }
-            if (String.IsNullOrEmpty(pessoaJuridica.Cnh))
+            if (String.IsNullOrWhiteSpace(pessoaJuridica.Cnh))
             {
                 throw new ArgumentException("CNH", "Campo obrigatório não preenchido");
             }
-            if (String.IsNullOrEmpty(pessoaJuridica.ValidadeCnh))
+            if (String.IsNullOrWhiteSpace(pessoaJuridica.ValidadeCnh))
             {
                 throw new ArgumentException("Val. CNH", "Campo obrigatório não preenchido");
             }
-            if (String.IsNullOrEmpty(pessoaJuridica.NomeCondutor))
+            if (String.IsNullOrWhiteSpace(pessoaJuridica.NomeCondutor))
             {
                 throw new ArgumentException("Condutor", "Campo obrigatório não preenchido");
             }
