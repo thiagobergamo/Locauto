@@ -18,14 +18,14 @@ namespace Services
         }
         public void inserir (TipoTelefone tipoTelefone)
         {
-            ValidarTipoTelefone(tipoTelefone);
+            ValidarTipoTelefone (tipoTelefone);
             tipoTelefoneDAO.inserir(tipoTelefone);
         }
         private void ValidarTipoTelefone(TipoTelefoneService tipoTelefone)
         {
-            if (String.IsNullOrWhiteSpace(tipoTelefone.Tipo))
+            if (String.IsNullOrWhiteSpace(tipoTelefone.Descricao))
             {
-                throw new ArgumentNullException("Código", "Campo obrigatório não preenchido");
+                throw new ArgumentNullException("Descrição", "Campo obrigatório não preenchido");
             }
 
         }
