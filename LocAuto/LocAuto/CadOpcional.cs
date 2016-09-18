@@ -26,7 +26,9 @@ namespace LocAuto
             
             Opcional opcional = new Opcional();
             opcional.Descricao = TxtDescricao.Text;
-            opcional.Valor = Convert.ToDecimal(TxtValor.Text);
+            if (!String.IsNullOrWhiteSpace(TxtValor.Text)){
+                opcional.Valor = Convert.ToDecimal(TxtValor.Text);
+            }
             OpcionalDAO opcionalDao = new OpcionalDAO();
             OpcionalService opcionalService = new OpcionalService(opcionalDao);
             try{

@@ -23,7 +23,7 @@ namespace Services
         }
         private void ValidarTipoVeiculo(TipoVeiculo tipoVeiculo)
         {
-            if (String.IsNullOrEmpty(tipoVeiculo.Descricao))
+            if (String.IsNullOrWhiteSpace(tipoVeiculo.Descricao))
             {
                 throw new ArgumentNullException("Descrição", "Campo obrigatório não preenchido");
             }

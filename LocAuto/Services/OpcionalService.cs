@@ -26,7 +26,11 @@ namespace Services
             if (String.IsNullOrEmpty(opcional.Descricao))
             {
                 throw new ArgumentNullException("Descrição", "Campo obrigatório não preenchido");
-            }            
+            }
+            if (opcional.Valor == 0)
+            {
+                throw new ArgumentNullException("Valor", "Campo obrigatório não preenchido");
+            }
         }
     }
 }

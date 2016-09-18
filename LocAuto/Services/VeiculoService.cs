@@ -23,23 +23,23 @@ namespace Services
         }
         private void ValidarVeiculo(Veiculo veiculo)
         {
-            if (String.IsNullOrEmpty(veiculo.Marca))
+            if (String.IsNullOrWhiteSpace(veiculo.Marca))
             {
                 throw new ArgumentNullException("Marca", "Campo obrigatório não preenchido");
             }
-            if (String.IsNullOrEmpty(veiculo.Modelo))
+            if (String.IsNullOrWhiteSpace(veiculo.Modelo))
             {
                 throw new ArgumentNullException("Modelo", "Campo obrigatório não preenchido");
             }
-            if (String.IsNullOrEmpty(veiculo.Cor))
+            if (String.IsNullOrWhiteSpace(veiculo.Cor))
             {
                 throw new ArgumentNullException("Cor", "Campo obrigatório não preenchido");
             }
-            if (veiculo.Ano == null)
+            if (veiculo.Ano == 0)
             {
                 throw new ArgumentNullException("Ano", "Campo obrigatório não preenchido");
             }
-            if (String.IsNullOrEmpty(veiculo.Placa))
+            if (String.IsNullOrWhiteSpace(veiculo.Placa))
             {
                 throw new ArgumentNullException("Placa", "Campo obrigatório não preenchido");
             }
