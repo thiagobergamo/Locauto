@@ -18,10 +18,10 @@ namespace Services
         }
         public void inserir (TipoTelefone tipoTelefone)
         {
-            ValidarTipoTelefone (tipoTelefone);
+            ValidarTipoTelefone(tipoTelefone);
             tipoTelefoneDAO.inserir(tipoTelefone);
         }
-        private void ValidarTipoTelefone(TipoTelefoneService tipoTelefone)
+        private void ValidarTipoTelefone(TipoTelefone tipoTelefone)
         {
             if (String.IsNullOrWhiteSpace(tipoTelefone.Descricao))
             {
