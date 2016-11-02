@@ -64,7 +64,10 @@ namespace LocAuto
             veiculo.codigoSituacaoVeiculo = CmbSituacao.SelectedValue.ToString();
             veiculo.Marca = TxtMarca.Text;
             veiculo.Modelo = TxtModelo.Text;
-            veiculo.Ano = Convert.ToInt32(TxtAno.Text);
+            if (!String.IsNullOrWhiteSpace(TxtAno.Text))
+            {
+                veiculo.Ano = Convert.ToInt32(TxtAno.Text);
+            }
             veiculo.Placa = TxtPlaca.Text;
             veiculo.Chassi = TxtChassi.Text;
             veiculo.Cor = TxtCor.Text;

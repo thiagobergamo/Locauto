@@ -40,9 +40,13 @@ namespace LocAuto
             tipoVeiculo.TravaEletrica = ChkTravaEletrica.Checked.ToString();
             tipoVeiculo.Abs = ChkAbs.Checked.ToString();
             tipoVeiculo.AirBag = ChkAirBag.Checked.ToString();
-            tipoVeiculo.ValorDiaria = Convert.ToDecimal(TxtValorDiaria.Text);
+            if (!String.IsNullOrWhiteSpace(TxtValorDiaria.Text))
+            {
+                tipoVeiculo.ValorDiaria = Convert.ToDecimal(TxtValorDiaria.Text);
+            }
             TipoVeiculoDAO tipoVeiculoDao = new TipoVeiculoDAO();
             TipoVeiculoService tipoVeiculoService = new TipoVeiculoService(tipoVeiculoDao);
+
             try
             {
                 tipoVeiculoService.inserir(tipoVeiculo);
