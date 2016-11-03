@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Modelo;
+using DaoMysql;
+using Services;
 
 namespace LocAuto
 {
@@ -36,7 +39,7 @@ namespace LocAuto
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            String msg;
+            //String msg;
             Vistoria vistoria = new Vistoria();
             vistoria.CodigoLocacao = Convert.ToInt32(TxtCodigoLocacao.Text);
             vistoria.CodigoUsuario = Convert.ToInt32(TxtCodigoUsuario.SelectedValue.ToString());
@@ -49,11 +52,24 @@ namespace LocAuto
             if (TxtLaudoDev.Text == "")
             {
                 VistoriaDAO vistoriaDAO = new VistoriaDAO();
-                msg = vistoriaDAO.inserir(vistoria);
+                vistoriaDAO.inserir(vistoria);
                 TxtKmLoc.Text = "";
                 TxtNivelCombLoc.Text = "";
                 TxtNivelCombLoc.Text = "";
-                MessageBox.Show(msg);
+                VistoriaService vistoriaService = new VistoriaService(vistoriaDAO);
+                try
+                {
+                    vistoriaService.inserir(vistoria);
+                    MessageBox.Show("Cadastro realizado com sucesso!");
+                }
+                catch (ArgumentNullException ex)
+                {
+                    MessageBox.Show(ex.Message, "Mensagem");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Erro");
+                }
                 this.Close();
             }
             else
@@ -62,8 +78,21 @@ namespace LocAuto
                 vistoria.NivelCombDev = TxtNivelCombDev.Text;
                 vistoria.LaudoDev = TxtLaudoDev.Text;
                 VistoriaDAO vistoriaDAO = new VistoriaDAO();
-                msg = vistoriaDAO.atualizar(vistoria);
-                MessageBox.Show(msg);
+                //vistoriaDAO.atualizar(vistoria);
+                VistoriaService vistoriaService = new VistoriaService(vistoriaDAO);
+                try
+                {
+                    vistoriaService.atualizar(vistoria);
+                    MessageBox.Show("Cadastro realizado com sucesso!");
+                }
+                catch (ArgumentNullException ex)
+                {
+                    MessageBox.Show(ex.Message, "Mensagem");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Erro");
+                }
                 this.Close();
             }
 

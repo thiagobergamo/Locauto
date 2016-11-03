@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DaoMysql;
+using Modelo;
+using Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,13 +37,28 @@ namespace LocAuto
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            String msg;
+            //String msg;
             TipoTelefone tipoTelefone = new TipoTelefone();
             tipoTelefone.Descricao = TxtDescricao.Text;
+
             TipoTelefoneDAO dao = new TipoTelefoneDAO();
-            msg = dao.inserir(tipoTelefone);
+
+            dao.inserir(tipoTelefone);
             TxtDescricao.Text = "";
-            MessageBox.Show(msg);
+            TipoTelefoneService tipoTelefoneService = new TipoTelefoneService(dao);
+            try
+            {
+                tipoTelefoneService.inserir(tipoTelefone);
+                MessageBox.Show("Cadastro realizado com sucesso!");
+            }
+            catch (ArgumentNullException ex)
+            {
+                MessageBox.Show(ex.Message, "Mensagem");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro");
+            }
 
         }
     }

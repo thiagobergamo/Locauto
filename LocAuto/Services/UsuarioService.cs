@@ -10,27 +10,22 @@ namespace Services
 {
     public class UsuarioService
     {
-        private IUsuarioDAO usuarioDAO;
+        private IUsuarioDAO usuarioDao;
         public UsuarioService() { }
-        public UsuarioService(IUsuarioDAO usuarioDAO)
+        public UsuarioService(IUsuarioDAO usuarioDao)
         {
-            this.usuarioDAO = usuarioDAO;
+            this.usuarioDao = usuarioDao;
         }
         public void inserir(Usuario usuario)
         {
             ValidarUsuario(usuario);
-            usuario.inserir(usuario);
+            usuarioDao.inserir(usuario);
         }
-
-        private void ValidarUsuario(UsuarioService usuario)
+        private void ValidarUsuario(Usuario usuario)
         {
             if (String.IsNullOrWhiteSpace(usuario.Nome))
             {
                 throw new ArgumentNullException("Nome", "Campo obrigatório não preenchido");
-            }
-            if (String.IsNullOrWhiteSpace(usuario.Email))
-            {
-                throw new ArgumentNullException("Email", "Campo obrigatório não preenchido");
             }
             if (String.IsNullOrWhiteSpace(usuario.Login))
             {
@@ -40,8 +35,6 @@ namespace Services
             {
                 throw new ArgumentNullException("Senha", "Campo obrigatório não preenchido");
             }
-
         }
     }
 }
-

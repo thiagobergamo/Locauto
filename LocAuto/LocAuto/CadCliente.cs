@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using DaoMysql;
+using Modelo;
+using Services;
 
 namespace LocAuto
 {
@@ -80,7 +83,7 @@ namespace LocAuto
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            String msg;
+            //String msg;
 
             PessoaFisica pessoaFisica = new PessoaFisica();
             pessoaFisica.Nome = TxtNome.Text;
@@ -101,7 +104,7 @@ namespace LocAuto
             pessoaFisica.OutroDocumento = TxtOutDocumento.Text;
             pessoaFisica.LoginWeb = TxtLoginWeb.Text;
             pessoaFisica.SenhaWeb = TxtSenha.Text;
-            PessoaFisicaDAO dao = new PessoaFisicaDAO();
+            PessoaFisicaDAO pessoaFisicaDao = new PessoaFisicaDAO();
 
             List<TelefoneCliente> telefones = new List<TelefoneCliente>();
             foreach(DataGridViewRow linha in this.dataGridView1.Rows)
@@ -111,10 +114,21 @@ namespace LocAuto
                     telefones.Add(new TelefoneCliente() { Tipo = Convert.ToInt32(linha.Cells["Tipo"].Value), Numero = linha.Cells["numero"].Value.ToString() });
                 }
             }
-             
-            msg = dao.inserir(pessoaFisica, telefones);
 
-            MessageBox.Show(msg);
+            PessoaFisicaService pessoaFisicaService = new PessoaFisicaService(pessoaFisicaDao);
+            try
+            {
+                pessoaFisicaService.inserir(pessoaFisica, telefones);
+                MessageBox.Show("Cadastro realizado com sucesso!");
+            }
+            catch (ArgumentNullException ex)
+            {
+                MessageBox.Show(ex.Message, "Mensagem");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro");
+            }
         }
 
         private void TxtNumero_TextChanged(object sender, EventArgs e)

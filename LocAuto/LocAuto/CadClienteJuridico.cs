@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Modelo;
+using DaoMysql;
+using Services;
 
 namespace LocAuto
 {
@@ -51,7 +54,7 @@ namespace LocAuto
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
             PessoaJuridica pessoaJuridica = new PessoaJuridica();
-            String msg;
+            //String msg;
 
             pessoaJuridica.RazaoSocial = TxtRazSocial.Text;
             pessoaJuridica.InscEstadual = TxtInsc.Text;
@@ -82,7 +85,7 @@ namespace LocAuto
             }
 
             PessoaJuridicaDAO dao = new PessoaJuridicaDAO();
-            msg = dao.inserir(pessoaJuridica, telefones);
+            dao.inserir(pessoaJuridica, telefones);
             TxtRazSocial.Text = "";
             TxtInsc.Text = "";
             MskCnpj.Text = "";
@@ -101,8 +104,21 @@ namespace LocAuto
             TxtNomCodutor.Text = "";
             TxtSenha.Text = "";
             TxtLogin.Text = "";
-            MessageBox.Show(msg);
 
+            PessoaJuridicaService pessoaJuridicaService = new PessoaJuridicaService(dao);
+            try
+            {
+                pessoaJuridicaService.inserir(pessoaJuridica, telefones);
+                MessageBox.Show("Cadastro realizado com sucesso!");
+            }
+            catch (ArgumentNullException ex)
+            {
+                MessageBox.Show(ex.Message, "Mensagem");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro");
+            }
         }
 
         private void TxtCodigo_TextChanged(object sender, EventArgs e)

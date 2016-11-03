@@ -48,6 +48,7 @@
     <Compile Include="SituacaoVeiculoService.cs" />
     <Compile Include="TipoTelefoneService.cs" />
     <Compile Include="TipoVeiculoService.cs" />
+    <Compile Include="UsuarioService.cs" />
     <Compile Include="VeiculoService.cs" />
     <Compile Include="VistoriaService.cs" />
   </ItemGroup>
