@@ -35,7 +35,6 @@ namespace DaoMysql
             {
                 conn.Close();
             }
-
         }
     }
 }
