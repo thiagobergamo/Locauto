@@ -12,5 +12,6 @@ namespace DaoInterface
         void inserir(PessoaFisica pessoaFisica, List<TelefoneCliente> telefoneCliente);
         PessoaFisica Retornar(int codigo);
         List<PessoaFisica> buscarTodos();
+        PessoaFisica BuscarPorId(int id);
     }
 }

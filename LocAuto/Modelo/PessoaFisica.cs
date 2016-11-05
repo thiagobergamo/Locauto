@@ -13,5 +13,6 @@ namespace Modelo
         public string Rg { get; set; }
         public string OutroDocumento { get; set; }
         public string DtNascimento { get; set; }
+        public string celular { get; set; }
     }
 }

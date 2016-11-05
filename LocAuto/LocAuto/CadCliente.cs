@@ -16,12 +16,31 @@ namespace LocAuto
 {
     public partial class CadClienteFisica : Form
     {
+        public PessoaFisica pessoaFisicaConsulta { get; set; }
+
         public CadClienteFisica()
         {
             InitializeComponent();
         }
 
         private void CadCliente_Load(object sender, EventArgs e)
+        {
+            CarregarTiposTelefone();
+            if (pessoaFisicaConsulta != null)
+            {
+                TxtNome.Text = pessoaFisicaConsulta.Nome;
+                MskValCnh.Text = pessoaFisicaConsulta.ValidadeCnh.ToString();
+                
+            }
+            TxtNome.Focus();
+        }
+
+        private void Senha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CarregarTiposTelefone()
         {
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
@@ -41,13 +60,6 @@ namespace LocAuto
             this.Tipo.DisplayMember = "descricao";
 
             conn.Close();
-
-            TxtNome.Focus();
-        }
-
-        private void Senha_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
@@ -124,6 +136,7 @@ namespace LocAuto
                 pessoaFisicaService.inserir(pessoaFisica, telefones);
                 LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
+                this.Close();
             }
             catch (ArgumentNullException ex)
             {

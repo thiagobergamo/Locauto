@@ -338,6 +338,7 @@ namespace LocAuto
                 this.idLocacao = unchecked((int)locacaoService.inserir(locacao));
                // LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
+              
             }
             catch (ArgumentNullException ex)
             {
@@ -347,6 +348,7 @@ namespace LocAuto
             {
                 MessageBox.Show(ex.Message, "Erro");
             }
+           
         }
 
         private void button1_Click(object sender, EventArgs e)

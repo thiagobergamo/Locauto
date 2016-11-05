@@ -80,5 +80,10 @@ namespace Services
            
             return listaPessoaFisica;
         }
+
+        public PessoaFisica BuscarPorId(int id)
+        {
+            return this.pessoaFisicaDao.BuscarPorId(id);
+        }
     }
 }
