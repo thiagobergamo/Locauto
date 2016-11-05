@@ -21,5 +21,6 @@ namespace Modelo
         public string Cep { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
+        public List<TelefoneCliente> Telefones { get; set; }
     }
 }

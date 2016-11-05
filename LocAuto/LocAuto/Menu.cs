@@ -42,10 +42,6 @@ namespace LocAuto
 
         private void pessoaFísicaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //CadClienteFisica cadClienteFisica = new CadClienteFisica();
-            //cadClienteFisica.MdiParent = this;
-            //cadClienteFisica.DesktopLocation = new Point(550, 100);
-            //cadClienteFisica.Show();
             ConsultaPessoaFisica consultaPessoaFisica = new ConsultaPessoaFisica();
             consultaPessoaFisica.MdiParent = this;
             consultaPessoaFisica.DesktopLocation = new Point(550, 100);

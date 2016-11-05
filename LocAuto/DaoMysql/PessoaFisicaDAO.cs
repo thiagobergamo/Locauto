@@ -138,9 +138,10 @@ namespace DaoMysql
             MySqlConnection conn;
             conn = cf.ObterConexao();
 
-            String cmdText = "select j.nome " +
-                             "from cliente c " +
-                             "join pessoa_fisica j on j.codigo_cliente = c.codigo ";
+            String cmdText = " select *, " +
+                             " (select telefone from telefone_cliente where codigo_cliente = c.codigo and codigo_tipo_telefone = 1) celular" +
+                             " from cliente c " +
+                             " join pessoa_fisica j on j.codigo_cliente = c.codigo ";
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(cmdText, conn);
             cmd.Prepare();
@@ -150,9 +151,10 @@ namespace DaoMysql
                 {
                     PessoaFisica pessoaFisica = new PessoaFisica();
                     //pessoaFisica.Codigo = Convert.ToInt32(leitor["codigo"]);
+                    pessoaFisica.Codigo = Convert.ToInt32(leitor["codigo_cliente"].ToString());
                     pessoaFisica.Nome = leitor["nome"].ToString();
-                    //pessoaFisica.Cnh = leitor["cnh"].ToString();
-                    //pessoaFisica.Email = leitor["email"].ToString();
+                    pessoaFisica.Cpf = leitor["cpf"].ToString();
+                    pessoaFisica.celular = leitor["celular"].ToString();
                     listaPessoaFisica.Add(pessoaFisica);
                 }
             }
@@ -160,5 +162,39 @@ namespace DaoMysql
 
             return listaPessoaFisica;
         }
+
+        public PessoaFisica BuscarPorId(int id)
+        {
+            PessoaFisica pessoaFisica = new PessoaFisica();
+            ConnectionFactory cf = new ConnectionFactory();
+            MySqlConnection conn;
+            conn = cf.ObterConexao();
+
+            String cmdText = "select * " +
+                             "from cliente c " +
+                             "join pessoa_fisica j on j.codigo_cliente = c.codigo " +
+                             "where c.codigo = @codigo";
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+            cmd.Parameters.Add(new MySqlParameter("codigo", id.ToString()));
+            cmd.Prepare();
+            using (MySqlDataReader leitor = cmd.ExecuteReader())
+            {
+                while (leitor.Read())
+                {
+                    pessoaFisica.Codigo = Convert.ToInt32(leitor["codigo"]);
+                    pessoaFisica.Email = leitor["email"].ToString();
+                    pessoaFisica.LoginWeb = leitor["login_web"].ToString();
+                    pessoaFisica.SenhaWeb = leitor["senha_web"].ToString();
+                    pessoaFisica.Cnh = leitor["cnh"].ToString();
+                    pessoaFisica.ValidadeCnh = leitor["validade_cnh"].ToString();
+                    pessoaFisica.Nome = leitor["nome"].ToString();
+                }
+            }
+            conn.Close();
+
+            return pessoaFisica;
+        }
     }
+
 }
