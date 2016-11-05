@@ -304,6 +304,9 @@ namespace LocAuto
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
             Locacao locacao = new Locacao();
+            LocacaoDAO locacaoDao = new LocacaoDAO();
+            LocacaoService locacaoService = new LocacaoService(locacaoDao);
+
             locacao.CodigoCliente = Convert.ToInt32(CbxNome.SelectedValue.ToString());
             locacao.CodigoVeiculo = Convert.ToInt32(CbxPlaca.SelectedValue.ToString());
             locacao.DataLocacao = DtpDtLocacao.Value.ToString("yyyy-MM-dd");
@@ -313,12 +316,11 @@ namespace LocAuto
             locacao.ValorOpc = Convert.ToDecimal(TxtValorOpc.Text);
             locacao.ValorCaucao = Convert.ToDecimal(TxtValorCaucao.Text);
             locacao.Pago = Convert.ToInt32(ChkPago.Checked).ToString();
-            LocacaoDAO dao = new LocacaoDAO();
-            LocacaoDAO locacaoDao = new LocacaoDAO();
-            LocacaoService locacaoService = new LocacaoService(locacaoDao);
+            
             try
             {
                 locacaoService.inserir(locacao);
+               // LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
             }
             catch (ArgumentNullException ex)
@@ -336,6 +338,19 @@ namespace LocAuto
             CadVistoria cadVistoria = new CadVistoria();
             cadVistoria.codLocacao = idLocacao;
             cadVistoria.Show();
+        }
+
+        //private void LimparTxt()
+        //{
+        //    CbxFormaPagto.Text = "";
+        // //   TxtValorTotal.Text = "";
+        //    TxtValorOpc.Text = "";
+        //    TxtValorCaucao.Text = "";
+        //}
+
+        private void BtnLimpar_Click(object sender, EventArgs e)
+        {
+          //  LimparTxt();
         }
     }
 }

@@ -34,6 +34,9 @@ namespace LocAuto
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
             TipoVeiculo tipoVeiculo = new TipoVeiculo();
+            TipoVeiculoDAO tipoVeiculoDao = new TipoVeiculoDAO();
+            TipoVeiculoService tipoVeiculoService = new TipoVeiculoService(tipoVeiculoDao);
+
             tipoVeiculo.Descricao = TxtGrupo.Text;
             tipoVeiculo.ArCondicionado = ChkArCondicionado.Checked.ToString();
             tipoVeiculo.VidroEletrico = ChkVidroEletrico.Checked.ToString();
@@ -43,13 +46,12 @@ namespace LocAuto
             if (!String.IsNullOrWhiteSpace(TxtValorDiaria.Text))
             {
                 tipoVeiculo.ValorDiaria = Convert.ToDecimal(TxtValorDiaria.Text);
-            }
-            TipoVeiculoDAO tipoVeiculoDao = new TipoVeiculoDAO();
-            TipoVeiculoService tipoVeiculoService = new TipoVeiculoService(tipoVeiculoDao);
+            }            
 
             try
             {
                 tipoVeiculoService.inserir(tipoVeiculo);
+                LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
             }
             catch (ArgumentNullException ex)
@@ -69,11 +71,15 @@ namespace LocAuto
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
+            LimparTxt();
+        }
+
+        private void LimparTxt()
+        {
             TxtGrupo.Text = "";
             ChkArCondicionado.Checked = false;
             ChkVidroEletrico.Checked = false;
             ChkTravaEletrica.Checked = false;
-            //ChkPortas.Checked = false;
             ChkAbs.Checked = false;
             ChkAirBag.Checked = false;
             TxtValorDiaria.Text = "";

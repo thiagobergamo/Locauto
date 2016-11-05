@@ -44,5 +44,17 @@ namespace DaoMysql
             }
 
         }
+
+       // public List<Veiculo> buscarTodos()
+      //  {
+      //      ConnectionFactory cf = new ConnectionFactory();
+      //      MySqlConnection conn;
+        //    conn = cf.ObterConexao();
+       //     String cmdText = "select * from veiculo";
+
+
+            
+
+      //  }
     }
 }

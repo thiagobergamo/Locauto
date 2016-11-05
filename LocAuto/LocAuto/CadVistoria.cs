@@ -39,15 +39,12 @@ namespace LocAuto
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            //String msg;
             Vistoria vistoria = new Vistoria();
             vistoria.CodigoLocacao = Convert.ToInt32(TxtCodigoLocacao.Text);
             vistoria.CodigoUsuario = Convert.ToInt32(TxtCodigoUsuario.SelectedValue.ToString());
             vistoria.KmLoc = Convert.ToInt32(TxtKmLoc.Text);
             vistoria.LaudoLoc = TxtLaudoLoc.Text;
-            vistoria.NivelCombLoc = TxtNivelCombLoc.Text;
-            
-
+            vistoria.NivelCombLoc = TxtNivelCombLoc.Text;        
 
             if (TxtLaudoDev.Text == "")
             {
@@ -60,6 +57,7 @@ namespace LocAuto
                 try
                 {
                     vistoriaService.inserir(vistoria);
+                    LimparTxt();
                     MessageBox.Show("Cadastro realizado com sucesso!");
                 }
                 catch (ArgumentNullException ex)
@@ -95,12 +93,13 @@ namespace LocAuto
                 }
                 this.Close();
             }
-
-
-
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparTxt();
+        }
+        private void LimparTxt()
         {
             TxtKmLoc.Text = "";
             TxtNivelCombLoc.Text = "";

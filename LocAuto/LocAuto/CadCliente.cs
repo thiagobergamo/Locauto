@@ -52,6 +52,11 @@ namespace LocAuto
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
+            LimparTxt();
+        }
+
+        public void LimparTxt()
+        {
             TxtNome.Text = "";
             TxtEmail.Text = "";
             MskDtNascimento.Text = "";
@@ -83,9 +88,10 @@ namespace LocAuto
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            //String msg;
-
             PessoaFisica pessoaFisica = new PessoaFisica();
+            PessoaFisicaDAO pessoaFisicaDao = new PessoaFisicaDAO();
+            PessoaFisicaService pessoaFisicaService = new PessoaFisicaService(pessoaFisicaDao);
+
             pessoaFisica.Nome = TxtNome.Text;
             pessoaFisica.Email = TxtEmail.Text;
             pessoaFisica.DtNascimento = MskDtNascimento.Value.ToString("yyyy-MM-dd");
@@ -96,15 +102,13 @@ namespace LocAuto
             pessoaFisica.Cep = MskCep.Text;
             pessoaFisica.Cidade = TxtCidade.Text;
             pessoaFisica.Estado = CmbEstado.Text;
-            //pessoaFisica.Codigo = Convert.ToInt32(TxtCodigo.Text);
             pessoaFisica.Rg = TxtRg.Text;
             pessoaFisica.Cnh = TxtCnh.Text;
             pessoaFisica.ValidadeCnh = MskValCnh.Value.ToString("yyyy-MM-dd");
             pessoaFisica.Cpf = MskCpf.Text;
             pessoaFisica.OutroDocumento = TxtOutDocumento.Text;
             pessoaFisica.LoginWeb = TxtLoginWeb.Text;
-            pessoaFisica.SenhaWeb = TxtSenha.Text;
-            PessoaFisicaDAO pessoaFisicaDao = new PessoaFisicaDAO();
+            pessoaFisica.SenhaWeb = TxtSenha.Text;            
 
             List<TelefoneCliente> telefones = new List<TelefoneCliente>();
             foreach(DataGridViewRow linha in this.dataGridView1.Rows)
@@ -114,11 +118,11 @@ namespace LocAuto
                     telefones.Add(new TelefoneCliente() { Tipo = Convert.ToInt32(linha.Cells["Tipo"].Value), Numero = linha.Cells["numero"].Value.ToString() });
                 }
             }
-
-            PessoaFisicaService pessoaFisicaService = new PessoaFisicaService(pessoaFisicaDao);
+            
             try
             {
                 pessoaFisicaService.inserir(pessoaFisica, telefones);
+                LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
             }
             catch (ArgumentNullException ex)

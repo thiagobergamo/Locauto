@@ -148,6 +148,7 @@
             this.MskValCnh.Name = "MskValCnh";
             this.MskValCnh.Size = new System.Drawing.Size(82, 20);
             this.MskValCnh.TabIndex = 15;
+            this.MskValCnh.Value = new System.DateTime(2016, 11, 4, 14, 24, 26, 0);
             // 
             // Senha
             // 
@@ -408,7 +409,6 @@
             this.TxtBairro.Name = "TxtBairro";
             this.TxtBairro.Size = new System.Drawing.Size(81, 20);
             this.TxtBairro.TabIndex = 10;
-            this.TxtBairro.Text = "9";
             // 
             // label9
             // 
@@ -556,7 +556,7 @@
             this.Controls.Add(this.BtnLimpar);
             this.Controls.Add(this.BtnSalvar);
             this.Name = "CadClienteJuridico";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Cadastro Cliente PJ";
             this.Load += new System.EventHandler(this.CadClienteJuridico_Load);
             this.groupBox3.ResumeLayout(false);

@@ -508,7 +508,7 @@
             this.DtpDtLocacao.Name = "DtpDtLocacao";
             this.DtpDtLocacao.Size = new System.Drawing.Size(121, 20);
             this.DtpDtLocacao.TabIndex = 5;
-            this.DtpDtLocacao.Value = new System.DateTime(2016, 5, 22, 0, 0, 0, 0);
+            this.DtpDtLocacao.Value = new System.DateTime(2016, 11, 4, 0, 0, 0, 0);
             // 
             // label11
             // 
@@ -581,6 +581,7 @@
             this.BtnLimpar.TabIndex = 5;
             this.BtnLimpar.Text = "Limpar";
             this.BtnLimpar.UseVisualStyleBackColor = true;
+            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
             // btnVistoria
             // 
@@ -603,6 +604,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "CadLocPf";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Locação Pessoa Física";
             this.Load += new System.EventHandler(this.CadLocPf_Load);
             this.groupBox1.ResumeLayout(false);

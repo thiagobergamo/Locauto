@@ -106,6 +106,7 @@
             this.Controls.Add(this.BtnDevolucao);
             this.Controls.Add(this.DgvConsultaPf);
             this.Name = "Consulta_locacaoPf";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Consulta Locação PF";
             this.Load += new System.EventHandler(this.Consulta_locacaoPf_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvConsultaPf)).EndInit();

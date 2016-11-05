@@ -271,7 +271,7 @@
             this.Controls.Add(this.TxtCodigo);
             this.Controls.Add(this.label1);
             this.Name = "CadVeiculo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Cadastro Veículo";
             this.Load += new System.EventHandler(this.CadVeiculo_Load);
             this.ResumeLayout(false);

@@ -250,7 +250,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtCodigoLocacao);
             this.Name = "CadVistoria";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Vistoria";
             this.Load += new System.EventHandler(this.CadVistoria_Load);
             this.groupBox1.ResumeLayout(false);

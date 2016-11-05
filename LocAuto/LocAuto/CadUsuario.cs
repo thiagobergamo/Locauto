@@ -23,6 +23,11 @@ namespace LocAuto
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
+            LimparTxt();
+        }
+
+        private void LimparTxt()
+        {
             TxtNome.Text = "";
             TxtEmail.Text = "";
             TxtUsuario.Text = "";
@@ -31,30 +36,19 @@ namespace LocAuto
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            //String msg;
             Usuario usuario = new Usuario();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            UsuarioService usuarioService = new UsuarioService(usuarioDAO);
+
             usuario.Nome = TxtNome.Text;
             usuario.Email = TxtEmail.Text;
             usuario.Login = TxtUsuario.Text;
             usuario.Senha = TxtSenha.Text;
-
-            if (!String.IsNullOrWhiteSpace(TxtNome.Text))
-            {
-                usuario.Nome = TxtNome.Text;
-            }
-            if (!String.IsNullOrWhiteSpace(TxtUsuario.Text))
-            {
-                usuario.Login = TxtUsuario.Text;
-            }
-            if (!String.IsNullOrWhiteSpace(TxtSenha.Text))
-            {
-                usuario.Senha = TxtSenha.Text;
-            }
-            UsuarioDAO usuarioDAO = new UsuarioDAO();
-            UsuarioService usuarioService = new UsuarioService(usuarioDAO);
+            
             try
             {
                 usuarioService.inserir(usuario);
+                LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
             }
             catch (ArgumentNullException ex)

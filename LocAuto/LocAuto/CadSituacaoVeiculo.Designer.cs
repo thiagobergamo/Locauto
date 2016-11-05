@@ -101,8 +101,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CadSituacaoVeiculo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Situacão do Veiculo";
+            this.Load += new System.EventHandler(this.CadSituacaoVeiculo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

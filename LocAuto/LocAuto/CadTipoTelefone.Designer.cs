@@ -103,7 +103,7 @@
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.TxtCodigo);
             this.Name = "CadTipoTelefone";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Tipo Telefone";
             this.ResumeLayout(false);
             this.PerformLayout();

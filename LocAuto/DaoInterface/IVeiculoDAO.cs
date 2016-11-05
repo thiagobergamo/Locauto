@@ -10,5 +10,6 @@ namespace DaoInterface
     public interface IVeiculoDAO
     {
         void inserir(Veiculo veiculo);
+      //  List<Veiculo> buscarTodos();
     }
 }

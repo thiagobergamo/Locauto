@@ -22,23 +22,25 @@ namespace LocAuto
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
-            TxtDescricao.Text = "";
+            LimparTxt();
         }
 
+        private void LimparTxt()
+        {
+            TxtDescricao.Text = "";
+        }
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            String msg;
             SituacaoVeiculo situacaoVeiculo = new SituacaoVeiculo();
-            situacaoVeiculo.Descricao = TxtDescricao.Text;
-
             SituacaoVeiculoDAO situacaoVeiculoDAO = new SituacaoVeiculoDAO();
-            situacaoVeiculoDAO.inserir(situacaoVeiculo);
-            TxtDescricao.Text = "";
-
             SituacaoVeiculoService situacaoVeiculoService = new SituacaoVeiculoService(situacaoVeiculoDAO);
+
+            situacaoVeiculo.Descricao = TxtDescricao.Text;            
+            
             try
             {
                 situacaoVeiculoService.inserir(situacaoVeiculo);
+                LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
             }
             catch (ArgumentNullException ex)
@@ -49,6 +51,11 @@ namespace LocAuto
             {
                 MessageBox.Show(ex.Message, "Erro");
             }
+        }
+
+        private void CadSituacaoVeiculo_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

@@ -196,7 +196,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtCodigo);
             this.Name = "CadTipoVeiculo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Cadastro Tipo Veículo";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

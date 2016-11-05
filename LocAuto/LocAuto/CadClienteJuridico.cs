@@ -54,7 +54,8 @@ namespace LocAuto
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
             PessoaJuridica pessoaJuridica = new PessoaJuridica();
-            //String msg;
+            PessoaJuridicaDAO dao = new PessoaJuridicaDAO();
+            PessoaJuridicaService pessoaJuridicaService = new PessoaJuridicaService(dao);
 
             pessoaJuridica.RazaoSocial = TxtRazSocial.Text;
             pessoaJuridica.InscEstadual = TxtInsc.Text;
@@ -82,33 +83,12 @@ namespace LocAuto
                 {
                     telefones.Add(new TelefoneCliente() { Tipo = Convert.ToInt32(linha.Cells["Tipo"].Value), Numero = linha.Cells["numero"].Value.ToString() });
                 }
-            }
-
-            PessoaJuridicaDAO dao = new PessoaJuridicaDAO();
-            dao.inserir(pessoaJuridica, telefones);
-            TxtRazSocial.Text = "";
-            TxtInsc.Text = "";
-            MskCnpj.Text = "";
-            TxtNomFantasia.Text = "";
-            TxtEmail.Text = "";
-            TxtContato.Text = "";
-            TxtEndereco.Text = "";
-            TxtNumero.Text = "";
-            TxtBairro.Text = "";
-            TxtComplemento.Text = "";
-            MskCep.Text = "";
-            TxtCidade.Text = "";
-            CmbEstado.Text = "";
-            TxtCnh.Text = "";
-            MskValCnh.Text = "";
-            TxtNomCodutor.Text = "";
-            TxtSenha.Text = "";
-            TxtLogin.Text = "";
-
-            PessoaJuridicaService pessoaJuridicaService = new PessoaJuridicaService(dao);
+            }            
+            
             try
             {
                 pessoaJuridicaService.inserir(pessoaJuridica, telefones);
+                LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
             }
             catch (ArgumentNullException ex)
@@ -121,12 +101,18 @@ namespace LocAuto
             }
         }
 
+
+
         private void TxtCodigo_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparTxt();
+        }
+        private void LimparTxt()
         {
             TxtRazSocial.Text = "";
             TxtInsc.Text = "";

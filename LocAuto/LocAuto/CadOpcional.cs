@@ -25,16 +25,20 @@ namespace LocAuto
         {
             
             Opcional opcional = new Opcional();
+            OpcionalDAO opcionalDao = new OpcionalDAO();
+            OpcionalService opcionalService = new OpcionalService(opcionalDao);
+
             opcional.Descricao = TxtDescricao.Text;
             if (!String.IsNullOrWhiteSpace(TxtValor.Text)){
                 opcional.Valor = Convert.ToDecimal(TxtValor.Text);
             }
-            OpcionalDAO opcionalDao = new OpcionalDAO();
-            OpcionalService opcionalService = new OpcionalService(opcionalDao);
+            
             try{
                 opcionalService.inserir(opcional);
+                LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
-            } catch(ArgumentNullException ex)
+            }
+            catch (ArgumentNullException ex)
             {
                 MessageBox.Show(ex.Message, "Mensagem");
             }
@@ -45,6 +49,11 @@ namespace LocAuto
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparTxt();
+        }
+
+        private void LimparTxt()
         {
             TxtDescricao.Text = "";
             TxtValor.Text = "";

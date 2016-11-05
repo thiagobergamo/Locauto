@@ -21,6 +21,7 @@ namespace LocAuto
         {
             CadClienteFisica cadClienteFisica = new CadClienteFisica();
             cadClienteFisica.MdiParent = this;
+            cadClienteFisica.DesktopLocation = new Point(550, 100);
             cadClienteFisica.Show();
         }
 
@@ -30,6 +31,7 @@ namespace LocAuto
         {
             CadTipoTelefone cadTipoTelefone = new CadTipoTelefone();
             cadTipoTelefone.MdiParent = this;
+            cadTipoTelefone.DesktopLocation = new Point(550, 100);
             cadTipoTelefone.Show();
         }
 
@@ -42,6 +44,7 @@ namespace LocAuto
         {
             CadClienteFisica cadClienteFisica = new CadClienteFisica();
             cadClienteFisica.MdiParent = this;
+            cadClienteFisica.DesktopLocation = new Point(550, 100);
             cadClienteFisica.Show();
         }
 
@@ -54,6 +57,7 @@ namespace LocAuto
         {
             CadClienteJuridico cadClienteJuridico = new CadClienteJuridico();
             cadClienteJuridico.MdiParent = this;
+            cadClienteJuridico.DesktopLocation = new Point(550, 100);
             cadClienteJuridico.Show();
         }
 
@@ -66,6 +70,7 @@ namespace LocAuto
         {
             CadLocPf cadLocPf = new CadLocPf();
             cadLocPf.MdiParent = this;
+            cadLocPf.DesktopLocation = new Point(550, 100);
             cadLocPf.Show();
         }
 
@@ -73,6 +78,7 @@ namespace LocAuto
         {
             CadLocPj cadLocPj = new CadLocPj();
             cadLocPj.MdiParent = this;
+            cadLocPj.DesktopLocation = new Point(550, 100);
             cadLocPj.Show();
         }
 
@@ -80,6 +86,7 @@ namespace LocAuto
         {
             CadUsuario cadUsuario = new CadUsuario();
             cadUsuario.MdiParent = this;
+            cadUsuario.DesktopLocation = new Point(550, 100);
             cadUsuario.Show();
         }
 
@@ -87,6 +94,7 @@ namespace LocAuto
         {
             CadSituacaoVeiculo cadSituacaoVeiculo = new CadSituacaoVeiculo();
             cadSituacaoVeiculo.MdiParent = this;
+            cadSituacaoVeiculo.DesktopLocation = new Point(550, 100);
             cadSituacaoVeiculo.Show();
         }
 
@@ -94,6 +102,7 @@ namespace LocAuto
         {
             CadOpcional cadOpcional = new CadOpcional();
             cadOpcional.MdiParent = this;
+            cadOpcional.DesktopLocation = new Point(550, 100);
             cadOpcional.Show();
         }
 
@@ -101,6 +110,7 @@ namespace LocAuto
         {
             CadClienteJuridico cadClienteJuridico = new CadClienteJuridico();
             cadClienteJuridico.MdiParent = this;
+            cadClienteJuridico.DesktopLocation = new Point(550, 100);
             cadClienteJuridico.Show();
         }
 
@@ -108,6 +118,7 @@ namespace LocAuto
         {
             CadVeiculo cadVeiculo = new CadVeiculo();
             cadVeiculo.MdiParent = this;
+            cadVeiculo.DesktopLocation = new Point(550, 100);
             cadVeiculo.Show();
         }
 
@@ -115,6 +126,7 @@ namespace LocAuto
         {
             CadTipoVeiculo cadTipoVeiculo = new CadTipoVeiculo();
             cadTipoVeiculo.MdiParent = this;
+            cadTipoVeiculo.DesktopLocation = new Point(550, 100);
             cadTipoVeiculo.Show();
         }
 
@@ -122,6 +134,7 @@ namespace LocAuto
         {
             Consulta_locacaoPf consulta_locacaoPf = new Consulta_locacaoPf();
             consulta_locacaoPf.MdiParent = this;
+            consulta_locacaoPf.DesktopLocation = new Point(550, 100);
             consulta_locacaoPf.Show();
         }
 
@@ -129,7 +142,8 @@ namespace LocAuto
         {
             ConsultaLocacao consultaLocacao = new ConsultaLocacao();
             consultaLocacao.MdiParent = this;
+            consultaLocacao.DesktopLocation = new Point(550, 100);
             consultaLocacao.Show();
-        }
+        }             
     }
 }

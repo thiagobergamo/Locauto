@@ -60,6 +60,9 @@ namespace LocAuto
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
             Veiculo veiculo = new Veiculo();
+            VeiculoDAO veiculoDao = new VeiculoDAO();
+            VeiculoService veiculoService = new VeiculoService(veiculoDao);
+
             veiculo.codigoTipoVeiculo = CmbGrupo.SelectedValue.ToString();
             veiculo.codigoSituacaoVeiculo = CmbSituacao.SelectedValue.ToString();
             veiculo.Marca = TxtMarca.Text;
@@ -72,11 +75,11 @@ namespace LocAuto
             veiculo.Chassi = TxtChassi.Text;
             veiculo.Cor = TxtCor.Text;
             veiculo.Observacao = TxtObs.Text;
-            VeiculoDAO veiculoDao = new VeiculoDAO();
-            VeiculoService veiculoService = new VeiculoService(veiculoDao);
+            
             try
             {
                 veiculoService.inserir(veiculo);
+                LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
             }
             catch (ArgumentNullException ex)
@@ -127,6 +130,10 @@ namespace LocAuto
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparTxt();
+        }
+        private void LimparTxt()
         {
             TxtMarca.Text = "";
             TxtModelo.Text = "";

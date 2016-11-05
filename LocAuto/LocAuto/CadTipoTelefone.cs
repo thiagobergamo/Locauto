@@ -27,7 +27,12 @@ namespace LocAuto
 
         private void Limpar_Click(object sender, EventArgs e)
         {
+            LimparTxt();
+        }
 
+        private void LimparTxt()
+        {
+            TxtDescricao.Text = "";
         }
 
         private void TxtCodigo_TextChanged(object sender, EventArgs e)
@@ -37,18 +42,16 @@ namespace LocAuto
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            //String msg;
             TipoTelefone tipoTelefone = new TipoTelefone();
-            tipoTelefone.Descricao = TxtDescricao.Text;
-
             TipoTelefoneDAO dao = new TipoTelefoneDAO();
-
-            dao.inserir(tipoTelefone);
-            TxtDescricao.Text = "";
             TipoTelefoneService tipoTelefoneService = new TipoTelefoneService(dao);
+
+            tipoTelefone.Descricao = TxtDescricao.Text;
+            
             try
             {
                 tipoTelefoneService.inserir(tipoTelefone);
+                LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
             }
             catch (ArgumentNullException ex)

@@ -54,6 +54,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.TxtCidade = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.MskCep = new System.Windows.Forms.MaskedTextBox();
             this.CEP = new System.Windows.Forms.Label();
             this.TxtBairro = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -71,7 +72,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Tipo = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MskCep = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -349,6 +349,14 @@
             this.label11.TabIndex = 57;
             this.label11.Text = "Cidade";
             // 
+            // MskCep
+            // 
+            this.MskCep.Location = new System.Drawing.Point(347, 152);
+            this.MskCep.Mask = "99999-999";
+            this.MskCep.Name = "MskCep";
+            this.MskCep.Size = new System.Drawing.Size(69, 20);
+            this.MskCep.TabIndex = 10;
+            // 
             // CEP
             // 
             this.CEP.AutoSize = true;
@@ -506,14 +514,6 @@
             this.numero.HeaderText = "Número";
             this.numero.Name = "numero";
             // 
-            // MskCep
-            // 
-            this.MskCep.Location = new System.Drawing.Point(347, 152);
-            this.MskCep.Mask = "99999-999";
-            this.MskCep.Name = "MskCep";
-            this.MskCep.Size = new System.Drawing.Size(69, 20);
-            this.MskCep.TabIndex = 10;
-            // 
             // CadClienteFisica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -526,7 +526,7 @@
             this.Controls.Add(this.BtnLimpar);
             this.Controls.Add(this.BtnSalvar);
             this.Name = "CadClienteFisica";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Cadastro Cliente PF";
             this.Load += new System.EventHandler(this.CadCliente_Load);
             this.groupBox1.ResumeLayout(false);
