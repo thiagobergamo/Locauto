@@ -44,10 +44,6 @@ namespace Services
             {
                 throw new ArgumentNullException("Número", "Campo obrigatório não preenchido");
             }
-            if (String.IsNullOrWhiteSpace(pessoaFisica.Complemento))
-            {
-                throw new ArgumentNullException("Complemento", "Campo obrigatório não preenchido");
-            }
             if (String.IsNullOrWhiteSpace(pessoaFisica.Bairro))
             {
                 throw new ArgumentNullException("Bairro", "Campo obrigatório não preenchido");
