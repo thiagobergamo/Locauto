@@ -125,6 +125,12 @@
     <Compile Include="ConsultaPessoaFisica.Designer.cs">
       <DependentUpon>ConsultaPessoaFisica.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaVeiculo.Designer.cs">
+      <DependentUpon>ConsultaVeiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consulta_locacaoPf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaPessoaFisica.resx">
       <DependentUpon>ConsultaPessoaFisica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaVeiculo.resx">
+      <DependentUpon>ConsultaVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta_locacaoPf.resx">
       <DependentUpon>Consulta_locacaoPf.cs</DependentUpon>
