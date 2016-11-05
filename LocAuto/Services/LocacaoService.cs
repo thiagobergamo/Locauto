@@ -16,10 +16,10 @@ namespace Services
         {
             this.locacaoDao = locacaoDao;
         }
-        public void inserir(Locacao locacao)
+        public long inserir(Locacao locacao)
         {
             ValidarLocacao(locacao);
-            locacaoDao.Inserir(locacao);
+            return locacaoDao.Inserir(locacao);
         }
         private void ValidarLocacao(Locacao locacao)
         {

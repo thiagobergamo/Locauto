@@ -73,5 +73,12 @@ namespace Services
                 throw new ArgumentNullException("CPF", "Campo obrigatório não preenchido");
             }
         }
+        public List<PessoaFisica> buscarTodos()
+        {
+            List<PessoaFisica> listaPessoaFisica = new List<PessoaFisica>();
+            listaPessoaFisica = this.pessoaFisicaDao.buscarTodos();
+           
+            return listaPessoaFisica;
+        }
     }
 }

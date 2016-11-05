@@ -130,5 +130,35 @@ namespace DaoMysql
 
             return pessoaFisica;
         }
+
+        public List<PessoaFisica> buscarTodos()
+        {
+            List<PessoaFisica> listaPessoaFisica = new List<PessoaFisica>();
+            ConnectionFactory cf = new ConnectionFactory();
+            MySqlConnection conn;
+            conn = cf.ObterConexao();
+
+            String cmdText = "select j.nome " +
+                             "from cliente c " +
+                             "join pessoa_fisica j on j.codigo_cliente = c.codigo ";
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+            cmd.Prepare();
+            using (MySqlDataReader leitor = cmd.ExecuteReader())
+            {
+                while (leitor.Read())
+                {
+                    PessoaFisica pessoaFisica = new PessoaFisica();
+                    //pessoaFisica.Codigo = Convert.ToInt32(leitor["codigo"]);
+                    pessoaFisica.Nome = leitor["nome"].ToString();
+                    //pessoaFisica.Cnh = leitor["cnh"].ToString();
+                    //pessoaFisica.Email = leitor["email"].ToString();
+                    listaPessoaFisica.Add(pessoaFisica);
+                }
+            }
+            conn.Close();
+
+            return listaPessoaFisica;
+        }
     }
 }

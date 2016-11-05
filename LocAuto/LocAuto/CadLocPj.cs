@@ -17,7 +17,7 @@ namespace LocAuto
 {
     public partial class CadLocPj : Form
     {
-        public int idLocacao { get; set; }
+        private int idLocacao = 0;
         public CadLocPj()
         {
             InitializeComponent();
@@ -92,20 +92,35 @@ namespace LocAuto
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
             Locacao locacao = new Locacao();
-            locacao.CodigoCliente = Convert.ToInt32(CbxNomeFantasia.SelectedValue.ToString());
-            locacao.CodigoVeiculo = Convert.ToInt32(CbxPlaca.SelectedValue.ToString());
+            if (!String.IsNullOrWhiteSpace(locacao.CodigoCliente.ToString()))
+            {
+                locacao.CodigoCliente = Convert.ToInt32(CbxNomeFantasia.SelectedValue.ToString());
+            }
+            if (!String.IsNullOrWhiteSpace(locacao.CodigoVeiculo.ToString()))
+            {
+                locacao.CodigoVeiculo = Convert.ToInt32(CbxPlaca.SelectedValue);
+            }
             locacao.DataLocacao = DtpDtLocacao.Value.ToString("yyyy-MM-dd");
             locacao.DataPrevDevolucao = DtpDtDevolucao.Value.ToString("yyyy-MM-dd");
             locacao.FormaPagamento = CbxFormaPagto.Text;
-            locacao.ValorTotal = Convert.ToDecimal(TxtValorTotal.Text);
-            locacao.ValorOpc = Convert.ToDecimal(TxtValorOpc.Text);
-            locacao.ValorCaucao = Convert.ToDecimal(TxtValorCaucao.Text);
+            if (!String.IsNullOrWhiteSpace(locacao.ValorTotal.ToString()))
+            {
+                locacao.ValorTotal = Convert.ToDecimal(TxtValorTotal.Text);
+            }
+            if (!String.IsNullOrWhiteSpace(locacao.ValorOpc.ToString()))
+            {
+                locacao.ValorOpc = Convert.ToDecimal(TxtValorOpc.Text);
+            }
+            if (!String.IsNullOrWhiteSpace(locacao.ValorCaucao.ToString()))
+            {
+                locacao.ValorCaucao = Convert.ToDecimal(TxtValorCaucao.Text);
+            }
             locacao.Pago = Convert.ToInt32(ChkPago.Checked).ToString();
             LocacaoDAO locacaoDao = new LocacaoDAO();
             LocacaoService locacaoService = new LocacaoService(locacaoDao);
             try
             {
-                locacaoService.inserir(locacao);
+                this.idLocacao = unchecked((int)locacaoService.inserir(locacao));
                 MessageBox.Show("Cadastro realizado com sucesso!");
             }
             catch (ArgumentNullException ex)
@@ -311,9 +326,15 @@ namespace LocAuto
 
         private void BtnVistoria_Click(object sender, EventArgs e)
         {
-            CadVistoria cadVistoria = new CadVistoria();
-            cadVistoria.codLocacao = idLocacao;
-            cadVistoria.Show();
+            if (this.idLocacao == 0)
+            {
+                MessageBox.Show("Salve a locação antes de realizar a vistoria");
+            }else
+            {
+                CadVistoria cadVistoria = new CadVistoria();
+                cadVistoria.codLocacao = idLocacao;
+                cadVistoria.Show();
+            }
         }
     }
 }

@@ -119,6 +119,12 @@
     <Compile Include="ConsultaLocacao.Designer.cs">
       <DependentUpon>ConsultaLocacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaPessoaFisica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaPessoaFisica.Designer.cs">
+      <DependentUpon>ConsultaPessoaFisica.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consulta_locacaoPf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     <EmbeddedResource Include="ConsultaLocacao.resx">
       <DependentUpon>ConsultaLocacao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaPessoaFisica.resx">
+      <DependentUpon>ConsultaPessoaFisica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consulta_locacaoPf.resx">
       <DependentUpon>Consulta_locacaoPf.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +194,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\Services.PessoaFisicaService.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -218,6 +228,9 @@
       <Project>{489be008-8927-4110-8f77-5b6756c44a8f}</Project>
       <Name>Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

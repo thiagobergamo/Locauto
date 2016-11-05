@@ -11,7 +11,7 @@ namespace DaoMysql
 {
     public class LocacaoDAO : ILocacaoDAO
     {
-        public void Inserir(Locacao locacao)
+        public long Inserir(Locacao locacao)
         {
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
@@ -34,6 +34,7 @@ namespace DaoMysql
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
                 id = cmd.LastInsertedId;
+                return id;
 
             }
             catch (MySqlException ex)

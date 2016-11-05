@@ -9,6 +9,6 @@ namespace DaoInterface
 {
     public interface ILocacaoDAO
     {
-        void Inserir(Locacao locacao);
+        long Inserir(Locacao locacao);
     }
 }

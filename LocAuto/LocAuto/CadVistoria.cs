@@ -50,15 +50,12 @@ namespace LocAuto
             {
                 VistoriaDAO vistoriaDAO = new VistoriaDAO();
                 vistoriaDAO.inserir(vistoria);
-                TxtKmLoc.Text = "";
-                TxtNivelCombLoc.Text = "";
-                TxtNivelCombLoc.Text = "";
                 VistoriaService vistoriaService = new VistoriaService(vistoriaDAO);
                 try
                 {
                     vistoriaService.inserir(vistoria);
-                    LimparTxt();
                     MessageBox.Show("Cadastro realizado com sucesso!");
+                    this.Close();
                 }
                 catch (ArgumentNullException ex)
                 {
@@ -68,7 +65,6 @@ namespace LocAuto
                 {
                     MessageBox.Show(ex.Message, "Erro");
                 }
-                this.Close();
             }
             else
             {
