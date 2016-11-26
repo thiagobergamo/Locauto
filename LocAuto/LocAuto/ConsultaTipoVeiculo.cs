@@ -58,5 +58,18 @@ namespace LocAuto
             MessageBox.Show("Tipo de Veiculo apagado com sucesso");
             carregarGrid();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int idSelecionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells["codigo"].Value);
+            TipoVeiculo tipoVeiculoSelecionado;
+            TipoVeiculoDAO dao = new TipoVeiculoDAO();
+            TipoVeiculoService service = new TipoVeiculoService(dao);
+            tipoVeiculoSelecionado = service.buscaPorId(idSelecionado);
+
+            CadTipoVeiculo cadTipoVeiculo = new CadTipoVeiculo();
+            cadTipoVeiculo.tipoVeiculoConsulta = tipoVeiculoSelecionado;
+            cadTipoVeiculo.Show();
+        }
     }
 }

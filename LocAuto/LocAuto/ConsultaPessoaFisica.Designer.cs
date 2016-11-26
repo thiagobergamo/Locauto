@@ -154,7 +154,6 @@
             this.groupBox1.Size = new System.Drawing.Size(854, 64);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Pesquisa";
             // 
             // button2
             // 

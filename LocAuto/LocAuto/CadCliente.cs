@@ -120,6 +120,7 @@ namespace LocAuto
             PessoaFisicaDAO pessoaFisicaDao = new PessoaFisicaDAO();
             PessoaFisicaService pessoaFisicaService = new PessoaFisicaService(pessoaFisicaDao);
 
+            pessoaFisica.Codigo = Convert.ToInt32(TxtCodigo.Text);
             pessoaFisica.Nome = TxtNome.Text;
             pessoaFisica.Email = TxtEmail.Text;
             pessoaFisica.DtNascimento = MskDtNascimento.Value.ToString("yyyy-MM-dd");
@@ -149,7 +150,7 @@ namespace LocAuto
             
             try
             {
-                if (pessoaFisica.Codigo == null)
+                if (pessoaFisica.Codigo == 0)
                 {
                     pessoaFisicaService.inserir(pessoaFisica, telefones);
                 }

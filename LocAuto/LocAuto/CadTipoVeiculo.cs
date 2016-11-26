@@ -16,6 +16,8 @@ namespace LocAuto
 {
     public partial class CadTipoVeiculo : Form
     {
+        public TipoVeiculo tipoVeiculoConsulta { get; set; }
+
         public CadTipoVeiculo()
         {
             InitializeComponent();
@@ -83,6 +85,25 @@ namespace LocAuto
             ChkAbs.Checked = false;
             ChkAirBag.Checked = false;
             TxtValorDiaria.Text = "";
+        }
+
+        private void CadTipoVeiculo_Load(object sender, EventArgs e)
+        {
+            if (tipoVeiculoConsulta != null)
+            {
+                TxtCodigo.Text = tipoVeiculoConsulta.Codigo.ToString();
+                TxtGrupo.Text = tipoVeiculoConsulta.Descricao;
+
+                if (tipoVeiculoConsulta.Abs == "T")
+                {
+                    ChkAbs.Checked = true;
+                }else
+                {
+                    ChkAbs.Checked = false;
+                }
+
+                
+            }
         }
     }
 }
