@@ -65,8 +65,6 @@ namespace LocAuto
                 {
                     tipoVeiculoService.atualizar(tipoVeiculo);
                 }
-
-                tipoVeiculoService.inserir(tipoVeiculo);
                 LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
             }

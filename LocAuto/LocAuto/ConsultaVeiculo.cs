@@ -70,6 +70,7 @@ namespace LocAuto
             CadVeiculo cadVeiculo = new CadVeiculo();
             cadVeiculo.veiculoConsulta = veiculoSelecionado;
             cadVeiculo.Show();
+
         }
     }
 }

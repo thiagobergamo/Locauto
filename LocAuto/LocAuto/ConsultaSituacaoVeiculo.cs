@@ -66,7 +66,9 @@ namespace LocAuto
 
             CadSituacaoVeiculo cadSituacaoVeiculo = new CadSituacaoVeiculo();
             cadSituacaoVeiculo.situacaoVeiculoConsulta = situacaoVeiculoSelecionado;
-            cadSituacaoVeiculo.Show();
+            //cadSituacaoVeiculo.Show();
+            cadSituacaoVeiculo.ShowDialog();
+            carregarGrid();
         }
     }
 }
