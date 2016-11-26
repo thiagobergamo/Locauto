@@ -39,7 +39,7 @@ namespace DaoMysql
             }
         }
 
-        void atualizar(Usuario usuario)
+        public void atualizar(Usuario usuario)
         {
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
@@ -68,7 +68,7 @@ namespace DaoMysql
             }
         }
 
-        void apagar(int id)
+        public void apagar(int id)
         {
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
@@ -93,7 +93,7 @@ namespace DaoMysql
             }
         }
 
-        Usuario buscaPorId(int id)
+        public Usuario buscaPorId(int id)
         {
             Usuario usuario = new Usuario();
             ConnectionFactory cf = new ConnectionFactory();
@@ -123,7 +123,7 @@ namespace DaoMysql
             return usuario;
         }
 
-        List<Usuario> buscaTodos()
+        public List<Usuario> buscaTodos()
         {
             List<Usuario> usuarios = new List<Usuario>();
             ConnectionFactory cf = new ConnectionFactory();
