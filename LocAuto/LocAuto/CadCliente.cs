@@ -28,8 +28,24 @@ namespace LocAuto
             CarregarTiposTelefone();
             if (pessoaFisicaConsulta != null)
             {
+                TxtCodigo.Text = pessoaFisicaConsulta.Codigo.ToString();
                 TxtNome.Text = pessoaFisicaConsulta.Nome;
+                //MskDtNascimento.Text = pessoaFisicaConsulta.DtNascimento.ToString();
+                TxtEmail.Text = pessoaFisicaConsulta.Email;
+                TxtLog.Text = pessoaFisicaConsulta.Logradouro;
+                TxtNum.Text = pessoaFisicaConsulta.Numero.ToString();
+                TxtComplemento.Text = pessoaFisicaConsulta.Complemento;
+                TxtBairro.Text = pessoaFisicaConsulta.Bairro;
+                CmbEstado.Text = pessoaFisicaConsulta.Estado;
+                TxtCidade.Text = pessoaFisicaConsulta.Cidade;
+                MskCep.Text = pessoaFisicaConsulta.Cep;
+                TxtRg.Text = pessoaFisicaConsulta.Rg;
+                TxtCnh.Text = pessoaFisicaConsulta.Cnh;
                 MskValCnh.Text = pessoaFisicaConsulta.ValidadeCnh.ToString();
+                MskCpf.Text = pessoaFisicaConsulta.Cpf;
+                TxtOutDocumento.Text = pessoaFisicaConsulta.OutroDocumento;
+                TxtLoginWeb.Text = pessoaFisicaConsulta.LoginWeb;
+                TxtSenha.Text = pessoaFisicaConsulta.SenhaWeb;
                 
             }
             TxtNome.Focus();
