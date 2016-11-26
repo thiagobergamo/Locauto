@@ -63,8 +63,16 @@ namespace LocAuto
             VeiculoDAO veiculoDao = new VeiculoDAO();
             VeiculoService veiculoService = new VeiculoService(veiculoDao);
 
-            veiculo.codigoTipoVeiculo = CmbGrupo.SelectedValue.ToString();
-            veiculo.codigoSituacaoVeiculo = CmbSituacao.SelectedValue.ToString();
+            if (!String.IsNullOrWhiteSpace(CmbGrupo.Text))
+            {
+                veiculo.codigoTipoVeiculo = Convert.ToInt32(CmbGrupo.SelectedValue.ToString());
+            }
+            //veiculo.codigoTipoVeiculo = CmbGrupo.SelectedValue.ToString();
+            if (!String.IsNullOrWhiteSpace(CmbSituacao.Text))
+            {
+                veiculo.codigoSituacaoVeiculo = Convert.ToInt32(CmbSituacao.SelectedValue.ToString());
+            }
+            //veiculo.codigoSituacaoVeiculo = CmbSituacao.SelectedValue.ToString();
             veiculo.Marca = TxtMarca.Text;
             veiculo.Modelo = TxtModelo.Text;
             if (!String.IsNullOrWhiteSpace(TxtAno.Text))
