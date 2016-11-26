@@ -122,11 +122,29 @@
     <Compile Include="ConsultaLocacao.Designer.cs">
       <DependentUpon>ConsultaLocacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaOpcional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaOpcional.Designer.cs">
+      <DependentUpon>ConsultaOpcional.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaPessoaFisica.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConsultaPessoaFisica.Designer.cs">
       <DependentUpon>ConsultaPessoaFisica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaSituacaoVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaSituacaoVeiculo.Designer.cs">
+      <DependentUpon>ConsultaSituacaoVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaTipoTelefone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaTipoTelefone.Designer.cs">
+      <DependentUpon>ConsultaTipoTelefone.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultaTipoVeiculo.cs">
       <SubType>Form</SubType>
