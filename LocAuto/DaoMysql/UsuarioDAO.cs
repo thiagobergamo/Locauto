@@ -73,7 +73,7 @@ namespace DaoMysql
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
             conn = cf.ObterConexao();
-            String cmdText = "DELETE usuario WHERE codigo = @id;";
+            String cmdText = "DELETE FROM usuario WHERE codigo = @id;";
 
             try
             {

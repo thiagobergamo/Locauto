@@ -81,5 +81,10 @@ namespace Services
         {
             return this.pessoaFisicaDao.BuscarPorId(id);
         }
+
+        public List<PessoaFisica> buscaPorNomeOuCpf(String nome, String cpf)
+        {
+            return this.pessoaFisicaDao.buscaPorNomeOuCpf(nome, cpf);
+        }
     }
 }
