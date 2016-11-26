@@ -21,6 +21,11 @@ namespace Services
             ValidarPessoaFisica(pessoaFisica);
             pessoaFisicaDao.inserir(pessoaFisica, telefoneCliente);
         }
+        public void atualizar(PessoaFisica pessoaFisica, List<TelefoneCliente> telefoneCliente)
+        {
+            ValidarPessoaFisica(pessoaFisica);
+            pessoaFisicaDao.atualizar(pessoaFisica, telefoneCliente);
+        }
         public PessoaFisica Retornar(int codigo)
         {
             PessoaFisica pessoaFisica = pessoaFisicaDao.Retornar(codigo);

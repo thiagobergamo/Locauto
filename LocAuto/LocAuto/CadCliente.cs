@@ -149,7 +149,15 @@ namespace LocAuto
             
             try
             {
-                pessoaFisicaService.inserir(pessoaFisica, telefones);
+                if (pessoaFisica.Codigo == null)
+                {
+                    pessoaFisicaService.inserir(pessoaFisica, telefones);
+                }
+                else
+                {
+                    pessoaFisicaService.atualizar(pessoaFisica, telefones);
+                }
+                
                 LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
                 this.Close();

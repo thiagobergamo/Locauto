@@ -15,5 +15,6 @@ namespace DaoInterface
         PessoaFisica BuscarPorId(int id);
         void apagar(int id);
         List<PessoaFisica> buscaPorNomeOuCpf(String nome, String cpf);
+        void atualizar(PessoaFisica pessoaFisica, List<TelefoneCliente> telefoneCliente);
     }
 }

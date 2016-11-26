@@ -100,6 +100,115 @@ namespace DaoMysql
             }
         }
 
+        public void atualizar(PessoaFisica pessoaFisica, List<TelefoneCliente> telefoneCliente)
+        {
+            ConnectionFactory cf = new ConnectionFactory();
+            MySqlConnection conn;
+            conn = cf.ObterConexao();
+            String cmdText = "UPDATE cliente SET email = @email, login_web = @login_web, senha_web = @senha_web, cnh = @cnh, validade_cnh = @validade_cnh, logradouro = @logradouro, numero = @numero, complemento = @complemento, bairro = @bairro, cep = @cep, cidade = @cidade, estado = @estado WHERE codigo = @id;";
+            long id;
+            id = 0;
+
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+                cmd.Parameters.Add(new MySqlParameter("id", pessoaFisica.Codigo));
+                cmd.Parameters.Add(new MySqlParameter("email", pessoaFisica.Email));
+                cmd.Parameters.Add(new MySqlParameter("login_web", pessoaFisica.LoginWeb));
+                cmd.Parameters.Add(new MySqlParameter("senha_web", pessoaFisica.SenhaWeb));
+                cmd.Parameters.Add(new MySqlParameter("cnh", pessoaFisica.Cnh));
+                cmd.Parameters.Add(new MySqlParameter("validade_cnh", pessoaFisica.ValidadeCnh));
+                cmd.Parameters.Add(new MySqlParameter("logradouro", pessoaFisica.Logradouro));
+                cmd.Parameters.Add(new MySqlParameter("numero", pessoaFisica.Numero));
+                cmd.Parameters.Add(new MySqlParameter("complemento", pessoaFisica.Complemento));
+                cmd.Parameters.Add(new MySqlParameter("bairro", pessoaFisica.Bairro));
+                cmd.Parameters.Add(new MySqlParameter("cep", pessoaFisica.Cep));
+                cmd.Parameters.Add(new MySqlParameter("cidade", pessoaFisica.Cidade));
+                cmd.Parameters.Add(new MySqlParameter("estado", pessoaFisica.Estado));
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+                id = cmd.LastInsertedId;
+                //return "Usuário salvo com sucesso.";
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            cmdText = "UPDATE pessoa_fisica SET nome = @nome, cpf = @cpf, rg = @rg, outro_documento = @outro_documento, dt_nascimento = @dt_nascimento WHERE codigo_cliente = @id;";
+
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+                cmd.Parameters.Add(new MySqlParameter("id", pessoaFisica.Codigo));
+                cmd.Parameters.Add(new MySqlParameter("codigo_cliente", id));
+                cmd.Parameters.Add(new MySqlParameter("nome", pessoaFisica.Nome));
+                cmd.Parameters.Add(new MySqlParameter("cpf", pessoaFisica.Cpf));
+                cmd.Parameters.Add(new MySqlParameter("rg", pessoaFisica.Rg));
+                cmd.Parameters.Add(new MySqlParameter("outro_documento", pessoaFisica.OutroDocumento));
+                cmd.Parameters.Add(new MySqlParameter("dt_nascimento", pessoaFisica.DtNascimento));
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            cmdText = "DELETE FROM telefone_cliente WHERE codigo_cliente = @id";
+
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+                cmd.Parameters.Add(new MySqlParameter("id", id));
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            foreach (TelefoneCliente telefone in telefoneCliente)
+            {
+                cmdText = "INSERT INTO telefone_cliente (codigo_cliente, codigo_tipo_telefone, telefone) values (@codigo_cliente, @codigo_tipo_telefone, @telefone);";
+
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+                    cmd.Parameters.Add(new MySqlParameter("codigo_cliente", id));
+                    cmd.Parameters.Add(new MySqlParameter("codigo_tipo_telefone", telefone.Tipo));
+                    cmd.Parameters.Add(new MySqlParameter("telefone", telefone.Numero));
+                    cmd.Prepare();
+                    cmd.ExecuteNonQuery();
+                }
+                catch (MySqlException ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
         public PessoaFisica Retornar(int codigo)
         {
             PessoaFisica pessoaFisica = new PessoaFisica();
