@@ -35,6 +35,7 @@ namespace Services
 
         public void atualizar(TipoVeiculo tipoVeiculo)
         {
+            ValidarTipoVeiculo(tipoVeiculo);
             tipoVeiculoDao.atualizar(tipoVeiculo);
         }
         public void apagar(int id)

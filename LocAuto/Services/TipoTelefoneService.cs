@@ -31,6 +31,7 @@ namespace Services
         }
         public void atualizar(TipoTelefone tipoTelefone)
         {
+            ValidarTipoTelefone(tipoTelefone);
             tipoTelefoneDAO.atualizar(tipoTelefone);
         }
         public void apagar(int id)
