@@ -108,18 +108,18 @@ namespace LocAuto
 
         private void pessoaJurídicaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadClienteJuridico cadClienteJuridico = new CadClienteJuridico();
-            cadClienteJuridico.MdiParent = this;
-            cadClienteJuridico.DesktopLocation = new Point(550, 100);
-            cadClienteJuridico.Show();
+            ConsultaPessoaJuridica consultaPessoaJuridica = new ConsultaPessoaJuridica();
+            consultaPessoaJuridica.MdiParent = this;
+            consultaPessoaJuridica.DesktopLocation = new Point(550, 100);
+            consultaPessoaJuridica.Show();
         }
 
         private void cadastroVeículoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadVeiculo cadVeiculo = new CadVeiculo();
-            cadVeiculo.MdiParent = this;
-            cadVeiculo.DesktopLocation = new Point(550, 100);
-            cadVeiculo.Show();
+            ConsultaVeiculo consultaVeiculo = new ConsultaVeiculo();
+            consultaVeiculo.MdiParent = this;
+            consultaVeiculo.DesktopLocation = new Point(550, 100);
+            consultaVeiculo.Show();
         }
 
         private void grupoDoVeículoToolStripMenuItem1_Click(object sender, EventArgs e)

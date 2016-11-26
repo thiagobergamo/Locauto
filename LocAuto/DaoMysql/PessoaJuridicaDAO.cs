@@ -177,13 +177,13 @@ namespace DaoMysql
                 conn.Close();
             }
 
-            cmdText = "UPDATE pessoa_juridica SET cnpj = @cnpj, insc_estadual = @insc_estadual, razao_social = @razao_social, nome_fantasia = @nome_fantasia, contato = @contato, nome_condutor = @nome_condutor;";
+            cmdText = "UPDATE pessoa_juridica SET cnpj = @cnpj, insc_estadual = @insc_estadual, razao_social = @razao_social, nome_fantasia = @nome_fantasia, contato = @contato, nome_condutor = @nome_condutor WHERE codigo_cliente = @id;";
 
             try
             {
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(cmdText, conn);
-                cmd.Parameters.Add(new MySqlParameter("codigo_cliente", id));
+                cmd.Parameters.Add(new MySqlParameter("id", pessoaJuridica.Codigo));
                 cmd.Parameters.Add(new MySqlParameter("cnpj", pessoaJuridica.Cnpj));
                 cmd.Parameters.Add(new MySqlParameter("insc_estadual", pessoaJuridica.InscEstadual));
                 cmd.Parameters.Add(new MySqlParameter("razao_social", pessoaJuridica.RazaoSocial));

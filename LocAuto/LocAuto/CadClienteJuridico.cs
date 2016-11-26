@@ -91,8 +91,8 @@ namespace LocAuto
                 }
             }            
             
-          //  try
-          //  {
+            try
+            {
                 if (pessoaJuridica.Codigo == 0)
                 {
                     pessoaJuridicaService.inserir(pessoaJuridica, telefones);
@@ -103,15 +103,15 @@ namespace LocAuto
                     
                 LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
-        //    }
-        //    catch (ArgumentNullException ex)
-        //    {
-        //        MessageBox.Show(ex.Message, "Mensagem");
-        //    }
-       //     catch (Exception ex)
-       //     {
-       //         MessageBox.Show(ex.Message, "Erro");
-        //    }
+            }
+            catch (ArgumentNullException ex)
+           {
+              MessageBox.Show(ex.Message, "Mensagem");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro");
+            }
         }
 
 
