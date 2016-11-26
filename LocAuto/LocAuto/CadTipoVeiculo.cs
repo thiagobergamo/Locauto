@@ -39,6 +39,11 @@ namespace LocAuto
             TipoVeiculoDAO tipoVeiculoDao = new TipoVeiculoDAO();
             TipoVeiculoService tipoVeiculoService = new TipoVeiculoService(tipoVeiculoDao);
 
+            if (!String.IsNullOrWhiteSpace(TxtCodigo.Text))
+            {
+                tipoVeiculo.Codigo = Convert.ToInt32(TxtCodigo.Text);
+            }
+            
             tipoVeiculo.Descricao = TxtGrupo.Text;
             tipoVeiculo.ArCondicionado = ChkArCondicionado.Checked.ToString();
             tipoVeiculo.VidroEletrico = ChkVidroEletrico.Checked.ToString();
@@ -52,6 +57,15 @@ namespace LocAuto
 
             try
             {
+                if (tipoVeiculo.Codigo == 0)
+                {
+                    tipoVeiculoService.inserir(tipoVeiculo);
+                }
+                else
+                {
+                    tipoVeiculoService.atualizar(tipoVeiculo);
+                }
+
                 tipoVeiculoService.inserir(tipoVeiculo);
                 LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
@@ -94,7 +108,7 @@ namespace LocAuto
                 TxtCodigo.Text = tipoVeiculoConsulta.Codigo.ToString();
                 TxtGrupo.Text = tipoVeiculoConsulta.Descricao;
 
-                if (tipoVeiculoConsulta.Abs == "T")
+                if (tipoVeiculoConsulta.Abs == "True")
                 {
                     ChkAbs.Checked = true;
                 }else
@@ -102,7 +116,39 @@ namespace LocAuto
                     ChkAbs.Checked = false;
                 }
 
+                if (tipoVeiculoConsulta.AirBag == "True")
+                {
+                    ChkAirBag.Checked = true;
+                }else
+                {
+                    ChkAirBag.Checked = false;
+                }
                 
+                if (tipoVeiculoConsulta.ArCondicionado == "True")
+                {
+                    ChkArCondicionado.Checked = true;
+                }else
+                {
+                    ChkArCondicionado.Checked = false;
+                }
+
+                if(tipoVeiculoConsulta.TravaEletrica == "True")
+                {
+                    ChkTravaEletrica.Checked = true;
+                }else
+                {
+                    ChkTravaEletrica.Checked = false;
+                }
+
+                if(tipoVeiculoConsulta.VidroEletrico == "True")
+                {
+                    ChkVidroEletrico.Checked = true;
+                }else
+                {
+                    ChkVidroEletrico.Checked = false;
+                }
+
+                TxtValorDiaria.Text = tipoVeiculoConsulta.ValorDiaria.ToString();
             }
         }
     }
