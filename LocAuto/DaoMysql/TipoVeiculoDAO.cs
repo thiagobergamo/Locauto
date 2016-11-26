@@ -48,7 +48,7 @@ namespace DaoMysql
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
             conn = cf.ObterConexao();
-            String cmdText = "UPDATE tipo_veiculo SET descricao = @descricao, ar_condicionado = @ar_condicionado, vidro_eletrico = @vidro_eletrico, trava_eletrica = @trava_eletrica, portas = @portas, abs = @abs, air_bag = @air_bag, valor_diaria = @valor_diaria);";
+            String cmdText = "UPDATE tipo_veiculo SET descricao = @descricao, ar_condicionado = @ar_condicionado, vidro_eletrico = @vidro_eletrico, trava_eletrica = @trava_eletrica, portas = @portas, abs = @abs, air_bag = @air_bag, valor_diaria = @valor_diaria;";
 
             try
             {
