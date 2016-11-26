@@ -105,6 +105,7 @@
             this.Name = "CadTipoTelefone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Tipo Telefone";
+            this.Load += new System.EventHandler(this.CadTipoTelefone_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

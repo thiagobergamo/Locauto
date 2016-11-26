@@ -8,6 +8,7 @@ namespace Modelo
 {
      public class TelefoneCliente
     {
+        public int codigo_cliente { get; set; }
         public int Tipo { get; set; }
         public String Numero { get; set; }
     }

@@ -16,6 +16,7 @@ namespace LocAuto
 {
     public partial class CadUsuario : Form
     {
+        public Usuario usuarioConsulta { get; set; }
         public CadUsuario()
         {
             InitializeComponent();
@@ -58,6 +59,15 @@ namespace LocAuto
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erro");
+            }
+        }
+
+        private void CadUsuario_Load(object sender, EventArgs e)
+        {
+            if (usuarioConsulta != null)
+            {
+                TxtCodigo.Text = usuarioConsulta.Codigo.ToString();
+                TxtNome.Text = usuarioConsulta.Nome;
             }
         }
     }

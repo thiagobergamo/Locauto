@@ -147,7 +147,7 @@ namespace DaoMysql
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(cmdText, conn);
                 cmd.Parameters.Add(new MySqlParameter("id", pessoaFisica.Codigo));
-                cmd.Parameters.Add(new MySqlParameter("codigo_cliente", id));
+                cmd.Parameters.Add(new MySqlParameter("codigo_cliente", pessoaFisica.Codigo));
                 cmd.Parameters.Add(new MySqlParameter("nome", pessoaFisica.Nome));
                 cmd.Parameters.Add(new MySqlParameter("cpf", pessoaFisica.Cpf));
                 cmd.Parameters.Add(new MySqlParameter("rg", pessoaFisica.Rg));
@@ -171,7 +171,7 @@ namespace DaoMysql
             {
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(cmdText, conn);
-                cmd.Parameters.Add(new MySqlParameter("id", id));
+                cmd.Parameters.Add(new MySqlParameter("id", pessoaFisica.Codigo));
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
             }
@@ -192,7 +192,7 @@ namespace DaoMysql
                 {
                     conn.Open();
                     MySqlCommand cmd = new MySqlCommand(cmdText, conn);
-                    cmd.Parameters.Add(new MySqlParameter("codigo_cliente", id));
+                    cmd.Parameters.Add(new MySqlParameter("codigo_cliente", pessoaFisica.Codigo));
                     cmd.Parameters.Add(new MySqlParameter("codigo_tipo_telefone", telefone.Tipo));
                     cmd.Parameters.Add(new MySqlParameter("telefone", telefone.Numero));
                     cmd.Prepare();
@@ -313,9 +313,29 @@ namespace DaoMysql
 
                 }
             }
+            List<TelefoneCliente> listaTelefoneCliente = new List<TelefoneCliente>();
+            cmdText = "select * " +
+                             "from telefone_cliente c " +
+                             "where c.codigo_cliente = @id";
+
+   
+            cmd = new MySqlCommand(cmdText, conn);
+            cmd.Parameters.Add(new MySqlParameter("id", pessoaFisica.Codigo));
+            cmd.Prepare();
+            using (MySqlDataReader leitor = cmd.ExecuteReader())
+            {
+                while (leitor.Read())
+                {
+                    TelefoneCliente telefoneCliente = new TelefoneCliente();
+                    telefoneCliente.codigo_cliente = Convert.ToInt32(leitor["codigo_cliente"]);
+                    telefoneCliente.Tipo = Convert.ToInt32(leitor["codigo_tipo_telefone"]);
+                    telefoneCliente.Numero = leitor["telefone"].ToString();
+                    listaTelefoneCliente.Add(telefoneCliente);
+                }
+            }
 
             conn.Close();
-
+            pessoaFisica.Telefones = listaTelefoneCliente;
             return pessoaFisica;
         }
 
