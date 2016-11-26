@@ -10,5 +10,9 @@ namespace DaoInterface
     public interface IOpcionalDAO
     {
         void inserir(Opcional opcional);
+        void atualizar(Opcional usuario);
+        void apagar(int id);
+        Opcional buscaPorId(int id);
+        List<Opcional> buscaTodos();
     }
 }

@@ -28,5 +28,22 @@ namespace Services
                 throw new ArgumentNullException("Descrição", "Campo obrigatório não preenchido");
             }
         }
+        public void atualizar(SituacaoVeiculo situacaoVeiculo)
+        {
+            ValidarSituacaoVeiculo(situacaoVeiculo);
+            situacaoVeiculoDao.atualizar(situacaoVeiculo);
+        }
+        public void apagar(int id)
+        {
+            situacaoVeiculoDao.apagar(id);
+        }
+        public SituacaoVeiculo buscaPorId(int id)
+        {
+            return situacaoVeiculoDao.buscaPorId(id);
+        }
+        public List<SituacaoVeiculo> buscaTodos()
+        {
+            return situacaoVeiculoDao.buscaTodos();
+        }
     }
 }

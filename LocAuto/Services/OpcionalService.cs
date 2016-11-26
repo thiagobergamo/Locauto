@@ -32,5 +32,23 @@ namespace Services
                 throw new ArgumentNullException("Valor", "Campo obrigatório não preenchido");
             }
         }
+
+        public void atualizar(Opcional opcional)
+        {
+            ValidarOpcional(opcional);
+            opcionalDao.atualizar(opcional);
+        }
+        public void apagar(int id)
+        {
+            opcionalDao.apagar(id);
+        }
+        public Opcional buscaPorId(int id)
+        {
+            return opcionalDao.buscaPorId(id);
+        }
+        public List<Opcional> buscaTodos()
+        {
+            return opcionalDao.buscaTodos();
+        }
     }
 }
