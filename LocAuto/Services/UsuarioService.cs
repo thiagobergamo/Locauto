@@ -36,5 +36,23 @@ namespace Services
                 throw new ArgumentNullException("Senha", "Campo obrigatório não preenchido");
             }
         }
+
+        public void atualizar(Usuario usuario)
+        {
+            ValidarUsuario(usuario);
+            usuarioDao.atualizar(usuario);
+        }
+        public void apagar(int id)
+        {
+            usuarioDao.apagar(id);
+        }
+        public Usuario buscaPorId(int id)
+        {
+            return usuarioDao.buscaPorId(id);
+        }
+        public List<Usuario> buscaTodos()
+        {
+            return usuarioDao.buscaTodos();
+        }
     }
 }
