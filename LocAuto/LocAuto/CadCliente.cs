@@ -30,7 +30,7 @@ namespace LocAuto
             {
                 TxtCodigo.Text = pessoaFisicaConsulta.Codigo.ToString();
                 TxtNome.Text = pessoaFisicaConsulta.Nome;
-                //MskDtNascimento.Text = pessoaFisicaConsulta.DtNascimento.ToString();
+                MskDtNascimento.Text = pessoaFisicaConsulta.DtNascimento.ToString();
                 TxtEmail.Text = pessoaFisicaConsulta.Email;
                 TxtLog.Text = pessoaFisicaConsulta.Logradouro;
                 TxtNum.Text = pessoaFisicaConsulta.Numero.ToString();

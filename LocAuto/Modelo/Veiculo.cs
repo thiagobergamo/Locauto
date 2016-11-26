@@ -16,7 +16,7 @@ namespace Modelo
         public string Chassi { get; set; }
         public string Observacao { get; set; }
         public string Cor { get; set; }
-        public string codigoTipoVeiculo { get; set; }
-        public string codigoSituacaoVeiculo { get; set; }
+        public int codigoTipoVeiculo { get; set; }
+        public int codigoSituacaoVeiculo { get; set; }
     }
 }

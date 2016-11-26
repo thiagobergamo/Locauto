@@ -50,7 +50,7 @@ namespace DaoMysql
                 conn.Close();
             }
 
-            cmdText = "INSERT INTO pessoa_fisica (codigo_cliente, nome, cpf, rg, outro_documento) values ( @codigo_cliente, @nome, @cpf, @rg, @outro_documento);";
+            cmdText = "INSERT INTO pessoa_fisica (codigo_cliente, nome, cpf, rg, outro_documento, dt_nascimento) values ( @codigo_cliente, @nome, @cpf, @rg, @outro_documento, @dt_nascimento);";
 
             try
             {
@@ -61,6 +61,7 @@ namespace DaoMysql
                 cmd.Parameters.Add(new MySqlParameter("cpf", pessoaFisica.Cpf));
                 cmd.Parameters.Add(new MySqlParameter("rg", pessoaFisica.Rg));
                 cmd.Parameters.Add(new MySqlParameter("outro_documento", pessoaFisica.OutroDocumento));
+                cmd.Parameters.Add(new MySqlParameter("dt_nascimento", pessoaFisica.DtNascimento));
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
             }
@@ -188,12 +189,86 @@ namespace DaoMysql
                     pessoaFisica.SenhaWeb = leitor["senha_web"].ToString();
                     pessoaFisica.Cnh = leitor["cnh"].ToString();
                     pessoaFisica.ValidadeCnh = leitor["validade_cnh"].ToString();
+                    pessoaFisica.Logradouro = leitor["logradouro"].ToString();
+                    pessoaFisica.Numero = Convert.ToInt32(leitor["numero"].ToString());
+                    pessoaFisica.Complemento = leitor["complemento"].ToString();
+                    pessoaFisica.Bairro = leitor["bairro"].ToString();
+                    pessoaFisica.Cep = leitor["cep"].ToString();
+                    pessoaFisica.Cidade = leitor["cidade"].ToString();
+                    pessoaFisica.Estado = leitor["estado"].ToString();
                     pessoaFisica.Nome = leitor["nome"].ToString();
+                    pessoaFisica.Cpf = leitor["cpf"].ToString();
+                    pessoaFisica.Rg = leitor["rg"].ToString();
+                    pessoaFisica.OutroDocumento = leitor["outro_documento"].ToString();
+                    pessoaFisica.DtNascimento = leitor["dt_nascimento"].ToString();
+
+                }
+            }
+
+            conn.Close();
+
+            return pessoaFisica;
+        }
+
+        public void apagar(int id)
+        {
+            ConnectionFactory cf = new ConnectionFactory();
+            MySqlConnection conn;
+            conn = cf.ObterConexao();
+            String cmdText = "DELETE FROM pessoa_fisica WHERE codigo_cliente = @id;";
+
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+                cmd.Parameters.Add(new MySqlParameter("id", id));
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public List<PessoaFisica> buscaPorNomeOuCpf(String nome, String cpf)
+        {
+            List<PessoaFisica> listaPessoaFisica = new List<PessoaFisica>();
+            ConnectionFactory cf = new ConnectionFactory();
+            MySqlConnection conn;
+            conn = cf.ObterConexao();
+
+            String cmdText = " select *, " +
+                             " (select telefone from telefone_cliente where codigo_cliente = c.codigo and codigo_tipo_telefone = 1) celular" +
+                             " from cliente c " +
+                             " join pessoa_fisica j on j.codigo_cliente = c.codigo " +
+                             " where nome like @nome or cpf = @cpf";
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+            cmd.Parameters.Add(new MySqlParameter("@nome", nome));
+            cmd.Parameters.Add(new MySqlParameter("@cpf", cpf));
+            cmd.Prepare();
+
+            using (MySqlDataReader leitor = cmd.ExecuteReader())
+            {
+                while (leitor.Read())
+                {
+                    PessoaFisica pessoaFisica = new PessoaFisica();
+                    //pessoaFisica.Codigo = Convert.ToInt32(leitor["codigo"]);
+                    pessoaFisica.Codigo = Convert.ToInt32(leitor["codigo_cliente"].ToString());
+                    pessoaFisica.Nome = leitor["nome"].ToString();
+                    pessoaFisica.Cpf = leitor["cpf"].ToString();
+                    pessoaFisica.celular = leitor["celular"].ToString();
+                    listaPessoaFisica.Add(pessoaFisica);
                 }
             }
             conn.Close();
 
-            return pessoaFisica;
+            return listaPessoaFisica;
         }
     }
 

@@ -10,5 +10,9 @@ namespace DaoInterface
     public interface ITipoTelefoneDAO
     {
         void inserir(TipoTelefone tipoTelefone);
+        void atualizar(TipoTelefone tipoTelefone);
+        void apagar(int id);
+        TipoTelefone buscaPorId(int id);
+        List<TipoTelefone> buscaTodos();
     }
 }
