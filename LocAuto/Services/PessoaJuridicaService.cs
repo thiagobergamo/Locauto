@@ -72,5 +72,26 @@ namespace Services
             }
 
         }
+        public List<PessoaJuridica> buscarTodos()
+        {
+            return pessoaJuridicaDAO.buscarTodos();
+        }
+        public PessoaJuridica BuscarPorId(int id)
+        {
+            return pessoaJuridicaDAO.BuscarPorId(id);
+        }
+        public void apagar(int id)
+        {
+            pessoaJuridicaDAO.apagar(id);
+        }
+        public List<PessoaJuridica> buscaPorNomeOuCnpj(String nome, String cnpj)
+        {
+            return pessoaJuridicaDAO.buscaPorNomeOuCnpj(nome, cnpj);
+        }
+
+        public void atualizar(PessoaJuridica pessoaJuridica, List<TelefoneCliente> telefoneCliente)
+        {
+            pessoaJuridicaDAO.atualizar(pessoaJuridica, telefoneCliente);
+        }
     }
 }

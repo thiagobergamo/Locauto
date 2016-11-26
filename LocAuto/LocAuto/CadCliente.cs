@@ -46,7 +46,16 @@ namespace LocAuto
                 TxtOutDocumento.Text = pessoaFisicaConsulta.OutroDocumento;
                 TxtLoginWeb.Text = pessoaFisicaConsulta.LoginWeb;
                 TxtSenha.Text = pessoaFisicaConsulta.SenhaWeb;
-                
+
+                dataGridView1.Rows.Clear();
+                foreach (TelefoneCliente p in pessoaFisicaConsulta.Telefones)
+                {
+                    int index = dataGridView1.Rows.Add();
+                    DataGridViewRow linhaTabela = dataGridView1.Rows[index];
+                    linhaTabela.Cells["Tipo"].Value = p.Tipo;
+                    linhaTabela.Cells["numero"].Value = p.Numero;
+                }
+
             }
             TxtNome.Focus();
         }
@@ -120,7 +129,10 @@ namespace LocAuto
             PessoaFisicaDAO pessoaFisicaDao = new PessoaFisicaDAO();
             PessoaFisicaService pessoaFisicaService = new PessoaFisicaService(pessoaFisicaDao);
 
-            pessoaFisica.Codigo = Convert.ToInt32(TxtCodigo.Text);
+            if (!String.IsNullOrWhiteSpace(TxtCodigo.Text))
+            {
+                pessoaFisica.Codigo = Convert.ToInt32(TxtCodigo.Text);
+            }
             pessoaFisica.Nome = TxtNome.Text;
             pessoaFisica.Email = TxtEmail.Text;
             pessoaFisica.DtNascimento = MskDtNascimento.Value.ToString("yyyy-MM-dd");
@@ -153,8 +165,7 @@ namespace LocAuto
                 if (pessoaFisica.Codigo == 0)
                 {
                     pessoaFisicaService.inserir(pessoaFisica, telefones);
-                }
-                else
+                }else
                 {
                     pessoaFisicaService.atualizar(pessoaFisica, telefones);
                 }
