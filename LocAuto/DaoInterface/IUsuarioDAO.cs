@@ -10,5 +10,9 @@ namespace DaoInterface
     public interface IUsuarioDAO
     {
         void inserir(Usuario usuario);
+        void atualizar(Usuario usuario);
+        void apagar(int id);
+        Usuario buscaPorId(int id);
+        List<Usuario> buscaTodos();
     }
 }
