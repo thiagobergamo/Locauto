@@ -40,7 +40,10 @@ namespace LocAuto
             Usuario usuario = new Usuario();
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             UsuarioService usuarioService = new UsuarioService(usuarioDAO);
-
+            if (!String.IsNullOrWhiteSpace(TxtCodigo.Text))
+            {
+                usuario.Codigo = Convert.ToInt32(TxtCodigo.Text);
+            }
             usuario.Nome = TxtNome.Text;
             usuario.Email = TxtEmail.Text;
             usuario.Login = TxtUsuario.Text;
@@ -48,9 +51,16 @@ namespace LocAuto
             
             try
             {
-                usuarioService.inserir(usuario);
-                LimparTxt();
-                MessageBox.Show("Cadastro realizado com sucesso!");
+                if (usuario.Codigo == 0)
+                {
+                    usuarioService.inserir(usuario);
+                }
+                else
+                {
+                    usuarioService.atualizar(usuario);
+                }
+                    LimparTxt();
+                    MessageBox.Show("Cadastro realizado com sucesso!");
             }
             catch (ArgumentNullException ex)
             {
@@ -68,6 +78,11 @@ namespace LocAuto
             {
                 TxtCodigo.Text = usuarioConsulta.Codigo.ToString();
                 TxtNome.Text = usuarioConsulta.Nome;
+                TxtEmail.Text = usuarioConsulta.Email;
+                TxtUsuario.Text = usuarioConsulta.Login;
+                TxtSenha.Text = usuarioConsulta.Senha;
+
+
             }
         }
     }
