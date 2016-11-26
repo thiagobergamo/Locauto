@@ -16,5 +16,10 @@ namespace LocAuto
         {
             InitializeComponent();
         }
+
+        private void ConsultaVeiculo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

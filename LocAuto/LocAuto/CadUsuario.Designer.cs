@@ -163,6 +163,7 @@
             this.Name = "CadUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Cadastro Usuário";
+            this.Load += new System.EventHandler(this.CadUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

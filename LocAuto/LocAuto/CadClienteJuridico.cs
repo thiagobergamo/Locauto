@@ -16,6 +16,8 @@ namespace LocAuto
 {
     public partial class CadClienteJuridico : Form
     {
+        public PessoaJuridica pessoaJuridicaConsulta { get; set; }
+
         public CadClienteJuridico()
         {
             InitializeComponent();
@@ -57,6 +59,10 @@ namespace LocAuto
             PessoaJuridicaDAO dao = new PessoaJuridicaDAO();
             PessoaJuridicaService pessoaJuridicaService = new PessoaJuridicaService(dao);
 
+            if (!String.IsNullOrWhiteSpace(TxtCodigo.Text))
+            {
+                pessoaJuridica.Codigo = Convert.ToInt32(TxtCodigo.Text);
+            }
             pessoaJuridica.RazaoSocial = TxtRazSocial.Text;
             pessoaJuridica.InscEstadual = TxtInsc.Text;
             pessoaJuridica.Cnpj = MskCnpj.Text;
@@ -85,20 +91,27 @@ namespace LocAuto
                 }
             }            
             
-            try
-            {
-                pessoaJuridicaService.inserir(pessoaJuridica, telefones);
+          //  try
+          //  {
+                if (pessoaJuridica.Codigo == 0)
+                {
+                    pessoaJuridicaService.inserir(pessoaJuridica, telefones);
+                }else
+                {
+                    pessoaJuridicaService.atualizar(pessoaJuridica, telefones);
+                }
+                    
                 LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
-            }
-            catch (ArgumentNullException ex)
-            {
-                MessageBox.Show(ex.Message, "Mensagem");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Erro");
-            }
+        //    }
+        //    catch (ArgumentNullException ex)
+        //    {
+        //        MessageBox.Show(ex.Message, "Mensagem");
+        //    }
+       //     catch (Exception ex)
+       //     {
+       //         MessageBox.Show(ex.Message, "Erro");
+        //    }
         }
 
 
@@ -154,6 +167,37 @@ namespace LocAuto
             this.Tipo.DisplayMember = "descricao";
 
             conn.Close();
+
+            //--------------------
+            if (pessoaJuridicaConsulta != null)
+            {
+                TxtCodigo.Text = pessoaJuridicaConsulta.Codigo.ToString();
+                TxtRazSocial.Text = pessoaJuridicaConsulta.RazaoSocial;
+                TxtEmail.Text = pessoaJuridicaConsulta.Email;
+                TxtEndereco.Text = pessoaJuridicaConsulta.Logradouro;
+                TxtNumero.Text = pessoaJuridicaConsulta.Numero.ToString();
+                TxtComplemento.Text = pessoaJuridicaConsulta.Complemento;
+                TxtBairro.Text = pessoaJuridicaConsulta.Bairro;
+                CmbEstado.Text = pessoaJuridicaConsulta.Estado;
+                TxtCidade.Text = pessoaJuridicaConsulta.Cidade;
+                MskCep.Text = pessoaJuridicaConsulta.Cep;
+                TxtInsc.Text = pessoaJuridicaConsulta.InscEstadual;
+                TxtCnh.Text = pessoaJuridicaConsulta.Cnh;
+                MskValCnh.Text = pessoaJuridicaConsulta.ValidadeCnh.ToString();
+                MskCnpj.Text = pessoaJuridicaConsulta.Cnpj;
+                TxtLogin.Text = pessoaJuridicaConsulta.LoginWeb;
+                TxtSenha.Text = pessoaJuridicaConsulta.SenhaWeb;
+
+                dataGridView1.Rows.Clear();
+                foreach (TelefoneCliente p in pessoaJuridicaConsulta.Telefones)
+                {
+                    int index = dataGridView1.Rows.Add();
+                    DataGridViewRow linhaTabela = dataGridView1.Rows[index];
+                    linhaTabela.Cells["Tipo"].Value = p.Tipo;
+                    linhaTabela.Cells["numero"].Value = p.Numero;
+                }
+
+            }
         }
     }
 }
