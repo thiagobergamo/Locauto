@@ -124,10 +124,10 @@ namespace LocAuto
 
         private void grupoDoVeículoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            CadTipoVeiculo cadTipoVeiculo = new CadTipoVeiculo();
-            cadTipoVeiculo.MdiParent = this;
-            cadTipoVeiculo.DesktopLocation = new Point(550, 100);
-            cadTipoVeiculo.Show();
+            ConsultaTipoVeiculo consultaTipoVeiculo = new ConsultaTipoVeiculo();
+            consultaTipoVeiculo.MdiParent = this;
+            consultaTipoVeiculo.DesktopLocation = new Point(550, 100);
+            consultaTipoVeiculo.Show();
         }
 
         private void pessoaFísicaToolStripMenuItem1_Click(object sender, EventArgs e)
