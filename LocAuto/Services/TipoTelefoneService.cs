@@ -29,6 +29,21 @@ namespace Services
             }
 
         }
-
+        public void atualizar(TipoTelefone tipoTelefone)
+        {
+            tipoTelefoneDAO.atualizar(tipoTelefone);
+        }
+        public void apagar(int id)
+        {
+            tipoTelefoneDAO.apagar(id);
+        }
+        public TipoTelefone buscaPorId(int id)
+        {
+            return tipoTelefoneDAO.buscaPorId(id);
+        }
+        public List<TipoTelefone> buscaTodos()
+        {
+            return tipoTelefoneDAO.buscaTodos();
+        }
     }
 }

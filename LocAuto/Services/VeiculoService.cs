@@ -44,5 +44,22 @@ namespace Services
                 throw new ArgumentNullException("Placa", "Campo obrigatório não preenchido");
             }
         }
+
+        public void atualizar(Veiculo veiculo) {
+
+            veiculoDao.atualizar(veiculo);
+        }
+        public void apagar(int id) {
+
+            veiculoDao.apagar(id);
+        }
+        public Veiculo buscaPorId(int id) {
+
+            return veiculoDao.buscaPorId(id);
+        }
+        public List<Veiculo> buscaTodos() {
+
+            return veiculoDao.buscaTodos();
+        }
     }
 }

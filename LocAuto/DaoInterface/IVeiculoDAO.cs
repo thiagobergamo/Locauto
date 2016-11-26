@@ -10,6 +10,9 @@ namespace DaoInterface
     public interface IVeiculoDAO
     {
         void inserir(Veiculo veiculo);
-      //  List<Veiculo> buscarTodos();
+        void atualizar(Veiculo veiculo);
+        void apagar(int id);
+        Veiculo buscaPorId(int id);
+        List<Veiculo> buscaTodos();
     }
 }

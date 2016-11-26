@@ -32,5 +32,22 @@ namespace Services
                 throw new ArgumentNullException("Valor Diária", "Campo obrigatório não preenchido");
             }
         }
+
+        public void atualizar(TipoVeiculo tipoVeiculo)
+        {
+            tipoVeiculoDao.atualizar(tipoVeiculo);
+        }
+        public void apagar(int id)
+        {
+            tipoVeiculoDao.apagar(id);
+        }
+        public TipoVeiculo buscaPorId(int id)
+        {
+            return tipoVeiculoDao.buscaPorId(id);
+        }
+        public List<TipoVeiculo> buscaTodos()
+        {
+            return tipoVeiculoDao.buscaTodos();
+        }
     }
 }
