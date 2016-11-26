@@ -69,7 +69,8 @@ namespace LocAuto
 
             CadTipoVeiculo cadTipoVeiculo = new CadTipoVeiculo();
             cadTipoVeiculo.tipoVeiculoConsulta = tipoVeiculoSelecionado;
-            cadTipoVeiculo.Show();
+            cadTipoVeiculo.ShowDialog();
+            carregarGrid();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
