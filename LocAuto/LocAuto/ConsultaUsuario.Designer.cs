@@ -100,7 +100,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ConsultaUsuario";
-            this.Text = "ConsultaUsuario";
+            this.Text = "Consulta Usuário";
             this.Load += new System.EventHandler(this.ConsultaUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

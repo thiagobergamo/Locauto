@@ -62,14 +62,14 @@ namespace LocAuto
         private void button3_Click(object sender, EventArgs e)
         {
             int idSelecionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells["codigo"].Value);
-            Usuario usuarioSelecionado;
-            UsuarioDAO dao = new UsuarioDAO();
-            UsuarioService service = new UsuarioService(dao);
-            usuarioSelecionado = service.buscaPorId(idSelecionado);
+            TipoVeiculo tipoVeiculoSelecionado;
+            TipoVeiculoDAO dao = new TipoVeiculoDAO();
+            TipoVeiculoService service = new TipoVeiculoService(dao);
+            tipoVeiculoSelecionado = service.buscaPorId(idSelecionado);
 
-            CadUsuario cadUsuario = new CadUsuario();
-            cadUsuario.usuarioConsulta = usuarioSelecionado;
-            cadUsuario.Show();
+            CadTipoVeiculo cadTipoVeiculo = new CadTipoVeiculo();
+            cadTipoVeiculo.tipoVeiculoConsulta = tipoVeiculoSelecionado;
+            cadTipoVeiculo.Show();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

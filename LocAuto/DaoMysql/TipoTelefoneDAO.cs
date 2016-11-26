@@ -42,7 +42,7 @@ namespace DaoMysql
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
             conn = cf.ObterConexao();
-            String cmdText = "UPDATE tipo_telefone SET descricao = @descricao);";
+            String cmdText = "UPDATE tipo_telefone SET descricao = @descricao;";
             try
             {
                 conn.Open();
