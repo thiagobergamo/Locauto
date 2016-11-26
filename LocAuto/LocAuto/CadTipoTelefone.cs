@@ -15,6 +15,7 @@ namespace LocAuto
 {
     public partial class CadTipoTelefone : Form
     {
+        public TipoTelefone tipoTelefoneConsulta { get; set; }
         public CadTipoTelefone()
         {
             InitializeComponent();
@@ -46,11 +47,23 @@ namespace LocAuto
             TipoTelefoneDAO dao = new TipoTelefoneDAO();
             TipoTelefoneService tipoTelefoneService = new TipoTelefoneService(dao);
 
+            if (!String.IsNullOrWhiteSpace(TxtCodigo.Text))
+            {
+                tipoTelefone.Codigo = Convert.ToInt32(TxtCodigo.Text);
+            }
+
             tipoTelefone.Descricao = TxtDescricao.Text;
-            
+
             try
             {
-                tipoTelefoneService.inserir(tipoTelefone);
+                if (tipoTelefone.Codigo == 0)
+                {
+                    tipoTelefoneService.inserir(tipoTelefone);
+                }
+                else
+                {
+                    tipoTelefoneService.atualizar(tipoTelefone);
+                }
                 LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
             }
@@ -64,5 +77,14 @@ namespace LocAuto
             }
 
         }
+
+        private void CadTipoTelefone_Load(object sender, EventArgs e)
+        {
+            if (tipoTelefoneConsulta != null)
+            {
+                TxtCodigo.Text = tipoTelefoneConsulta.Codigo.ToString();
+                TxtDescricao.Text = tipoTelefoneConsulta.Descricao;
+            }
+          }
     }
 }

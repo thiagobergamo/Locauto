@@ -29,10 +29,10 @@ namespace LocAuto
 
         private void tipoDeTelefonesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadTipoTelefone cadTipoTelefone = new CadTipoTelefone();
-            cadTipoTelefone.MdiParent = this;
-            cadTipoTelefone.DesktopLocation = new Point(550, 100);
-            cadTipoTelefone.Show();
+            ConsultaTipoTelefone consultaTipoTelefone = new ConsultaTipoTelefone();
+            consultaTipoTelefone.MdiParent = this;
+            consultaTipoTelefone.DesktopLocation = new Point(550, 100);
+            consultaTipoTelefone.Show();
         }
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -84,26 +84,26 @@ namespace LocAuto
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadUsuario cadUsuario = new CadUsuario();
-            cadUsuario.MdiParent = this;
-            cadUsuario.DesktopLocation = new Point(550, 100);
-            cadUsuario.Show();
+            ConsultaUsuario consultaUsuario = new ConsultaUsuario();
+            consultaUsuario.MdiParent = this;
+            consultaUsuario.DesktopLocation = new Point(550, 100);
+            consultaUsuario.Show();
         }
 
         private void situaçãoDoVeículoToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            CadSituacaoVeiculo cadSituacaoVeiculo = new CadSituacaoVeiculo();
-            cadSituacaoVeiculo.MdiParent = this;
-            cadSituacaoVeiculo.DesktopLocation = new Point(550, 100);
-            cadSituacaoVeiculo.Show();
+            ConsultaSituacaoVeiculo consultaSituacaoVeiculo = new ConsultaSituacaoVeiculo();
+            consultaSituacaoVeiculo.MdiParent = this;
+            consultaSituacaoVeiculo.DesktopLocation = new Point(550, 100);
+            consultaSituacaoVeiculo.Show();
         }
 
         private void opcionaisLocaçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadOpcional cadOpcional = new CadOpcional();
-            cadOpcional.MdiParent = this;
-            cadOpcional.DesktopLocation = new Point(550, 100);
-            cadOpcional.Show();
+            ConsultaOpcional consultaOpcional = new ConsultaOpcional();
+            consultaOpcional.MdiParent = this;
+            consultaOpcional.DesktopLocation = new Point(550, 100);
+            consultaOpcional.Show();
         }
 
         private void pessoaJurídicaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -144,6 +144,11 @@ namespace LocAuto
             consultaLocacao.MdiParent = this;
             consultaLocacao.DesktopLocation = new Point(550, 100);
             consultaLocacao.Show();
-        }             
+        }
+
+        private void locaçõesEmAbertoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

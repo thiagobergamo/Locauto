@@ -121,8 +121,8 @@ namespace DaoMysql
             MySqlConnection conn;
             conn = cf.ObterConexao();
 
-            String cmdText = "select * " +
-                             "from tipo_telefone c ";
+            String cmdText = "SELECT * " +
+                             "FROM tipo_telefone c ";
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(cmdText, conn);
             cmd.Prepare();
@@ -133,6 +133,7 @@ namespace DaoMysql
                     TipoTelefone tipoTelefone = new TipoTelefone();
                     tipoTelefone.Codigo = Convert.ToInt32(leitor["codigo"]);
                     tipoTelefone.Descricao = leitor["descricao"].ToString();
+                    tipoTelefones.Add(tipoTelefone);
                 }
             }
             conn.Close();

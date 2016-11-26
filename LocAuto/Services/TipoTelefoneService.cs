@@ -10,16 +10,16 @@ namespace Services
 {
     public class TipoTelefoneService
     {
-        private ITipoTelefoneDAO tipoTelefoneDAO;
+        private ITipoTelefoneDAO tipoTelefoneDao;
         public TipoTelefoneService() { }
         public TipoTelefoneService(ITipoTelefoneDAO tipoTelefoneDAO)
         {
-            this.tipoTelefoneDAO = tipoTelefoneDAO;
+            this.tipoTelefoneDao = tipoTelefoneDAO;
         }
         public void inserir (TipoTelefone tipoTelefone)
         {
             ValidarTipoTelefone(tipoTelefone);
-            tipoTelefoneDAO.inserir(tipoTelefone);
+            tipoTelefoneDao.inserir(tipoTelefone);
         }
         private void ValidarTipoTelefone(TipoTelefone tipoTelefone)
         {
@@ -32,19 +32,19 @@ namespace Services
         public void atualizar(TipoTelefone tipoTelefone)
         {
             ValidarTipoTelefone(tipoTelefone);
-            tipoTelefoneDAO.atualizar(tipoTelefone);
+            tipoTelefoneDao.atualizar(tipoTelefone);
         }
         public void apagar(int id)
         {
-            tipoTelefoneDAO.apagar(id);
+            tipoTelefoneDao.apagar(id);
         }
         public TipoTelefone buscaPorId(int id)
         {
-            return tipoTelefoneDAO.buscaPorId(id);
+            return tipoTelefoneDao.buscaPorId(id);
         }
         public List<TipoTelefone> buscaTodos()
         {
-            return tipoTelefoneDAO.buscaTodos();
+            return tipoTelefoneDao.buscaTodos();
         }
     }
 }
