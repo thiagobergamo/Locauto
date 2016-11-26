@@ -42,7 +42,7 @@ namespace DaoMysql
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
             conn = cf.ObterConexao();
-            String cmdText = "UPDATE opcional SET descricao = @descricao, valor = @valor, WHERE codigo = @id;";
+            String cmdText = "UPDATE opcional SET descricao = @descricao, valor = @valor WHERE codigo = @id;";
 
             try
             {
@@ -108,8 +108,8 @@ namespace DaoMysql
                 while (leitor.Read())
                 {
                     opcional.Codigo = Convert.ToInt32(leitor["codigo"]);
-                    cmd.Parameters.Add(new MySqlParameter("descricao", opcional.Descricao));
-                    cmd.Parameters.Add(new MySqlParameter("valor", opcional.Valor));
+                    opcional.Descricao = leitor["descricao"].ToString();
+                    opcional.Valor = Convert.ToInt32(leitor["valor"]);
                 }
             }
             conn.Close();

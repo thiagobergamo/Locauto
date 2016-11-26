@@ -15,6 +15,8 @@ namespace LocAuto
 {
     public partial class CadSituacaoVeiculo : Form
     {
+        public SituacaoVeiculo situacaoVeiculoConsulta { get; set; }
+
         public CadSituacaoVeiculo()
         {
             InitializeComponent();
@@ -35,11 +37,22 @@ namespace LocAuto
             SituacaoVeiculoDAO situacaoVeiculoDAO = new SituacaoVeiculoDAO();
             SituacaoVeiculoService situacaoVeiculoService = new SituacaoVeiculoService(situacaoVeiculoDAO);
 
+            if (!String.IsNullOrWhiteSpace(TxtCodigo.Text))
+            {
+                situacaoVeiculo.Codigo = Convert.ToInt32(TxtCodigo.Text);
+            }
             situacaoVeiculo.Descricao = TxtDescricao.Text;            
             
             try
             {
-                situacaoVeiculoService.inserir(situacaoVeiculo);
+                if(situacaoVeiculo.Codigo == 0)
+                {
+                    situacaoVeiculoService.inserir(situacaoVeiculo);
+                }
+                else
+                {
+                    situacaoVeiculoService.atualizar(situacaoVeiculo);
+                }                
                 LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
             }
@@ -55,7 +68,11 @@ namespace LocAuto
 
         private void CadSituacaoVeiculo_Load(object sender, EventArgs e)
         {
-           
+            if (situacaoVeiculoConsulta != null)
+            {
+                TxtCodigo.Text = situacaoVeiculoConsulta.Codigo.ToString();
+                TxtDescricao.Text = situacaoVeiculoConsulta.Descricao;
+            }
         }
     }
 }

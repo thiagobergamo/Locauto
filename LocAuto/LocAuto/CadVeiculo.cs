@@ -17,6 +17,8 @@ namespace LocAuto
 {
     public partial class CadVeiculo : Form
     {
+        public Veiculo veiculoConsulta { get; set; }
+
         public CadVeiculo()
         {
             InitializeComponent();
@@ -63,6 +65,10 @@ namespace LocAuto
             VeiculoDAO veiculoDao = new VeiculoDAO();
             VeiculoService veiculoService = new VeiculoService(veiculoDao);
 
+            if (!String.IsNullOrWhiteSpace(TxtCodigo.Text))
+            {
+                veiculo.Codigo = Convert.ToInt32(TxtCodigo.Text);
+            }
             if (!String.IsNullOrWhiteSpace(CmbGrupo.Text))
             {
                 veiculo.codigoTipoVeiculo = Convert.ToInt32(CmbGrupo.SelectedValue.ToString());
@@ -86,7 +92,14 @@ namespace LocAuto
             
             try
             {
-                veiculoService.inserir(veiculo);
+                if (veiculo.Codigo == 0)
+                {
+                    veiculoService.inserir(veiculo);
+                }
+                else
+                {
+                    veiculoService.atualizar(veiculo);
+                }                    
                 LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
             }
@@ -135,6 +148,21 @@ namespace LocAuto
             this.CmbSituacao.DisplayMember = "descricao";
 
             conn.Close();
+
+            if (veiculoConsulta != null)
+            {
+                TxtCodigo.Text = veiculoConsulta.Codigo.ToString();
+                CmbGrupo.SelectedValue = veiculoConsulta.codigoTipoVeiculo.ToString();
+                CmbSituacao.SelectedValue = veiculoConsulta.codigoSituacaoVeiculo.ToString();
+                TxtMarca.Text = veiculoConsulta.Marca;
+                TxtModelo.Text = veiculoConsulta.Modelo;
+                TxtCor.Text = veiculoConsulta.Cor;
+                TxtAno.Text = veiculoConsulta.Ano.ToString();
+                TxtPlaca.Text = veiculoConsulta.Placa;
+                TxtChassi.Text = veiculoConsulta.Chassi;
+                TxtObs.Text = veiculoConsulta.Observacao;
+
+            }
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)

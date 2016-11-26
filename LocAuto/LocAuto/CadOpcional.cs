@@ -16,6 +16,8 @@ namespace LocAuto
 {
     public partial class CadOpcional : Form
     {
+        public Opcional opcionalConsulta { get; set; }
+
         public CadOpcional()
         {
             InitializeComponent();
@@ -28,13 +30,25 @@ namespace LocAuto
             OpcionalDAO opcionalDao = new OpcionalDAO();
             OpcionalService opcionalService = new OpcionalService(opcionalDao);
 
+            if (!String.IsNullOrWhiteSpace(TxtCodigo.Text))
+            {
+                opcional.Codigo = Convert.ToInt32(TxtCodigo.Text);
+            }
             opcional.Descricao = TxtDescricao.Text;
             if (!String.IsNullOrWhiteSpace(TxtValor.Text)){
                 opcional.Valor = Convert.ToDecimal(TxtValor.Text);
             }
             
             try{
-                opcionalService.inserir(opcional);
+                
+                if(opcional.Codigo == 0)
+                {
+                    opcionalService.inserir(opcional);
+                }
+                else
+                {
+                    opcionalService.atualizar(opcional);
+                }
                 LimparTxt();
                 MessageBox.Show("Cadastro realizado com sucesso!");
             }
@@ -57,6 +71,16 @@ namespace LocAuto
         {
             TxtDescricao.Text = "";
             TxtValor.Text = "";
+        }
+
+        private void CadOpcional_Load(object sender, EventArgs e)
+        {
+            if (opcionalConsulta != null)
+            {
+                TxtCodigo.Text = opcionalConsulta.Codigo.ToString();
+                TxtDescricao.Text = opcionalConsulta.Descricao;
+                TxtValor.Text = opcionalConsulta.Valor.ToString();
+            }
         }
     }
 }

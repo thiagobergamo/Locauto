@@ -208,8 +208,14 @@
     <EmbeddedResource Include="ConsultaLocacao.resx">
       <DependentUpon>ConsultaLocacao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaOpcional.resx">
+      <DependentUpon>ConsultaOpcional.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaPessoaFisica.resx">
       <DependentUpon>ConsultaPessoaFisica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaSituacaoVeiculo.resx">
+      <DependentUpon>ConsultaSituacaoVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaTipoVeiculo.resx">
       <DependentUpon>ConsultaTipoVeiculo.cs</DependentUpon>

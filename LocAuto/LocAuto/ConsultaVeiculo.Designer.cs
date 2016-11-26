@@ -33,6 +33,9 @@
             this.modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ano = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +49,7 @@
             this.placa});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(443, 115);
+            this.dataGridView1.Size = new System.Drawing.Size(551, 303);
             this.dataGridView1.TabIndex = 0;
             // 
             // codigo
@@ -58,6 +61,7 @@
             // 
             this.modelo.HeaderText = "Modelo";
             this.modelo.Name = "modelo";
+            this.modelo.Width = 200;
             // 
             // ano
             // 
@@ -69,14 +73,48 @@
             this.placa.HeaderText = "Placa";
             this.placa.Name = "placa";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(488, 326);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 24);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Novo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(415, 326);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(67, 24);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Excluir";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(342, 326);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(67, 24);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Editar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // ConsultaVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(678, 278);
+            this.ClientSize = new System.Drawing.Size(575, 361);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ConsultaVeiculo";
             this.Text = "Veículos";
+            this.Load += new System.EventHandler(this.ConsultaVeiculo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -89,5 +127,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn modelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ano;
         private System.Windows.Forms.DataGridViewTextBoxColumn placa;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

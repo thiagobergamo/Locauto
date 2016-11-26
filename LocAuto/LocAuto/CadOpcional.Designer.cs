@@ -123,6 +123,7 @@
             this.Name = "CadOpcional";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Opcional";
+            this.Load += new System.EventHandler(this.CadOpcional_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

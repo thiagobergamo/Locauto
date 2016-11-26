@@ -50,7 +50,7 @@ namespace DaoMysql
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
             conn = cf.ObterConexao();
-            String cmdText = "UPDATE veiculo SET codigo_tipo_veiculo = @codigo_tipo_veiculo, codigo_situacao_veiculo = @codigo_situacao_veiculo, marca = @marca, modelo = @modelo, ano = @ano, placa = @placa, chassi = @chassi, cor = @cor, observacao = @observacao;";
+            String cmdText = "UPDATE veiculo SET codigo_tipo_veiculo = @codigo_tipo_veiculo, codigo_situacao_veiculo = @codigo_situacao_veiculo, marca = @marca, modelo = @modelo, ano = @ano, placa = @placa, chassi = @chassi, cor = @cor, observacao = @observacao WHERE codigo = @id;";
 
             try
             {
@@ -84,7 +84,7 @@ namespace DaoMysql
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
             conn = cf.ObterConexao();
-            String cmdText = "DELETE veiculo WHERE codigo = @id;";
+            String cmdText = "DELETE FROM veiculo WHERE codigo = @id;";
 
             try
             {
