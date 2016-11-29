@@ -1,6 +1,6 @@
 ﻿namespace LocAuto
 {
-    partial class RelatorioLoc
+    partial class RelatorioVei
     {
         /// <summary>
         /// Required designer variable.
@@ -31,36 +31,36 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.RelLocacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.RelLocacaoBindingSource)).BeginInit();
+            this.VeiculoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.VeiculoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "LocacaoDS";
-            reportDataSource1.Value = this.RelLocacaoBindingSource;
+            reportDataSource1.Name = "RelatorioVei";
+            reportDataSource1.Value = this.VeiculoBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "LocAuto.Report1.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "LocAuto.Report2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(871, 525);
+            this.reportViewer1.Size = new System.Drawing.Size(815, 630);
             this.reportViewer1.TabIndex = 0;
             // 
-            // RelLocacaoBindingSource
+            // VeiculoBindingSource
             // 
-            this.RelLocacaoBindingSource.DataSource = typeof(Modelo.RelLocacao);
+            this.VeiculoBindingSource.DataSource = typeof(Modelo.Veiculo);
             // 
-            // RelatorioLoc
+            // RelatorioVei
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 525);
+            this.ClientSize = new System.Drawing.Size(815, 630);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "RelatorioLoc";
-            this.Text = "RelatorioLoc";
-            this.Load += new System.EventHandler(this.RelatorioLoc_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.RelLocacaoBindingSource)).EndInit();
+            this.Name = "RelatorioVei";
+            this.Text = "RelatorioVei";
+            this.Load += new System.EventHandler(this.RelatorioVei_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.VeiculoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -68,6 +68,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource RelLocacaoBindingSource;
+        private System.Windows.Forms.BindingSource VeiculoBindingSource;
     }
 }
