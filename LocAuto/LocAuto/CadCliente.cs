@@ -26,7 +26,7 @@ namespace LocAuto
         private void CadCliente_Load(object sender, EventArgs e)
         {
             CmbEstado.DropDownStyle = ComboBoxStyle.DropDownList;
-                
+            
             CarregarTiposTelefone();
             if (pessoaFisicaConsulta != null)
             {

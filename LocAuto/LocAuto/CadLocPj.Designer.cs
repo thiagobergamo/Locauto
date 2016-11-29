@@ -31,16 +31,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.ChkAssentoElevacao = new System.Windows.Forms.CheckBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.ChkCadeiraBebe = new System.Windows.Forms.CheckBox();
-            this.ChkNavegadorGps = new System.Windows.Forms.CheckBox();
-            this.ChkCoberturaTerceiros = new System.Windows.Forms.CheckBox();
-            this.ChkCoberturaCarro = new System.Windows.Forms.CheckBox();
             this.ChkPago = new System.Windows.Forms.CheckBox();
             this.TxtValorCaucao = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -80,9 +70,12 @@
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
             this.BtnVistoria = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.opcional = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -111,9 +104,9 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(39, 247);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(740, 336);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
@@ -132,137 +125,18 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.ChkAssentoElevacao);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.ChkCadeiraBebe);
-            this.panel1.Controls.Add(this.ChkNavegadorGps);
-            this.panel1.Controls.Add(this.ChkCoberturaTerceiros);
-            this.panel1.Controls.Add(this.ChkCoberturaCarro);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(363, 89);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(342, 180);
             this.panel1.TabIndex = 21;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(240, 142);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(66, 17);
-            this.label22.TabIndex = 19;
-            this.label22.Text = "R$ 20,00";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(240, 110);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(66, 17);
-            this.label21.TabIndex = 18;
-            this.label21.Text = "R$ 20,00";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(240, 79);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(66, 17);
-            this.label20.TabIndex = 17;
-            this.label20.Text = "R$ 38,00";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(240, 48);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(66, 17);
-            this.label19.TabIndex = 16;
-            this.label19.Text = "R$ 17,00";
-            // 
-            // ChkAssentoElevacao
-            // 
-            this.ChkAssentoElevacao.AutoSize = true;
-            this.ChkAssentoElevacao.Location = new System.Drawing.Point(31, 17);
-            this.ChkAssentoElevacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ChkAssentoElevacao.Name = "ChkAssentoElevacao";
-            this.ChkAssentoElevacao.Size = new System.Drawing.Size(162, 21);
-            this.ChkAssentoElevacao.TabIndex = 14;
-            this.ChkAssentoElevacao.Text = "Assento de elevação";
-            this.ChkAssentoElevacao.UseVisualStyleBackColor = true;
-            this.ChkAssentoElevacao.CheckedChanged += new System.EventHandler(this.ChkAssentoElevacao_CheckedChanged);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(240, 17);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(66, 17);
-            this.label18.TabIndex = 15;
-            this.label18.Text = "R$ 20,00";
-            // 
-            // ChkCadeiraBebe
-            // 
-            this.ChkCadeiraBebe.AutoSize = true;
-            this.ChkCadeiraBebe.Location = new System.Drawing.Point(31, 46);
-            this.ChkCadeiraBebe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ChkCadeiraBebe.Name = "ChkCadeiraBebe";
-            this.ChkCadeiraBebe.Size = new System.Drawing.Size(135, 21);
-            this.ChkCadeiraBebe.TabIndex = 13;
-            this.ChkCadeiraBebe.Text = "Cadeira de bebê";
-            this.ChkCadeiraBebe.UseVisualStyleBackColor = true;
-            this.ChkCadeiraBebe.CheckedChanged += new System.EventHandler(this.ChkCadeiraBebe_CheckedChanged);
-            // 
-            // ChkNavegadorGps
-            // 
-            this.ChkNavegadorGps.AutoSize = true;
-            this.ChkNavegadorGps.Location = new System.Drawing.Point(31, 140);
-            this.ChkNavegadorGps.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ChkNavegadorGps.Name = "ChkNavegadorGps";
-            this.ChkNavegadorGps.Size = new System.Drawing.Size(133, 21);
-            this.ChkNavegadorGps.TabIndex = 12;
-            this.ChkNavegadorGps.Text = "Navegador GPS";
-            this.ChkNavegadorGps.UseVisualStyleBackColor = true;
-            this.ChkNavegadorGps.CheckedChanged += new System.EventHandler(this.ChkNavegadorGps_CheckedChanged);
-            // 
-            // ChkCoberturaTerceiros
-            // 
-            this.ChkCoberturaTerceiros.AutoSize = true;
-            this.ChkCoberturaTerceiros.Location = new System.Drawing.Point(31, 108);
-            this.ChkCoberturaTerceiros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ChkCoberturaTerceiros.Name = "ChkCoberturaTerceiros";
-            this.ChkCoberturaTerceiros.Size = new System.Drawing.Size(185, 21);
-            this.ChkCoberturaTerceiros.TabIndex = 11;
-            this.ChkCoberturaTerceiros.Text = "Cobertura para terceiros";
-            this.ChkCoberturaTerceiros.UseVisualStyleBackColor = true;
-            this.ChkCoberturaTerceiros.CheckedChanged += new System.EventHandler(this.ChkCoberturaTerceiros_CheckedChanged);
-            // 
-            // ChkCoberturaCarro
-            // 
-            this.ChkCoberturaCarro.AutoSize = true;
-            this.ChkCoberturaCarro.Location = new System.Drawing.Point(31, 78);
-            this.ChkCoberturaCarro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ChkCoberturaCarro.Name = "ChkCoberturaCarro";
-            this.ChkCoberturaCarro.Size = new System.Drawing.Size(150, 21);
-            this.ChkCoberturaCarro.TabIndex = 10;
-            this.ChkCoberturaCarro.Text = "Cobertura do carro";
-            this.ChkCoberturaCarro.UseVisualStyleBackColor = true;
-            this.ChkCoberturaCarro.CheckedChanged += new System.EventHandler(this.ChkCoberturaCarro_CheckedChanged_1);
             // 
             // ChkPago
             // 
             this.ChkPago.AutoSize = true;
             this.ChkPago.Location = new System.Drawing.Point(556, 288);
-            this.ChkPago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ChkPago.Margin = new System.Windows.Forms.Padding(4);
             this.ChkPago.Name = "ChkPago";
             this.ChkPago.Size = new System.Drawing.Size(63, 21);
             this.ChkPago.TabIndex = 10;
@@ -272,7 +146,7 @@
             // TxtValorCaucao
             // 
             this.TxtValorCaucao.Location = new System.Drawing.Point(419, 286);
-            this.TxtValorCaucao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtValorCaucao.Margin = new System.Windows.Forms.Padding(4);
             this.TxtValorCaucao.Name = "TxtValorCaucao";
             this.TxtValorCaucao.Size = new System.Drawing.Size(80, 22);
             this.TxtValorCaucao.TabIndex = 9;
@@ -297,7 +171,7 @@
             "Cartão de Débito",
             "Faturado"});
             this.CbxFormaPagto.Location = new System.Drawing.Point(108, 286);
-            this.CbxFormaPagto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CbxFormaPagto.Margin = new System.Windows.Forms.Padding(4);
             this.CbxFormaPagto.Name = "CbxFormaPagto";
             this.CbxFormaPagto.Size = new System.Drawing.Size(141, 24);
             this.CbxFormaPagto.TabIndex = 8;
@@ -325,7 +199,7 @@
             // TxtValorTotal
             // 
             this.TxtValorTotal.Location = new System.Drawing.Point(145, 250);
-            this.TxtValorTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtValorTotal.Margin = new System.Windows.Forms.Padding(4);
             this.TxtValorTotal.Name = "TxtValorTotal";
             this.TxtValorTotal.Size = new System.Drawing.Size(104, 22);
             this.TxtValorTotal.TabIndex = 13;
@@ -334,7 +208,7 @@
             // TxtValorOpc
             // 
             this.TxtValorOpc.Location = new System.Drawing.Point(145, 218);
-            this.TxtValorOpc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtValorOpc.Margin = new System.Windows.Forms.Padding(4);
             this.TxtValorOpc.Name = "TxtValorOpc";
             this.TxtValorOpc.Size = new System.Drawing.Size(104, 22);
             this.TxtValorOpc.TabIndex = 12;
@@ -354,7 +228,7 @@
             // TxtValorDiaria
             // 
             this.TxtValorDiaria.Location = new System.Drawing.Point(145, 186);
-            this.TxtValorDiaria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtValorDiaria.Margin = new System.Windows.Forms.Padding(4);
             this.TxtValorDiaria.Name = "TxtValorDiaria";
             this.TxtValorDiaria.Size = new System.Drawing.Size(104, 22);
             this.TxtValorDiaria.TabIndex = 10;
@@ -376,7 +250,7 @@
             this.DtpDtDevolucao.CustomFormat = "dd:MM:yyyy HH:mm";
             this.DtpDtDevolucao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpDtDevolucao.Location = new System.Drawing.Point(89, 143);
-            this.DtpDtDevolucao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DtpDtDevolucao.Margin = new System.Windows.Forms.Padding(4);
             this.DtpDtDevolucao.Name = "DtpDtDevolucao";
             this.DtpDtDevolucao.Size = new System.Drawing.Size(160, 22);
             this.DtpDtDevolucao.TabIndex = 7;
@@ -387,7 +261,7 @@
             this.DtpDtLocacao.CustomFormat = "";
             this.DtpDtLocacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpDtLocacao.Location = new System.Drawing.Point(89, 106);
-            this.DtpDtLocacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DtpDtLocacao.Margin = new System.Windows.Forms.Padding(4);
             this.DtpDtLocacao.Name = "DtpDtLocacao";
             this.DtpDtLocacao.Size = new System.Drawing.Size(160, 22);
             this.DtpDtLocacao.TabIndex = 6;
@@ -416,7 +290,7 @@
             // 
             this.CbxVeiculo.FormattingEnabled = true;
             this.CbxVeiculo.Location = new System.Drawing.Point(363, 33);
-            this.CbxVeiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CbxVeiculo.Margin = new System.Windows.Forms.Padding(4);
             this.CbxVeiculo.Name = "CbxVeiculo";
             this.CbxVeiculo.Size = new System.Drawing.Size(341, 24);
             this.CbxVeiculo.TabIndex = 4;
@@ -426,7 +300,7 @@
             // 
             this.CbxPlaca.FormattingEnabled = true;
             this.CbxPlaca.Location = new System.Drawing.Point(89, 69);
-            this.CbxPlaca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CbxPlaca.Margin = new System.Windows.Forms.Padding(4);
             this.CbxPlaca.Name = "CbxPlaca";
             this.CbxPlaca.Size = new System.Drawing.Size(160, 24);
             this.CbxPlaca.TabIndex = 5;
@@ -435,7 +309,7 @@
             // 
             this.CbxGrupo.FormattingEnabled = true;
             this.CbxGrupo.Location = new System.Drawing.Point(89, 33);
-            this.CbxGrupo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CbxGrupo.Margin = new System.Windows.Forms.Padding(4);
             this.CbxGrupo.Name = "CbxGrupo";
             this.CbxGrupo.Size = new System.Drawing.Size(160, 24);
             this.CbxGrupo.TabIndex = 3;
@@ -488,9 +362,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(39, 27);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(740, 190);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -500,7 +374,7 @@
             // 
             this.CbxNomeFantasia.FormattingEnabled = true;
             this.CbxNomeFantasia.Location = new System.Drawing.Point(89, 30);
-            this.CbxNomeFantasia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CbxNomeFantasia.Margin = new System.Windows.Forms.Padding(4);
             this.CbxNomeFantasia.Name = "CbxNomeFantasia";
             this.CbxNomeFantasia.Size = new System.Drawing.Size(405, 24);
             this.CbxNomeFantasia.TabIndex = 1;
@@ -519,7 +393,7 @@
             // TxtNomeCondutor
             // 
             this.TxtNomeCondutor.Location = new System.Drawing.Point(89, 68);
-            this.TxtNomeCondutor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNomeCondutor.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNomeCondutor.Name = "TxtNomeCondutor";
             this.TxtNomeCondutor.Size = new System.Drawing.Size(405, 22);
             this.TxtNomeCondutor.TabIndex = 2;
@@ -528,7 +402,7 @@
             // 
             this.DtpDtValidade.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DtpDtValidade.Location = new System.Drawing.Point(363, 107);
-            this.DtpDtValidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DtpDtValidade.Margin = new System.Windows.Forms.Padding(4);
             this.DtpDtValidade.Name = "DtpDtValidade";
             this.DtpDtValidade.Size = new System.Drawing.Size(132, 22);
             this.DtpDtValidade.TabIndex = 12;
@@ -536,7 +410,7 @@
             // TxtCodigo
             // 
             this.TxtCodigo.Location = new System.Drawing.Point(613, 30);
-            this.TxtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Size = new System.Drawing.Size(91, 22);
             this.TxtCodigo.TabIndex = 11;
@@ -564,7 +438,7 @@
             // TxtEmail
             // 
             this.TxtEmail.Location = new System.Drawing.Point(363, 144);
-            this.TxtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(219, 22);
             this.TxtEmail.TabIndex = 8;
@@ -572,7 +446,7 @@
             // TxtNumero
             // 
             this.TxtNumero.Location = new System.Drawing.Point(89, 144);
-            this.TxtNumero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNumero.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNumero.Name = "TxtNumero";
             this.TxtNumero.Size = new System.Drawing.Size(171, 22);
             this.TxtNumero.TabIndex = 7;
@@ -600,7 +474,7 @@
             // TxtCnh
             // 
             this.TxtCnh.Location = new System.Drawing.Point(89, 107);
-            this.TxtCnh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCnh.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCnh.Name = "TxtCnh";
             this.TxtCnh.Size = new System.Drawing.Size(171, 22);
             this.TxtCnh.TabIndex = 3;
@@ -628,7 +502,7 @@
             // BtnSalvar
             // 
             this.BtnSalvar.Location = new System.Drawing.Point(679, 603);
-            this.BtnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(100, 32);
             this.BtnSalvar.TabIndex = 11;
@@ -639,7 +513,7 @@
             // BtnLimpar
             // 
             this.BtnLimpar.Location = new System.Drawing.Point(571, 603);
-            this.BtnLimpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnLimpar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnLimpar.Name = "BtnLimpar";
             this.BtnLimpar.Size = new System.Drawing.Size(100, 32);
             this.BtnLimpar.TabIndex = 7;
@@ -650,13 +524,31 @@
             // BtnVistoria
             // 
             this.BtnVistoria.Location = new System.Drawing.Point(39, 606);
-            this.BtnVistoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnVistoria.Margin = new System.Windows.Forms.Padding(4);
             this.BtnVistoria.Name = "BtnVistoria";
             this.BtnVistoria.Size = new System.Drawing.Size(100, 28);
             this.BtnVistoria.TabIndex = 8;
             this.BtnVistoria.Text = "Vistoria";
             this.BtnVistoria.UseVisualStyleBackColor = true;
             this.BtnVistoria.Click += new System.EventHandler(this.BtnVistoria_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.opcional});
+            this.dataGridView1.Location = new System.Drawing.Point(3, 9);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(334, 166);
+            this.dataGridView1.TabIndex = 22;
+            this.dataGridView1.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowValidated);
+            // 
+            // opcional
+            // 
+            this.opcional.HeaderText = "Opcional";
+            this.opcional.Name = "opcional";
+            this.opcional.Width = 200;
             // 
             // CadLocPj
             // 
@@ -668,7 +560,7 @@
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadLocPj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Locação PJ";
@@ -676,9 +568,9 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -727,15 +619,7 @@
         private System.Windows.Forms.ComboBox CbxNomeFantasia;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button BtnVistoria;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.CheckBox ChkAssentoElevacao;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.CheckBox ChkCadeiraBebe;
-        private System.Windows.Forms.CheckBox ChkNavegadorGps;
-        private System.Windows.Forms.CheckBox ChkCoberturaTerceiros;
-        private System.Windows.Forms.CheckBox ChkCoberturaCarro;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn opcional;
     }
 }

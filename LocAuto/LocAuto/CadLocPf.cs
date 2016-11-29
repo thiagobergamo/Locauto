@@ -38,8 +38,31 @@ namespace LocAuto
 
         }
 
+        private void carregaOpcionais()
+        {
+            ConnectionFactory cf = new ConnectionFactory();
+            MySqlConnection conn;
+            conn = cf.ObterConexao();
+
+            conn.Open();
+
+            string mSQL = "select codigo, concat(descricao,' R$',valor) descricao from opcional order by descricao";
+
+            MySqlCommand cmd = new MySqlCommand(mSQL, conn);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+            DataTable dtClientes = new DataTable();
+            da.Fill(dtClientes);
+            this.opcional.DataSource = dtClientes;
+            this.opcional.ValueMember = "codigo";
+            this.opcional.DisplayMember = "descricao";
+
+            conn.Close();
+        }
+
         private void CadLocPf_Load(object sender, EventArgs e)
         {
+            carregaOpcionais();
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
             conn = cf.ObterConexao();
@@ -72,39 +95,7 @@ namespace LocAuto
             this.CbxGrupo.ValueMember = "codigo";
             this.CbxGrupo.DisplayMember = "descricao";
 
-            conn.Close();
-
-            conn.Open();
-
-            //mSQL = "select valor from opcional where codigo = 1";
-
-            //cmd = new MySqlCommand(mSQL, conn);
-            //label18.Text = "R$ " + cmd.ExecuteScalar().ToString();
-
-            //mSQL = "select valor from opcional where codigo = 2";
-
-            //cmd = new MySqlCommand(mSQL, conn);
-            //label19.Text = "R$ " + cmd.ExecuteScalar().ToString();
-
-            //mSQL = "select valor from opcional where codigo = 3";
-
-            //cmd = new MySqlCommand(mSQL, conn);
-            //label20.Text = "R$ " + cmd.ExecuteScalar().ToString();
-
-            //mSQL = "select valor from opcional where codigo = 4";
-
-            //cmd = new MySqlCommand(mSQL, conn);
-            //label21.Text = "R$ " + cmd.ExecuteScalar().ToString();
-
-            //mSQL = "select valor from opcional where codigo = 5";
-
-            cmd = new MySqlCommand(mSQL, conn);
-            label22.Text = "R$ " + cmd.ExecuteScalar().ToString();
-
-
-
-
-            conn.Close();
+  
 
         }
 
@@ -241,67 +232,7 @@ namespace LocAuto
             TxtValorTotal.Text = (Convert.ToDouble(TxtValorDiaria.Text) + Convert.ToDouble(TxtValorOpc.Text)).ToString();
         }
 
-        private void ChkAssentoElevacao_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ChkAssentoElevacao.Checked == true)
-            {
-                TxtValorOpc.Text = (Convert.ToDouble(TxtValorOpc.Text) + Convert.ToDouble(label18.Text.Replace("R$", ""))).ToString();
-            }
-            else
-            {
-                TxtValorOpc.Text = (Convert.ToDouble(TxtValorOpc.Text) - Convert.ToDouble(label18.Text.Replace("R$", ""))).ToString();
-            }
-        }
-
-        private void ChkCadeiraBebe_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ChkCadeiraBebe.Checked == true)
-            {
-                TxtValorOpc.Text = (Convert.ToDouble(TxtValorOpc.Text) + Convert.ToDouble(label19.Text.Replace("R$", ""))).ToString();
-            }
-            else
-            {
-                TxtValorOpc.Text = (Convert.ToDouble(TxtValorOpc.Text) - Convert.ToDouble(label19.Text.Replace("R$", ""))).ToString();
-            }
-        }
-
-        private void ChkCoberturaCarro_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ChkCoberturaCarro.Checked == true)
-            {
-                TxtValorOpc.Text = (Convert.ToDouble(TxtValorOpc.Text) + Convert.ToDouble(label20.Text.Replace("R$", ""))).ToString();
-            }
-            else
-            {
-                TxtValorOpc.Text = (Convert.ToDouble(TxtValorOpc.Text) - Convert.ToDouble(label20.Text.Replace("R$", ""))).ToString();
-            }
-        }
-
-        private void ChkCoberturaTerceiros_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ChkCoberturaTerceiros.Checked == true)
-            {
-                TxtValorOpc.Text = (Convert.ToDouble(TxtValorOpc.Text) + Convert.ToDouble(label21.Text.Replace("R$", ""))).ToString();
-            }
-            else
-            {
-                TxtValorOpc.Text = (Convert.ToDouble(TxtValorOpc.Text) - Convert.ToDouble(label21.Text.Replace("R$", ""))).ToString();
-            }
-        }
-
-        private void ChkNavegadorGps_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ChkNavegadorGps.Checked == true)
-            {
-                TxtValorOpc.Text = (Convert.ToDouble(TxtValorOpc.Text) + Convert.ToDouble(label22.Text.Replace("R$", ""))).ToString();
-            }
-            else
-            {
-                TxtValorOpc.Text = (Convert.ToDouble(TxtValorOpc.Text) - Convert.ToDouble(label22.Text.Replace("R$", ""))).ToString();
-            }
-        }
-
-        private void BtnSalvar_Click(object sender, EventArgs e)
+       private void BtnSalvar_Click(object sender, EventArgs e)
         {
             Locacao locacao = new Locacao();
             LocacaoDAO locacaoDao = new LocacaoDAO();
@@ -378,5 +309,58 @@ namespace LocAuto
         {
           //  LimparTxt();
         }
+
+        private void CbxGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void dataGridView1_RowValidated(object sender, DataGridViewCellEventArgs e)
+        {
+            Decimal valorTotal = 0; 
+            foreach (DataGridViewRow linha in this.dataGridView1.Rows)
+            {
+                if (linha.Cells["opcional"].Value != null)
+                {
+                    //MessageBox.Show(buscaValorOpcional( Convert.ToInt32(linha.Cells["opcional"].Value.ToString())  ).ToString());
+                    Decimal valor = buscaValorOpcional(Convert.ToInt32(linha.Cells["opcional"].Value.ToString()));
+                    valorTotal += valor;
+                }
+            }
+            TxtValorOpc.Text = valorTotal.ToString();
+        }
+
+        private decimal buscaValorOpcional(int idOpcional)
+        {
+            ConnectionFactory cf = new ConnectionFactory();
+            MySqlConnection conn;
+            String mSQL;
+
+            conn = cf.ObterConexao();
+
+            conn.Open();
+            mSQL = "select valor from opcional where codigo = @id";
+
+            MySqlCommand cmd = new MySqlCommand(mSQL, conn);
+            cmd.Parameters.Add(new MySqlParameter("id", idOpcional.ToString()));
+            int vRetorno = 0;
+
+            try
+            {
+                vRetorno = Convert.ToInt32(cmd.ExecuteScalar().ToString());
+            }
+            catch { }
+
+
+            conn.Close();
+            return vRetorno;
+        }
     }
+
+    
 }
