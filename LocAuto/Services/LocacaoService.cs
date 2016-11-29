@@ -23,6 +23,7 @@ namespace Services
         }
         private void ValidarLocacao(Locacao locacao)
         {
+            
             if (locacao.CodigoVeiculo == 0)
             {
                 throw new ArgumentNullException("Veículo", "Dados do veículo incompletos");
@@ -38,6 +39,10 @@ namespace Services
             if (String.IsNullOrEmpty(locacao.FormaPagamento))
             {
                 throw new ArgumentNullException("Forma Pagamento", "Campo obrigatório não preenchido");
+            }
+            if (locacao.ValorTotal == 0)
+            {
+                throw new ArgumentNullException("Data Locação", "Campo obrigatório não preenchido");
             }
         }
     }

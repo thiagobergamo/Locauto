@@ -33,7 +33,7 @@ namespace LocAuto
 
             conn.Open();
 
-            string mSQL = "select codigo_cliente, nome_fantasia from pessoa_juridica order by nome_fantasia desc";
+            string mSQL = "select codigo_cliente, nome_fantasia, razao_social from pessoa_juridica order by nome_fantasia desc";
 
             MySqlCommand cmd = new MySqlCommand(mSQL, conn);
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -42,7 +42,7 @@ namespace LocAuto
             da.Fill(dtClientes);
             this.CbxNomeFantasia.DataSource = dtClientes;
             this.CbxNomeFantasia.ValueMember = "codigo_cliente";
-            this.CbxNomeFantasia.DisplayMember = "nome_fantasia";
+            this.CbxNomeFantasia.DisplayMember = "razao_social";
 
             conn.Close();
 
@@ -105,17 +105,17 @@ namespace LocAuto
             locacao.DataLocacao = DtpDtLocacao.Value.ToString("yyyy-MM-dd");
             locacao.DataPrevDevolucao = DtpDtDevolucao.Value.ToString("yyyy-MM-dd");
             locacao.FormaPagamento = CbxFormaPagto.Text;
-            if (!String.IsNullOrWhiteSpace(locacao.ValorTotal.ToString()))
+            if (!String.IsNullOrWhiteSpace(TxtValorTotal.Text))
             {
                 locacao.ValorTotal = Convert.ToDecimal(TxtValorTotal.Text);
             }
-            if (!String.IsNullOrWhiteSpace(locacao.ValorOpc.ToString()))
+            if (!String.IsNullOrWhiteSpace(TxtValorOpc.Text))
             {
                 locacao.ValorOpc = Convert.ToDecimal(TxtValorOpc.Text);
             }
-            if (!String.IsNullOrWhiteSpace(locacao.ValorCaucao.ToString()))
+            if (!String.IsNullOrWhiteSpace(maskedTextBox1.Text))
             {
-                locacao.ValorCaucao = Convert.ToDecimal(TxtValorCaucao.Text);
+                locacao.ValorCaucao = Convert.ToDecimal(maskedTextBox1.Text);
             }
             locacao.Pago = Convert.ToInt32(ChkPago.Checked).ToString();
             LocacaoDAO locacaoDao = new LocacaoDAO();
@@ -140,11 +140,24 @@ namespace LocAuto
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
-            CbxFormaPagto.Text = "";
-            TxtValorTotal.Text = "";
-            TxtValorOpc.Text = "";
-            TxtValorCaucao.Text = "";
+            TxtCodigo.Text = "";
+            TxtCnh.Text = "";
+            DtpDtValidade.Text = "";
+            TxtNumero.Text = "";
+            TxtEmail.Text = "";
+            CbxNomeFantasia.SelectedIndex = 0;
+            CbxGrupo.SelectedIndex = 0;
+            //CbxVeiculo.SelectedIndex = 0;
+            //CbxPlaca.SelectedIndex = 0;
+            DtpDtLocacao.Text = "";
+            DtpDtDevolucao.Text = "";
+            TxtValorDiaria.Text = "0";
+            TxtValorOpc.Text = "0";
+            TxtValorTotal.Text = "0";
+            CbxFormaPagto.SelectedIndex = 0;
+            maskedTextBox1.Text = "";
             ChkPago.Checked = false;
+            dataGridView1.Rows.Clear();
         }
 
         private void CbxNomeFantasia_Validated(object sender, EventArgs e)

@@ -47,8 +47,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.opcional = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ChkPago = new System.Windows.Forms.CheckBox();
-            this.TxtValorCaucao = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.CbxFormaPagto = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -69,7 +69,7 @@
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
             this.btnVistoria = new System.Windows.Forms.Button();
-            this.opcional = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.TxtValorCaucao = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -238,10 +238,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.TxtValorCaucao);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Controls.Add(this.ChkPago);
-            this.groupBox2.Controls.Add(this.TxtValorCaucao);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.CbxFormaPagto);
             this.groupBox2.Controls.Add(this.label15);
@@ -302,6 +302,12 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowValidated);
             // 
+            // opcional
+            // 
+            this.opcional.HeaderText = "Opcional";
+            this.opcional.Name = "opcional";
+            this.opcional.Width = 200;
+            // 
             // ChkPago
             // 
             this.ChkPago.AutoSize = true;
@@ -312,15 +318,6 @@
             this.ChkPago.TabIndex = 9;
             this.ChkPago.Text = "Pago";
             this.ChkPago.UseVisualStyleBackColor = true;
-            // 
-            // TxtValorCaucao
-            // 
-            this.TxtValorCaucao.Location = new System.Drawing.Point(419, 286);
-            this.TxtValorCaucao.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtValorCaucao.Name = "TxtValorCaucao";
-            this.TxtValorCaucao.Size = new System.Drawing.Size(80, 22);
-            this.TxtValorCaucao.TabIndex = 8;
-            this.TxtValorCaucao.Text = "0";
             // 
             // label16
             // 
@@ -368,6 +365,7 @@
             // 
             // TxtValorTotal
             // 
+            this.TxtValorTotal.Enabled = false;
             this.TxtValorTotal.Location = new System.Drawing.Point(145, 250);
             this.TxtValorTotal.Margin = new System.Windows.Forms.Padding(4);
             this.TxtValorTotal.Name = "TxtValorTotal";
@@ -378,6 +376,7 @@
             // 
             // TxtValorOpc
             // 
+            this.TxtValorOpc.Enabled = false;
             this.TxtValorOpc.Location = new System.Drawing.Point(145, 218);
             this.TxtValorOpc.Margin = new System.Windows.Forms.Padding(4);
             this.TxtValorOpc.Name = "TxtValorOpc";
@@ -398,6 +397,7 @@
             // 
             // TxtValorDiaria
             // 
+            this.TxtValorDiaria.Enabled = false;
             this.TxtValorDiaria.Location = new System.Drawing.Point(145, 186);
             this.TxtValorDiaria.Margin = new System.Windows.Forms.Padding(4);
             this.TxtValorDiaria.Name = "TxtValorDiaria";
@@ -532,11 +532,13 @@
             this.btnVistoria.UseVisualStyleBackColor = true;
             this.btnVistoria.Click += new System.EventHandler(this.button1_Click);
             // 
-            // opcional
+            // TxtValorCaucao
             // 
-            this.opcional.HeaderText = "Opcional";
-            this.opcional.Name = "opcional";
-            this.opcional.Width = 200;
+            this.TxtValorCaucao.Location = new System.Drawing.Point(395, 289);
+            this.TxtValorCaucao.Mask = "99999999";
+            this.TxtValorCaucao.Name = "TxtValorCaucao";
+            this.TxtValorCaucao.Size = new System.Drawing.Size(100, 22);
+            this.TxtValorCaucao.TabIndex = 22;
             // 
             // CadLocPf
             // 
@@ -597,7 +599,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox ChkPago;
-        private System.Windows.Forms.TextBox TxtValorCaucao;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox CbxFormaPagto;
         private System.Windows.Forms.Label label15;
@@ -607,5 +608,6 @@
         private System.Windows.Forms.Button btnVistoria;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewComboBoxColumn opcional;
+        private System.Windows.Forms.MaskedTextBox TxtValorCaucao;
     }
 }

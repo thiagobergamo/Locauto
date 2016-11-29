@@ -249,15 +249,15 @@ namespace LocAuto
             locacao.DataLocacao = DtpDtLocacao.Value.ToString("yyyy-MM-dd");
             locacao.DataPrevDevolucao = DtpDtDevolucao.Value.ToString("yyyy-MM-dd");
             locacao.FormaPagamento = CbxFormaPagto.Text;
-            if (! String.IsNullOrWhiteSpace(locacao.ValorTotal.ToString()))
+            if (! String.IsNullOrWhiteSpace(TxtValorTotal.Text))
             {
                 locacao.ValorTotal = Convert.ToDecimal(TxtValorTotal.Text);
             }
-            if (! String.IsNullOrWhiteSpace(locacao.ValorOpc.ToString()))
+            if (! String.IsNullOrWhiteSpace(TxtValorOpc.Text))
             {
                 locacao.ValorOpc = Convert.ToDecimal(TxtValorOpc.Text);
             }
-            if (! String.IsNullOrWhiteSpace(locacao.ValorCaucao.ToString()))
+            if (! String.IsNullOrWhiteSpace(TxtValorCaucao.Text))
             {
                 locacao.ValorCaucao = Convert.ToDecimal(TxtValorCaucao.Text);
             }
@@ -307,7 +307,24 @@ namespace LocAuto
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
-          //  LimparTxt();
+            TxtCodigo.Text = "";
+            TxtCnh.Text = "";
+            DtpDtValidade.Text = "";
+            TxtNumero.Text = "";
+            TxtEmail.Text = "";
+            CbxNome.SelectedIndex = 0;
+            CbxGrupo.SelectedIndex = 0;
+            //CbxVeiculo.SelectedIndex = 0;
+            //CbxPlaca.SelectedIndex = 0;
+            DtpDtLocacao.Text = "";
+            DtpDtDevolucao.Text = "";
+            TxtValorDiaria.Text = "0";
+            TxtValorOpc.Text = "0";
+            TxtValorTotal.Text = "0";
+            CbxFormaPagto.SelectedIndex = 0;
+            TxtValorCaucao.Text = "";
+            ChkPago.Checked = false;
+            dataGridView1.Rows.Clear();
         }
 
         private void CbxGrupo_SelectedIndexChanged(object sender, EventArgs e)

@@ -31,8 +31,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.opcional = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ChkPago = new System.Windows.Forms.CheckBox();
-            this.TxtValorCaucao = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.CbxFormaPagto = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -70,20 +71,19 @@
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
             this.BtnVistoria = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.opcional = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.maskedTextBox1);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Controls.Add(this.ChkPago);
-            this.groupBox2.Controls.Add(this.TxtValorCaucao);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.CbxFormaPagto);
             this.groupBox2.Controls.Add(this.label15);
@@ -132,6 +132,24 @@
             this.panel1.Size = new System.Drawing.Size(342, 180);
             this.panel1.TabIndex = 21;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.opcional});
+            this.dataGridView1.Location = new System.Drawing.Point(3, 9);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(334, 166);
+            this.dataGridView1.TabIndex = 22;
+            this.dataGridView1.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowValidated);
+            // 
+            // opcional
+            // 
+            this.opcional.HeaderText = "Opcional";
+            this.opcional.Name = "opcional";
+            this.opcional.Width = 200;
+            // 
             // ChkPago
             // 
             this.ChkPago.AutoSize = true;
@@ -142,15 +160,6 @@
             this.ChkPago.TabIndex = 10;
             this.ChkPago.Text = "Pago";
             this.ChkPago.UseVisualStyleBackColor = true;
-            // 
-            // TxtValorCaucao
-            // 
-            this.TxtValorCaucao.Location = new System.Drawing.Point(419, 286);
-            this.TxtValorCaucao.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtValorCaucao.Name = "TxtValorCaucao";
-            this.TxtValorCaucao.Size = new System.Drawing.Size(80, 22);
-            this.TxtValorCaucao.TabIndex = 9;
-            this.TxtValorCaucao.Text = "0";
             // 
             // label16
             // 
@@ -198,6 +207,7 @@
             // 
             // TxtValorTotal
             // 
+            this.TxtValorTotal.Enabled = false;
             this.TxtValorTotal.Location = new System.Drawing.Point(145, 250);
             this.TxtValorTotal.Margin = new System.Windows.Forms.Padding(4);
             this.TxtValorTotal.Name = "TxtValorTotal";
@@ -207,6 +217,7 @@
             // 
             // TxtValorOpc
             // 
+            this.TxtValorOpc.Enabled = false;
             this.TxtValorOpc.Location = new System.Drawing.Point(145, 218);
             this.TxtValorOpc.Margin = new System.Windows.Forms.Padding(4);
             this.TxtValorOpc.Name = "TxtValorOpc";
@@ -227,6 +238,7 @@
             // 
             // TxtValorDiaria
             // 
+            this.TxtValorDiaria.Enabled = false;
             this.TxtValorDiaria.Location = new System.Drawing.Point(145, 186);
             this.TxtValorDiaria.Margin = new System.Windows.Forms.Padding(4);
             this.TxtValorDiaria.Name = "TxtValorDiaria";
@@ -532,23 +544,13 @@
             this.BtnVistoria.UseVisualStyleBackColor = true;
             this.BtnVistoria.Click += new System.EventHandler(this.BtnVistoria_Click);
             // 
-            // dataGridView1
+            // maskedTextBox1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.opcional});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 9);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(334, 166);
-            this.dataGridView1.TabIndex = 22;
-            this.dataGridView1.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowValidated);
-            // 
-            // opcional
-            // 
-            this.opcional.HeaderText = "Opcional";
-            this.opcional.Name = "opcional";
-            this.opcional.Width = 200;
+            this.maskedTextBox1.Location = new System.Drawing.Point(395, 288);
+            this.maskedTextBox1.Mask = "99999999";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(120, 22);
+            this.maskedTextBox1.TabIndex = 22;
             // 
             // CadLocPj
             // 
@@ -568,9 +570,9 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -581,7 +583,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox ChkPago;
-        private System.Windows.Forms.TextBox TxtValorCaucao;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox CbxFormaPagto;
         private System.Windows.Forms.Label label15;
@@ -621,5 +622,6 @@
         private System.Windows.Forms.Button BtnVistoria;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewComboBoxColumn opcional;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
