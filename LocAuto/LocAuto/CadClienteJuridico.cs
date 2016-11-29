@@ -70,7 +70,10 @@ namespace LocAuto
             pessoaJuridica.Email = TxtEmail.Text;
             pessoaJuridica.Contato = TxtContato.Text;
             pessoaJuridica.Logradouro = TxtEndereco.Text;
-            pessoaJuridica.Numero = Convert.ToInt32(TxtNumero.Text);
+            if (!String.IsNullOrWhiteSpace(TxtNumero.Text))
+            {
+                pessoaJuridica.Numero = Convert.ToInt32(TxtNumero.Text);
+            }
             pessoaJuridica.Bairro = TxtBairro.Text;
             pessoaJuridica.Complemento = TxtComplemento.Text;
             pessoaJuridica.Cep = MskCep.Text;
@@ -100,9 +103,8 @@ namespace LocAuto
                 {
                     pessoaJuridicaService.atualizar(pessoaJuridica, telefones);
                 }
-                    
-                LimparTxt();
-                MessageBox.Show("Cadastro realizado com sucesso!");
+                MessageBox.Show("Cadastro salvo com sucesso!");
+                this.Close();
             }
             catch (ArgumentNullException ex)
            {
@@ -149,6 +151,8 @@ namespace LocAuto
 
         private void CadClienteJuridico_Load(object sender, EventArgs e)
         {
+            CmbEstado.DropDownStyle = ComboBoxStyle.DropDownList;
+
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
             conn = cf.ObterConexao();

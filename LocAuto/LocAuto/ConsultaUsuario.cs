@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DaoMysql;
 using Services;
 using Modelo;
+using MySql.Data.MySqlClient;
 
 namespace LocAuto
 {
@@ -48,7 +49,8 @@ namespace LocAuto
         private void button1_Click(object sender, EventArgs e)
         {
             CadUsuario cadUsuario = new CadUsuario();
-            cadUsuario.Show();
+            cadUsuario.ShowDialog();
+            carregarGrid();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -64,7 +66,14 @@ namespace LocAuto
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro");
+                if (ex.Message == "1451")
+                {
+                    MessageBox.Show("Registro não pode ser apagado, pois tem registro relacionado","Erro");
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message, "Erro");
+                }                
             }
 
         }
@@ -79,7 +88,8 @@ namespace LocAuto
 
             CadUsuario cadUsuario = new CadUsuario();
             cadUsuario.usuarioConsulta = usuarioSelecionado;
-            cadUsuario.Show();
+            cadUsuario.ShowDialog();
+            carregarGrid();
         }
     }
 }

@@ -70,16 +70,31 @@ namespace LocAuto
         private void btnNovo_Click(object sender, EventArgs e)
         {
             CadClienteJuridico c = new CadClienteJuridico();
-            c.Show();
+            c.ShowDialog();
+            carregaGrid();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             int idSelecionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells["codigo"].Value);
             PessoaJuridicaDAO dao = new PessoaJuridicaDAO();
-            dao.apagar(idSelecionado);
-            MessageBox.Show("Cliente apagado com sucesso");
-            carregaGrid();
+            try
+            {
+                dao.apagar(idSelecionado);
+                MessageBox.Show("Cliente apagado com sucesso");
+                carregaGrid();
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "1451")
+                {
+                    MessageBox.Show("Registro não pode ser apagado, pois tem registro relacionado", "Erro");
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message, "Erro");
+                }
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -92,6 +107,7 @@ namespace LocAuto
             CadClienteJuridico cadCliente = new CadClienteJuridico();
             cadCliente.pessoaJuridicaConsulta = pessoaJuridicaSelecionada;
             cadCliente.ShowDialog();
+            carregaGrid();
         }
     }
 }

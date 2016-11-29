@@ -58,6 +58,10 @@ namespace DaoMysql
             {
                 throw new Exception(ex.Message);
             }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
             finally
             {
                 conn.Close();
@@ -81,7 +85,7 @@ namespace DaoMysql
             }
             catch (MySqlException ex)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(ex.Number.ToString());
             }
             finally
             {

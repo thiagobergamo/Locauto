@@ -405,9 +405,9 @@
             // 
             // TxtBairro
             // 
-            this.TxtBairro.Location = new System.Drawing.Point(491, 151);
+            this.TxtBairro.Location = new System.Drawing.Point(72, 176);
             this.TxtBairro.Name = "TxtBairro";
-            this.TxtBairro.Size = new System.Drawing.Size(81, 20);
+            this.TxtBairro.Size = new System.Drawing.Size(215, 20);
             this.TxtBairro.TabIndex = 10;
             // 
             // label9
@@ -422,9 +422,9 @@
             // 
             // TxtComplemento
             // 
-            this.TxtComplemento.Location = new System.Drawing.Point(72, 177);
+            this.TxtComplemento.Location = new System.Drawing.Point(491, 151);
             this.TxtComplemento.Name = "TxtComplemento";
-            this.TxtComplemento.Size = new System.Drawing.Size(151, 20);
+            this.TxtComplemento.Size = new System.Drawing.Size(81, 20);
             this.TxtComplemento.TabIndex = 10;
             // 
             // label10

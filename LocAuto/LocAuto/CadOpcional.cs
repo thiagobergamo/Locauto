@@ -49,8 +49,8 @@ namespace LocAuto
                 {
                     opcionalService.atualizar(opcional);
                 }
-                LimparTxt();
-                MessageBox.Show("Cadastro realizado com sucesso!");
+                MessageBox.Show("Cadastro salvo com sucesso!");
+                this.Close();
             }
             catch (ArgumentNullException ex)
             {

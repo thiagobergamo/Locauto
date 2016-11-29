@@ -38,7 +38,7 @@ namespace Services
             {
                 throw new ArgumentNullException("Endereço", "Campo obrigatório não preenchido");
             }
-            if (pessoaJuridica.Numero == 0 )
+            if (pessoaJuridica.Numero == 0)
             {
                 throw new ArgumentNullException("Numero", "Campo obrigatório não preenchido");
             }
@@ -91,6 +91,7 @@ namespace Services
 
         public void atualizar(PessoaJuridica pessoaJuridica, List<TelefoneCliente> telefoneCliente)
         {
+            ValidarPessoaJuridica(pessoaJuridica);
             pessoaJuridicaDAO.atualizar(pessoaJuridica, telefoneCliente);
         }
     }

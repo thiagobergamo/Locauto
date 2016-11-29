@@ -46,5 +46,35 @@ namespace DaoMysql
                 conn.Close();
             }
         }
+        public List<RelLocacao> buscaTodos()
+        {
+            List<RelLocacao> relLocacaos = new List<RelLocacao>();
+            ConnectionFactory cf = new ConnectionFactory();
+            MySqlConnection conn;
+            conn = cf.ObterConexao();
+
+            String cmdText = "select * from v_locpendpf union all select * from v_locpendpj";
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(cmdText, conn);
+            cmd.Prepare();
+            using (MySqlDataReader leitor = cmd.ExecuteReader())
+            {
+                while (leitor.Read())
+                {
+                    RelLocacao relLocacao = new RelLocacao();
+                    relLocacao.Codigo = Convert.ToInt32(leitor["Id_loc"]);
+                    relLocacao.Nome = leitor["Nome"].ToString();
+                    relLocacao.DataLocacao = leitor["data_loc"].ToString();
+                    relLocacao.DataPrevDevolucao = leitor["data_prev"].ToString();
+                    relLocacao.Veiculo = leitor["Veiculo"].ToString();
+                    relLocacao.ValorTotal = Convert.ToDecimal(leitor["Valor_Total"]);
+                    relLocacaos.Add(relLocacao);
+                }
+            }
+            conn.Close();
+
+            return relLocacaos;
+        }
+
     }
-}
+    }

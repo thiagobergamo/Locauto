@@ -87,16 +87,30 @@ namespace LocAuto
             CadClienteFisica cadCliente = new CadClienteFisica();
             cadCliente.pessoaFisicaConsulta = pessoaFisicaSelecionada;
             cadCliente.ShowDialog();
-            
+            carregaGrid();            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             int idSelecionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells["codigo"].Value);
             PessoaFisicaDAO dao = new PessoaFisicaDAO();
-            dao.apagar(idSelecionado);
-            MessageBox.Show("Cliente apagado com sucesso");
-            carregaGrid();
+            try
+            {
+                dao.apagar(idSelecionado);
+                MessageBox.Show("Cliente apagado com sucesso");
+                carregaGrid();
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "1451")
+                {
+                    MessageBox.Show("Registro não pode ser apagado, pois tem registro relacionado", "Erro");
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message, "Erro");
+                }
+            }
         }
     }
 }

@@ -61,30 +61,30 @@ namespace LocAuto
 
             conn.Open();
 
-            mSQL = "select valor from opcional where codigo = 1";
+            //mSQL = "select valor from opcional where codigo = 1";
 
-            cmd = new MySqlCommand(mSQL, conn);
-            label18.Text = "R$ " + cmd.ExecuteScalar().ToString();
+            //cmd = new MySqlCommand(mSQL, conn);
+            //label18.Text = "R$ " + cmd.ExecuteScalar().ToString();
 
-            mSQL = "select valor from opcional where codigo = 2";
+            //mSQL = "select valor from opcional where codigo = 2";
 
-            cmd = new MySqlCommand(mSQL, conn);
-            label19.Text = "R$ " + cmd.ExecuteScalar().ToString();
+            //cmd = new MySqlCommand(mSQL, conn);
+            //label19.Text = "R$ " + cmd.ExecuteScalar().ToString();
 
-            mSQL = "select valor from opcional where codigo = 3";
+            //mSQL = "select valor from opcional where codigo = 3";
 
-            cmd = new MySqlCommand(mSQL, conn);
-            label20.Text = "R$ " + cmd.ExecuteScalar().ToString();
+            //cmd = new MySqlCommand(mSQL, conn);
+            //label20.Text = "R$ " + cmd.ExecuteScalar().ToString();
 
-            mSQL = "select valor from opcional where codigo = 4";
+            //mSQL = "select valor from opcional where codigo = 4";
 
-            cmd = new MySqlCommand(mSQL, conn);
-            label21.Text = "R$ " + cmd.ExecuteScalar().ToString();
+            //cmd = new MySqlCommand(mSQL, conn);
+            //label21.Text = "R$ " + cmd.ExecuteScalar().ToString();
 
-            mSQL = "select valor from opcional where codigo = 5";
+            //mSQL = "select valor from opcional where codigo = 5";
 
-            cmd = new MySqlCommand(mSQL, conn);
-            label22.Text = "R$ " + cmd.ExecuteScalar().ToString();
+            //cmd = new MySqlCommand(mSQL, conn);
+            //label22.Text = "R$ " + cmd.ExecuteScalar().ToString();
             
             conn.Close();
         }
@@ -122,6 +122,9 @@ namespace LocAuto
             {
                 this.idLocacao = unchecked((int)locacaoService.inserir(locacao));
                 MessageBox.Show("Cadastro realizado com sucesso!");
+                CadVistoria cadVistoria = new CadVistoria();
+                cadVistoria.codLocacao = idLocacao;
+                cadVistoria.Show();
             }
             catch (ArgumentNullException ex)
             {

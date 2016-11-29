@@ -150,5 +150,11 @@ namespace LocAuto
         {
 
         }
+
+        private void relatórioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RelatorioLoc relatorioLoc = new RelatorioLoc();
+            relatorioLoc.Show();
+        }
     }
 }

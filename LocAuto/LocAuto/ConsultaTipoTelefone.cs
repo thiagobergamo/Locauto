@@ -44,19 +44,32 @@ namespace LocAuto
         private void button1_Click(object sender, EventArgs e)
         {
             CadTipoTelefone cadTipoTelefone = new CadTipoTelefone();
-            cadTipoTelefone.Show();
+            cadTipoTelefone.ShowDialog();
+            carregarGrid();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             int idSelecionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells["codigo"].Value);
             TipoTelefoneDAO dao = new TipoTelefoneDAO();
-            TipoTelefoneService service = new TipoTelefoneService(dao);
-
-            dao.apagar(idSelecionado);
-
-            MessageBox.Show("Tipo de Telefone apagado com sucesso");
-            carregarGrid();
+            TipoTelefoneService service = new TipoTelefoneService(dao);            
+            try
+            {
+                dao.apagar(idSelecionado);
+                MessageBox.Show("Tipo de Telefone apagado com sucesso");
+                carregarGrid();
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "1451")
+                {
+                    MessageBox.Show("Registro não pode ser apagado, pois tem registro relacionado", "Erro");
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message, "Erro");
+                }
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -69,7 +82,8 @@ namespace LocAuto
 
             CadTipoTelefone cadTipoTelefone = new CadTipoTelefone();
             cadTipoTelefone.tipoTelefoneConsulta = tipoTelefoneSelecionado;
-            cadTipoTelefone.Show();
+            cadTipoTelefone.ShowDialog();
+            carregarGrid();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

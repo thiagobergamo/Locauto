@@ -99,9 +99,9 @@ namespace LocAuto
                 else
                 {
                     veiculoService.atualizar(veiculo);
-                }                    
-                LimparTxt();
-                MessageBox.Show("Cadastro realizado com sucesso!");
+                }
+                MessageBox.Show("Cadastro salvo com sucesso!");
+                this.Close();
             }
             catch (ArgumentNullException ex)
             {

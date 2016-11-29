@@ -25,6 +25,8 @@ namespace LocAuto
 
         private void CadCliente_Load(object sender, EventArgs e)
         {
+            CmbEstado.DropDownStyle = ComboBoxStyle.DropDownList;
+                
             CarregarTiposTelefone();
             if (pessoaFisicaConsulta != null)
             {
@@ -137,7 +139,10 @@ namespace LocAuto
             pessoaFisica.Email = TxtEmail.Text;
             pessoaFisica.DtNascimento = MskDtNascimento.Value.ToString("yyyy-MM-dd");
             pessoaFisica.Logradouro = TxtLog.Text;
-            pessoaFisica.Numero = Convert.ToInt32 (TxtNum.Text);
+            if (!String.IsNullOrWhiteSpace(TxtNum.Text))
+            {
+                pessoaFisica.Numero = Convert.ToInt32(TxtNum.Text);
+            }            
             pessoaFisica.Complemento = TxtComplemento.Text;
             pessoaFisica.Bairro = TxtBairro.Text;
             pessoaFisica.Cep = MskCep.Text;
@@ -170,8 +175,7 @@ namespace LocAuto
                     pessoaFisicaService.atualizar(pessoaFisica, telefones);
                 }
                 
-                LimparTxt();
-                MessageBox.Show("Cadastro realizado com sucesso!");
+                MessageBox.Show("Cadastro salvo com sucesso!");
                 this.Close();
             }
             catch (ArgumentNullException ex)

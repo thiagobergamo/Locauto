@@ -346,16 +346,35 @@ namespace DaoMysql
             conn = cf.ObterConexao();
             String cmdText = "DELETE FROM pessoa_fisica WHERE codigo_cliente = @id;";
 
+            conn.Open();
+            MySqlTransaction transacao;
+            transacao = conn.BeginTransaction();
+
             try
-            {
-                conn.Open();
+            {          
+
                 MySqlCommand cmd = new MySqlCommand(cmdText, conn);
                 cmd.Parameters.Add(new MySqlParameter("id", id));
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
+
+                
+                cmdText = "DELETE FROM cliente WHERE codigo = @id;";
+                MySqlCommand cmd1 = new MySqlCommand(cmdText, conn);
+                cmd1.Parameters.Add(new MySqlParameter("id", id));
+                cmd1.Prepare();
+                cmd1.ExecuteNonQuery();
+
+                transacao.Commit();
             }
             catch (MySqlException ex)
             {
+                transacao.Rollback();
+                throw new Exception(ex.Number.ToString());                
+            }
+            catch (Exception ex)
+            {
+                transacao.Rollback();
                 throw new Exception(ex.Message);
             }
             finally
@@ -378,7 +397,7 @@ namespace DaoMysql
                              " where nome like @nome or cpf = @cpf";
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(cmdText, conn);
-            cmd.Parameters.Add(new MySqlParameter("@nome", nome));
+            cmd.Parameters.Add(new MySqlParameter("@nome", "%"+nome+"%"));
             cmd.Parameters.Add(new MySqlParameter("@cpf", cpf));
             cmd.Prepare();
 

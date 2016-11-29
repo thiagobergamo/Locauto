@@ -46,7 +46,8 @@ namespace LocAuto
         private void button1_Click(object sender, EventArgs e)
         {
             CadVeiculo cadVeiculo = new CadVeiculo();
-            cadVeiculo.Show();
+            cadVeiculo.ShowDialog();
+            carregarGrid();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -54,9 +55,23 @@ namespace LocAuto
             int idSelecionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells["codigo"].Value);
             VeiculoDAO dao = new VeiculoDAO();
             VeiculoService service = new VeiculoService(dao);
-            dao.apagar(idSelecionado);
-            MessageBox.Show("Veiculo apagado com sucesso");
-            carregarGrid();
+            try
+            {
+                dao.apagar(idSelecionado);
+                MessageBox.Show("Veiculo apagado com sucesso");
+                carregarGrid();
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "1451")
+                {
+                    MessageBox.Show("Registro não pode ser apagado, pois tem registro relacionado", "Erro");
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message, "Erro");
+                }
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -69,8 +84,8 @@ namespace LocAuto
 
             CadVeiculo cadVeiculo = new CadVeiculo();
             cadVeiculo.veiculoConsulta = veiculoSelecionado;
-            cadVeiculo.Show();
-
+            cadVeiculo.ShowDialog();
+            carregarGrid();
         }
     }
 }

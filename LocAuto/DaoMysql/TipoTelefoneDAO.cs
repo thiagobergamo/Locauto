@@ -79,6 +79,10 @@ namespace DaoMysql
             }
             catch (MySqlException ex)
             {
+                throw new Exception(ex.Number.ToString());
+            }
+            catch (Exception ex)
+            {
                 throw new Exception(ex.Message);
             }
             finally

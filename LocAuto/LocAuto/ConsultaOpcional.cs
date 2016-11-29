@@ -49,7 +49,8 @@ namespace LocAuto
         private void button1_Click(object sender, EventArgs e)
         {
             CadOpcional cadOpcional = new CadOpcional();
-            cadOpcional.Show();
+            cadOpcional.ShowDialog();
+            carregarGrid();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -57,9 +58,23 @@ namespace LocAuto
             int idSelecionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells["codigo"].Value);
             OpcionalDAO dao = new OpcionalDAO();
             OpcionalService service = new OpcionalService(dao);
-            dao.apagar(idSelecionado);
-            MessageBox.Show("Opcional apagado com sucesso");
-            carregarGrid();
+            try
+            {
+                dao.apagar(idSelecionado);
+                MessageBox.Show("Opcional apagado com sucesso");
+                carregarGrid();
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "1451")
+                {
+                    MessageBox.Show("Registro não pode ser apagado, pois tem registro relacionado", "Erro");
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message, "Erro");
+                }
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -72,7 +87,8 @@ namespace LocAuto
 
             CadOpcional cadOpcional = new CadOpcional();
             cadOpcional.opcionalConsulta = opcionalSelecionado;
-            cadOpcional.Show();
+            cadOpcional.ShowDialog();
+            carregarGrid();
         }
     }
 }

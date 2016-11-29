@@ -45,6 +45,7 @@
     <Compile Include="PessoaJuridica.cs" />
     <Compile Include="PessoaFisica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelLocacao.cs" />
     <Compile Include="TipoVeiculo.cs" />
     <Compile Include="SituacaoVeiculo.cs" />
     <Compile Include="Veiculo.cs" />
