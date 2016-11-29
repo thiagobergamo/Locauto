@@ -193,6 +193,12 @@
     <Compile Include="RelatorioLoc.Designer.cs">
       <DependentUpon>RelatorioLoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="RelatorioVei.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelatorioVei.Designer.cs">
+      <DependentUpon>RelatorioVei.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CadCliente.resx">
       <DependentUpon>CadCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,8 +278,13 @@
     <EmbeddedResource Include="RelatorioLoc.resx">
       <DependentUpon>RelatorioLoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioVei.resx">
+      <DependentUpon>RelatorioVei.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
     <None Include="Properties\DataSources\Modelo.RelLocacao.datasource" />
+    <None Include="Properties\DataSources\Modelo.Veiculo.datasource" />
     <None Include="Properties\DataSources\Services.PessoaFisicaService.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

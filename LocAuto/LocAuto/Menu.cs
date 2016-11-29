@@ -153,8 +153,19 @@ namespace LocAuto
 
         private void relatórioToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void locaçãoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             RelatorioLoc relatorioLoc = new RelatorioLoc();
             relatorioLoc.Show();
+        }
+
+        private void veículoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            RelatorioVei relatorioVei = new RelatorioVei();
+            relatorioVei.Show();
         }
     }
 }
