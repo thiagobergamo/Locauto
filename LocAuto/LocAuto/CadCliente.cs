@@ -205,7 +205,7 @@ namespace LocAuto
 
         private void TxtNum_Validated(object sender, EventArgs e)
         {
-            if (!Validador.inteiro(TxtNum.Text)){
+            if (!Validador.eInteiro(TxtNum.Text)){
                 MessageBox.Show(Validador.msgInteiro,"Validação de campo");
                 TxtNum.Text = "";
                 TxtNum.Focus();

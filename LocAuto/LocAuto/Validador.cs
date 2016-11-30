@@ -9,7 +9,8 @@ namespace LocAuto
     public class Validador
     {
         public static String msgInteiro = "Este campo só permite números inteiros";
-        public static bool inteiro(string texto)
+
+        public static bool eInteiro(string texto)
         {
             try
             {
@@ -21,5 +22,18 @@ namespace LocAuto
                 return false;
             }
         }
+        public static bool eDecimal(string texto)
+        {
+            try
+            {
+                Convert.ToDecimal(texto);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }
