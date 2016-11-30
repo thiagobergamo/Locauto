@@ -23,16 +23,16 @@ namespace LocAuto
         {
             DgvConsultaPj.MultiSelect = false;
             DgvConsultaPj.AutoSize = true;
-    //        DgvConsultaPj.Columns.Add("Id_loc", "ID Locação");
-    //        DgvConsultaPj.Columns.Add("Nome", "Nome");
-    //        DgvConsultaPj.Columns.Add("data_loc", "Data Locação");
-    //        DgvConsultaPj.Columns.Add("data_prev", "Data Prev. Dev.");
-    //        DgvConsultaPj.Columns.Add("Veiculo", "Veículo");
-   //         DgvConsultaPj.Columns.Add("Valor_Total", "Valor Total");
+            carregarGrid();
+
+
+        }
+        private void carregarGrid()
+        {
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
             conn = cf.ObterConexao();
-
+            DgvConsultaPj.Rows.Clear();
             conn.Open();
             String cmdText = "select *  from v_locpendpj";
 
@@ -53,12 +53,12 @@ namespace LocAuto
                 }
             }
         }
-
         private void BtnDevolucao_Click(object sender, EventArgs e)
         {
             CadVistoria cadVistoria = new CadVistoria();
             cadVistoria.codLocacao = Convert.ToInt32(DgvConsultaPj.CurrentRow.Cells["Id_loc"].Value);
-            cadVistoria.Show();
+            cadVistoria.ShowDialog();
+            carregarGrid();
         }
     }
 }
