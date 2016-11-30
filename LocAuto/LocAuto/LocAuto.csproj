@@ -199,6 +199,7 @@
     <Compile Include="RelatorioVei.Designer.cs">
       <DependentUpon>RelatorioVei.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validador.cs" />
     <EmbeddedResource Include="CadCliente.resx">
       <DependentUpon>CadCliente.cs</DependentUpon>
     </EmbeddedResource>
