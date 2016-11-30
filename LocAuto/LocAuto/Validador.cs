@@ -17,7 +17,7 @@ namespace LocAuto
             {
                 if (!String.IsNullOrWhiteSpace(texto))
                 {
-                    decimal i = Convert.ToInt32(texto);
+                    Int64 i = Convert.ToInt64(texto);
                 }
         
                 return true;
