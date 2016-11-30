@@ -91,5 +91,10 @@ namespace Services
         {
             return this.pessoaFisicaDao.buscaPorNomeOuCpf(nome, cpf);
         }
+
+        public void apagar(int id)
+        {
+            pessoaFisicaDao.apagar(id);
+        }
     }
 }

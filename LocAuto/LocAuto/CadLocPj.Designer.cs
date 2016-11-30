@@ -71,7 +71,7 @@
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
             this.BtnVistoria = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -546,11 +546,11 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(395, 288);
-            this.maskedTextBox1.Mask = "99999999";
+            this.maskedTextBox1.Location = new System.Drawing.Point(403, 289);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(120, 22);
+            this.maskedTextBox1.Size = new System.Drawing.Size(125, 22);
             this.maskedTextBox1.TabIndex = 22;
+            this.maskedTextBox1.Validated += new System.EventHandler(this.maskedTextBox1_Validated);
             // 
             // CadLocPj
             // 
@@ -622,6 +622,6 @@
         private System.Windows.Forms.Button BtnVistoria;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewComboBoxColumn opcional;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.TextBox maskedTextBox1;
     }
 }

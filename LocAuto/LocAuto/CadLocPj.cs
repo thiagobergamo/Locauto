@@ -359,6 +359,16 @@ namespace LocAuto
             conn.Close();
             return vRetorno;
         }
+
+        private void maskedTextBox1_Validated(object sender, EventArgs e)
+        {
+            if (!Validador.eDecimal(maskedTextBox1.Text))
+            {
+                MessageBox.Show(Validador.msgDecimal, "Validação de campo");
+                maskedTextBox1.Text = "";
+                maskedTextBox1.Focus();
+            }
+        }
     }
 
    

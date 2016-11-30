@@ -191,6 +191,9 @@ namespace LocAuto
                 MskCnpj.Text = pessoaJuridicaConsulta.Cnpj;
                 TxtLogin.Text = pessoaJuridicaConsulta.LoginWeb;
                 TxtSenha.Text = pessoaJuridicaConsulta.SenhaWeb;
+                TxtContato.Text = pessoaJuridicaConsulta.Contato;
+                TxtNomCodutor.Text = pessoaJuridicaConsulta.NomeCondutor;
+                TxtNomFantasia.Text = pessoaJuridicaConsulta.NomeFantasia;
 
                 dataGridView1.Rows.Clear();
                 foreach (TelefoneCliente p in pessoaJuridicaConsulta.Telefones)
@@ -201,6 +204,36 @@ namespace LocAuto
                     linhaTabela.Cells["numero"].Value = p.Numero;
                 }
 
+            }
+        }
+
+        private void TxtInsc_Validated(object sender, EventArgs e)
+        {
+            if (!Validador.eInteiro(TxtInsc.Text))
+            {
+                MessageBox.Show(Validador.msgInteiro, "Validação de campo");
+                TxtInsc.Text = "";
+                TxtInsc.Focus();
+            }
+        }
+
+        private void TxtNumero_Validated(object sender, EventArgs e)
+        {
+            if (!Validador.eInteiro(TxtNumero.Text))
+            {
+                MessageBox.Show(Validador.msgInteiro, "Validação de campo");
+                TxtNumero.Text = "";
+                TxtNumero.Focus();
+            }
+        }
+
+        private void TxtCnh_Validated(object sender, EventArgs e)
+        {
+            if (!Validador.eInteiro(TxtCnh.Text))
+            {
+                MessageBox.Show(Validador.msgInteiro, "Validação de campo");
+                TxtCnh.Text = "";
+                TxtCnh.Focus();
             }
         }
     }

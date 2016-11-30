@@ -137,5 +137,25 @@ namespace LocAuto
             catch { }
 
         }
+
+        private void TxtKmLoc_Validated(object sender, EventArgs e)
+        {
+            if (!Validador.eInteiro(TxtKmLoc.Text))
+            {
+                MessageBox.Show(Validador.msgInteiro, "Validação de campo");
+                TxtKmLoc.Text = "";
+                TxtKmLoc.Focus();
+            }
+        }
+
+        private void TxtKmDev_Validated(object sender, EventArgs e)
+        {
+            if (!Validador.eInteiro(TxtKmDev.Text))
+            {
+                MessageBox.Show(Validador.msgInteiro, "Validação de campo");
+                TxtKmDev.Text = "";
+                TxtKmDev.Focus();
+            }
+        }
     }
 }

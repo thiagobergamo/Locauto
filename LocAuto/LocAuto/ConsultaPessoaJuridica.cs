@@ -78,9 +78,10 @@ namespace LocAuto
         {
             int idSelecionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells["codigo"].Value);
             PessoaJuridicaDAO dao = new PessoaJuridicaDAO();
+            PessoaJuridicaService pessoaJuridicaService = new PessoaJuridicaService(dao);
             try
             {
-                dao.apagar(idSelecionado);
+                pessoaJuridicaService.apagar(idSelecionado);
                 MessageBox.Show("Cliente apagado com sucesso");
                 carregaGrid();
             }

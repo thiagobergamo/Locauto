@@ -9,12 +9,17 @@ namespace LocAuto
     public class Validador
     {
         public static String msgInteiro = "Este campo só permite números inteiros";
+        public static String msgDecimal = "Este campo só permite números decimais";
 
         public static bool eInteiro(string texto)
         {
             try
             {
-                int i = Convert.ToInt32(texto);
+                if (!String.IsNullOrWhiteSpace(texto))
+                {
+                    int i = Convert.ToInt32(texto);
+                }
+        
                 return true;
             }
             catch
@@ -26,7 +31,11 @@ namespace LocAuto
         {
             try
             {
-                Convert.ToDecimal(texto);
+                if (!String.IsNullOrWhiteSpace(texto))
+                {
+                    Convert.ToDecimal(texto);
+                }
+               
                 return true;
             }
             catch

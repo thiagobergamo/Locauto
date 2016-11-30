@@ -69,7 +69,7 @@
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
             this.btnVistoria = new System.Windows.Forms.Button();
-            this.TxtValorCaucao = new System.Windows.Forms.MaskedTextBox();
+            this.TxtValorCaucao = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -534,11 +534,11 @@
             // 
             // TxtValorCaucao
             // 
-            this.TxtValorCaucao.Location = new System.Drawing.Point(395, 289);
-            this.TxtValorCaucao.Mask = "99999999";
+            this.TxtValorCaucao.Location = new System.Drawing.Point(403, 289);
             this.TxtValorCaucao.Name = "TxtValorCaucao";
-            this.TxtValorCaucao.Size = new System.Drawing.Size(100, 22);
+            this.TxtValorCaucao.Size = new System.Drawing.Size(125, 22);
             this.TxtValorCaucao.TabIndex = 22;
+            this.TxtValorCaucao.Validated += new System.EventHandler(this.TxtValorCaucao_Validated);
             // 
             // CadLocPf
             // 
@@ -608,6 +608,6 @@
         private System.Windows.Forms.Button btnVistoria;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewComboBoxColumn opcional;
-        private System.Windows.Forms.MaskedTextBox TxtValorCaucao;
+        private System.Windows.Forms.TextBox TxtValorCaucao;
     }
 }

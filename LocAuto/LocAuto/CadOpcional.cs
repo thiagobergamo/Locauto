@@ -82,5 +82,15 @@ namespace LocAuto
                 TxtValor.Text = opcionalConsulta.Valor.ToString();
             }
         }
+
+        private void TxtValor_Validated(object sender, EventArgs e)
+        {
+            if (!Validador.eDecimal(TxtValor.Text))
+            {
+                MessageBox.Show(Validador.msgDecimal, "Validação de campo");
+                TxtValor.Text = "";
+                TxtValor.Focus();
+            }
+        }
     }
 }

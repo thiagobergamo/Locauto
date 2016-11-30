@@ -312,6 +312,9 @@ namespace DaoMysql
                     pessoaJuridica.RazaoSocial = leitor["razao_social"].ToString();
                     pessoaJuridica.Cnpj = leitor["cnpj"].ToString();
                     pessoaJuridica.InscEstadual = leitor["insc_estadual"].ToString();
+                    pessoaJuridica.Contato = leitor["contato"].ToString();
+                    pessoaJuridica.NomeCondutor = leitor["nome_condutor"].ToString();
+                    pessoaJuridica.NomeFantasia = leitor["nome_fantasia"].ToString();
 
                 }
             }
@@ -359,6 +362,12 @@ namespace DaoMysql
                 cmd.Parameters.Add(new MySqlParameter("id", id));
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
+
+                cmdText = "DELETE FROM telefone_cliente WHERE codigo_cliente = @id;";
+                MySqlCommand cmd2 = new MySqlCommand(cmdText, conn);
+                cmd2.Parameters.Add(new MySqlParameter("id", id));
+                cmd2.Prepare();
+                cmd2.ExecuteNonQuery();
 
                 cmdText = "DELETE FROM cliente WHERE codigo = @id;";
                 MySqlCommand cmd1 = new MySqlCommand(cmdText, conn);

@@ -149,5 +149,15 @@ namespace LocAuto
                 TxtValorDiaria.Text = tipoVeiculoConsulta.ValorDiaria.ToString();
             }
         }
+
+        private void TxtValorDiaria_Validated(object sender, EventArgs e)
+        {
+            if (!Validador.eDecimal(TxtValorDiaria.Text))
+            {
+                MessageBox.Show(Validador.msgDecimal, "Validação de campo");
+                TxtValorDiaria.Text = "";
+                TxtValorDiaria.Focus();
+            }
+        }
     }
 }

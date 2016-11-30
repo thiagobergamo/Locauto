@@ -211,5 +211,30 @@ namespace LocAuto
                 TxtNum.Focus();
             }
         }
+
+        private void TxtRg_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtRg_Validated(object sender, EventArgs e)
+        {
+            if (!Validador.eInteiro(TxtRg.Text))
+            {
+                MessageBox.Show(Validador.msgInteiro, "Validação de campo");
+                TxtRg.Text = "";
+                TxtRg.Focus();
+            }
+        }
+
+        private void TxtCnh_Validated(object sender, EventArgs e)
+        {
+            if (!Validador.eInteiro(TxtCnh.Text))
+            {
+                MessageBox.Show(Validador.msgInteiro, "Validação de campo");
+                TxtCnh.Text = "";
+                TxtCnh.Focus();
+            }
+        }
     }
 }

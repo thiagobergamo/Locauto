@@ -377,6 +377,16 @@ namespace LocAuto
             conn.Close();
             return vRetorno;
         }
+
+        private void TxtValorCaucao_Validated(object sender, EventArgs e)
+        {
+            if (!Validador.eDecimal(TxtValorCaucao.Text))
+            {
+                MessageBox.Show(Validador.msgDecimal, "Validação de campo");
+                TxtValorCaucao.Text = "";
+                TxtValorCaucao.Focus();
+            }
+        }
     }
 
     

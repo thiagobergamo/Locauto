@@ -49,7 +49,7 @@
             // 
             this.TxtCodigo.Enabled = false;
             this.TxtCodigo.Location = new System.Drawing.Point(108, 25);
-            this.TxtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Size = new System.Drawing.Size(88, 22);
             this.TxtCodigo.TabIndex = 0;
@@ -78,7 +78,7 @@
             // TxtGrupo
             // 
             this.TxtGrupo.Location = new System.Drawing.Point(108, 57);
-            this.TxtGrupo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtGrupo.Margin = new System.Windows.Forms.Padding(4);
             this.TxtGrupo.Name = "TxtGrupo";
             this.TxtGrupo.Size = new System.Drawing.Size(160, 22);
             this.TxtGrupo.TabIndex = 1;
@@ -91,9 +91,9 @@
             this.groupBox1.Controls.Add(this.ChkAbs);
             this.groupBox1.Controls.Add(this.ChkArCondicionado);
             this.groupBox1.Location = new System.Drawing.Point(36, 108);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(233, 192);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -104,7 +104,7 @@
             // 
             this.ChkVidroEletrico.AutoSize = true;
             this.ChkVidroEletrico.Location = new System.Drawing.Point(8, 148);
-            this.ChkVidroEletrico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ChkVidroEletrico.Margin = new System.Windows.Forms.Padding(4);
             this.ChkVidroEletrico.Name = "ChkVidroEletrico";
             this.ChkVidroEletrico.Size = new System.Drawing.Size(114, 21);
             this.ChkVidroEletrico.TabIndex = 7;
@@ -115,7 +115,7 @@
             // 
             this.ChkTravaEletrica.AutoSize = true;
             this.ChkTravaEletrica.Location = new System.Drawing.Point(8, 119);
-            this.ChkTravaEletrica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ChkTravaEletrica.Margin = new System.Windows.Forms.Padding(4);
             this.ChkTravaEletrica.Name = "ChkTravaEletrica";
             this.ChkTravaEletrica.Size = new System.Drawing.Size(118, 21);
             this.ChkTravaEletrica.TabIndex = 6;
@@ -126,7 +126,7 @@
             // 
             this.ChkAirBag.AutoSize = true;
             this.ChkAirBag.Location = new System.Drawing.Point(8, 64);
-            this.ChkAirBag.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ChkAirBag.Margin = new System.Windows.Forms.Padding(4);
             this.ChkAirBag.Name = "ChkAirBag";
             this.ChkAirBag.Size = new System.Drawing.Size(76, 21);
             this.ChkAirBag.TabIndex = 3;
@@ -137,7 +137,7 @@
             // 
             this.ChkAbs.AutoSize = true;
             this.ChkAbs.Location = new System.Drawing.Point(8, 36);
-            this.ChkAbs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ChkAbs.Margin = new System.Windows.Forms.Padding(4);
             this.ChkAbs.Name = "ChkAbs";
             this.ChkAbs.Size = new System.Drawing.Size(57, 21);
             this.ChkAbs.TabIndex = 2;
@@ -148,7 +148,7 @@
             // 
             this.ChkArCondicionado.AutoSize = true;
             this.ChkArCondicionado.Location = new System.Drawing.Point(8, 92);
-            this.ChkArCondicionado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ChkArCondicionado.Margin = new System.Windows.Forms.Padding(4);
             this.ChkArCondicionado.Name = "ChkArCondicionado";
             this.ChkArCondicionado.Size = new System.Drawing.Size(134, 21);
             this.ChkArCondicionado.TabIndex = 4;
@@ -158,10 +158,11 @@
             // TxtValorDiaria
             // 
             this.TxtValorDiaria.Location = new System.Drawing.Point(121, 325);
-            this.TxtValorDiaria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtValorDiaria.Margin = new System.Windows.Forms.Padding(4);
             this.TxtValorDiaria.Name = "TxtValorDiaria";
             this.TxtValorDiaria.Size = new System.Drawing.Size(147, 22);
             this.TxtValorDiaria.TabIndex = 8;
+            this.TxtValorDiaria.Validated += new System.EventHandler(this.TxtValorDiaria_Validated);
             // 
             // label3
             // 
@@ -177,7 +178,7 @@
             // BtnLimpar
             // 
             this.BtnLimpar.Location = new System.Drawing.Point(61, 370);
-            this.BtnLimpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnLimpar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnLimpar.Name = "BtnLimpar";
             this.BtnLimpar.Size = new System.Drawing.Size(100, 28);
             this.BtnLimpar.TabIndex = 10;
@@ -188,7 +189,7 @@
             // BtnSalvar
             // 
             this.BtnSalvar.Location = new System.Drawing.Point(169, 370);
-            this.BtnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(100, 28);
             this.BtnSalvar.TabIndex = 9;
@@ -210,7 +211,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtCodigo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadTipoVeiculo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Cadastro Tipo Veículo";

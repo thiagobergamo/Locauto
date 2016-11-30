@@ -351,19 +351,25 @@ namespace DaoMysql
             transacao = conn.BeginTransaction();
 
             try
-            {          
-
+            {
                 MySqlCommand cmd = new MySqlCommand(cmdText, conn);
                 cmd.Parameters.Add(new MySqlParameter("id", id));
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
 
-                
+                cmdText = "DELETE FROM telefone_cliente WHERE codigo_cliente = @id;";
+                MySqlCommand cmd2 = new MySqlCommand(cmdText, conn);
+                cmd2.Parameters.Add(new MySqlParameter("id", id));
+                cmd2.Prepare();
+                cmd2.ExecuteNonQuery();
+
                 cmdText = "DELETE FROM cliente WHERE codigo = @id;";
                 MySqlCommand cmd1 = new MySqlCommand(cmdText, conn);
                 cmd1.Parameters.Add(new MySqlParameter("id", id));
                 cmd1.Prepare();
                 cmd1.ExecuteNonQuery();
+
+                
 
                 transacao.Commit();
             }

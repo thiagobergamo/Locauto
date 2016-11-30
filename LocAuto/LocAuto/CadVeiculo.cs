@@ -179,5 +179,15 @@ namespace LocAuto
             TxtCor.Text = "";
             TxtObs.Text = "";
         }
+
+        private void TxtAno_Validated(object sender, EventArgs e)
+        {
+            if (!Validador.eInteiro(TxtAno.Text))
+            {
+                MessageBox.Show(Validador.msgInteiro, "Validação de campo");
+                TxtAno.Text = "";
+                TxtAno.Focus();
+            }
+        }
     }
 }
