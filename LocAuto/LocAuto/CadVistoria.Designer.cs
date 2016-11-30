@@ -46,7 +46,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.TxtLaudoDev = new System.Windows.Forms.TextBox();
             this.BtnSalvar = new System.Windows.Forms.Button();
-            this.BtnLimpar = new System.Windows.Forms.Button();
             this.TxtCodigoUsuario = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -56,7 +55,7 @@
             // 
             this.TxtCodigoLocacao.Enabled = false;
             this.TxtCodigoLocacao.Location = new System.Drawing.Point(135, 25);
-            this.TxtCodigoLocacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCodigoLocacao.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCodigoLocacao.Name = "TxtCodigoLocacao";
             this.TxtCodigoLocacao.Size = new System.Drawing.Size(104, 22);
             this.TxtCodigoLocacao.TabIndex = 2;
@@ -94,7 +93,7 @@
             // TxtKmLoc
             // 
             this.TxtKmLoc.Location = new System.Drawing.Point(149, 37);
-            this.TxtKmLoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtKmLoc.Margin = new System.Windows.Forms.Padding(4);
             this.TxtKmLoc.Name = "TxtKmLoc";
             this.TxtKmLoc.Size = new System.Drawing.Size(131, 22);
             this.TxtKmLoc.TabIndex = 7;
@@ -103,7 +102,7 @@
             // TxtKmDev
             // 
             this.TxtKmDev.Location = new System.Drawing.Point(148, 37);
-            this.TxtKmDev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtKmDev.Margin = new System.Windows.Forms.Padding(4);
             this.TxtKmDev.Name = "TxtKmDev";
             this.TxtKmDev.Size = new System.Drawing.Size(132, 22);
             this.TxtKmDev.TabIndex = 8;
@@ -143,7 +142,7 @@
             // TxtNivelCombLoc
             // 
             this.TxtNivelCombLoc.Location = new System.Drawing.Point(149, 76);
-            this.TxtNivelCombLoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNivelCombLoc.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNivelCombLoc.Name = "TxtNivelCombLoc";
             this.TxtNivelCombLoc.Size = new System.Drawing.Size(131, 22);
             this.TxtNivelCombLoc.TabIndex = 12;
@@ -151,7 +150,7 @@
             // TxtNivelCombDev
             // 
             this.TxtNivelCombDev.Location = new System.Drawing.Point(148, 76);
-            this.TxtNivelCombDev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNivelCombDev.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNivelCombDev.Name = "TxtNivelCombDev";
             this.TxtNivelCombDev.Size = new System.Drawing.Size(132, 22);
             this.TxtNivelCombDev.TabIndex = 13;
@@ -165,9 +164,9 @@
             this.groupBox1.Controls.Add(this.TxtNivelCombLoc);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(32, 92);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(368, 228);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
@@ -176,7 +175,7 @@
             // TxtLaudoLoc
             // 
             this.TxtLaudoLoc.Location = new System.Drawing.Point(73, 124);
-            this.TxtLaudoLoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtLaudoLoc.Margin = new System.Windows.Forms.Padding(4);
             this.TxtLaudoLoc.Multiline = true;
             this.TxtLaudoLoc.Name = "TxtLaudoLoc";
             this.TxtLaudoLoc.Size = new System.Drawing.Size(268, 88);
@@ -201,9 +200,9 @@
             this.groupBox2.Controls.Add(this.TxtNivelCombDev);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(424, 92);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(377, 228);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
@@ -223,7 +222,7 @@
             // TxtLaudoDev
             // 
             this.TxtLaudoDev.Location = new System.Drawing.Point(89, 124);
-            this.TxtLaudoDev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtLaudoDev.Margin = new System.Windows.Forms.Padding(4);
             this.TxtLaudoDev.Multiline = true;
             this.TxtLaudoDev.Name = "TxtLaudoDev";
             this.TxtLaudoDev.Size = new System.Drawing.Size(260, 88);
@@ -232,7 +231,7 @@
             // BtnSalvar
             // 
             this.BtnSalvar.Location = new System.Drawing.Point(701, 345);
-            this.BtnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(100, 28);
             this.BtnSalvar.TabIndex = 16;
@@ -240,22 +239,11 @@
             this.BtnSalvar.UseVisualStyleBackColor = true;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
-            // BtnLimpar
-            // 
-            this.BtnLimpar.Location = new System.Drawing.Point(593, 345);
-            this.BtnLimpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BtnLimpar.Name = "BtnLimpar";
-            this.BtnLimpar.Size = new System.Drawing.Size(100, 28);
-            this.BtnLimpar.TabIndex = 17;
-            this.BtnLimpar.Text = "Limpar";
-            this.BtnLimpar.UseVisualStyleBackColor = true;
-            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
-            // 
             // TxtCodigoUsuario
             // 
             this.TxtCodigoUsuario.FormattingEnabled = true;
             this.TxtCodigoUsuario.Location = new System.Drawing.Point(135, 59);
-            this.TxtCodigoUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCodigoUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCodigoUsuario.Name = "TxtCodigoUsuario";
             this.TxtCodigoUsuario.Size = new System.Drawing.Size(160, 24);
             this.TxtCodigoUsuario.TabIndex = 18;
@@ -266,14 +254,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 391);
             this.Controls.Add(this.TxtCodigoUsuario);
-            this.Controls.Add(this.BtnLimpar);
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtCodigoLocacao);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadVistoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Vistoria";
@@ -306,7 +293,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TxtLaudoDev;
         private System.Windows.Forms.Button BtnSalvar;
-        private System.Windows.Forms.Button BtnLimpar;
         private System.Windows.Forms.ComboBox TxtCodigoUsuario;
     }
 }

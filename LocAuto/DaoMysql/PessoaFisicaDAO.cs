@@ -249,7 +249,7 @@ namespace DaoMysql
             conn = cf.ObterConexao();
 
             String cmdText = " select *, " +
-                             " (select telefone from telefone_cliente where codigo_cliente = c.codigo and codigo_tipo_telefone = 1) celular" +
+                             " (select telefone from telefone_cliente where codigo_cliente = c.codigo limit 1) celular" +
                              " from cliente c " +
                              " join pessoa_fisica j on j.codigo_cliente = c.codigo ";
             conn.Open();
