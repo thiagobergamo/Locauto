@@ -21,14 +21,13 @@ namespace LocAuto
 
         private void Consulta_locacaoPf_Load(object sender, EventArgs e)
         {
-          //  DgvConsultaPf.MultiSelect = false;
-          //  DgvConsultaPf.AutoSize = true;
-          //  DgvConsultaPf.Columns.Add("Id_loc", "ID Locação");
-          //  DgvConsultaPf.Columns.Add("Nome", "Nome");
-         //   DgvConsultaPf.Columns.Add("data_loc", "Data Locação");
-         //   DgvConsultaPf.Columns.Add("data_prev", "Data Prev. Dev.");
-        //    DgvConsultaPf.Columns.Add("Veiculo", "Veículo");
-        //    DgvConsultaPf.Columns.Add("Valor_Total", "Valor Total");
+            carregarGrid();
+            
+        }
+
+        private void carregarGrid()
+        {
+            DgvConsultaPf.Rows.Clear();
             ConnectionFactory cf = new ConnectionFactory();
             MySqlConnection conn;
             conn = cf.ObterConexao();
@@ -58,7 +57,8 @@ namespace LocAuto
         {
             CadVistoria cadVistoria = new CadVistoria();
             cadVistoria.codLocacao = Convert.ToInt32(DgvConsultaPf.CurrentRow.Cells["Id_loc"].Value);
-            cadVistoria.Show();
+            cadVistoria.ShowDialog();
+            carregarGrid();
         }
     }
 }
