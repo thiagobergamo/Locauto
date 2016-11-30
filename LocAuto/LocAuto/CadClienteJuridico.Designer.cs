@@ -88,9 +88,9 @@
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.TxtLogin);
             this.groupBox3.Location = new System.Drawing.Point(29, 479);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(321, 110);
             this.groupBox3.TabIndex = 58;
             this.groupBox3.TabStop = false;
@@ -109,7 +109,7 @@
             // TxtSenha
             // 
             this.TxtSenha.Location = new System.Drawing.Point(96, 58);
-            this.TxtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtSenha.Margin = new System.Windows.Forms.Padding(4);
             this.TxtSenha.Name = "TxtSenha";
             this.TxtSenha.Size = new System.Drawing.Size(159, 22);
             this.TxtSenha.TabIndex = 18;
@@ -127,7 +127,7 @@
             // TxtLogin
             // 
             this.TxtLogin.Location = new System.Drawing.Point(96, 28);
-            this.TxtLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtLogin.Margin = new System.Windows.Forms.Padding(4);
             this.TxtLogin.Name = "TxtLogin";
             this.TxtLogin.Size = new System.Drawing.Size(159, 22);
             this.TxtLogin.TabIndex = 17;
@@ -141,9 +141,9 @@
             this.groupBox2.Controls.Add(this.TxtCnh);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(29, 341);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(809, 114);
             this.groupBox2.TabIndex = 57;
             this.groupBox2.TabStop = false;
@@ -153,7 +153,7 @@
             // 
             this.MskValCnh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.MskValCnh.Location = new System.Drawing.Point(520, 28);
-            this.MskValCnh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MskValCnh.Margin = new System.Windows.Forms.Padding(4);
             this.MskValCnh.Name = "MskValCnh";
             this.MskValCnh.Size = new System.Drawing.Size(108, 22);
             this.MskValCnh.TabIndex = 15;
@@ -172,7 +172,7 @@
             // TxtNomCodutor
             // 
             this.TxtNomCodutor.Location = new System.Drawing.Point(96, 59);
-            this.TxtNomCodutor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNomCodutor.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNomCodutor.Name = "TxtNomCodutor";
             this.TxtNomCodutor.Size = new System.Drawing.Size(285, 22);
             this.TxtNomCodutor.TabIndex = 16;
@@ -190,7 +190,7 @@
             // TxtCnh
             // 
             this.TxtCnh.Location = new System.Drawing.Point(96, 28);
-            this.TxtCnh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCnh.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCnh.Name = "TxtCnh";
             this.TxtCnh.Size = new System.Drawing.Size(159, 22);
             this.TxtCnh.TabIndex = 14;
@@ -209,7 +209,7 @@
             // MskCnpj
             // 
             this.MskCnpj.Location = new System.Drawing.Point(96, 57);
-            this.MskCnpj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MskCnpj.Margin = new System.Windows.Forms.Padding(4);
             this.MskCnpj.Mask = "99.999.999/9999-99";
             this.MskCnpj.Name = "MskCnpj";
             this.MskCnpj.Size = new System.Drawing.Size(159, 22);
@@ -219,7 +219,7 @@
             // TxtInsc
             // 
             this.TxtInsc.Location = new System.Drawing.Point(585, 53);
-            this.TxtInsc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtInsc.Margin = new System.Windows.Forms.Padding(4);
             this.TxtInsc.Name = "TxtInsc";
             this.TxtInsc.Size = new System.Drawing.Size(176, 22);
             this.TxtInsc.TabIndex = 2;
@@ -280,9 +280,9 @@
             this.groupBox1.Controls.Add(this.Email);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(29, 23);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(809, 295);
             this.groupBox1.TabIndex = 56;
             this.groupBox1.TabStop = false;
@@ -292,7 +292,7 @@
             // 
             this.TxtCodigo.Enabled = false;
             this.TxtCodigo.Location = new System.Drawing.Point(96, 23);
-            this.TxtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Size = new System.Drawing.Size(71, 22);
             this.TxtCodigo.TabIndex = 66;
@@ -301,7 +301,7 @@
             // TxtContato
             // 
             this.TxtContato.Location = new System.Drawing.Point(520, 154);
-            this.TxtContato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtContato.Margin = new System.Windows.Forms.Padding(4);
             this.TxtContato.Name = "TxtContato";
             this.TxtContato.Size = new System.Drawing.Size(241, 22);
             this.TxtContato.TabIndex = 6;
@@ -319,7 +319,7 @@
             // TxtNomFantasia
             // 
             this.TxtNomFantasia.Location = new System.Drawing.Point(96, 122);
-            this.TxtNomFantasia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNomFantasia.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNomFantasia.Name = "TxtNomFantasia";
             this.TxtNomFantasia.Size = new System.Drawing.Size(316, 22);
             this.TxtNomFantasia.TabIndex = 4;
@@ -376,7 +376,7 @@
             "SE",
             "TO"});
             this.CmbEstado.Location = new System.Drawing.Point(520, 217);
-            this.CmbEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CmbEstado.Margin = new System.Windows.Forms.Padding(4);
             this.CmbEstado.Name = "CmbEstado";
             this.CmbEstado.Size = new System.Drawing.Size(49, 24);
             this.CmbEstado.TabIndex = 11;
@@ -394,7 +394,7 @@
             // TxtCidade
             // 
             this.TxtCidade.Location = new System.Drawing.Point(96, 250);
-            this.TxtCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCidade.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCidade.Name = "TxtCidade";
             this.TxtCidade.Size = new System.Drawing.Size(200, 22);
             this.TxtCidade.TabIndex = 12;
@@ -422,7 +422,7 @@
             // MskCep
             // 
             this.MskCep.Location = new System.Drawing.Point(520, 250);
-            this.MskCep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MskCep.Margin = new System.Windows.Forms.Padding(4);
             this.MskCep.Mask = "99.999-999";
             this.MskCep.Name = "MskCep";
             this.MskCep.Size = new System.Drawing.Size(81, 22);
@@ -441,7 +441,7 @@
             // TxtBairro
             // 
             this.TxtBairro.Location = new System.Drawing.Point(96, 217);
-            this.TxtBairro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtBairro.Margin = new System.Windows.Forms.Padding(4);
             this.TxtBairro.Name = "TxtBairro";
             this.TxtBairro.Size = new System.Drawing.Size(285, 22);
             this.TxtBairro.TabIndex = 10;
@@ -460,7 +460,7 @@
             // TxtComplemento
             // 
             this.TxtComplemento.Location = new System.Drawing.Point(655, 186);
-            this.TxtComplemento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtComplemento.Margin = new System.Windows.Forms.Padding(4);
             this.TxtComplemento.Name = "TxtComplemento";
             this.TxtComplemento.Size = new System.Drawing.Size(107, 22);
             this.TxtComplemento.TabIndex = 10;
@@ -478,7 +478,7 @@
             // TxtNumero
             // 
             this.TxtNumero.Location = new System.Drawing.Point(520, 186);
-            this.TxtNumero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNumero.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNumero.Name = "TxtNumero";
             this.TxtNumero.Size = new System.Drawing.Size(49, 22);
             this.TxtNumero.TabIndex = 8;
@@ -488,7 +488,7 @@
             // TxtEndereco
             // 
             this.TxtEndereco.Location = new System.Drawing.Point(96, 186);
-            this.TxtEndereco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtEndereco.Margin = new System.Windows.Forms.Padding(4);
             this.TxtEndereco.Name = "TxtEndereco";
             this.TxtEndereco.Size = new System.Drawing.Size(285, 22);
             this.TxtEndereco.TabIndex = 7;
@@ -516,7 +516,7 @@
             // TxtRazSocial
             // 
             this.TxtRazSocial.Location = new System.Drawing.Point(96, 90);
-            this.TxtRazSocial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtRazSocial.Margin = new System.Windows.Forms.Padding(4);
             this.TxtRazSocial.Name = "TxtRazSocial";
             this.TxtRazSocial.Size = new System.Drawing.Size(316, 22);
             this.TxtRazSocial.TabIndex = 3;
@@ -524,7 +524,7 @@
             // TxtEmail
             // 
             this.TxtEmail.Location = new System.Drawing.Point(96, 154);
-            this.TxtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(200, 22);
             this.TxtEmail.TabIndex = 5;
@@ -552,7 +552,7 @@
             // BtnLimpar
             // 
             this.BtnLimpar.Location = new System.Drawing.Point(631, 636);
-            this.BtnLimpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnLimpar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnLimpar.Name = "BtnLimpar";
             this.BtnLimpar.Size = new System.Drawing.Size(100, 28);
             this.BtnLimpar.TabIndex = 20;
@@ -564,7 +564,7 @@
             // BtnSalvar
             // 
             this.BtnSalvar.Location = new System.Drawing.Point(739, 636);
-            this.BtnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(100, 28);
             this.BtnSalvar.TabIndex = 19;
@@ -580,7 +580,7 @@
             this.Tipo,
             this.numero});
             this.dataGridView1.Location = new System.Drawing.Point(467, 479);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(325, 124);
             this.dataGridView1.TabIndex = 67;
@@ -606,9 +606,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtnLimpar);
             this.Controls.Add(this.BtnSalvar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadClienteJuridico";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Cliente PJ";
             this.Load += new System.EventHandler(this.CadClienteJuridico_Load);
             this.groupBox3.ResumeLayout(false);

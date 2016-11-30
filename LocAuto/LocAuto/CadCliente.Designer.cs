@@ -574,7 +574,7 @@
             this.Controls.Add(this.BtnSalvar);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadClienteFisica";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Cliente PF";
             this.Load += new System.EventHandler(this.CadCliente_Load);
             this.groupBox1.ResumeLayout(false);

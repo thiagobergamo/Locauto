@@ -67,7 +67,7 @@
             // 
             this.TxtCodigo.Enabled = false;
             this.TxtCodigo.Location = new System.Drawing.Point(115, 28);
-            this.TxtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Size = new System.Drawing.Size(92, 22);
             this.TxtCodigo.TabIndex = 1;
@@ -76,7 +76,7 @@
             // TxtMarca
             // 
             this.TxtMarca.Location = new System.Drawing.Point(115, 95);
-            this.TxtMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtMarca.Margin = new System.Windows.Forms.Padding(4);
             this.TxtMarca.Name = "TxtMarca";
             this.TxtMarca.Size = new System.Drawing.Size(444, 22);
             this.TxtMarca.TabIndex = 3;
@@ -84,7 +84,7 @@
             // TxtModelo
             // 
             this.TxtModelo.Location = new System.Drawing.Point(115, 128);
-            this.TxtModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtModelo.Margin = new System.Windows.Forms.Padding(4);
             this.TxtModelo.Name = "TxtModelo";
             this.TxtModelo.Size = new System.Drawing.Size(444, 22);
             this.TxtModelo.TabIndex = 4;
@@ -113,7 +113,7 @@
             // TxtObs
             // 
             this.TxtObs.Location = new System.Drawing.Point(115, 258);
-            this.TxtObs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtObs.Margin = new System.Windows.Forms.Padding(4);
             this.TxtObs.Multiline = true;
             this.TxtObs.Name = "TxtObs";
             this.TxtObs.Size = new System.Drawing.Size(444, 85);
@@ -122,7 +122,7 @@
             // TxtPlaca
             // 
             this.TxtPlaca.Location = new System.Drawing.Point(409, 191);
-            this.TxtPlaca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtPlaca.Margin = new System.Windows.Forms.Padding(4);
             this.TxtPlaca.Name = "TxtPlaca";
             this.TxtPlaca.Size = new System.Drawing.Size(149, 22);
             this.TxtPlaca.TabIndex = 7;
@@ -130,7 +130,7 @@
             // TxtChassi
             // 
             this.TxtChassi.Location = new System.Drawing.Point(115, 226);
-            this.TxtChassi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtChassi.Margin = new System.Windows.Forms.Padding(4);
             this.TxtChassi.Name = "TxtChassi";
             this.TxtChassi.Size = new System.Drawing.Size(444, 22);
             this.TxtChassi.TabIndex = 8;
@@ -191,7 +191,7 @@
             // TxtCor
             // 
             this.TxtCor.Location = new System.Drawing.Point(115, 162);
-            this.TxtCor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCor.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCor.Name = "TxtCor";
             this.TxtCor.Size = new System.Drawing.Size(219, 22);
             this.TxtCor.TabIndex = 5;
@@ -199,7 +199,7 @@
             // BtnLimpar
             // 
             this.BtnLimpar.Location = new System.Drawing.Point(352, 370);
-            this.BtnLimpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnLimpar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnLimpar.Name = "BtnLimpar";
             this.BtnLimpar.Size = new System.Drawing.Size(100, 28);
             this.BtnLimpar.TabIndex = 11;
@@ -210,7 +210,7 @@
             // BtnSalvar
             // 
             this.BtnSalvar.Location = new System.Drawing.Point(460, 370);
-            this.BtnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(100, 28);
             this.BtnSalvar.TabIndex = 10;
@@ -222,7 +222,7 @@
             // 
             this.CmbSituacao.FormattingEnabled = true;
             this.CmbSituacao.Location = new System.Drawing.Point(409, 60);
-            this.CmbSituacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CmbSituacao.Margin = new System.Windows.Forms.Padding(4);
             this.CmbSituacao.Name = "CmbSituacao";
             this.CmbSituacao.Size = new System.Drawing.Size(149, 24);
             this.CmbSituacao.TabIndex = 2;
@@ -231,7 +231,7 @@
             // 
             this.CmbGrupo.FormattingEnabled = true;
             this.CmbGrupo.Location = new System.Drawing.Point(115, 60);
-            this.CmbGrupo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CmbGrupo.Margin = new System.Windows.Forms.Padding(4);
             this.CmbGrupo.Name = "CmbGrupo";
             this.CmbGrupo.Size = new System.Drawing.Size(219, 24);
             this.CmbGrupo.TabIndex = 1;
@@ -260,7 +260,7 @@
             // TxtAno
             // 
             this.TxtAno.Location = new System.Drawing.Point(115, 194);
-            this.TxtAno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtAno.Margin = new System.Windows.Forms.Padding(4);
             this.TxtAno.Name = "TxtAno";
             this.TxtAno.Size = new System.Drawing.Size(219, 22);
             this.TxtAno.TabIndex = 6;
@@ -293,9 +293,9 @@
             this.Controls.Add(this.TxtMarca);
             this.Controls.Add(this.TxtCodigo);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadVeiculo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Veículo";
             this.Load += new System.EventHandler(this.CadVeiculo_Load);
             this.ResumeLayout(false);

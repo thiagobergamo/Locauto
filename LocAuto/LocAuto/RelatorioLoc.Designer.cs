@@ -30,10 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.RelLocacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.RelLocacaoBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // RelLocacaoBindingSource
+            // 
+            this.RelLocacaoBindingSource.DataSource = typeof(Modelo.RelLocacao);
             // 
             // reportViewer1
             // 
@@ -43,21 +47,20 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "LocAuto.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(871, 525);
+            this.reportViewer1.Size = new System.Drawing.Size(1161, 646);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // RelLocacaoBindingSource
-            // 
-            this.RelLocacaoBindingSource.DataSource = typeof(Modelo.RelLocacao);
             // 
             // RelatorioLoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 525);
+            this.ClientSize = new System.Drawing.Size(1161, 646);
             this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RelatorioLoc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RelatorioLoc";
             this.Load += new System.EventHandler(this.RelatorioLoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RelLocacaoBindingSource)).EndInit();

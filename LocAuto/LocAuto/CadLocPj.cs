@@ -126,7 +126,8 @@ namespace LocAuto
                 MessageBox.Show("Cadastro realizado com sucesso!");
                 CadVistoria cadVistoria = new CadVistoria();
                 cadVistoria.codLocacao = idLocacao;
-                cadVistoria.Show();
+                cadVistoria.ShowDialog();
+                this.Close();
             }
             catch (ArgumentNullException ex)
             {

@@ -35,12 +35,12 @@
             this.txtNomePesquisa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnNovo = new System.Windows.Forms.Button();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.razaosocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -117,6 +117,23 @@
             this.dataGridView1.Size = new System.Drawing.Size(854, 240);
             this.dataGridView1.TabIndex = 9;
             // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            this.codigo.Width = 80;
+            // 
+            // cnpj
+            // 
+            this.cnpj.HeaderText = "CNPJ";
+            this.cnpj.Name = "cnpj";
+            // 
+            // razaosocial
+            // 
+            this.razaosocial.HeaderText = "Razão Social";
+            this.razaosocial.Name = "razaosocial";
+            this.razaosocial.Width = 300;
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(585, 336);
@@ -147,23 +164,6 @@
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Código";
-            this.codigo.Name = "codigo";
-            this.codigo.Width = 80;
-            // 
-            // cnpj
-            // 
-            this.cnpj.HeaderText = "CNPJ";
-            this.cnpj.Name = "cnpj";
-            // 
-            // razaosocial
-            // 
-            this.razaosocial.HeaderText = "Razão Social";
-            this.razaosocial.Name = "razaosocial";
-            this.razaosocial.Width = 300;
-            // 
             // ConsultaPessoaJuridica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -175,6 +175,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "ConsultaPessoaJuridica";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaPessoaJuridica";
             this.Load += new System.EventHandler(this.ConsultaPessoaJuridica_Load);
             this.groupBox1.ResumeLayout(false);

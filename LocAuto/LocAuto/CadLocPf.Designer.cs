@@ -44,6 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TxtValorCaucao = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -69,7 +70,6 @@
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
             this.btnVistoria = new System.Windows.Forms.Button();
-            this.TxtValorCaucao = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -269,6 +269,14 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados Locação";
+            // 
+            // TxtValorCaucao
+            // 
+            this.TxtValorCaucao.Location = new System.Drawing.Point(403, 289);
+            this.TxtValorCaucao.Name = "TxtValorCaucao";
+            this.TxtValorCaucao.Size = new System.Drawing.Size(125, 22);
+            this.TxtValorCaucao.TabIndex = 22;
+            this.TxtValorCaucao.Validated += new System.EventHandler(this.TxtValorCaucao_Validated);
             // 
             // label17
             // 
@@ -532,14 +540,6 @@
             this.btnVistoria.UseVisualStyleBackColor = true;
             this.btnVistoria.Click += new System.EventHandler(this.button1_Click);
             // 
-            // TxtValorCaucao
-            // 
-            this.TxtValorCaucao.Location = new System.Drawing.Point(403, 289);
-            this.TxtValorCaucao.Name = "TxtValorCaucao";
-            this.TxtValorCaucao.Size = new System.Drawing.Size(125, 22);
-            this.TxtValorCaucao.TabIndex = 22;
-            this.TxtValorCaucao.Validated += new System.EventHandler(this.TxtValorCaucao_Validated);
-            // 
             // CadLocPf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -552,7 +552,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadLocPf";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Locação Pessoa Física";
             this.Load += new System.EventHandler(this.CadLocPf_Load);
             this.groupBox1.ResumeLayout(false);

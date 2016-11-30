@@ -30,10 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.VeiculoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.VeiculoBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // VeiculoBindingSource
+            // 
+            this.VeiculoBindingSource.DataSource = typeof(Modelo.Veiculo);
             // 
             // reportViewer1
             // 
@@ -43,21 +47,20 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "LocAuto.Report2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(815, 630);
+            this.reportViewer1.Size = new System.Drawing.Size(1087, 775);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // VeiculoBindingSource
-            // 
-            this.VeiculoBindingSource.DataSource = typeof(Modelo.Veiculo);
             // 
             // RelatorioVei
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 630);
+            this.ClientSize = new System.Drawing.Size(1087, 775);
             this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RelatorioVei";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RelatorioVei";
             this.Load += new System.EventHandler(this.RelatorioVei_Load);
             ((System.ComponentModel.ISupportInitialize)(this.VeiculoBindingSource)).EndInit();

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox1 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -71,7 +72,6 @@
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
             this.BtnVistoria = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -111,6 +111,14 @@
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados Locação";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(403, 289);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(125, 22);
+            this.maskedTextBox1.TabIndex = 22;
+            this.maskedTextBox1.Validated += new System.EventHandler(this.maskedTextBox1_Validated);
             // 
             // label17
             // 
@@ -544,14 +552,6 @@
             this.BtnVistoria.UseVisualStyleBackColor = true;
             this.BtnVistoria.Click += new System.EventHandler(this.BtnVistoria_Click);
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(403, 289);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(125, 22);
-            this.maskedTextBox1.TabIndex = 22;
-            this.maskedTextBox1.Validated += new System.EventHandler(this.maskedTextBox1_Validated);
-            // 
             // CadLocPj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -564,7 +564,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadLocPj";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Locação PJ";
             this.Load += new System.EventHandler(this.CadLocPj_Load);
             this.groupBox2.ResumeLayout(false);

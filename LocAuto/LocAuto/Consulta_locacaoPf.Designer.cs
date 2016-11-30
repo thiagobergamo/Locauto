@@ -49,9 +49,10 @@
             this.data_prev,
             this.Veiculo,
             this.Valor_Total});
-            this.DgvConsultaPf.Location = new System.Drawing.Point(27, 29);
+            this.DgvConsultaPf.Location = new System.Drawing.Point(36, 36);
+            this.DgvConsultaPf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DgvConsultaPf.Name = "DgvConsultaPf";
-            this.DgvConsultaPf.Size = new System.Drawing.Size(792, 337);
+            this.DgvConsultaPf.Size = new System.Drawing.Size(1056, 415);
             this.DgvConsultaPf.TabIndex = 0;
             // 
             // Id_loc
@@ -90,9 +91,10 @@
             // 
             // BtnDevolucao
             // 
-            this.BtnDevolucao.Location = new System.Drawing.Point(700, 381);
+            this.BtnDevolucao.Location = new System.Drawing.Point(933, 469);
+            this.BtnDevolucao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnDevolucao.Name = "BtnDevolucao";
-            this.BtnDevolucao.Size = new System.Drawing.Size(106, 30);
+            this.BtnDevolucao.Size = new System.Drawing.Size(141, 37);
             this.BtnDevolucao.TabIndex = 1;
             this.BtnDevolucao.Text = "Devolução";
             this.BtnDevolucao.UseVisualStyleBackColor = true;
@@ -100,13 +102,14 @@
             // 
             // Consulta_locacaoPf
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 423);
+            this.ClientSize = new System.Drawing.Size(1136, 521);
             this.Controls.Add(this.BtnDevolucao);
             this.Controls.Add(this.DgvConsultaPf);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Consulta_locacaoPf";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Locação PF";
             this.Load += new System.EventHandler(this.Consulta_locacaoPf_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvConsultaPf)).EndInit();

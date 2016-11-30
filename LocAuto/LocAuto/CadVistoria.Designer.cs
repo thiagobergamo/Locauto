@@ -262,7 +262,7 @@
             this.Controls.Add(this.TxtCodigoLocacao);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadVistoria";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vistoria";
             this.Load += new System.EventHandler(this.CadVistoria_Load);
             this.groupBox1.ResumeLayout(false);

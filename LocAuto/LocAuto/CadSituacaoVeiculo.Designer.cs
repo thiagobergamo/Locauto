@@ -39,41 +39,46 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Location = new System.Drawing.Point(16, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 52);
+            this.label2.Location = new System.Drawing.Point(16, 64);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(71, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Descrição";
             // 
             // TxtDescricao
             // 
-            this.TxtDescricao.Location = new System.Drawing.Point(80, 49);
+            this.TxtDescricao.Location = new System.Drawing.Point(107, 60);
+            this.TxtDescricao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtDescricao.Name = "TxtDescricao";
-            this.TxtDescricao.Size = new System.Drawing.Size(140, 20);
+            this.TxtDescricao.Size = new System.Drawing.Size(185, 22);
             this.TxtDescricao.TabIndex = 2;
             // 
             // TxtCodigo
             // 
             this.TxtCodigo.Enabled = false;
-            this.TxtCodigo.Location = new System.Drawing.Point(80, 17);
+            this.TxtCodigo.Location = new System.Drawing.Point(107, 21);
+            this.TxtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtCodigo.Name = "TxtCodigo";
-            this.TxtCodigo.Size = new System.Drawing.Size(59, 20);
+            this.TxtCodigo.Size = new System.Drawing.Size(77, 22);
             this.TxtCodigo.TabIndex = 3;
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Location = new System.Drawing.Point(155, 93);
+            this.BtnSalvar.Location = new System.Drawing.Point(207, 114);
+            this.BtnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.Size = new System.Drawing.Size(65, 23);
+            this.BtnSalvar.Size = new System.Drawing.Size(87, 28);
             this.BtnSalvar.TabIndex = 4;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
@@ -81,9 +86,10 @@
             // 
             // BtnLimpar
             // 
-            this.BtnLimpar.Location = new System.Drawing.Point(90, 93);
+            this.BtnLimpar.Location = new System.Drawing.Point(120, 114);
+            this.BtnLimpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnLimpar.Name = "BtnLimpar";
-            this.BtnLimpar.Size = new System.Drawing.Size(59, 23);
+            this.BtnLimpar.Size = new System.Drawing.Size(79, 28);
             this.BtnLimpar.TabIndex = 5;
             this.BtnLimpar.Text = "Limpar";
             this.BtnLimpar.UseVisualStyleBackColor = true;
@@ -91,17 +97,18 @@
             // 
             // CadSituacaoVeiculo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(256, 134);
+            this.ClientSize = new System.Drawing.Size(341, 165);
             this.Controls.Add(this.BtnLimpar);
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.TxtCodigo);
             this.Controls.Add(this.TxtDescricao);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CadSituacaoVeiculo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Situacão do Veiculo";
             this.Load += new System.EventHandler(this.CadSituacaoVeiculo_Load);
             this.ResumeLayout(false);

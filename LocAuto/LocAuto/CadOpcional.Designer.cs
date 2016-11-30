@@ -41,7 +41,7 @@
             // BtnLimpar
             // 
             this.BtnLimpar.Location = new System.Drawing.Point(99, 169);
-            this.BtnLimpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnLimpar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnLimpar.Name = "BtnLimpar";
             this.BtnLimpar.Size = new System.Drawing.Size(100, 28);
             this.BtnLimpar.TabIndex = 4;
@@ -52,7 +52,7 @@
             // BtnSalvar
             // 
             this.BtnSalvar.Location = new System.Drawing.Point(207, 169);
-            this.BtnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(100, 28);
             this.BtnSalvar.TabIndex = 3;
@@ -64,7 +64,7 @@
             // 
             this.TxtCodigo.Enabled = false;
             this.TxtCodigo.Location = new System.Drawing.Point(120, 33);
-            this.TxtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Size = new System.Drawing.Size(77, 22);
             this.TxtCodigo.TabIndex = 9;
@@ -72,7 +72,7 @@
             // TxtDescricao
             // 
             this.TxtDescricao.Location = new System.Drawing.Point(120, 73);
-            this.TxtDescricao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtDescricao.Margin = new System.Windows.Forms.Padding(4);
             this.TxtDescricao.Name = "TxtDescricao";
             this.TxtDescricao.Size = new System.Drawing.Size(185, 22);
             this.TxtDescricao.TabIndex = 1;
@@ -110,7 +110,7 @@
             // TxtValor
             // 
             this.TxtValor.Location = new System.Drawing.Point(120, 113);
-            this.TxtValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtValor.Margin = new System.Windows.Forms.Padding(4);
             this.TxtValor.Name = "TxtValor";
             this.TxtValor.Size = new System.Drawing.Size(108, 22);
             this.TxtValor.TabIndex = 2;
@@ -129,9 +129,9 @@
             this.Controls.Add(this.TxtDescricao);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadOpcional";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Opcional";
             this.Load += new System.EventHandler(this.CadOpcional_Load);
             this.ResumeLayout(false);
